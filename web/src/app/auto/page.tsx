@@ -9,13 +9,19 @@ import type { MonsterFlowNode } from '@/components/MonsterNode';
 import { MonsterPicker } from '@/components/MonsterPicker';
 import { useTitleData } from '@/components/TitleProvider';
 import { getRuleset } from '@/lib/engine/registry';
-import type { BreedingPlan, TitleData } from '@/lib/engine/types';
+import type { BreedingMethod, BreedingPlan, TitleData } from '@/lib/engine/types';
 
 const X_GAP = 200;
 const Y_GAP = 140;
 
 function familyName(data: TitleData, familyId: string): string {
   return data.families.find((f) => f.id === familyId)?.name ?? familyId;
+}
+
+function methodLabel(method: BreedingMethod): string {
+  if (method === 'special') return '特殊配合';
+  if (method === 'quad') return '4体配合';
+  return '通常配合';
 }
 
 function buildFlow(plan: BreedingPlan, data: TitleData) {
@@ -43,21 +49,51 @@ function buildFlow(plan: BreedingPlan, data: TitleData) {
       return { id, x };
     }
 
-    const placed = p.parents.map((parent) => walk(parent, depth + 1));
+    // 4体配合は祖父母4体の下に「任意の子」の中間ノードを2つ挟んで描く
+    const quad = p.method === 'quad' && p.parents.length === 4;
+    const parentDepth = quad ? depth + 2 : depth + 1;
+    const placed = p.parents.map((parent) => walk(parent, parentDepth));
     const x = placed.reduce((s, c) => s + c.x, 0) / placed.length;
+
+    let incoming = placed;
+    if (quad) {
+      incoming = [
+        [placed[0], placed[1]],
+        [placed[2], placed[3]],
+      ].map((pair) => {
+        const midId = `n${seq++}`;
+        const midX = (pair[0].x + pair[1].x) / 2;
+        nodes.push({
+          id: midId,
+          type: 'monster',
+          position: { x: midX, y: -(depth + 1) * Y_GAP },
+          data: { label: '（この2体の子）', sub: '種族は自由', status: 'warn' },
+        });
+        for (const gp of pair) {
+          edges.push({
+            id: `e${gp.id}-${midId}`,
+            source: gp.id,
+            target: midId,
+            markerEnd: { type: MarkerType.ArrowClosed },
+          });
+        }
+        return { id: midId, x: midX };
+      });
+    }
+
     nodes.push({
       id,
       type: 'monster',
       position: { x, y: -depth * Y_GAP },
       data: {
         label: p.monster.name,
-        sub: `${p.monster.rank}ランク・${familyName(data, p.monster.familyId)}・${
-          p.method === 'special' ? '特殊配合' : '通常配合'
-        }`,
+        sub: `${p.monster.rank}ランク・${familyName(data, p.monster.familyId)}・${methodLabel(
+          p.method,
+        )}`,
         status: 'ok',
       },
     });
-    for (const parent of placed) {
+    for (const parent of incoming) {
       edges.push({
         id: `e${parent.id}-${id}`,
         source: parent.id,
@@ -76,7 +112,13 @@ function collectSteps(plan: BreedingPlan, out: string[]): void {
   if (plan.kind !== 'breed') return;
   for (const parent of plan.parents) collectSteps(parent, out);
   const parents = plan.parents.map((p) => p.monster.name).join(' × ');
-  out.push(`${parents} → ${plan.monster.name}（${plan.method === 'special' ? '特殊配合' : '通常配合'}）`);
+  if (plan.method === 'quad') {
+    out.push(
+      `${parents} の4体を祖父母にして2回配合し、その子同士を配合 → ${plan.monster.name}（4体配合）`,
+    );
+    return;
+  }
+  out.push(`${parents} → ${plan.monster.name}（${methodLabel(plan.method)}）`);
 }
 
 export default function AutoPage() {

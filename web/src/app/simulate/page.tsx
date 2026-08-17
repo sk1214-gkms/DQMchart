@@ -17,6 +17,28 @@ export default function SimulatePage() {
     return getRuleset(data.ruleset).candidates(a, b, data);
   }, [data, aId, bId]);
 
+  // 選んだ2体が祖父母に含まれる4体配合を参考表示（4体配合の判定には祖父母4体が必要）
+  const quadHints = useMemo(() => {
+    if (!aId || !bId) return [];
+    const monsterName = (id: string) => data.monsters.find((m) => m.id === id)?.name ?? id;
+    const familyLabel = (id: string) => data.families.find((f) => f.id === id)?.name ?? id;
+    return data.specialRecipes
+      .filter(
+        (r) =>
+          r.parents.length === 4 &&
+          [aId, bId].every((id) =>
+            r.parents.some((p) => p.kind === 'monster' && p.monsterId === id),
+          ),
+      )
+      .map((r) => ({
+        recipeId: r.id,
+        childName: monsterName(r.childId),
+        parentNames: r.parents.map((p) =>
+          p.kind === 'monster' ? monsterName(p.monsterId) : familyLabel(p.familyId),
+        ),
+      }));
+  }, [data, aId, bId]);
+
   return (
     <div className="flex flex-col gap-6">
       <h1 className="text-xl font-bold">配合シミュレータ</h1>
@@ -25,6 +47,19 @@ export default function SimulatePage() {
         <MonsterPicker data={data} value={aId} onChange={setAId} label="親①" />
         <MonsterPicker data={data} value={bId} onChange={setBId} label="親②" />
       </div>
+
+      {quadHints.length > 0 && (
+        <section className="rounded border border-amber-300 bg-amber-50 px-3 py-2 text-sm text-amber-900">
+          <p className="font-medium">この2体が祖父母に含まれる4体配合があります</p>
+          <ul className="mt-1 list-disc pl-5 text-xs">
+            {quadHints.map((h) => (
+              <li key={h.recipeId}>
+                {h.childName} ← {h.parentNames.join(' ＋ ')}（この4体を祖父母にして2回配合し、その子同士を配合）
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {results === null ? (
         <p className="text-sm text-zinc-500">親を2体選ぶと子候補を表示します。</p>

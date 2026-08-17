@@ -38,6 +38,8 @@ export interface SpecialRecipe {
   id: string;
   childId: string;
   parents: RecipeParent[];
+  /** 備考（4体配合・DLC限定など）。parentsが4件のレシピは4体配合で、現状エンジンは未対応 */
+  note?: string;
 }
 
 export interface TitleData {
@@ -52,20 +54,23 @@ export interface TitleData {
   specialRecipes: SpecialRecipe[];
 }
 
+/** 配合方法。quad=4体配合（祖父母4体の組み合わせで決まる） */
+export type BreedingMethod = 'normal' | 'special' | 'quad';
+
 /** 配合シミュレーション結果（親2体→子候補） */
 export interface BreedingCandidate {
   child: Monster;
-  method: 'normal' | 'special';
+  method: BreedingMethod;
   recipe?: SpecialRecipe;
 }
 
-/** 逆算で得られる配合計画ツリー */
+/** 逆算で得られる配合計画ツリー。quadのparentsは祖父母4体 */
 export type BreedingPlan =
   | { kind: 'wild'; monster: Monster; cost: number }
   | {
       kind: 'breed';
       monster: Monster;
-      method: 'normal' | 'special';
+      method: BreedingMethod;
       recipeId?: string;
       parents: BreedingPlan[];
       cost: number;
@@ -74,6 +79,11 @@ export type BreedingPlan =
 export interface BreedingRuleset {
   /** 親2体から生まれうる子候補（通常配合＋特殊配合） */
   candidates(a: Monster, b: Monster, data: TitleData): BreedingCandidate[];
+  /**
+   * 4体配合の判定。祖父母4体の組み合わせで決まるため親2体だけでは判定できない。
+   * 親2体それぞれの親（＝祖父母4体）が判明しているときに使う。
+   */
+  quadCandidates(grandparents: Monster[], data: TitleData): BreedingCandidate[];
   /** 目標モンスターの入手手順を野生入手可能モンスターまで逆算する */
   plan(targetId: string, data: TitleData): BreedingPlan | null;
 }

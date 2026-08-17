@@ -8,55 +8,133 @@ const engine = getRuleset(data.ruleset);
 
 function m(id: string): Monster {
   const found = data.monsters.find((x) => x.id === id);
-  if (!found) throw new Error(`テストデータにいないモンスター: ${id}`);
+  if (!found) throw new Error(`データにいないモンスター: ${id}`);
   return found;
 }
 
+const rankOrder = (rank: string) => data.ranks.find((r) => r.id === rank)!.order;
+
+describe('マスタデータの整合性', () => {
+  it('通常配合表の子がすべてモンスター一覧に存在する', () => {
+    const ids = new Set(data.monsters.map((x) => x.id));
+    for (const rule of data.normalRules) {
+      for (const child of rule.childIds) expect(ids.has(child)).toBe(true);
+    }
+  });
+
+  it('特殊配合の子と親がすべてモンスター一覧・系統一覧に存在する', () => {
+    const ids = new Set(data.monsters.map((x) => x.id));
+    const fams = new Set(data.families.map((f) => f.id));
+    for (const recipe of data.specialRecipes) {
+      expect(ids.has(recipe.childId)).toBe(true);
+      for (const p of recipe.parents) {
+        if (p.kind === 'monster') expect(ids.has(p.monsterId)).toBe(true);
+        else expect(fams.has(p.familyId)).toBe(true);
+      }
+    }
+  });
+
+  it('通常配合表はG〜Bランクのみで、系統ペアごとに子が2体', () => {
+    const ranks = new Set(data.normalRules.map((r) => r.rank));
+    expect([...ranks].sort()).toEqual(['B', 'C', 'D', 'E', 'F', 'G']);
+    for (const rule of data.normalRules) {
+      expect(rule.childIds).toHaveLength(2);
+      expect(rule.familyA).not.toBe(rule.familyB); // 同系統ペアは表に存在しない
+    }
+  });
+});
+
 describe('DQM3 通常配合', () => {
   it('同ランクの系統ペアから子候補が出る（スライム系G×ドラゴン系G）', () => {
-    const result = engine.candidates(m('slime'), m('kodora'), data);
+    const result = engine.candidates(m('スライム'), m('コドラ'), data);
     const ids = result.filter((c) => c.method === 'normal').map((c) => c.child.id);
-    expect(ids).toContain('hane_slime');
-    expect(ids).toContain('dragon_kids');
+    expect(ids).toContain('はねスライム');
+    expect(ids).toContain('ドラゴンキッズ');
   });
 
   it('親のランクが違う場合は両方のランクの表から選べる（F×G）', () => {
-    const result = engine.candidates(m('slime_beth'), m('kodora'), data);
+    const result = engine.candidates(m('スライムベス'), m('コドラ'), data);
     const ids = result.filter((c) => c.method === 'normal').map((c) => c.child.id);
     // Gランク表の候補
-    expect(ids).toContain('hane_slime');
-    expect(ids).toContain('dragon_kids');
+    expect(ids).toContain('はねスライム');
+    expect(ids).toContain('ドラゴンキッズ');
     // Fランク表の候補
-    expect(ids).toContain('dragoslime');
-    expect(ids).toContain('smile_lizard');
+    expect(ids).toContain('ドラゴスライム');
+    expect(ids).toContain('スマイルリザード');
+  });
+
+  it('親自身の種族も常に子候補に含まれる', () => {
+    const result = engine.candidates(m('スライムベス'), m('コドラ'), data);
+    const ids = result.filter((c) => c.method === 'normal').map((c) => c.child.id);
+    expect(ids).toContain('スライムベス');
+    expect(ids).toContain('コドラ');
+  });
+
+  it('同系統同士の配合では親のどちらかしか生まれない', () => {
+    const result = engine.candidates(m('スライム'), m('スライムベス'), data);
+    const ids = result.filter((c) => c.method === 'normal').map((c) => c.child.id).sort();
+    expect(ids).toEqual(['スライム', 'スライムベス']);
   });
 
   it('通常配合では親よりランクが上の子は生まれない', () => {
-    const result = engine.candidates(m('slime'), m('kodora'), data);
-    const orderOf = (rank: string) => data.ranks.find((r) => r.id === rank)!.order;
-    const maxParent = Math.max(orderOf('G'), orderOf('G'));
+    const result = engine.candidates(m('スライム'), m('コドラ'), data);
+    const maxParent = Math.max(rankOrder(m('スライム').rank), rankOrder(m('コドラ').rank));
     for (const c of result.filter((x) => x.method === 'normal')) {
-      expect(orderOf(c.child.rank)).toBeLessThanOrEqual(maxParent);
+      expect(rankOrder(c.child.rank)).toBeLessThanOrEqual(maxParent);
     }
   });
 });
 
 describe('DQM3 特殊配合', () => {
   it('モンスター指定レシピが順不同で一致する', () => {
-    const a = engine.candidates(m('slime_knight'), m('hoimi_slime'), data);
-    const b = engine.candidates(m('hoimi_slime'), m('slime_knight'), data);
-    expect(a.some((c) => c.method === 'special' && c.child.id === 'king_slime')).toBe(true);
-    expect(b.some((c) => c.method === 'special' && c.child.id === 'king_slime')).toBe(true);
+    const recipe = data.specialRecipes.find(
+      (r) => r.parents.length === 2 && r.parents.every((p) => p.kind === 'monster'),
+    )!;
+    const [p1, p2] = recipe.parents.map((p) => m((p as { monsterId: string }).monsterId));
+    const forward = engine.candidates(p1, p2, data);
+    const reverse = engine.candidates(p2, p1, data);
+    expect(forward.some((c) => c.method === 'special' && c.child.id === recipe.childId)).toBe(true);
+    expect(reverse.some((c) => c.method === 'special' && c.child.id === recipe.childId)).toBe(true);
   });
 
-  it('系統指定レシピが一致する（ドラゴン×自然系→スカイドラゴン）', () => {
-    const result = engine.candidates(m('dragon_e'), m('momon'), data);
-    expect(result.some((c) => c.method === 'special' && c.child.id === 'sky_dragon')).toBe(true);
+  it('系統指定レシピが一致する（スライム×魔獣系→ぶちスライム）', () => {
+    const beast = data.monsters.find((x) => x.familyId === 'beast')!;
+    const result = engine.candidates(m('スライム'), beast, data);
+    expect(result.some((c) => c.method === 'special' && c.child.id === 'ぶちスライム')).toBe(true);
   });
 
-  it('条件を満たさないペアには特殊配合が出ない', () => {
-    const result = engine.candidates(m('slime'), m('momonja'), data);
-    expect(result.every((c) => c.method !== 'special')).toBe(true);
+  it('特殊配合の子はほぼ上位親と同ランクか1つ上に収まる（メタル系など少数の例外を許容）', () => {
+    let checked = 0;
+    const exceptions: string[] = [];
+    for (const recipe of data.specialRecipes) {
+      if (recipe.parents.length !== 2) continue;
+      const parents = recipe.parents.flatMap((p) =>
+        p.kind === 'monster' ? [m(p.monsterId)] : [],
+      );
+      if (parents.length !== 2) continue; // 系統指定は親ランクが定まらないので対象外
+      checked += 1;
+      const maxParent = Math.max(...parents.map((p) => rankOrder(p.rank)));
+      if (rankOrder(m(recipe.childId).rank) > maxParent + 1) exceptions.push(recipe.childId);
+    }
+    expect(checked).toBeGreaterThan(100);
+    // 大きく外れるものが増えたらデータ取り込みの誤りを疑う
+    expect(exceptions.length / checked).toBeLessThan(0.05);
+  });
+
+  it('ランクアップ（親より上のランク）は特殊配合でのみ起こる', () => {
+    const gainsRank = data.specialRecipes.some((recipe) => {
+      const parents = recipe.parents.flatMap((p) => (p.kind === 'monster' ? [m(p.monsterId)] : []));
+      if (parents.length === 0) return false;
+      const maxParent = Math.max(...parents.map((p) => rankOrder(p.rank)));
+      return rankOrder(m(recipe.childId).rank) > maxParent;
+    });
+    expect(gainsRank).toBe(true);
+    // 通常配合表側は親ランクを超えないことを全件確認
+    for (const rule of data.normalRules) {
+      for (const childId of rule.childIds) {
+        expect(rankOrder(m(childId).rank)).toBeLessThanOrEqual(rankOrder(rule.rank));
+      }
+    }
   });
 });
 
@@ -67,37 +145,72 @@ describe('DQM3 逆算プランナー', () => {
   }
 
   it('野生入手可能モンスターは葉として返る', () => {
-    const plan = engine.plan('slime', data);
+    const wild = data.monsters.find((x) => x.obtainable)!;
+    const plan = engine.plan(wild.id, data);
     expect(plan).not.toBeNull();
     expect(plan!.kind).toBe('wild');
   });
 
-  it('特殊配合1段の逆算ができる（キングスライム）', () => {
-    const plan = engine.plan('king_slime', data);
+  it('特殊配合が必要なモンスターを逆算でき、葉がすべて野生入手可能', () => {
+    const target = data.specialRecipes.find((r) => {
+      const child = data.monsters.find((x) => x.id === r.childId);
+      return child && !child.obtainable && engine.plan(child.id, data) !== null;
+    })!;
+    const plan = engine.plan(target.childId, data);
     expect(plan).not.toBeNull();
     expect(plan!.kind).toBe('breed');
-    // 葉はすべて野生入手可能であること
     for (const leaf of leaves(plan!)) {
       expect(leaf.obtainable).toBe(true);
     }
   });
 
-  it('多段の逆算ができ、葉がすべて野生入手可能（ダークドレアム）', () => {
-    const plan = engine.plan('dark_dream', data);
-    expect(plan).not.toBeNull();
-    expect(plan!.cost).toBeGreaterThanOrEqual(5);
-    for (const leaf of leaves(plan!)) {
-      expect(leaf.obtainable).toBe(true);
-    }
-  });
-
-  it('通常配合の逆算では子と同じ個体を親に使わない', () => {
-    const plan = engine.plan('smile_lizard', data);
-    expect(plan).not.toBeNull();
+  it('4体配合を経由するプランを組み立てられる', () => {
+    const quadRecipes = data.specialRecipes.filter((r) => r.parents.length === 4);
+    expect(quadRecipes.length).toBeGreaterThan(0);
+    const reachableQuad = quadRecipes.filter((r) => {
+      const plan = engine.plan(r.childId, data);
+      return plan?.kind === 'breed' && plan.method === 'quad';
+    });
+    expect(reachableQuad.length).toBeGreaterThan(0);
+    const plan = engine.plan(reachableQuad[0].childId, data);
+    expect(plan!.kind).toBe('breed');
     if (plan!.kind === 'breed') {
-      for (const p of plan!.parents) {
-        expect(p.monster.id).not.toBe('smile_lizard');
-      }
+      expect(plan!.parents).toHaveLength(4);
+      // 4体配合は中間2回＋最終1回の3手が最低必要
+      expect(plan!.cost).toBeGreaterThanOrEqual(3);
     }
+    for (const leaf of leaves(plan!)) expect(leaf.obtainable).toBe(true);
+  });
+
+  it('逆算結果の各配合ステップが配合ルール上も成立する', () => {
+    const verify = (p: BreedingPlan): void => {
+      if (p.kind === 'wild') return;
+      if (p.method === 'quad') {
+        expect(p.parents).toHaveLength(4);
+        const ok = engine
+          .quadCandidates(
+            p.parents.map((x) => x.monster),
+            data,
+          )
+          .some((c) => c.child.id === p.monster.id);
+        expect(ok).toBe(true);
+      } else if (p.parents.length === 2) {
+        const ok = engine
+          .candidates(p.parents[0].monster, p.parents[1].monster, data)
+          .some((c) => c.child.id === p.monster.id);
+        expect(ok).toBe(true);
+      }
+      p.parents.forEach(verify);
+    };
+    // 到達可能なモンスターを幅広く検証する
+    for (const m of data.monsters) {
+      const plan = engine.plan(m.id, data);
+      if (plan) verify(plan);
+    }
+  });
+
+  it('到達可能なモンスターが全体の8割以上ある', () => {
+    const reachable = data.monsters.filter((x) => engine.plan(x.id, data) !== null);
+    expect(reachable.length / data.monsters.length).toBeGreaterThan(0.8);
   });
 });

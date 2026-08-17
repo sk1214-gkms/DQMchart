@@ -78,7 +78,15 @@ export default function EditorPage() {
   };
 
   // 各ノードの検証: 親0体=野生なら青 / 親2体=エンジン判定で緑・赤 / それ以外=黄
+  // 親2体で成立しない場合でも、祖父母4体が揃っていれば4体配合として判定する
   const statusMap = useMemo(() => {
+    const monsterOfNode = (nodeId: string | undefined) => {
+      const src = nodes.find((n) => n.id === nodeId);
+      return data.monsters.find((x) => x.id === src?.data.monsterId);
+    };
+    const parentNodeIds = (nodeId: string) =>
+      edges.filter((e) => e.target === nodeId).map((e) => e.source);
+
     const map = new Map<string, MonsterNodeStatus>();
     for (const node of nodes) {
       const m = data.monsters.find((x) => x.id === node.data.monsterId);
@@ -86,25 +94,32 @@ export default function EditorPage() {
         map.set(node.id, 'none');
         continue;
       }
-      const incoming = edges.filter((e) => e.target === node.id);
-      if (incoming.length === 0) {
+      const parentIds = parentNodeIds(node.id);
+      if (parentIds.length === 0) {
         map.set(node.id, m.obtainable ? 'wild' : 'none');
-      } else if (incoming.length !== 2) {
-        map.set(node.id, 'warn');
-      } else {
-        const parents = incoming.map((e) => {
-          const src = nodes.find((n) => n.id === e.source);
-          return data.monsters.find((x) => x.id === src?.data.monsterId);
-        });
-        if (parents[0] && parents[1]) {
-          const ok = engine
-            .candidates(parents[0], parents[1], data)
-            .some((c) => c.child.id === m.id);
-          map.set(node.id, ok ? 'ok' : 'ng');
-        } else {
-          map.set(node.id, 'warn');
-        }
+        continue;
       }
+      if (parentIds.length !== 2) {
+        map.set(node.id, 'warn');
+        continue;
+      }
+      const parents = parentIds.map(monsterOfNode);
+      if (!parents[0] || !parents[1]) {
+        map.set(node.id, 'warn');
+        continue;
+      }
+      if (engine.candidates(parents[0], parents[1], data).some((c) => c.child.id === m.id)) {
+        map.set(node.id, 'ok');
+        continue;
+      }
+      const grandparents = parentIds
+        .flatMap((pid) => parentNodeIds(pid))
+        .map(monsterOfNode)
+        .filter((x): x is NonNullable<typeof x> => Boolean(x));
+      const quadOk =
+        grandparents.length === 4 &&
+        engine.quadCandidates(grandparents, data).some((c) => c.child.id === m.id);
+      map.set(node.id, quadOk ? 'ok' : 'ng');
     }
     return map;
   }, [nodes, edges, data, engine]);

@@ -31,12 +31,32 @@ function parentMatches(p: RecipeParent, m: Monster): boolean {
 
 /** 2体用レシピが親(a,b)に一致するか（順不同） */
 function recipeMatches(recipe: SpecialRecipe, a: Monster, b: Monster): boolean {
-  if (recipe.parents.length !== 2) return false; // 4体配合は将来対応
+  if (recipe.parents.length !== 2) return false; // 4体配合はquadCandidatesで扱う
   const [p1, p2] = recipe.parents;
   return (
     (parentMatches(p1, a) && parentMatches(p2, b)) ||
     (parentMatches(p1, b) && parentMatches(p2, a))
   );
+}
+
+/**
+ * レシピの親条件リストとモンスターの集合が過不足なく対応づくか（順不同）。
+ * 同じモンスターを2体要求するレシピがあるため、使用済みを消し込みながら照合する。
+ */
+function matchesUnordered(reqs: RecipeParent[], monsters: Monster[]): boolean {
+  if (reqs.length !== monsters.length) return false;
+  const used = new Array(monsters.length).fill(false);
+  const assign = (i: number): boolean => {
+    if (i === reqs.length) return true;
+    for (let j = 0; j < monsters.length; j++) {
+      if (used[j] || !parentMatches(reqs[i], monsters[j])) continue;
+      used[j] = true;
+      if (assign(i + 1)) return true;
+      used[j] = false;
+    }
+    return false;
+  };
+  return assign(0);
 }
 
 function normalCandidates(a: Monster, b: Monster, data: TitleData): Monster[] {
@@ -80,15 +100,24 @@ class Planner {
     this.visiting.add(monsterId);
     let best: BreedingPlan | null = null;
 
-    // 特殊配合レシピから逆算
+    // 特殊配合レシピから逆算（2体配合＝1回、4体配合＝中間2回＋最終1回で3回）
     for (const recipe of this.data.specialRecipes) {
-      if (recipe.childId !== monsterId || recipe.parents.length !== 2) continue;
+      if (recipe.childId !== monsterId) continue;
+      if (recipe.parents.length !== 2 && recipe.parents.length !== 4) continue;
       const parentPlans = recipe.parents.map((p) => this.planForRequirement(p));
       if (parentPlans.some((p) => p === null)) continue;
       const plans = parentPlans as BreedingPlan[];
-      const cost = 1 + plans.reduce((s, p) => s + p.cost, 0);
+      const quad = recipe.parents.length === 4;
+      const cost = (quad ? 3 : 1) + plans.reduce((s, p) => s + p.cost, 0);
       if (!best || cost < best.cost) {
-        best = { kind: 'breed', monster: m, method: 'special', recipeId: recipe.id, parents: plans, cost };
+        best = {
+          kind: 'breed',
+          monster: m,
+          method: quad ? 'quad' : 'special',
+          recipeId: recipe.id,
+          parents: plans,
+          cost,
+        };
       }
     }
 
@@ -147,10 +176,28 @@ export const dqm3Ruleset: BreedingRuleset = {
     for (const child of normalCandidates(a, b, data)) {
       out.push({ child, method: 'normal' });
     }
+    // 親自身の種族も常に子候補に含まれる（同系統配合では親のどちらかしか生まれない）
+    for (const parent of [a, b]) {
+      if (!out.some((c) => c.child.id === parent.id)) {
+        out.push({ child: parent, method: 'normal' });
+      }
+    }
     for (const recipe of data.specialRecipes) {
       if (!recipeMatches(recipe, a, b)) continue;
       const child = monsterById(data, recipe.childId);
       if (child) out.push({ child, method: 'special', recipe });
+    }
+    return out;
+  },
+
+  quadCandidates(grandparents: Monster[], data: TitleData): BreedingCandidate[] {
+    if (grandparents.length !== 4) return [];
+    const out: BreedingCandidate[] = [];
+    for (const recipe of data.specialRecipes) {
+      if (recipe.parents.length !== 4) continue;
+      if (!matchesUnordered(recipe.parents, grandparents)) continue;
+      const child = monsterById(data, recipe.childId);
+      if (child) out.push({ child, method: 'quad', recipe });
     }
     return out;
   },
