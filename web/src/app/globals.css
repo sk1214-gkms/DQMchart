@@ -30,6 +30,16 @@
   --family-zombie: #4a3aa7;
   --family-demon: #e34948;
 
+  /* カード背景用の淡色。本文が読める明るさに留める */
+  --family-slime-bg: #eef4fd;
+  --family-beast-bg: #fdf1ec;
+  --family-dragon-bg: #ecf8f3;
+  --family-material-bg: #fdf6e7;
+  --family-unknown-bg: #fdeff4;
+  --family-nature-bg: #ebf5eb;
+  --family-zombie-bg: #f0eef9;
+  --family-demon-bg: #fdeeee;
+
   /* 状態色（配合の成否など。系統色とは役割を分ける） */
   --status-ok: #157f4d;
   --status-ng: #c92a2a;
@@ -117,19 +127,21 @@ body {
     border-color: var(--border);
   }
 
-  /* 系統バッジ：色ドット＋系統名（色だけに頼らない） */
+  /* 系統バッジ：アイコン＋系統名（色だけに頼らない） */
   .family-badge {
-    @apply inline-flex items-center gap-1.5 whitespace-nowrap text-xs;
+    @apply inline-flex items-center gap-1 whitespace-nowrap text-xs;
     color: var(--muted);
   }
 
-  .family-dot {
-    @apply inline-block h-2.5 w-2.5 shrink-0 rounded-full;
+  /* 系統アイコンの下地（丸いチップ） */
+  .family-chip {
+    @apply grid shrink-0 place-items-center rounded-full;
   }
 
-  /* ランクバッジ：単色の濃淡で上位ほど濃くする（順序のある指標） */
-  .rank-badge {
-    @apply inline-flex min-w-6 items-center justify-center rounded px-1.5 py-0.5 text-xs font-bold tabular-nums;
+  /* ランクはテキストで表記する */
+  .rank-text {
+    @apply whitespace-nowrap text-xs font-bold tabular-nums;
+    color: var(--brand-700);
   }
 }
 

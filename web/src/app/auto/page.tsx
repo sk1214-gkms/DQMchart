@@ -9,9 +9,10 @@ import type { MonsterFlowNode } from '@/components/MonsterNode';
 import { MonsterPicker } from '@/components/MonsterPicker';
 import {
   AcquisitionBadge,
-  FamilyBadge,
-  RankBadge,
+  FamilyMark,
+  RankText,
   acquisitionLabel,
+  familyBackground,
   familyColor,
   familyName,
 } from '@/components/MonsterBadges';
@@ -188,10 +189,17 @@ export default function AutoPage() {
         <>
           <div className="card flex flex-wrap items-center gap-x-4 gap-y-2">
             {targetMonster && (
-              <div className="flex items-center gap-2">
-                <RankBadge rank={targetMonster.rank} data={data} />
-                <span className="text-lg font-bold">{targetMonster.name}</span>
-                <FamilyBadge data={data} familyId={targetMonster.familyId} />
+              <div className="flex items-center gap-2.5">
+                <FamilyMark familyId={targetMonster.familyId} size="lg" />
+                <div>
+                  <span className="text-lg font-bold">{targetMonster.name}</span>
+                  <div className="flex items-center gap-1.5">
+                    <RankText rank={targetMonster.rank} />
+                    <span className="text-xs text-[var(--muted)]">
+                      {familyName(data, targetMonster.familyId)}
+                    </span>
+                  </div>
+                </div>
               </div>
             )}
             {result.plan.kind === 'wild' ? (
@@ -247,13 +255,13 @@ export default function AutoPage() {
                 {materials.map(({ monster, count }) => (
                   <li
                     key={monster.id}
-                    className="flex items-start gap-2 overflow-hidden rounded-lg border bg-white py-2 pl-3 pr-3 shadow-sm"
+                    className="flex items-start gap-2.5 rounded-lg border p-2.5 shadow-sm"
                     style={{
-                      borderColor: 'var(--border)',
-                      borderLeft: `4px solid ${familyColor(monster.familyId)}`,
+                      background: familyBackground(monster.familyId),
+                      borderColor: familyColor(monster.familyId),
                     }}
                   >
-                    <RankBadge rank={monster.rank} data={data} />
+                    <FamilyMark familyId={monster.familyId} />
                     <div className="min-w-0 flex-1">
                       <div className="flex flex-wrap items-center gap-x-2">
                         <span className="font-semibold">{monster.name}</span>
@@ -263,11 +271,19 @@ export default function AutoPage() {
                           </span>
                         )}
                       </div>
-                      <div className="mt-0.5 flex flex-wrap items-center gap-1.5">
-                        <AcquisitionBadge kind={monster.acquisition} />
-                        <span className="text-[11px] text-[var(--muted)]">
-                          {monster.acquisitionDetail ?? familyName(data, monster.familyId)}
+                      <div className="flex items-center gap-1.5">
+                        <RankText rank={monster.rank} />
+                        <span className="text-xs text-[var(--muted)]">
+                          {familyName(data, monster.familyId)}
                         </span>
+                      </div>
+                      <div className="mt-1 flex flex-wrap items-center gap-1.5">
+                        <AcquisitionBadge kind={monster.acquisition} />
+                        {monster.acquisitionDetail && (
+                          <span className="text-[11px] text-[var(--muted)]">
+                            {monster.acquisitionDetail}
+                          </span>
+                        )}
                       </div>
                     </div>
                   </li>

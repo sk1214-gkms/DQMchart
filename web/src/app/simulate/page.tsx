@@ -2,7 +2,13 @@
 // 配合シミュレータ: 親2体 → 子候補（通常配合＋特殊配合）
 import { useMemo, useState } from 'react';
 import { MonsterPicker } from '@/components/MonsterPicker';
-import { FamilyBadge, RankBadge, familyColor } from '@/components/MonsterBadges';
+import {
+  FamilyMark,
+  RankText,
+  familyBackground,
+  familyColor,
+  familyName,
+} from '@/components/MonsterBadges';
 import { useTitleData } from '@/components/TitleProvider';
 import { getRuleset } from '@/lib/engine/registry';
 
@@ -89,22 +95,27 @@ export default function SimulatePage() {
             {results.map((c, i) => (
               <li
                 key={`${c.child.id}-${c.method}-${i}`}
-                className="flex items-center gap-2 overflow-hidden rounded-lg border bg-white py-2 pl-3 pr-3 shadow-sm transition hover:shadow"
+                className="flex items-center gap-2.5 rounded-lg border p-2.5 shadow-sm transition hover:shadow"
                 style={{
-                  borderColor: 'var(--border)',
-                  borderLeft: `4px solid ${familyColor(c.child.familyId)}`,
+                  background: familyBackground(c.child.familyId),
+                  borderColor: familyColor(c.child.familyId),
                 }}
               >
-                <RankBadge rank={c.child.rank} data={data} />
+                <FamilyMark familyId={c.child.familyId} />
                 <div className="min-w-0 flex-1">
                   <div className="truncate font-semibold">{c.child.name}</div>
-                  <FamilyBadge data={data} familyId={c.child.familyId} />
+                  <div className="flex items-center gap-1.5">
+                    <RankText rank={c.child.rank} />
+                    <span className="truncate text-xs text-[var(--muted)]">
+                      {familyName(data, c.child.familyId)}
+                    </span>
+                  </div>
                 </div>
                 <span
                   className={`shrink-0 rounded px-2 py-0.5 text-xs font-bold ${
                     c.method === 'special'
                       ? 'bg-amber-100 text-amber-800'
-                      : 'bg-sky-100 text-sky-800'
+                      : 'bg-white/70 text-[var(--muted)]'
                   }`}
                 >
                   {c.method === 'special' ? '特殊' : '通常'}

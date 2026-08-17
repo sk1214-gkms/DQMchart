@@ -1,5 +1,6 @@
 // 系統・ランク・入手手段の表示を統一するための小さな表示部品。
-// 色は補助情報であり、識別は必ずテキスト（系統名・ランク文字）と併記する。
+// 系統はアイコン＋色＋名前、ランクはテキストで表す。
+import { FamilyIcon } from '@/components/FamilyIcon';
 import type { AcquisitionKind, TitleData } from '@/lib/engine/types';
 
 const familyColors: Record<string, string> = {
@@ -13,42 +14,64 @@ const familyColors: Record<string, string> = {
   unknown: 'var(--family-unknown)',
 };
 
+const familyBackgrounds: Record<string, string> = {
+  slime: 'var(--family-slime-bg)',
+  dragon: 'var(--family-dragon-bg)',
+  nature: 'var(--family-nature-bg)',
+  beast: 'var(--family-beast-bg)',
+  demon: 'var(--family-demon-bg)',
+  zombie: 'var(--family-zombie-bg)',
+  material: 'var(--family-material-bg)',
+  unknown: 'var(--family-unknown-bg)',
+};
+
 export function familyColor(familyId: string): string {
   return familyColors[familyId] ?? 'var(--muted)';
+}
+
+/** カード背景に使う淡い系統色 */
+export function familyBackground(familyId: string): string {
+  return familyBackgrounds[familyId] ?? 'var(--surface)';
 }
 
 export function familyName(data: TitleData, familyId: string): string {
   return data.families.find((f) => f.id === familyId)?.name ?? familyId;
 }
 
+/** 系統アイコンを丸チップに載せたもの（一覧の先頭に置く） */
+export function FamilyMark({
+  familyId,
+  size = 'md',
+}: {
+  familyId: string;
+  size?: 'sm' | 'md' | 'lg';
+}) {
+  const box = { sm: 'h-6 w-6', md: 'h-8 w-8', lg: 'h-10 w-10' }[size];
+  const icon = { sm: 'h-3.5 w-3.5', md: 'h-4.5 w-4.5', lg: 'h-6 w-6' }[size];
+  return (
+    <span
+      className={`family-chip ${box}`}
+      style={{ background: familyColor(familyId), color: '#ffffff' }}
+    >
+      <FamilyIcon familyId={familyId} className={icon} />
+    </span>
+  );
+}
+
 export function FamilyBadge({ data, familyId }: { data: TitleData; familyId: string }) {
   return (
     <span className="family-badge">
-      <span className="family-dot" style={{ background: familyColor(familyId) }} />
+      <span style={{ color: familyColor(familyId) }}>
+        <FamilyIcon familyId={familyId} className="h-3.5 w-3.5" />
+      </span>
       {familyName(data, familyId)}
     </span>
   );
 }
 
-/** ランクは順序のある指標なので、単一色相の濃淡で上位ほど濃く見せる */
-export function RankBadge({ rank, data }: { rank: string; data: TitleData }) {
-  const total = Math.max(data.ranks.length - 1, 1);
-  const order = data.ranks.find((r) => r.id === rank)?.order ?? 0;
-  const t = order / total;
-  // 明度を 92% → 32% へ落としていく（濃いほど上位ランク）
-  const lightness = 92 - t * 60;
-  return (
-    <span
-      className="rank-badge"
-      style={{
-        background: `hsl(230 45% ${lightness}%)`,
-        color: lightness > 62 ? 'var(--brand-900)' : '#ffffff',
-      }}
-      title={`${rank}ランク`}
-    >
-      {rank}
-    </span>
-  );
+/** ランクはテキストで表記する */
+export function RankText({ rank }: { rank: string }) {
+  return <span className="rank-text">{rank}ランク</span>;
 }
 
 export function acquisitionLabel(kind: AcquisitionKind | undefined): string {

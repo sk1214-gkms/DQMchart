@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useMemo } from 'react';
-import { FamilyBadge } from '@/components/MonsterBadges';
+import { FamilyMark, familyBackground, familyColor } from '@/components/MonsterBadges';
 import { useTitleData } from '@/components/TitleProvider';
 
 const modes = [
@@ -76,13 +76,23 @@ export default function Home() {
 
       <section className="card">
         <h2 className="text-sm font-bold">収録している系統</h2>
-        <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+        <ul className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
           {data.families.map((f) => {
             const count = data.monsters.filter((m) => m.familyId === f.id).length;
             return (
-              <li key={f.id} className="flex items-center gap-1.5">
-                <FamilyBadge data={data} familyId={f.id} />
-                <span className="text-xs tabular-nums text-[var(--muted)]">{count}体</span>
+              <li
+                key={f.id}
+                className="flex items-center gap-2 rounded-lg border p-2"
+                style={{
+                  background: familyBackground(f.id),
+                  borderColor: familyColor(f.id),
+                }}
+              >
+                <FamilyMark familyId={f.id} size="sm" />
+                <div className="min-w-0">
+                  <div className="truncate text-xs font-semibold">{f.name}</div>
+                  <div className="text-[11px] tabular-nums text-[var(--muted)]">{count}体</div>
+                </div>
               </li>
             );
           })}
