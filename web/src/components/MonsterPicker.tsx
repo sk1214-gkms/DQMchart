@@ -38,19 +38,16 @@ export function MonsterPicker({
   }, [data, filter]);
 
   return (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1.5">
       <span className="text-sm font-medium text-zinc-700">{label}</span>
       <input
-        className="rounded border border-zinc-300 bg-white px-2 py-1 text-sm"
+        className="field"
+        type="search"
         placeholder="名前で絞り込み"
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
       />
-      <select
-        className="rounded border border-zinc-300 bg-white px-2 py-1 text-sm"
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-      >
+      <select className="field" value={value} onChange={(e) => onChange(e.target.value)}>
         <option value="">-- 選択してください --</option>
         {grouped.map((g) => (
           <optgroup key={g.family.id} label={g.family.name}>

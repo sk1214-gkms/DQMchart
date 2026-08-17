@@ -11,7 +11,7 @@ const modes = [
   {
     href: '/auto',
     title: '自動チャート生成',
-    desc: '目標のモンスターを選ぶと、野生で仲間にできるモンスターから始まる配合チャートを自動で逆算します。',
+    desc: '目標のモンスターを選ぶと、配合なしで手に入るモンスターから始まる配合チャートを自動で逆算します。',
   },
   {
     href: '/editor',
@@ -31,12 +31,12 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="grid gap-4 sm:grid-cols-3">
+      <section className="grid gap-3 sm:grid-cols-3 sm:gap-4">
         {modes.map((m) => (
           <Link
             key={m.href}
             href={m.href}
-            className="rounded-lg border border-zinc-200 bg-white p-4 shadow-sm transition hover:border-zinc-400 hover:shadow"
+            className="rounded-lg border border-zinc-200 bg-white p-4 shadow-sm transition hover:border-zinc-400 hover:shadow active:bg-zinc-50"
           >
             <h2 className="font-semibold">{m.title}</h2>
             <p className="mt-2 text-sm text-zinc-600">{m.desc}</p>

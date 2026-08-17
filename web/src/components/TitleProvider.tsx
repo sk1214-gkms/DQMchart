@@ -47,9 +47,10 @@ export function TitleSwitcher() {
   const { titleId, setTitleId } = useContext(TitleContext);
   return (
     <label className="flex items-center gap-2 text-sm text-zinc-600">
-      対象タイトル
+      <span className="hidden sm:inline">対象タイトル</span>
       <select
-        className="rounded border border-zinc-300 bg-white px-2 py-1 text-sm"
+        className="field w-auto max-w-[55vw] text-sm sm:max-w-none"
+        aria-label="対象タイトル"
         value={titleId}
         onChange={(e) => setTitleId(e.target.value)}
       >

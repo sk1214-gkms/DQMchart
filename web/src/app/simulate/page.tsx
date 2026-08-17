@@ -47,6 +47,17 @@ export default function SimulatePage() {
         <MonsterPicker data={data} value={aId} onChange={setAId} label="親①" />
         <MonsterPicker data={data} value={bId} onChange={setBId} label="親②" />
       </div>
+      {aId && bId && (
+        <button
+          onClick={() => {
+            setAId(bId);
+            setBId(aId);
+          }}
+          className="btn btn-outline self-start text-sm"
+        >
+          親①と親②を入れ替える
+        </button>
+      )}
 
       {quadHints.length > 0 && (
         <section className="rounded border border-amber-300 bg-amber-50 px-3 py-2 text-sm text-amber-900">

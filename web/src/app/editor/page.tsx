@@ -193,24 +193,91 @@ export default function EditorPage() {
     setEdges([]);
   };
 
-  const removeChart = (id: string) => {
-    localChartStore.remove(id);
-    if (id === chartId) setChartId(null);
+  const removeChart = (chart: SavedChart) => {
+    if (!window.confirm(`「${chart.name}」を削除します。よろしいですか？`)) return;
+    localChartStore.remove(chart.id);
+    if (chart.id === chartId) setChartId(null);
+  };
+
+  // スマホにはDeleteキーが無いので、選択したノード・線をボタンで消せるようにする
+  const selectedCount =
+    nodes.filter((n) => n.selected).length + edges.filter((e) => e.selected).length;
+
+  const deleteSelected = () => {
+    const removedNodeIds = new Set(nodes.filter((n) => n.selected).map((n) => n.id));
+    setNodes((ns) => ns.filter((n) => !n.selected));
+    setEdges((es) =>
+      es.filter(
+        (e) => !e.selected && !removedNodeIds.has(e.source) && !removedNodeIds.has(e.target),
+      ),
+    );
   };
 
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-xl font-bold">手動チャートエディタ</h1>
 
+      {/* スマホではキャンバスを先に出す（操作パネルが先だとキャンバスまで遠い） */}
       <div className="flex flex-col gap-4 lg:flex-row">
-        <aside className="flex w-full flex-col gap-4 lg:w-72">
+        <div className="order-1 flex flex-col gap-2 lg:order-2 lg:flex-1">
+          <div className="h-[55vh] min-h-[300px] rounded-lg border border-zinc-200 bg-white shadow-sm lg:h-[600px]">
+            <ReactFlow
+              nodes={displayNodes}
+              edges={edges}
+              nodeTypes={nodeTypes}
+              onNodesChange={onNodesChange}
+              onEdgesChange={onEdgesChange}
+              onConnect={onConnect}
+              deleteKeyCode={['Backspace', 'Delete']}
+              fitView={nodes.length > 0}
+              minZoom={0.1}
+              proOptions={{ hideAttribution: true }}
+            >
+              <Background />
+              <Controls />
+            </ReactFlow>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2">
+            <button
+              onClick={deleteSelected}
+              disabled={selectedCount === 0}
+              className="btn btn-outline text-sm text-red-600"
+            >
+              選択中を削除{selectedCount > 0 && `（${selectedCount}）`}
+            </button>
+            <span className="text-xs text-zinc-500">
+              ノードや線をタップして選択 → 削除（パソコンではDeleteキーでも可）
+            </span>
+          </div>
+
+          <p className="text-xs text-zinc-500">
+            モンスターの下側の丸から、子にしたいモンスターの上側の丸へドラッグすると配合線がつながります（親2体→子）。
+          </p>
+          <ul className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-zinc-600">
+            <li>
+              <span className="mr-1 inline-block h-2 w-2 rounded-full bg-green-500" />
+              配合成立
+            </li>
+            <li>
+              <span className="mr-1 inline-block h-2 w-2 rounded-full bg-red-500" />
+              配合不成立
+            </li>
+            <li>
+              <span className="mr-1 inline-block h-2 w-2 rounded-full bg-amber-500" />
+              親が2体でない
+            </li>
+            <li>
+              <span className="mr-1 inline-block h-2 w-2 rounded-full bg-sky-400" />
+              配合なしで入手可
+            </li>
+          </ul>
+        </div>
+
+        <aside className="order-2 flex w-full flex-col gap-4 lg:order-1 lg:w-72">
           <section className="rounded-lg border border-zinc-200 bg-white p-3 shadow-sm">
             <MonsterPicker data={data} value={pickId} onChange={setPickId} label="モンスターを追加" />
-            <button
-              onClick={addMonster}
-              disabled={!pickId}
-              className="mt-2 w-full rounded bg-zinc-900 px-3 py-1.5 text-sm font-medium text-white disabled:opacity-40"
-            >
+            <button onClick={addMonster} disabled={!pickId} className="btn btn-primary mt-2 w-full">
               キャンバスに追加
             </button>
           </section>
@@ -218,22 +285,16 @@ export default function EditorPage() {
           <section className="rounded-lg border border-zinc-200 bg-white p-3 shadow-sm">
             <h2 className="mb-2 text-sm font-semibold">チャートの保存</h2>
             <input
-              className="w-full rounded border border-zinc-300 px-2 py-1 text-sm"
+              className="field"
               placeholder="チャート名"
               value={chartName}
               onChange={(e) => setChartName(e.target.value)}
             />
             <div className="mt-2 flex gap-2">
-              <button
-                onClick={saveChart}
-                className="flex-1 rounded bg-emerald-600 px-3 py-1.5 text-sm font-medium text-white"
-              >
+              <button onClick={saveChart} className="btn btn-accent flex-1">
                 保存
               </button>
-              <button
-                onClick={newChart}
-                className="flex-1 rounded border border-zinc-300 px-3 py-1.5 text-sm"
-              >
+              <button onClick={newChart} className="btn btn-outline flex-1">
                 新規
               </button>
             </div>
@@ -252,14 +313,14 @@ export default function EditorPage() {
                   <li key={c.id} className="flex items-center gap-1 text-sm">
                     <button
                       onClick={() => loadChart(c)}
-                      className="flex-1 truncate rounded px-2 py-1 text-left hover:bg-zinc-100"
+                      className="min-h-11 flex-1 truncate rounded px-2 text-left hover:bg-zinc-100"
                       title={c.name}
                     >
                       {c.name}
                     </button>
                     <button
-                      onClick={() => removeChart(c.id)}
-                      className="rounded px-2 py-1 text-xs text-red-600 hover:bg-red-50"
+                      onClick={() => removeChart(c)}
+                      className="min-h-11 rounded px-3 text-xs text-red-600 hover:bg-red-50"
                     >
                       削除
                     </button>
@@ -269,33 +330,6 @@ export default function EditorPage() {
             )}
           </section>
         </aside>
-
-        <div className="flex-1">
-          <div className="h-[600px] rounded-lg border border-zinc-200 bg-white shadow-sm">
-            <ReactFlow
-              nodes={displayNodes}
-              edges={edges}
-              nodeTypes={nodeTypes}
-              onNodesChange={onNodesChange}
-              onEdgesChange={onEdgesChange}
-              onConnect={onConnect}
-              deleteKeyCode={['Backspace', 'Delete']}
-              fitView={nodes.length > 0}
-              proOptions={{ hideAttribution: true }}
-            >
-              <Background />
-              <Controls />
-            </ReactFlow>
-          </div>
-          <p className="mt-2 text-xs text-zinc-500">
-            親ノード下端のハンドルから子ノード上端へドラッグして配合線をつなぐ（親2体→子）。
-            <span className="ml-2 inline-block h-2 w-2 rounded-full bg-green-500" /> 配合成立
-            <span className="ml-2 inline-block h-2 w-2 rounded-full bg-red-500" /> 配合不成立
-            <span className="ml-2 inline-block h-2 w-2 rounded-full bg-amber-500" /> 親が2体でない
-            <span className="ml-2 inline-block h-2 w-2 rounded-full bg-sky-400" /> 野生で入手可
-            ／ ノード・線はDeleteキーで削除
-          </p>
-        </div>
       </div>
     </div>
   );

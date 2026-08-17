@@ -14,6 +14,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const navItems = [
+  { href: '/simulate', label: '配合シミュレータ' },
+  { href: '/auto', label: '自動チャート生成' },
+  { href: '/editor', label: '手動エディタ' },
+];
+
 export const metadata: Metadata = {
   title: "配合チャートメーカー",
   description: "ドラゴンクエストモンスターズの配合チャート作成ツール",
@@ -28,28 +34,27 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col bg-zinc-50 text-zinc-900">
         <TitleProvider>
-          <header className="border-b border-zinc-200 bg-white">
-            <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3">
-              <Link href="/" className="text-lg font-bold">
+          <header className="sticky top-0 z-20 border-b border-zinc-200 bg-white">
+            <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-2">
+              <Link href="/" className="text-base font-bold sm:text-lg">
                 配合チャートメーカー
               </Link>
-              <nav className="flex gap-4 text-sm text-zinc-600">
-                <Link href="/simulate" className="hover:text-zinc-900">
-                  配合シミュレータ
-                </Link>
-                <Link href="/auto" className="hover:text-zinc-900">
-                  自動チャート生成
-                </Link>
-                <Link href="/editor" className="hover:text-zinc-900">
-                  手動チャートエディタ
-                </Link>
-              </nav>
-              <div className="ml-auto">
-                <TitleSwitcher />
-              </div>
+              <TitleSwitcher />
             </div>
+            {/* スマホでは横スクロールするタブ、画面が広ければ通常のナビ */}
+            <nav className="mx-auto flex max-w-6xl gap-1 overflow-x-auto px-2 pb-1 sm:px-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="flex min-h-11 shrink-0 items-center rounded px-3 text-sm text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
           </header>
-          <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6">{children}</main>
+          <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-4 sm:py-6">{children}</main>
         </TitleProvider>
       </body>
     </html>

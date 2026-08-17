@@ -23,13 +23,18 @@ const statusStyles: Record<MonsterNodeStatus, string> = {
   none: 'border-zinc-300 bg-white',
 };
 
+// 指でも掴めるようにハンドル（接続点）を既定より大きくする
+const handleClass = '!h-4 !w-4 !border-2 !bg-white';
+
 export function MonsterNode({ data }: NodeProps<MonsterFlowNode>) {
   return (
-    <div className={`min-w-36 rounded-md border-2 px-3 py-2 text-xs shadow-sm ${statusStyles[data.status]}`}>
-      <Handle type="target" position={Position.Top} />
+    <div
+      className={`min-w-36 rounded-md border-2 px-3 py-2 text-xs shadow-sm ${statusStyles[data.status]}`}
+    >
+      <Handle type="target" position={Position.Top} className={handleClass} />
       <div className="font-semibold text-zinc-900">{data.label}</div>
       <div className="text-[10px] text-zinc-500">{data.sub}</div>
-      <Handle type="source" position={Position.Bottom} />
+      <Handle type="source" position={Position.Bottom} className={handleClass} />
     </div>
   );
 }

@@ -192,18 +192,25 @@ export default function AutoPage() {
           )}
 
           {result.flow && result.flow.nodes.length > 1 && (
-            <div className="h-[540px] rounded-lg border border-zinc-200 bg-white shadow-sm">
-              <ReactFlow
-                nodes={result.flow.nodes}
-                edges={result.flow.edges}
-                nodeTypes={nodeTypes}
-                fitView
-                nodesConnectable={false}
-                proOptions={{ hideAttribution: true }}
-              >
-                <Background />
-                <Controls showInteractive={false} />
-              </ReactFlow>
+            <div className="flex flex-col gap-1">
+              <div className="h-[60vh] min-h-[300px] rounded-lg border border-zinc-200 bg-white shadow-sm sm:h-[540px]">
+                <ReactFlow
+                  nodes={result.flow.nodes}
+                  edges={result.flow.edges}
+                  nodeTypes={nodeTypes}
+                  fitView
+                  nodesConnectable={false}
+                  nodesDraggable={false}
+                  minZoom={0.1}
+                  proOptions={{ hideAttribution: true }}
+                >
+                  <Background />
+                  <Controls showInteractive={false} />
+                </ReactFlow>
+              </div>
+              <p className="text-xs text-zinc-500 sm:hidden">
+                チャートは指でドラッグして移動、2本指でズームできます
+              </p>
             </div>
           )}
 
