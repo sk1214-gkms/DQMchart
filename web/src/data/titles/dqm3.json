@@ -1,0 +1,156 @@
+{
+  "id": "dqm3",
+  "name": "ドラゴンクエストモンスターズ3",
+  "ruleset": "dqm3",
+  "note": "検証用サンプルデータ。モンスター名は実在のものを使っているが、ランク・系統・配合表・特殊配合レシピは仕組み検証用の仮データであり、実際のゲームの配合表とは異なる。",
+  "ranks": [
+    { "id": "G", "order": 0 },
+    { "id": "F", "order": 1 },
+    { "id": "E", "order": 2 },
+    { "id": "D", "order": 3 },
+    { "id": "C", "order": 4 },
+    { "id": "B", "order": 5 },
+    { "id": "A", "order": 6 },
+    { "id": "S", "order": 7 },
+    { "id": "X", "order": 8 }
+  ],
+  "families": [
+    { "id": "slime", "name": "スライム系" },
+    { "id": "dragon", "name": "ドラゴン系" },
+    { "id": "nature", "name": "自然系" },
+    { "id": "beast", "name": "魔獣系" },
+    { "id": "demon", "name": "悪魔系" },
+    { "id": "zombie", "name": "ゾンビ系" },
+    { "id": "material", "name": "物質系" },
+    { "id": "unknown", "name": "？？？系" }
+  ],
+  "monsters": [
+    { "id": "slime", "name": "スライム", "familyId": "slime", "rank": "G", "obtainable": true },
+    { "id": "hane_slime", "name": "はねスライム", "familyId": "slime", "rank": "G" },
+    { "id": "slime_beth", "name": "スライムベス", "familyId": "slime", "rank": "F", "obtainable": true },
+    { "id": "hoimi_slime", "name": "ホイミスライム", "familyId": "slime", "rank": "F", "obtainable": true },
+    { "id": "dragoslime", "name": "ドラゴスライム", "familyId": "slime", "rank": "F" },
+    { "id": "bubble_slime", "name": "バブルスライム", "familyId": "slime", "rank": "E", "obtainable": true },
+    { "id": "slime_knight", "name": "スライムナイト", "familyId": "slime", "rank": "E" },
+    { "id": "king_slime", "name": "キングスライム", "familyId": "slime", "rank": "C" },
+    { "id": "metal_slime", "name": "メタルスライム", "familyId": "slime", "rank": "B" },
+    { "id": "golden_slime", "name": "ゴールデンスライム", "familyId": "slime", "rank": "S" },
+    { "id": "kodora", "name": "コドラ", "familyId": "dragon", "rank": "G", "obtainable": true },
+    { "id": "dragon_kids", "name": "ドラゴンキッズ", "familyId": "dragon", "rank": "G" },
+    { "id": "smile_lizard", "name": "スマイルリザード", "familyId": "dragon", "rank": "F" },
+    { "id": "dragon_e", "name": "ドラゴン", "familyId": "dragon", "rank": "E", "obtainable": true },
+    { "id": "battle_rex", "name": "バトルレックス", "familyId": "dragon", "rank": "D" },
+    { "id": "sky_dragon", "name": "スカイドラゴン", "familyId": "dragon", "rank": "C" },
+    { "id": "great_dragon", "name": "グレイトドラゴン", "familyId": "dragon", "rank": "A" },
+    { "id": "dracky", "name": "ドラキー", "familyId": "nature", "rank": "G", "obtainable": true },
+    { "id": "momon", "name": "モーモン", "familyId": "nature", "rank": "F", "obtainable": true },
+    { "id": "momonja", "name": "ももんじゃ", "familyId": "beast", "rank": "G", "obtainable": true },
+    { "id": "almiraj", "name": "アルミラージ", "familyId": "beast", "rank": "F", "obtainable": true },
+    { "id": "killer_panther", "name": "キラーパンサー", "familyId": "beast", "rank": "C" },
+    { "id": "baby_satan", "name": "ベビーサタン", "familyId": "demon", "rank": "E", "obtainable": true },
+    { "id": "arch_demon", "name": "あくましんかん", "familyId": "demon", "rank": "B" },
+    { "id": "skeleton", "name": "がいこつ", "familyId": "zombie", "rank": "F", "obtainable": true },
+    { "id": "zombie_corpse", "name": "くさった死体", "familyId": "zombie", "rank": "E" },
+    { "id": "bomb_rock", "name": "ばくだんいわ", "familyId": "material", "rank": "E", "obtainable": true },
+    { "id": "golem", "name": "ゴーレム", "familyId": "material", "rank": "D" },
+    { "id": "dark_dream", "name": "ダークドレアム", "familyId": "unknown", "rank": "X" }
+  ],
+  "normalRules": [
+    { "familyA": "slime", "familyB": "dragon", "rank": "G", "childIds": ["hane_slime", "dragon_kids"] },
+    { "familyA": "slime", "familyB": "dragon", "rank": "F", "childIds": ["dragoslime", "smile_lizard"] },
+    { "familyA": "slime", "familyB": "dragon", "rank": "E", "childIds": ["slime_knight", "dragon_e"] },
+    { "familyA": "slime", "familyB": "slime", "rank": "G", "childIds": ["slime"] },
+    { "familyA": "slime", "familyB": "slime", "rank": "F", "childIds": ["hoimi_slime"] },
+    { "familyA": "dragon", "familyB": "dragon", "rank": "E", "childIds": ["dragon_e"] },
+    { "familyA": "slime", "familyB": "nature", "rank": "G", "childIds": ["slime", "dracky"] },
+    { "familyA": "slime", "familyB": "beast", "rank": "G", "childIds": ["hane_slime", "momonja"] },
+    { "familyA": "dragon", "familyB": "beast", "rank": "G", "childIds": ["dragon_kids", "momonja"] },
+    { "familyA": "beast", "familyB": "nature", "rank": "F", "childIds": ["almiraj", "momon"] },
+    { "familyA": "dragon", "familyB": "nature", "rank": "F", "childIds": ["smile_lizard", "momon"] },
+    { "familyA": "demon", "familyB": "zombie", "rank": "E", "childIds": ["baby_satan", "zombie_corpse"] },
+    { "familyA": "material", "familyB": "slime", "rank": "E", "childIds": ["bomb_rock", "bubble_slime"] },
+    { "familyA": "zombie", "familyB": "slime", "rank": "F", "childIds": ["skeleton", "dragoslime"] }
+  ],
+  "specialRecipes": [
+    {
+      "id": "sp_king_slime",
+      "childId": "king_slime",
+      "parents": [
+        { "kind": "monster", "monsterId": "slime_knight" },
+        { "kind": "monster", "monsterId": "hoimi_slime" }
+      ]
+    },
+    {
+      "id": "sp_sky_dragon",
+      "childId": "sky_dragon",
+      "parents": [
+        { "kind": "monster", "monsterId": "dragon_e" },
+        { "kind": "family", "familyId": "nature" }
+      ]
+    },
+    {
+      "id": "sp_battle_rex",
+      "childId": "battle_rex",
+      "parents": [
+        { "kind": "monster", "monsterId": "dragon_kids" },
+        { "kind": "monster", "monsterId": "smile_lizard" }
+      ]
+    },
+    {
+      "id": "sp_metal_slime",
+      "childId": "metal_slime",
+      "parents": [
+        { "kind": "monster", "monsterId": "king_slime" },
+        { "kind": "family", "familyId": "material" }
+      ]
+    },
+    {
+      "id": "sp_golem",
+      "childId": "golem",
+      "parents": [
+        { "kind": "monster", "monsterId": "bomb_rock" },
+        { "kind": "monster", "monsterId": "bomb_rock" }
+      ]
+    },
+    {
+      "id": "sp_killer_panther",
+      "childId": "killer_panther",
+      "parents": [
+        { "kind": "monster", "monsterId": "almiraj" },
+        { "kind": "monster", "monsterId": "momon" }
+      ]
+    },
+    {
+      "id": "sp_arch_demon",
+      "childId": "arch_demon",
+      "parents": [
+        { "kind": "monster", "monsterId": "baby_satan" },
+        { "kind": "family", "familyId": "zombie" }
+      ]
+    },
+    {
+      "id": "sp_great_dragon",
+      "childId": "great_dragon",
+      "parents": [
+        { "kind": "monster", "monsterId": "sky_dragon" },
+        { "kind": "monster", "monsterId": "battle_rex" }
+      ]
+    },
+    {
+      "id": "sp_golden_slime",
+      "childId": "golden_slime",
+      "parents": [
+        { "kind": "monster", "monsterId": "metal_slime" },
+        { "kind": "monster", "monsterId": "king_slime" }
+      ]
+    },
+    {
+      "id": "sp_dark_dream",
+      "childId": "dark_dream",
+      "parents": [
+        { "kind": "monster", "monsterId": "great_dragon" },
+        { "kind": "monster", "monsterId": "golden_slime" }
+      ]
+    }
+  ]
+}
