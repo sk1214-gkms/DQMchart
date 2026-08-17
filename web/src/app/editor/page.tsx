@@ -16,6 +16,7 @@ import '@xyflow/react/dist/style.css';
 import { nodeTypes } from '@/components/MonsterNode';
 import type { MonsterFlowNode, MonsterNodeStatus } from '@/components/MonsterNode';
 import { MonsterPicker } from '@/components/MonsterPicker';
+import { familyColor } from '@/components/MonsterBadges';
 import { useTitleData } from '@/components/TitleProvider';
 import { getRuleset } from '@/lib/engine/registry';
 import {
@@ -71,6 +72,7 @@ export default function EditorPage() {
           monsterId: m.id,
           label: m.name,
           sub: `${m.rank}ランク・${fam}`,
+          familyColor: familyColor(m.familyId),
           status: 'none',
         },
       },
@@ -170,6 +172,7 @@ export default function EditorPage() {
               monsterId: m.id,
               label: m.name,
               sub: `${m.rank}ランク・${fam}`,
+              familyColor: familyColor(m.familyId),
               status: 'none' as MonsterNodeStatus,
             },
           },
@@ -220,7 +223,7 @@ export default function EditorPage() {
       {/* スマホではキャンバスを先に出す（操作パネルが先だとキャンバスまで遠い） */}
       <div className="flex flex-col gap-4 lg:flex-row">
         <div className="order-1 flex flex-col gap-2 lg:order-2 lg:flex-1">
-          <div className="h-[55vh] min-h-[300px] rounded-lg border border-zinc-200 bg-white shadow-sm lg:h-[600px]">
+          <div className="h-[55vh] min-h-[300px] overflow-hidden rounded-xl border bg-white shadow-sm lg:h-[600px]" style={{ borderColor: 'var(--border)' }}>
             <ReactFlow
               nodes={displayNodes}
               edges={edges}
@@ -246,15 +249,15 @@ export default function EditorPage() {
             >
               選択中を削除{selectedCount > 0 && `（${selectedCount}）`}
             </button>
-            <span className="text-xs text-zinc-500">
+            <span className="text-xs text-[var(--muted)]">
               ノードや線をタップして選択 → 削除（パソコンではDeleteキーでも可）
             </span>
           </div>
 
-          <p className="text-xs text-zinc-500">
+          <p className="text-xs text-[var(--muted)]">
             モンスターの下側の丸から、子にしたいモンスターの上側の丸へドラッグすると配合線がつながります（親2体→子）。
           </p>
-          <ul className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-zinc-600">
+          <ul className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-[var(--muted)]">
             <li>
               <span className="mr-1 inline-block h-2 w-2 rounded-full bg-green-500" />
               配合成立
@@ -275,14 +278,14 @@ export default function EditorPage() {
         </div>
 
         <aside className="order-2 flex w-full flex-col gap-4 lg:order-1 lg:w-72">
-          <section className="rounded-lg border border-zinc-200 bg-white p-3 shadow-sm">
+          <section className="card p-3">
             <MonsterPicker data={data} value={pickId} onChange={setPickId} label="モンスターを追加" />
             <button onClick={addMonster} disabled={!pickId} className="btn btn-primary mt-2 w-full">
               キャンバスに追加
             </button>
           </section>
 
-          <section className="rounded-lg border border-zinc-200 bg-white p-3 shadow-sm">
+          <section className="card p-3">
             <h2 className="mb-2 text-sm font-semibold">チャートの保存</h2>
             <input
               className="field"
@@ -298,15 +301,15 @@ export default function EditorPage() {
                 新規
               </button>
             </div>
-            <p className="mt-2 text-[11px] text-zinc-500">
+            <p className="mt-2 text-[11px] text-[var(--muted)]">
               保存先はこのブラウザ内（アカウント同期は今後対応予定）
             </p>
           </section>
 
-          <section className="rounded-lg border border-zinc-200 bg-white p-3 shadow-sm">
+          <section className="card p-3">
             <h2 className="mb-2 text-sm font-semibold">保存済みチャート</h2>
             {saved.length === 0 ? (
-              <p className="text-xs text-zinc-500">まだありません</p>
+              <p className="text-xs text-[var(--muted)]">まだありません</p>
             ) : (
               <ul className="flex flex-col gap-1">
                 {saved.map((c) => (

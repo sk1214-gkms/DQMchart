@@ -1,5 +1,6 @@
 'use client';
 // React Flow用のモンスターノード。配合の親子は「親が上・子が下」で接続する。
+// 枠線・背景＝配合の状態、左端の帯＝系統（役割の違う情報を色で混ぜない）。
 import { Handle, Position } from '@xyflow/react';
 import type { Node, NodeProps } from '@xyflow/react';
 
@@ -9,6 +10,9 @@ export type MonsterNodeData = {
   label: string;
   sub: string;
   status: MonsterNodeStatus;
+  /** 系統の識別色。指定があればノード左端に帯で表示する */
+  familyColor?: string;
+  rank?: string;
   /** エディタでの検証・保存用。自動生成ツリーでは未使用 */
   monsterId?: string;
 };
@@ -16,24 +20,35 @@ export type MonsterNodeData = {
 export type MonsterFlowNode = Node<MonsterNodeData, 'monster'>;
 
 const statusStyles: Record<MonsterNodeStatus, string> = {
-  ok: 'border-green-500 bg-green-50',
-  ng: 'border-red-500 bg-red-50',
-  warn: 'border-amber-500 bg-amber-50',
-  wild: 'border-sky-400 bg-sky-50',
-  none: 'border-zinc-300 bg-white',
+  ok: 'border-[var(--status-ok)] bg-[#f1faf5]',
+  ng: 'border-[var(--status-ng)] bg-[#fef2f2]',
+  warn: 'border-[var(--status-warn)] bg-[#fffbeb]',
+  wild: 'border-[var(--status-info)] bg-[#f0f7fd]',
+  none: 'border-[var(--border)] bg-white',
 };
 
-// 指でも掴めるようにハンドル（接続点）を既定より大きくする
-const handleClass = '!h-4 !w-4 !border-2 !bg-white';
+// 接続点は指でも掴めるよう既定より大きくする
+const handleClass = '!h-4 !w-4 !border-2 !border-[var(--brand-500)] !bg-white';
 
-export function MonsterNode({ data }: NodeProps<MonsterFlowNode>) {
+export function MonsterNode({ data, selected }: NodeProps<MonsterFlowNode>) {
   return (
     <div
-      className={`min-w-36 rounded-md border-2 px-3 py-2 text-xs shadow-sm ${statusStyles[data.status]}`}
+      className={`relative min-w-40 overflow-hidden rounded-lg border-2 py-2 pl-4 pr-3 text-xs shadow-sm transition ${
+        statusStyles[data.status]
+      } ${selected ? 'ring-2 ring-[var(--brand-500)] ring-offset-1' : ''}`}
     >
+      {data.familyColor && (
+        <span
+          aria-hidden
+          className="absolute inset-y-0 left-0 w-1.5"
+          style={{ background: data.familyColor }}
+        />
+      )}
       <Handle type="target" position={Position.Top} className={handleClass} />
-      <div className="font-semibold text-zinc-900">{data.label}</div>
-      <div className="text-[10px] text-zinc-500">{data.sub}</div>
+      <div className="font-bold text-[var(--foreground)]">{data.label}</div>
+      <div className="mt-0.5 whitespace-pre-line text-[10px] leading-snug text-[var(--muted)]">
+        {data.sub}
+      </div>
       <Handle type="source" position={Position.Bottom} className={handleClass} />
     </div>
   );

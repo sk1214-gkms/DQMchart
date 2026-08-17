@@ -1,15 +1,49 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* サーフェス（背景・面）*/
+  --background: #f4f6fb;
+  --surface: #ffffff;
+  --foreground: #1b2233;
+  --muted: #5b6478;
+  --border: #dfe3ee;
+
+  /* ブランドカラー（見出し・ヘッダー） */
+  --brand-900: #101a3a;
+  --brand-700: #1e3a8a;
+  --brand-500: #2a78d6;
+
   /* タップ領域の最小サイズ（スマホでの押しやすさの下限） */
   --tap-target: 44px;
+
+  /*
+   * 系統カラー（カテゴリ配色）。
+   * 色覚特性シミュレーションと明度・彩度の検証を通した8色を系統に固定割り当てしている。
+   * 色は補助であり、識別は必ず系統名テキストと併用する。
+   */
+  --family-slime: #2a78d6;
+  --family-beast: #eb6834;
+  --family-dragon: #1baf7a;
+  --family-material: #eda100;
+  --family-unknown: #e87ba4;
+  --family-nature: #008300;
+  --family-zombie: #4a3aa7;
+  --family-demon: #e34948;
+
+  /* 状態色（配合の成否など。系統色とは役割を分ける） */
+  --status-ok: #157f4d;
+  --status-ng: #c92a2a;
+  --status-warn: #b45309;
+  --status-info: #1c6fb8;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-line: var(--border);
+  --color-brand: var(--brand-700);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -19,7 +53,9 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    var(--font-geist-sans), "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP",
+    "Yu Gothic", Meiryo, system-ui, sans-serif;
 }
 
 @layer components {
@@ -29,26 +65,71 @@ body {
    * ページを自動ズームしてしまい、レイアウトが崩れて見える）。
    */
   .field {
-    @apply w-full rounded border border-zinc-300 bg-white px-3 text-base text-zinc-900;
+    @apply w-full rounded-lg border bg-white px-3 text-base transition;
+    border-color: var(--border);
+    color: var(--foreground);
     min-height: var(--tap-target);
+  }
+
+  .field:focus {
+    @apply outline-none;
+    border-color: var(--brand-500);
+    box-shadow: 0 0 0 3px rgb(42 120 214 / 0.15);
   }
 
   /* ボタンは .btn と装飾クラスを組み合わせて使う（例: class="btn btn-primary"） */
   .btn {
-    @apply inline-flex items-center justify-center rounded px-4 text-base font-medium disabled:opacity-40;
+    @apply inline-flex cursor-pointer items-center justify-center gap-1.5 rounded-lg px-4 text-base font-medium transition disabled:cursor-not-allowed disabled:opacity-40;
     min-height: var(--tap-target);
   }
 
   .btn-primary {
-    @apply bg-zinc-900 text-white;
+    @apply text-white shadow-sm;
+    background: linear-gradient(180deg, var(--brand-500), var(--brand-700));
+  }
+
+  .btn-primary:not(:disabled):hover {
+    filter: brightness(1.08);
   }
 
   .btn-accent {
-    @apply bg-emerald-600 text-white;
+    @apply text-white shadow-sm;
+    background: linear-gradient(180deg, #22a06b, #157f4d);
+  }
+
+  .btn-accent:hover {
+    filter: brightness(1.08);
   }
 
   .btn-outline {
-    @apply border border-zinc-300 bg-white text-zinc-700;
+    @apply border bg-white;
+    border-color: var(--border);
+    color: var(--foreground);
+  }
+
+  .btn-outline:not(:disabled):hover {
+    background: #f7f9fd;
+  }
+
+  /* カード（情報のまとまり） */
+  .card {
+    @apply rounded-xl border bg-white p-4 shadow-sm;
+    border-color: var(--border);
+  }
+
+  /* 系統バッジ：色ドット＋系統名（色だけに頼らない） */
+  .family-badge {
+    @apply inline-flex items-center gap-1.5 whitespace-nowrap text-xs;
+    color: var(--muted);
+  }
+
+  .family-dot {
+    @apply inline-block h-2.5 w-2.5 shrink-0 rounded-full;
+  }
+
+  /* ランクバッジ：単色の濃淡で上位ほど濃くする（順序のある指標） */
+  .rank-badge {
+    @apply inline-flex min-w-6 items-center justify-center rounded px-1.5 py-0.5 text-xs font-bold tabular-nums;
   }
 }
 
@@ -56,4 +137,9 @@ body {
 .react-flow__pane,
 .react-flow__node {
   touch-action: none;
+}
+
+.react-flow__edge-path {
+  stroke: #9aa4bd;
+  stroke-width: 2;
 }

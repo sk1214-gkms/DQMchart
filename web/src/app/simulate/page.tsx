@@ -2,6 +2,7 @@
 // 配合シミュレータ: 親2体 → 子候補（通常配合＋特殊配合）
 import { useMemo, useState } from 'react';
 import { MonsterPicker } from '@/components/MonsterPicker';
+import { FamilyBadge, RankBadge, familyColor } from '@/components/MonsterBadges';
 import { useTitleData } from '@/components/TitleProvider';
 import { getRuleset } from '@/lib/engine/registry';
 
@@ -73,39 +74,45 @@ export default function SimulatePage() {
       )}
 
       {results === null ? (
-        <p className="text-sm text-zinc-500">親を2体選ぶと子候補を表示します。</p>
+        <p className="text-sm text-[var(--muted)]">親を2体選ぶと子候補を表示します。</p>
       ) : results.length === 0 ? (
-        <p className="rounded border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-600">
-          この組み合わせから生まれる子はサンプルデータに登録されていません。
+        <p className="card text-sm text-[var(--muted)]">
+          この組み合わせから生まれる子はデータに登録されていません。
         </p>
       ) : (
-        <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-          {results.map((c, i) => {
-            const fam = data.families.find((f) => f.id === c.child.familyId)?.name;
-            return (
+        <section>
+          <h2 className="mb-2 font-bold">
+            生まれる子候補
+            <span className="ml-2 text-sm font-normal text-[var(--muted)]">{results.length}件</span>
+          </h2>
+          <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            {results.map((c, i) => (
               <li
                 key={`${c.child.id}-${c.method}-${i}`}
-                className="flex items-center justify-between rounded-lg border border-zinc-200 bg-white px-3 py-2 shadow-sm"
+                className="flex items-center gap-2 overflow-hidden rounded-lg border bg-white py-2 pl-3 pr-3 shadow-sm transition hover:shadow"
+                style={{
+                  borderColor: 'var(--border)',
+                  borderLeft: `4px solid ${familyColor(c.child.familyId)}`,
+                }}
               >
-                <div>
-                  <div className="font-semibold">{c.child.name}</div>
-                  <div className="text-xs text-zinc-500">
-                    {c.child.rank}ランク・{fam}
-                  </div>
+                <RankBadge rank={c.child.rank} data={data} />
+                <div className="min-w-0 flex-1">
+                  <div className="truncate font-semibold">{c.child.name}</div>
+                  <FamilyBadge data={data} familyId={c.child.familyId} />
                 </div>
                 <span
-                  className={`rounded px-2 py-0.5 text-xs font-medium ${
+                  className={`shrink-0 rounded px-2 py-0.5 text-xs font-bold ${
                     c.method === 'special'
                       ? 'bg-amber-100 text-amber-800'
                       : 'bg-sky-100 text-sky-800'
                   }`}
                 >
-                  {c.method === 'special' ? '特殊配合' : '通常配合'}
+                  {c.method === 'special' ? '特殊' : '通常'}
                 </span>
               </li>
-            );
-          })}
-        </ul>
+            ))}
+          </ul>
+        </section>
       )}
     </div>
   );

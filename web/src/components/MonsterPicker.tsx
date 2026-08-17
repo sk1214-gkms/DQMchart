@@ -1,14 +1,8 @@
 'use client';
 // モンスター選択UI: テキストで絞り込み → 系統別グループのセレクトで選ぶ
 import { useMemo, useState } from 'react';
-import type { AcquisitionKind, TitleData } from '@/lib/engine/types';
-
-/** 配合以外の入手手段の表示名 */
-export function acquisitionLabel(kind: AcquisitionKind | undefined): string {
-  if (kind === 'egg') return 'タマゴ';
-  if (kind === 'event') return 'イベント';
-  return '野生';
-}
+import { acquisitionLabel } from '@/components/MonsterBadges';
+import type { TitleData } from '@/lib/engine/types';
 
 export function monsterLabel(data: TitleData, monsterId: string): string {
   const m = data.monsters.find((x) => x.id === monsterId);
@@ -39,7 +33,7 @@ export function MonsterPicker({
 
   return (
     <div className="flex flex-col gap-1.5">
-      <span className="text-sm font-medium text-zinc-700">{label}</span>
+      <span className="text-sm font-semibold text-[var(--foreground)]">{label}</span>
       <input
         className="field"
         type="search"

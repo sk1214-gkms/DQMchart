@@ -6,17 +6,21 @@ import type { Edge } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { nodeTypes } from '@/components/MonsterNode';
 import type { MonsterFlowNode } from '@/components/MonsterNode';
-import { MonsterPicker, acquisitionLabel } from '@/components/MonsterPicker';
+import { MonsterPicker } from '@/components/MonsterPicker';
+import {
+  AcquisitionBadge,
+  FamilyBadge,
+  RankBadge,
+  acquisitionLabel,
+  familyColor,
+  familyName,
+} from '@/components/MonsterBadges';
 import { useTitleData } from '@/components/TitleProvider';
 import { getRuleset } from '@/lib/engine/registry';
 import type { BreedingMethod, BreedingPlan, Monster, TitleData } from '@/lib/engine/types';
 
 const X_GAP = 200;
 const Y_GAP = 140;
-
-function familyName(data: TitleData, familyId: string): string {
-  return data.families.find((f) => f.id === familyId)?.name ?? familyId;
-}
 
 function methodLabel(method: BreedingMethod): string {
   if (method === 'special') return '特殊配合';
@@ -42,9 +46,10 @@ function buildFlow(plan: BreedingPlan, data: TitleData) {
         position: { x, y: -depth * Y_GAP },
         data: {
           label: p.monster.name,
-          sub: `${p.monster.rank}ランク・${familyName(data, p.monster.familyId)}・${
+          sub: `${p.monster.rank}ランク・${familyName(data, p.monster.familyId)}\n${
             p.monster.acquisitionDetail ?? `${acquisitionLabel(p.monster.acquisition)}で入手`
           }`,
+          familyColor: familyColor(p.monster.familyId),
           status: 'wild',
         },
       });
@@ -89,9 +94,10 @@ function buildFlow(plan: BreedingPlan, data: TitleData) {
       position: { x, y: -depth * Y_GAP },
       data: {
         label: p.monster.name,
-        sub: `${p.monster.rank}ランク・${familyName(data, p.monster.familyId)}・${methodLabel(
+        sub: `${p.monster.rank}ランク・${familyName(data, p.monster.familyId)}\n${methodLabel(
           p.method,
-        )}`,
+        )}で作る`,
+        familyColor: familyColor(p.monster.familyId),
         status: 'ok',
       },
     });
@@ -161,39 +167,54 @@ export default function AutoPage() {
     return Array.from(counts.values()).sort((a, b) => b.count - a.count);
   }, [result]);
 
+  const targetMonster = data.monsters.find((m) => m.id === targetId);
+
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-xl font-bold">自動チャート生成</h1>
-      <div className="max-w-sm">
+      <div className="card max-w-sm">
         <MonsterPicker data={data} value={targetId} onChange={setTargetId} label="目標モンスター" />
       </div>
 
       {!result ? (
-        <p className="text-sm text-zinc-500">
+        <p className="text-sm text-[var(--muted)]">
           目標モンスターを選ぶと、配合なしで手に入るモンスター（野生・タマゴ・イベント）から始まる配合手順を逆算します。
         </p>
       ) : !result.plan ? (
-        <p className="rounded border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">
+        <p className="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">
           このモンスターへの入手ルートが見つかりませんでした（データ未整備の可能性があります）。
         </p>
       ) : (
         <>
-          {result.plan.kind === 'wild' ? (
-            <p className="rounded border border-sky-200 bg-sky-50 px-3 py-2 text-sm text-sky-800">
-              このモンスターは配合なしで入手できます。
-              {result.plan.monster.acquisitionDetail
-                ? `（${result.plan.monster.acquisitionDetail}）`
-                : `（${acquisitionLabel(result.plan.monster.acquisition)}）`}
-            </p>
-          ) : (
-            <p className="text-sm text-zinc-600">
-              必要な配合回数: <span className="font-semibold">{result.plan.cost}回</span>
-            </p>
-          )}
+          <div className="card flex flex-wrap items-center gap-x-4 gap-y-2">
+            {targetMonster && (
+              <div className="flex items-center gap-2">
+                <RankBadge rank={targetMonster.rank} data={data} />
+                <span className="text-lg font-bold">{targetMonster.name}</span>
+                <FamilyBadge data={data} familyId={targetMonster.familyId} />
+              </div>
+            )}
+            {result.plan.kind === 'wild' ? (
+              <p className="text-sm text-[var(--status-info)]">
+                配合不要で入手できます
+                {result.plan.monster.acquisitionDetail
+                  ? `（${result.plan.monster.acquisitionDetail}）`
+                  : `（${acquisitionLabel(result.plan.monster.acquisition)}）`}
+              </p>
+            ) : (
+              <p className="text-sm text-[var(--muted)]">
+                必要な配合回数
+                <span className="ml-1.5 text-xl font-bold tabular-nums text-[var(--brand-700)]">
+                  {result.plan.cost}
+                </span>
+                回
+              </p>
+            )}
+          </div>
 
           {result.flow && result.flow.nodes.length > 1 && (
             <div className="flex flex-col gap-1">
-              <div className="h-[60vh] min-h-[300px] rounded-lg border border-zinc-200 bg-white shadow-sm sm:h-[540px]">
+              <div className="h-[60vh] min-h-[300px] overflow-hidden rounded-xl border bg-white shadow-sm sm:h-[540px]" style={{ borderColor: 'var(--border)' }}>
                 <ReactFlow
                   nodes={result.flow.nodes}
                   edges={result.flow.edges}
@@ -208,7 +229,7 @@ export default function AutoPage() {
                   <Controls showInteractive={false} />
                 </ReactFlow>
               </div>
-              <p className="text-xs text-zinc-500 sm:hidden">
+              <p className="text-xs text-[var(--muted)] sm:hidden">
                 チャートは指でドラッグして移動、2本指でズームできます
               </p>
             </div>
@@ -216,18 +237,39 @@ export default function AutoPage() {
 
           {materials.length > 0 && result.plan.kind === 'breed' && (
             <section>
-              <h2 className="mb-2 font-semibold">まず集める素材</h2>
-              <ul className="grid gap-1 text-sm sm:grid-cols-2 lg:grid-cols-3">
+              <h2 className="mb-2 flex items-center gap-2 font-bold">
+                <span aria-hidden className="text-[var(--brand-500)]">
+                  ①
+                </span>
+                まず集める素材
+              </h2>
+              <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
                 {materials.map(({ monster, count }) => (
                   <li
                     key={monster.id}
-                    className="rounded border border-zinc-200 bg-white px-3 py-1.5"
+                    className="flex items-start gap-2 overflow-hidden rounded-lg border bg-white py-2 pl-3 pr-3 shadow-sm"
+                    style={{
+                      borderColor: 'var(--border)',
+                      borderLeft: `4px solid ${familyColor(monster.familyId)}`,
+                    }}
                   >
-                    <span className="font-medium">{monster.name}</span>
-                    {count > 1 && <span className="ml-1 text-amber-700">×{count}体</span>}
-                    <span className="block text-[11px] text-zinc-500">
-                      {monster.acquisitionDetail ?? acquisitionLabel(monster.acquisition)}
-                    </span>
+                    <RankBadge rank={monster.rank} data={data} />
+                    <div className="min-w-0 flex-1">
+                      <div className="flex flex-wrap items-center gap-x-2">
+                        <span className="font-semibold">{monster.name}</span>
+                        {count > 1 && (
+                          <span className="rounded bg-amber-100 px-1.5 text-xs font-bold text-amber-800">
+                            ×{count}体
+                          </span>
+                        )}
+                      </div>
+                      <div className="mt-0.5 flex flex-wrap items-center gap-1.5">
+                        <AcquisitionBadge kind={monster.acquisition} />
+                        <span className="text-[11px] text-[var(--muted)]">
+                          {monster.acquisitionDetail ?? familyName(data, monster.familyId)}
+                        </span>
+                      </div>
+                    </div>
                   </li>
                 ))}
               </ul>
@@ -236,14 +278,30 @@ export default function AutoPage() {
 
           {stepCounts.length > 0 && (
             <section>
-              <h2 className="mb-2 font-semibold">配合手順</h2>
-              <ol className="flex list-decimal flex-col gap-1 pl-6 text-sm">
-                {stepCounts.map(([step, count]) => (
-                  <li key={step}>
-                    {step}
-                    {count > 1 && (
-                      <span className="ml-1 font-semibold text-amber-700">×{count}回</span>
-                    )}
+              <h2 className="mb-2 flex items-center gap-2 font-bold">
+                <span aria-hidden className="text-[var(--brand-500)]">
+                  ②
+                </span>
+                配合手順
+              </h2>
+              <ol className="flex flex-col gap-2">
+                {stepCounts.map(([step, count], i) => (
+                  <li
+                    key={step}
+                    className="flex items-start gap-3 rounded-lg border bg-white px-3 py-2 text-sm shadow-sm"
+                    style={{ borderColor: 'var(--border)' }}
+                  >
+                    <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#eef3fd] text-xs font-bold tabular-nums text-[var(--brand-700)]">
+                      {i + 1}
+                    </span>
+                    <span className="flex-1 leading-relaxed">
+                      {step}
+                      {count > 1 && (
+                        <span className="ml-1.5 rounded bg-amber-100 px-1.5 text-xs font-bold text-amber-800">
+                          ×{count}回
+                        </span>
+                      )}
+                    </span>
                   </li>
                 ))}
               </ol>
