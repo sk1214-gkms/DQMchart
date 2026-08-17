@@ -81,14 +81,16 @@
       "name": "スライム",
       "familyId": "slime",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "スライムコロネ",
       "name": "スライムコロネ",
       "familyId": "slime",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "スライムつむり",
@@ -107,28 +109,32 @@
       "name": "パールスライム",
       "familyId": "slime",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "はねスライム",
       "name": "はねスライム",
       "familyId": "slime",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "バブルスライム",
       "name": "バブルスライム",
       "familyId": "slime",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ホイミスライム",
       "name": "ホイミスライム",
       "familyId": "slime",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "マッシュスライム",
@@ -146,7 +152,10 @@
       "id": "バーガースライム",
       "name": "バーガースライム",
       "familyId": "slime",
-      "rank": "G"
+      "rank": "G",
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "マクドナルドコラボ限定。マックデリバリー1回目の注文でダウンロード番号を取得→タイトル画面でコード入力→エンドール闘技場『スペシャルカップ：マクドナルドチャレンジ1』クリアで入手。配信期間 2023/12/01〜2024/01/12（終了済）。一度入手後は白タマゴ／モグダンジョンからも出るようになる。"
     },
     {
       "id": "ジャングラー",
@@ -159,35 +168,40 @@
       "name": "スノーム",
       "familyId": "slime",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "スライムカルゴ",
       "name": "スライムカルゴ",
       "familyId": "slime",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "スライムタワー",
       "name": "スライムタワー",
       "familyId": "slime",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "スライムナイト",
       "name": "スライムナイト",
       "familyId": "slime",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "スライムベス",
       "name": "スライムベス",
       "familyId": "slime",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "たまねぎスライム",
@@ -200,7 +214,8 @@
       "name": "ドラゴスライム",
       "familyId": "slime",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ぶちスライム",
@@ -225,28 +240,32 @@
       "name": "エンゼルスライム",
       "familyId": "slime",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "こんぺいとう",
       "name": "こんぺいとう",
       "familyId": "slime",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ストーンスライム",
       "name": "ストーンスライム",
       "familyId": "slime",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "スピンスライム",
       "name": "スピンスライム",
       "familyId": "slime",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "スライムタール",
@@ -259,7 +278,8 @@
       "name": "ダークスライム",
       "familyId": "slime",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ぬかどこスライム",
@@ -272,7 +292,8 @@
       "name": "メタルスライム",
       "familyId": "slime",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "もりもりスライム",
@@ -297,14 +318,16 @@
       "name": "スライムブレス",
       "familyId": "slime",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "石炭つむり",
       "name": "石炭つむり",
       "familyId": "slime",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ダークキング",
@@ -317,7 +340,8 @@
       "name": "チョコタワー",
       "familyId": "slime",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "つららスライム",
@@ -330,28 +354,32 @@
       "name": "バブルキング",
       "familyId": "slime",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ベホマスライム",
       "name": "ベホマスライム",
       "familyId": "slime",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "もりもりベス",
       "name": "もりもりベス",
       "familyId": "slime",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "コロネホワイト",
       "name": "コロネホワイト",
       "familyId": "slime",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "スライムジョーカー",
@@ -370,28 +398,32 @@
       "name": "スライムフェアリー",
       "familyId": "slime",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "スライムプディング",
       "name": "スライムプディング",
       "familyId": "slime",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "スライムボーグ",
       "name": "スライムボーグ",
       "familyId": "slime",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "はぐれメタル",
       "name": "はぐれメタル",
       "familyId": "slime",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ぶちスライムベス",
@@ -440,7 +472,8 @@
       "name": "タールキング",
       "familyId": "slime",
       "rank": "B",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "だんごスライム",
@@ -453,14 +486,16 @@
       "name": "ふうらいスライム",
       "familyId": "slime",
       "rank": "B",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "メタルキング",
       "name": "メタルキング",
       "familyId": "slime",
       "rank": "B",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ゴールデンスライム",
@@ -503,14 +538,16 @@
       "name": "いばらドラゴン",
       "familyId": "dragon",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "コドラ",
       "name": "コドラ",
       "familyId": "dragon",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ドラゴンキッズ",
@@ -523,21 +560,24 @@
       "name": "はじけドーラ",
       "familyId": "dragon",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "はなまきドラゴ",
       "name": "はなまきドラゴ",
       "familyId": "dragon",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "フェアリードラゴン",
       "name": "フェアリードラゴン",
       "familyId": "dragon",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "プテラノドン",
@@ -556,7 +596,8 @@
       "name": "アイアンタートル",
       "familyId": "dragon",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ウィングスネーク",
@@ -569,20 +610,25 @@
       "name": "クロコマーチ",
       "familyId": "dragon",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "シーホース",
       "name": "シーホース",
       "familyId": "dragon",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "スカイドラゴン",
       "name": "スカイドラゴン",
       "familyId": "dragon",
-      "rank": "F"
+      "rank": "F",
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "白のタマゴから孵化（出やすい場所: 煉獄峠の魔界）"
     },
     {
       "id": "スマイルリザード",
@@ -619,7 +665,8 @@
       "name": "ギガントヒルズ",
       "familyId": "dragon",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ソードドラゴン",
@@ -638,35 +685,40 @@
       "name": "毒つぼドラゴン",
       "familyId": "dragon",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ドラゴン",
       "name": "ドラゴン",
       "familyId": "dragon",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "フーセンドラゴン",
       "name": "フーセンドラゴン",
       "familyId": "dragon",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "フォレストドラゴ",
       "name": "フォレストドラゴ",
       "familyId": "dragon",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "リザードマン",
       "name": "リザードマン",
       "familyId": "dragon",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "アックスドラゴン",
@@ -703,7 +755,8 @@
       "name": "ドラゴンライダー",
       "familyId": "dragon",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ヘルダイバー",
@@ -727,14 +780,18 @@
       "id": "ウルフドラゴン",
       "name": "ウルフドラゴン",
       "familyId": "dragon",
-      "rank": "C"
+      "rank": "C",
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "金のタマゴから孵化（出やすい場所: 流神殿の魔界）"
     },
     {
       "id": "ガメゴンロード",
       "name": "ガメゴンロード",
       "familyId": "dragon",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "キングリザード",
@@ -765,7 +822,8 @@
       "name": "バルンバ",
       "familyId": "dragon",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ボボンガー",
@@ -778,7 +836,8 @@
       "name": "ワニバーン",
       "familyId": "dragon",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ギガントドラゴン",
@@ -941,14 +1000,16 @@
       "name": "おおがらす",
       "familyId": "nature",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "おおにわとり",
       "name": "おおにわとり",
       "familyId": "nature",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "オニオーン",
@@ -961,14 +1022,16 @@
       "name": "キャタピラー",
       "familyId": "nature",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "くしざしツインズ",
       "name": "くしざしツインズ",
       "familyId": "nature",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ズッキーニャ",
@@ -981,14 +1044,16 @@
       "name": "テールイーター",
       "familyId": "nature",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ナスビナーラ",
       "name": "ナスビナーラ",
       "familyId": "nature",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ピッキー",
@@ -1001,14 +1066,16 @@
       "name": "プチアーノン",
       "familyId": "nature",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "フロッガー",
       "name": "フロッガー",
       "familyId": "nature",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "あばれうしどり",
@@ -1027,35 +1094,40 @@
       "name": "かまいたち",
       "familyId": "nature",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ガルーダ",
       "name": "ガルーダ",
       "familyId": "nature",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "キラーコーン",
       "name": "キラーコーン",
       "familyId": "nature",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "サボテンボール",
       "name": "サボテンボール",
       "familyId": "nature",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "タップペンギー",
       "name": "タップペンギー",
       "familyId": "nature",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "どんぐりベビー",
@@ -1074,21 +1146,24 @@
       "name": "ミノーン",
       "familyId": "nature",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "もみじこぞう",
       "name": "もみじこぞう",
       "familyId": "nature",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "イルカちょうちん",
       "name": "イルカちょうちん",
       "familyId": "nature",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "キメラ",
@@ -1107,7 +1182,8 @@
       "name": "ぐんたいガニ",
       "familyId": "nature",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "タコメット",
@@ -1131,7 +1207,10 @@
       "id": "とつげきうお",
       "name": "とつげきうお",
       "familyId": "nature",
-      "rank": "E"
+      "rank": "E",
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "銀のタマゴから孵化（出やすい場所: 流神殿の魔界）"
     },
     {
       "id": "ビーンファイター",
@@ -1143,14 +1222,18 @@
       "id": "ヘルボックル",
       "name": "ヘルボックル",
       "familyId": "nature",
-      "rank": "E"
+      "rank": "E",
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "銀のタマゴから孵化（出やすい場所: 甘味楼の魔界）"
     },
     {
       "id": "メランザーナ",
       "name": "メランザーナ",
       "familyId": "nature",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "岩とびあくま",
@@ -1163,7 +1246,8 @@
       "name": "うずしおキング",
       "familyId": "nature",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "エビルアングラー",
@@ -1175,14 +1259,18 @@
       "id": "ガマキャノン",
       "name": "ガマキャノン",
       "familyId": "nature",
-      "rank": "D"
+      "rank": "D",
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "銀のタマゴから孵化（出やすい場所: 人間界）"
     },
     {
       "id": "サンダーフロッグ",
       "name": "サンダーフロッグ",
       "familyId": "nature",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "じごくのたまねぎ",
@@ -1195,7 +1283,8 @@
       "name": "スノーグリフォン",
       "familyId": "nature",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ダンジョンえび",
@@ -1214,7 +1303,8 @@
       "name": "ひとくいそう",
       "familyId": "nature",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ヘルコンドル",
@@ -1233,7 +1323,8 @@
       "name": "かえんムカデ",
       "familyId": "nature",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ケセランパセラン",
@@ -1246,14 +1337,16 @@
       "name": "さそりアーマー",
       "familyId": "nature",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "じごくのハサミ",
       "name": "じごくのハサミ",
       "familyId": "nature",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "だいおうイカ",
@@ -1266,7 +1359,8 @@
       "name": "だいおうガマ",
       "familyId": "nature",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ダンスニードル",
@@ -1278,14 +1372,18 @@
       "id": "ブラックベジター",
       "name": "ブラックベジター",
       "familyId": "nature",
-      "rank": "C"
+      "rank": "C",
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "金のタマゴから孵化（出やすい場所: 甘味楼の魔界）"
     },
     {
       "id": "レッドシャモ",
       "name": "レッドシャモ",
       "familyId": "nature",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "アカイライ",
@@ -1304,7 +1402,8 @@
       "name": "スターキメラ",
       "familyId": "nature",
       "rank": "B",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ニードルフィン",
@@ -1317,14 +1416,16 @@
       "name": "ひくいどり",
       "familyId": "nature",
       "rank": "B",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ブラッドオックス",
       "name": "ブラッドオックス",
       "familyId": "nature",
       "rank": "B",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ブルベリーノ",
@@ -1337,14 +1438,16 @@
       "name": "ホエールマージ",
       "familyId": "nature",
       "rank": "B",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ホークブリザード",
       "name": "ホークブリザード",
       "familyId": "nature",
       "rank": "B",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ロックちょう",
@@ -1393,21 +1496,24 @@
       "name": "アントベア",
       "familyId": "beast",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "いたずらもぐら",
       "name": "いたずらもぐら",
       "familyId": "beast",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "いっかくうさぎ",
       "name": "いっかくうさぎ",
       "familyId": "beast",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "おおきづち",
@@ -1432,35 +1538,40 @@
       "name": "しましまキャット",
       "familyId": "beast",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ビッグハット",
       "name": "ビッグハット",
       "familyId": "beast",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ファーラット",
       "name": "ファーラット",
       "familyId": "beast",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ベビーパンサー",
       "name": "ベビーパンサー",
       "familyId": "beast",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "みみとびねずみ",
       "name": "みみとびねずみ",
       "familyId": "beast",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ももんじゃ",
@@ -1485,14 +1596,16 @@
       "name": "キャットフライ",
       "familyId": "beast",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "スカルガルー",
       "name": "スカルガルー",
       "familyId": "beast",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "とらおとこ",
@@ -1547,28 +1660,32 @@
       "name": "かくとうパンサー",
       "familyId": "beast",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "グリズリー",
       "name": "グリズリー",
       "familyId": "beast",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "シャドウベビー",
       "name": "シャドウベビー",
       "familyId": "beast",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ダックスビル",
       "name": "ダックスビル",
       "familyId": "beast",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "トンブレロ",
@@ -1593,14 +1710,16 @@
       "name": "ブラウニー",
       "familyId": "beast",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "プリズニャン",
       "name": "プリズニャン",
       "familyId": "beast",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "モコモコじゅう",
@@ -1619,14 +1738,16 @@
       "name": "ウイングタイガー",
       "familyId": "beast",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ガーゴイル",
       "name": "ガーゴイル",
       "familyId": "beast",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "キラーパンサー",
@@ -1651,21 +1772,24 @@
       "name": "デザートゴースト",
       "familyId": "beast",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "トロピカキング",
       "name": "トロピカキング",
       "familyId": "beast",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ベンガル",
       "name": "ベンガル",
       "familyId": "beast",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ユニコーン",
@@ -1702,14 +1826,16 @@
       "name": "オークキング",
       "familyId": "beast",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "キラーピッケル",
       "name": "キラーピッケル",
       "familyId": "beast",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ダンビラムーチョ",
@@ -1722,21 +1848,24 @@
       "name": "ビッグももんじゃ",
       "familyId": "beast",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ブラバニクイーン",
       "name": "ブラバニクイーン",
       "familyId": "beast",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "まかいじゅう",
       "name": "まかいじゅう",
       "familyId": "beast",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "マムー",
@@ -1761,14 +1890,16 @@
       "name": "シャドウパンサー",
       "familyId": "beast",
       "rank": "B",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ダークペルシャ",
       "name": "ダークペルシャ",
       "familyId": "beast",
       "rank": "B",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ダースリカント",
@@ -1780,13 +1911,19 @@
       "id": "とうだいタイガー",
       "name": "とうだいタイガー",
       "familyId": "beast",
-      "rank": "B"
+      "rank": "B",
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "金のタマゴから孵化（出やすい場所: 煉獄峠の魔界）"
     },
     {
       "id": "ドン・モグーラ",
       "name": "ドン・モグーラ",
       "familyId": "beast",
-      "rank": "B"
+      "rank": "B",
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "金のタマゴから孵化（出やすい場所: 覇王城の魔界）"
     },
     {
       "id": "バッファロン",
@@ -1799,21 +1936,24 @@
       "name": "ベロリンマン",
       "familyId": "beast",
       "rank": "B",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "モヒカント",
       "name": "モヒカント",
       "familyId": "beast",
       "rank": "B",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "れんごく天馬",
       "name": "れんごく天馬",
       "familyId": "beast",
       "rank": "B",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "キャットリベリオ",
@@ -1825,7 +1965,10 @@
       "id": "キングレオ",
       "name": "キングレオ",
       "familyId": "beast",
-      "rank": "A"
+      "rank": "A",
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "虹のタマゴから孵化（出やすい場所: 流神殿の魔界・覇王城の魔界（上級））"
     },
     {
       "id": "黒竜丸",
@@ -1838,7 +1981,8 @@
       "name": "心眼たぬき",
       "familyId": "beast",
       "rank": "A",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "デスゴーゴン",
@@ -1869,14 +2013,16 @@
       "name": "からくりエッグ",
       "familyId": "material",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ギズモ",
       "name": "ギズモ",
       "familyId": "material",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "くみひもこぞう",
@@ -1895,14 +2041,16 @@
       "name": "たけやりへい",
       "familyId": "material",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ドロザラー",
       "name": "ドロザラー",
       "familyId": "material",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "どろにんぎょう",
@@ -1915,21 +2063,24 @@
       "name": "フォンデュ",
       "familyId": "material",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "メタッピー",
       "name": "メタッピー",
       "familyId": "material",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ランタンこぞう",
       "name": "ランタンこぞう",
       "familyId": "material",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "わらいぶくろ",
@@ -1942,7 +2093,8 @@
       "name": "あばれこまいぬ",
       "familyId": "material",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "おばけプレート",
@@ -1961,14 +2113,16 @@
       "name": "とげジョボー",
       "familyId": "material",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ドラムゴート",
       "name": "ドラムゴート",
       "familyId": "material",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "トルトリーナ",
@@ -1987,21 +2141,24 @@
       "name": "ひとくいサーベル",
       "familyId": "material",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ひとくいばこ",
       "name": "ひとくいばこ",
       "familyId": "material",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ミステリドール",
       "name": "ミステリドール",
       "familyId": "material",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "メタルハンター",
@@ -2032,27 +2189,33 @@
       "name": "ガチャコッコ",
       "familyId": "material",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "キラーアンブレラ",
       "name": "キラーアンブレラ",
       "familyId": "material",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "クリオネオン",
       "name": "クリオネオン",
       "familyId": "material",
-      "rank": "E"
+      "rank": "E",
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "銀のタマゴから孵化（出やすい場所: 鉄鋼砦の魔界）"
     },
     {
       "id": "ケミカルゼリー",
       "name": "ケミカルゼリー",
       "familyId": "material",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "シールドオーガ",
@@ -2065,28 +2228,32 @@
       "name": "デビルアーマー",
       "familyId": "material",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ばくだんいわ",
       "name": "ばくだんいわ",
       "familyId": "material",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ヒートギズモ",
       "name": "ヒートギズモ",
       "familyId": "material",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "フロストギズモ",
       "name": "フロストギズモ",
       "familyId": "material",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "キラーマシン",
@@ -2099,7 +2266,8 @@
       "name": "サブナック",
       "familyId": "material",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "シーゴーレム",
@@ -2118,35 +2286,40 @@
       "name": "ストーンマン",
       "familyId": "material",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "デビルスノー",
       "name": "デビルスノー",
       "familyId": "material",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ハニーイーター",
       "name": "ハニーイーター",
       "familyId": "material",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ひょうがまじん",
       "name": "ひょうがまじん",
       "familyId": "material",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ふくぶくろ",
       "name": "ふくぶくろ",
       "familyId": "material",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ブリザード",
@@ -2159,7 +2332,8 @@
       "name": "フレイム",
       "familyId": "material",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ようがんまじん",
@@ -2171,20 +2345,27 @@
       "id": "バーガーミミック",
       "name": "バーガーミミック",
       "familyId": "material",
-      "rank": "D"
+      "rank": "D",
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "マクドナルドコラボ限定。マックデリバリー3回目の注文でダウンロード番号を取得→コード入力→エンドール闘技場『スペシャルカップ：マクドナルドチャレンジ3』クリアで入手。配信期間 2023/12/01〜2024/01/12（終了済）。一度入手後はタマゴ／モグダンジョンからも出るようになる。"
     },
     {
       "id": "うごくせきぞう",
       "name": "うごくせきぞう",
       "familyId": "material",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "王のはかもり",
       "name": "王のはかもり",
       "familyId": "material",
-      "rank": "C"
+      "rank": "C",
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "金のタマゴからも入手可能"
     },
     {
       "id": "スウィートバッグ",
@@ -2227,7 +2408,8 @@
       "name": "ミミック",
       "familyId": "material",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "メガザルロック",
@@ -2240,7 +2422,8 @@
       "name": "ルバンカ",
       "familyId": "material",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "からくりだいみょう",
@@ -2283,7 +2466,8 @@
       "name": "ジェリーマン",
       "familyId": "material",
       "rank": "B",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "スノーホムンクルス",
@@ -2356,14 +2540,16 @@
       "name": "シールドこぞう",
       "familyId": "demon",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ドラキー",
       "name": "ドラキー",
       "familyId": "demon",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ドルイド",
@@ -2388,21 +2574,24 @@
       "name": "メーダ",
       "familyId": "demon",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "モーモン",
       "name": "モーモン",
       "familyId": "demon",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "リップス",
       "name": "リップス",
       "familyId": "demon",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "リリパット",
@@ -2427,7 +2616,8 @@
       "name": "くらやみハーピー",
       "familyId": "demon",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ごろつき",
@@ -2446,7 +2636,8 @@
       "name": "シーメーダ",
       "familyId": "demon",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "デザートデーモン",
@@ -2477,7 +2668,8 @@
       "name": "ランドセーラー",
       "familyId": "demon",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "オーガー",
@@ -2490,69 +2682,81 @@
       "name": "きめんどうし",
       "familyId": "demon",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "サイクロプス",
       "name": "サイクロプス",
       "familyId": "demon",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "サタンフーラー",
       "name": "サタンフーラー",
       "familyId": "demon",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "スイーツまじん",
       "name": "スイーツまじん",
       "familyId": "demon",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "スペクテット",
       "name": "スペクテット",
       "familyId": "demon",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "どくやずきん",
       "name": "どくやずきん",
       "familyId": "demon",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ひとつめピエロ",
       "name": "ひとつめピエロ",
       "familyId": "demon",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ベレス",
       "name": "ベレス",
       "familyId": "demon",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "メイジドラキー",
       "name": "メイジドラキー",
       "familyId": "demon",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "フルーリーサタン",
       "name": "フルーリーサタン",
       "familyId": "demon",
-      "rank": "E"
+      "rank": "E",
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "マクドナルドコラボ限定。マックデリバリー2回目の注文でダウンロード番号を取得→コード入力→エンドール闘技場『スペシャルカップ：マクドナルドチャレンジ2』クリアで入手。配信期間 2023/12/01〜2024/01/12（終了済）。一度入手後はタマゴ／モグダンジョンからも出るようになる。"
     },
     {
       "id": "サイレス",
@@ -2576,21 +2780,26 @@
       "id": "ピサロのてさき",
       "name": "ピサロのてさき",
       "familyId": "demon",
-      "rank": "D"
+      "rank": "D",
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "銀のタマゴから孵化（出やすい場所: 覇王城の魔界）"
     },
     {
       "id": "ブチュチュンパ",
       "name": "ブチュチュンパ",
       "familyId": "demon",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ヘルビースト",
       "name": "ヘルビースト",
       "familyId": "demon",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ボストロール",
@@ -2609,7 +2818,8 @@
       "name": "よろいのきし",
       "familyId": "demon",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ランプのまじん",
@@ -2634,7 +2844,8 @@
       "name": "ずしおうまる",
       "familyId": "demon",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "タイムマスター",
@@ -2665,7 +2876,8 @@
       "name": "ネクロバルサ",
       "familyId": "demon",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ピサロナイト",
@@ -2677,7 +2889,10 @@
       "id": "ブルーイーター",
       "name": "ブルーイーター",
       "familyId": "demon",
-      "rank": "C"
+      "rank": "C",
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "金のタマゴからも入手可能"
     },
     {
       "id": "レッドイーター",
@@ -2690,14 +2905,16 @@
       "name": "アークデーモン",
       "familyId": "demon",
       "rank": "B",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "アークマージ",
       "name": "アークマージ",
       "familyId": "demon",
       "rank": "B",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "あくましんかん",
@@ -2734,7 +2951,8 @@
       "name": "トロルボンバー",
       "familyId": "demon",
       "rank": "B",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ホラービースト",
@@ -2746,7 +2964,10 @@
       "id": "ライオネック",
       "name": "ライオネック",
       "familyId": "demon",
-      "rank": "B"
+      "rank": "B",
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "金のタマゴから孵化（出やすい場所: 流神殿の魔界）"
     },
     {
       "id": "アトラス",
@@ -2831,14 +3052,16 @@
       "name": "アニマルゾンビ",
       "familyId": "zombie",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "おばけキノコ",
       "name": "おばけキノコ",
       "familyId": "zombie",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "おばけキャンドル",
@@ -2851,28 +3074,32 @@
       "name": "がいこつ",
       "familyId": "zombie",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "きりかぶおばけ",
       "name": "きりかぶおばけ",
       "familyId": "zombie",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ゴースト",
       "name": "ゴースト",
       "familyId": "zombie",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "スキッパー",
       "name": "スキッパー",
       "familyId": "zombie",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ドロル",
@@ -2885,14 +3112,16 @@
       "name": "ホイップゴースト",
       "familyId": "zombie",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "メラゴースト",
       "name": "メラゴースト",
       "familyId": "zombie",
       "rank": "G",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "おばけヒトデ",
@@ -2911,14 +3140,16 @@
       "name": "さまようよろい",
       "familyId": "zombie",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "シャドー",
       "name": "シャドー",
       "familyId": "zombie",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "スカルライダー",
@@ -2931,7 +3162,8 @@
       "name": "ふゆうじゅ",
       "familyId": "zombie",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "マドハンド",
@@ -2944,14 +3176,16 @@
       "name": "ミイラおとこ",
       "familyId": "zombie",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "やみしばり",
       "name": "やみしばり",
       "familyId": "zombie",
       "rank": "F",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "わかめ王子",
@@ -2964,14 +3198,16 @@
       "name": "きつねび",
       "familyId": "zombie",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "しのどれい",
       "name": "しのどれい",
       "familyId": "zombie",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "しりょうのきし",
@@ -2990,61 +3226,74 @@
       "name": "チョコホイップ",
       "familyId": "zombie",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "デスマエストロ",
       "name": "デスマエストロ",
       "familyId": "zombie",
-      "rank": "E"
+      "rank": "E",
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "銀のタマゴから孵化（出やすい場所: 覇王城の魔界）"
     },
     {
       "id": "ベロベロ",
       "name": "ベロベロ",
       "familyId": "zombie",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ぼうれい剣士",
       "name": "ぼうれい剣士",
       "familyId": "zombie",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "マタンゴ",
       "name": "マタンゴ",
       "familyId": "zombie",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "マネマネ",
       "name": "マネマネ",
       "familyId": "zombie",
-      "rank": "E"
+      "rank": "E",
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "銀のタマゴから孵化（出やすい場所: 流神殿の魔界）"
     },
     {
       "id": "メイデンドール",
       "name": "メイデンドール",
       "familyId": "zombie",
       "rank": "E",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "エビルスピリッツ",
       "name": "エビルスピリッツ",
       "familyId": "zombie",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "がいこつけんし",
       "name": "がいこつけんし",
       "familyId": "zombie",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "タタリ御前",
@@ -3057,7 +3306,8 @@
       "name": "ナイトウォーカー",
       "familyId": "zombie",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "なげきの亡霊",
@@ -3076,27 +3326,33 @@
       "name": "ポイズンゾンビ",
       "familyId": "zombie",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ボーンナイト",
       "name": "ボーンナイト",
       "familyId": "zombie",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ほねリーダー",
       "name": "ほねリーダー",
       "familyId": "zombie",
       "rank": "D",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ポムポムボム",
       "name": "ポムポムボム",
       "familyId": "zombie",
-      "rank": "D"
+      "rank": "D",
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "銀のタマゴから孵化（出やすい場所: 煉獄峠の魔界）"
     },
     {
       "id": "メトロゴースト",
@@ -3121,7 +3377,8 @@
       "name": "しにがみ",
       "familyId": "zombie",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ソイソルジャー",
@@ -3146,7 +3403,8 @@
       "name": "どくろクラゲ",
       "familyId": "zombie",
       "rank": "C",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "ドルマージュ",
@@ -3189,7 +3447,8 @@
       "name": "スカルゴン",
       "familyId": "zombie",
       "rank": "B",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "スモールグール",
@@ -3220,7 +3479,8 @@
       "name": "フェイスボール",
       "familyId": "zombie",
       "rank": "B",
-      "obtainable": true
+      "obtainable": true,
+      "acquisition": "wild"
     },
     {
       "id": "まおうのつかい",
@@ -3274,7 +3534,10 @@
       "id": "カンダタ",
       "name": "カンダタ",
       "familyId": "unknown",
-      "rank": "C"
+      "rank": "C",
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "金のタマゴから孵化（出やすい場所: 鉄鋼砦の魔界）"
     },
     {
       "id": "バラモス",
@@ -3358,7 +3621,10 @@
       "id": "ぴぴぼう",
       "name": "ぴぴぼう",
       "familyId": "unknown",
-      "rank": "S"
+      "rank": "S",
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "モンスターを300種類以上仲間にした状態（ライブラリ約58%）で、ロザリーヒルの塔1階にいる『アゲぴぴ』に話しかけると入手できる。配合・スカウト・タマゴでは入手不可。"
     },
     {
       "id": "魔軍司令ホメロス",
@@ -9770,6 +10036,201 @@
         }
       ],
       "note": "検索結果スニペットより補完（Game8/GAME攻略BOX等で確認）"
+    },
+    {
+      "id": "sp_359_アンドレアル",
+      "childId": "アンドレアル",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ギガントドラゴン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "フェイスボール"
+        }
+      ],
+      "note": "特殊配合"
+    },
+    {
+      "id": "sp_360_ブルベリーノ",
+      "childId": "ブルベリーノ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "メランザーナ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ブラックベジター"
+        }
+      ],
+      "note": "特殊配合。片親のブラックベジターはタマゴ限定（金）のため実質タマゴ経由でしか作れない。"
+    },
+    {
+      "id": "sp_361_クラーゴン",
+      "childId": "クラーゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "だいおうイカ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ソードイド"
+        }
+      ],
+      "note": "特殊配合"
+    },
+    {
+      "id": "sp_362_ムーンフェイス",
+      "childId": "ムーンフェイス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ビックアイ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ブルーイーター"
+        }
+      ],
+      "note": "特殊配合。もう一方のパターンとして『ビッグアイ × レッドイーター』でも作成可能。加えて甘味楼の中級クリア時に2体仲間になるという情報もあり（1ソース）。"
+    },
+    {
+      "id": "sp_363_ムーンフェイス",
+      "childId": "ムーンフェイス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ビックアイ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "レッドイーター"
+        }
+      ],
+      "note": "特殊配合。もう一方のパターンとして『ビッグアイ × レッドイーター』でも作成可能。加えて甘味楼の中級クリア時に2体仲間になるという情報もあり（1ソース）。"
+    },
+    {
+      "id": "sp_364_王のはかもり",
+      "childId": "王のはかもり",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ミステリドール"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "黄泉のほのお"
+        }
+      ],
+      "note": "特殊配合。加えて金のタマゴからも入手可能（altema・極限攻略とも記載）。通常配合（2系統の組み合わせ）では作れない。"
+    },
+    {
+      "id": "sp_365_ブルーイーター",
+      "childId": "ブルーイーター",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "おおめだま"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ブリザード"
+        }
+      ],
+      "note": "特殊配合。加えて金のタマゴからも入手可能（altema個別ページ記載）。"
+    },
+    {
+      "id": "sp_366_ヘルバトラー",
+      "childId": "ヘルバトラー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "アンクルホーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キングレオ"
+        }
+      ],
+      "note": "特殊配合。キングレオはタマゴ限定（虹）のため実質タマゴ経由が必須。"
+    },
+    {
+      "id": "sp_367_暗黒神ラプソーン",
+      "childId": "暗黒神ラプソーン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ドルマゲス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "魔犬レオパルド"
+        }
+      ],
+      "note": "特殊配合。dqfan527 は相方を『レオパルド』、altema は『魔犬レオパルド』と表記（同一モンスター）。"
+    },
+    {
+      "id": "sp_368_ゲマ",
+      "childId": "ゲマ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ライオネック"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "エビルプリースト"
+        }
+      ],
+      "note": "特殊配合。ライオネックはタマゴ限定（金）のため実質タマゴ経由が必須。"
+    },
+    {
+      "id": "sp_369_邪神ニズゼルファ",
+      "childId": "邪神ニズゼルファ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "邪神の子"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "冥獣王ネルゲル"
+        }
+      ],
+      "note": "特殊配合。ゾーマの配合素材になる。"
+    },
+    {
+      "id": "sp_370_ドルマゲス",
+      "childId": "ドルマゲス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ゲマ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キラージャック"
+        }
+      ],
+      "note": "特殊配合"
+    },
+    {
+      "id": "sp_371_冥獣王ネルゲル",
+      "childId": "冥獣王ネルゲル",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "守護者ラズバーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "堕天使エルギオス"
+        }
+      ],
+      "note": "特殊配合"
     }
   ]
 }

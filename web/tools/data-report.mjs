@@ -88,9 +88,14 @@ const unreachable = data.monsters.filter((m) => !reachable(m.id));
 
 const pct = (n) => `${((n / data.monsters.length) * 100).toFixed(1)}%`;
 
+const countBy = (kind) => data.monsters.filter((m) => m.acquisition === kind).length;
+
 console.log(`=== ${data.name} データレポート ===`);
 console.log(`モンスター: ${data.monsters.length}体`);
-console.log(`  野生入手可: ${wild.length}体 (${pct(wild.length)})`);
+console.log(`  配合なしで入手可: ${wild.length}体 (${pct(wild.length)})`);
+console.log(
+  `    野生スカウト ${countBy('wild')}体 / タマゴ ${countBy('egg')}体 / イベント ${countBy('event')}体`,
+);
 console.log(`通常配合: ${data.normalRules.length}エントリ`);
 console.log(
   `特殊配合: ${data.specialRecipes.length}件 (うち4体配合 ${

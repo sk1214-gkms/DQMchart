@@ -6,10 +6,10 @@ import type { Edge } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { nodeTypes } from '@/components/MonsterNode';
 import type { MonsterFlowNode } from '@/components/MonsterNode';
-import { MonsterPicker } from '@/components/MonsterPicker';
+import { MonsterPicker, acquisitionLabel } from '@/components/MonsterPicker';
 import { useTitleData } from '@/components/TitleProvider';
 import { getRuleset } from '@/lib/engine/registry';
-import type { BreedingMethod, BreedingPlan, TitleData } from '@/lib/engine/types';
+import type { BreedingMethod, BreedingPlan, Monster, TitleData } from '@/lib/engine/types';
 
 const X_GAP = 200;
 const Y_GAP = 140;
@@ -42,7 +42,9 @@ function buildFlow(plan: BreedingPlan, data: TitleData) {
         position: { x, y: -depth * Y_GAP },
         data: {
           label: p.monster.name,
-          sub: `${p.monster.rank}ランク・${familyName(data, p.monster.familyId)}・野生で入手`,
+          sub: `${p.monster.rank}ランク・${familyName(data, p.monster.familyId)}・${
+            p.monster.acquisitionDetail ?? `${acquisitionLabel(p.monster.acquisition)}で入手`
+          }`,
           status: 'wild',
         },
       });
@@ -142,6 +144,23 @@ export default function AutoPage() {
     return Array.from(counts.entries());
   }, [result]);
 
+  // 最初に集める必要のある素材（配合ツリーの葉）を必要数つきで集計
+  const materials = useMemo(() => {
+    if (!result?.plan) return [];
+    const counts = new Map<string, { monster: Monster; count: number }>();
+    const walk = (p: BreedingPlan): void => {
+      if (p.kind === 'wild') {
+        const cur = counts.get(p.monster.id);
+        if (cur) cur.count += 1;
+        else counts.set(p.monster.id, { monster: p.monster, count: 1 });
+        return;
+      }
+      p.parents.forEach(walk);
+    };
+    walk(result.plan);
+    return Array.from(counts.values()).sort((a, b) => b.count - a.count);
+  }, [result]);
+
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-xl font-bold">自動チャート生成</h1>
@@ -151,17 +170,20 @@ export default function AutoPage() {
 
       {!result ? (
         <p className="text-sm text-zinc-500">
-          目標モンスターを選ぶと、野生で仲間にできるモンスターから始まる配合手順を逆算します。
+          目標モンスターを選ぶと、配合なしで手に入るモンスター（野生・タマゴ・イベント）から始まる配合手順を逆算します。
         </p>
       ) : !result.plan ? (
         <p className="rounded border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">
-          このモンスターへの入手ルートが見つかりませんでした（サンプルデータ未整備の可能性があります）。
+          このモンスターへの入手ルートが見つかりませんでした（データ未整備の可能性があります）。
         </p>
       ) : (
         <>
           {result.plan.kind === 'wild' ? (
             <p className="rounded border border-sky-200 bg-sky-50 px-3 py-2 text-sm text-sky-800">
-              このモンスターは野生で仲間にできます。配合は不要です。
+              このモンスターは配合なしで入手できます。
+              {result.plan.monster.acquisitionDetail
+                ? `（${result.plan.monster.acquisitionDetail}）`
+                : `（${acquisitionLabel(result.plan.monster.acquisition)}）`}
             </p>
           ) : (
             <p className="text-sm text-zinc-600">
@@ -183,6 +205,26 @@ export default function AutoPage() {
                 <Controls showInteractive={false} />
               </ReactFlow>
             </div>
+          )}
+
+          {materials.length > 0 && result.plan.kind === 'breed' && (
+            <section>
+              <h2 className="mb-2 font-semibold">まず集める素材</h2>
+              <ul className="grid gap-1 text-sm sm:grid-cols-2 lg:grid-cols-3">
+                {materials.map(({ monster, count }) => (
+                  <li
+                    key={monster.id}
+                    className="rounded border border-zinc-200 bg-white px-3 py-1.5"
+                  >
+                    <span className="font-medium">{monster.name}</span>
+                    {count > 1 && <span className="ml-1 text-amber-700">×{count}体</span>}
+                    <span className="block text-[11px] text-zinc-500">
+                      {monster.acquisitionDetail ?? acquisitionLabel(monster.acquisition)}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </section>
           )}
 
           {stepCounts.length > 0 && (

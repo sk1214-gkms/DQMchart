@@ -34,6 +34,22 @@ describe('マスタデータの整合性', () => {
     }
   });
 
+  it('すべてのモンスターに入手手段がある（配合で作れるか、配合なしで入手できる）', () => {
+    const childIds = new Set([
+      ...data.normalRules.flatMap((r) => r.childIds),
+      ...data.specialRecipes.map((r) => r.childId),
+    ]);
+    const orphans = data.monsters.filter((m) => !m.obtainable && !childIds.has(m.id));
+    expect(orphans.map((m) => m.name)).toEqual([]);
+  });
+
+  it('配合なしで入手できるモンスターには入手手段の種別が付いている', () => {
+    for (const m of data.monsters) {
+      if (!m.obtainable) continue;
+      expect(['wild', 'egg', 'event']).toContain(m.acquisition);
+    }
+  });
+
   it('通常配合表はG〜Bランクのみで、系統ペアごとに子が2体', () => {
     const ranks = new Set(data.normalRules.map((r) => r.rank));
     expect([...ranks].sort()).toEqual(['B', 'C', 'D', 'E', 'F', 'G']);
@@ -209,8 +225,8 @@ describe('DQM3 逆算プランナー', () => {
     }
   });
 
-  it('到達可能なモンスターが全体の8割以上ある', () => {
-    const reachable = data.monsters.filter((x) => engine.plan(x.id, data) !== null);
-    expect(reachable.length / data.monsters.length).toBeGreaterThan(0.8);
+  it('すべてのモンスターに到達ルートがある', () => {
+    const unreachable = data.monsters.filter((x) => engine.plan(x.id, data) === null);
+    expect(unreachable.map((m) => m.name)).toEqual([]);
   });
 });

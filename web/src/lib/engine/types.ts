@@ -12,13 +12,20 @@ export interface FamilyDef {
   name: string; // 例: スライム系
 }
 
+/** 配合以外の入手手段。egg=タマゴ限定、event=イベント・コラボ配信など */
+export type AcquisitionKind = 'wild' | 'egg' | 'event';
+
 export interface Monster {
   id: string;
   name: string;
   familyId: string;
   rank: string;
-  /** 野生で仲間にできる＝配合ツリーの葉になれる */
+  /** 配合以外で入手できる＝配合ツリーの葉になれる */
   obtainable?: boolean;
+  /** 入手手段の種類（obtainableがtrueのとき） */
+  acquisition?: AcquisitionKind;
+  /** 入手方法の詳細（タマゴの色・出現場所・イベント条件など） */
+  acquisitionDetail?: string;
 }
 
 /** 通常配合テーブルの1エントリ: 系統ペア×ランク → 子候補 */

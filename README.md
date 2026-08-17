@@ -15,10 +15,11 @@ npm run dev   # → http://localhost:3000
 
 ```
 cd web
-npm test           # vitest（配合ルールエンジンのユニットテスト）
-npm run lint       # eslint
-npm run typecheck  # next typegen + tsc --noEmit
-npm run build      # 本番ビルド検証
+npm test                     # vitest（配合ルールエンジンのユニットテスト）
+npm run lint                 # eslint
+npm run typecheck            # next typegen + tsc --noEmit
+npm run build                # 本番ビルド検証
+node tools/data-report.mjs   # マスタデータの網羅性レポート（到達不能モンスターの洗い出し）
 ```
 
 ## 設定
@@ -38,10 +39,15 @@ npm run build      # 本番ビルド検証
 
 - `web/src/lib/engine/` — 配合ルールエンジン（UI非依存の純粋ロジック）。
   タイトルごとに `BreedingRuleset` 実装を追加し `registry.ts` に登録する。
-  DQM3方式: 通常配合は「系統ペア×ランク」テーブル参照（親よりランクの高い子は生まれない）、
-  ランクアップは特殊配合のみ。
-- `web/src/data/titles/` — タイトル別マスタデータ（JSON）。**現在は検証用サンプルデータ**であり、
-  実際のゲームの配合表とは異なる（アプリ内にも注記表示あり）。
+  DQM3方式の要点:
+  - 通常配合は「系統ペア×ランク」テーブル参照。親のランクが違えば両方のランクの表から選べる。
+  - 親自身の種族も常に子候補に含まれる（同系統同士では親のどちらかしか生まれない）。
+  - 通常配合では親よりランクの高い子は生まれず、ランクアップは特殊配合のみ。
+  - 4体配合は祖父母4体で決まるため、親2体だけでは判定できない（`quadCandidates` で扱う）。
+- `web/src/data/titles/` — タイトル別マスタデータ（JSON）。
+  DQM3は攻略サイトから収集した実データ（モンスター526体／通常配合126エントリ／特殊配合372件）。
+  出典はJSONの `note` に記載。誤りに気づいたら直接修正してよい。
+  配合以外の入手手段は `acquisition` で区別する（`wild` 野生スカウト／`egg` タマゴ限定／`event` イベント・コラボ配信）。
 - `web/src/lib/storage.ts` — チャート保存の抽象。現在はlocalStorage実装。
   Supabase（Googleログイン・アカウント別保存）導入時に実装を差し替える。
 - `設計/配合チャートアプリ_全体構成.drawio` — アーキテクチャ・データモデル図（シートがバージョン履歴）。
@@ -49,7 +55,8 @@ npm run build      # 本番ビルド検証
 ## ロードマップ
 
 1. ~~DQM3ルールエンジン＋3画面のMVP~~（完了）
-2. DQM3実データの投入（配合表・モンスター一覧）
-3. Supabase導入（Googleログイン＋アカウント別チャート保存）
-4. Vercel公開（URL限定・検索エンジン非掲載）
-5. 追加タイトル対応（位階配合タイトル、将来のDQM4）・4体配合対応
+2. ~~DQM3実データの投入・4体配合対応~~（完了）
+3. ~~入手手段（タマゴ・イベント）の整備~~（完了。全526体に到達ルートあり）
+4. Supabase導入（Googleログイン＋アカウント別チャート保存）
+5. Vercel公開（URL限定・検索エンジン非掲載）
+6. 追加タイトル対応（位階配合タイトル、将来のDQM4）
