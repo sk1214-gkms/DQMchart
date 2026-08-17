@@ -53,7 +53,6 @@ export interface TitleData {
   id: string;
   name: string;
   ruleset: string; // 'dqm3' など。レジストリでエンジン実装を解決する
-  note?: string;
   ranks: RankDef[];
   families: FamilyDef[];
   monsters: Monster[];
