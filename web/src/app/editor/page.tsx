@@ -16,7 +16,7 @@ import '@xyflow/react/dist/style.css';
 import { nodeTypes } from '@/components/MonsterNode';
 import type { MonsterFlowNode, MonsterNodeStatus } from '@/components/MonsterNode';
 import { MonsterPicker } from '@/components/MonsterPicker';
-import { familyColor } from '@/components/MonsterBadges';
+import { FamilyMark, familyBackground, familyColor } from '@/components/MonsterBadges';
 import { useTitleData } from '@/components/TitleProvider';
 import { getRuleset } from '@/lib/engine/registry';
 import {
@@ -35,8 +35,18 @@ export default function EditorPage() {
   const [nodes, setNodes] = useState<MonsterFlowNode[]>([]);
   const [edges, setEdges] = useState<Edge[]>([]);
   const [pickId, setPickId] = useState('');
+  const [parentAId, setParentAId] = useState('');
+  const [parentBId, setParentBId] = useState('');
   const [chartId, setChartId] = useState<string | null>(null);
   const [chartName, setChartName] = useState('');
+
+  // 「配合を追加」で選んだ親2体から生まれる子の候補
+  const childCandidates = useMemo(() => {
+    const a = data.monsters.find((m) => m.id === parentAId);
+    const b = data.monsters.find((m) => m.id === parentBId);
+    if (!a || !b) return null;
+    return engine.candidates(a, b, data);
+  }, [data, engine, parentAId, parentBId]);
 
   const chartsSnapshot = useSyncExternalStore(
     subscribeCharts,
@@ -202,6 +212,45 @@ export default function EditorPage() {
     if (chart.id === chartId) setChartId(null);
   };
 
+  /** 親2体から選んだ子を、線でつないだ状態でまとめて置く（ドラッグ操作が不要な導線） */
+  const addBreeding = (childId: string) => {
+    const parentA = data.monsters.find((m) => m.id === parentAId);
+    const parentB = data.monsters.find((m) => m.id === parentBId);
+    const child = data.monsters.find((m) => m.id === childId);
+    if (!parentA || !parentB || !child) return;
+
+    // 既に置かれているノードの下に新しい組を積む
+    const baseY = nodes.length
+      ? Math.max(...nodes.map((n) => n.position.y)) + 190
+      : 40;
+    const toNode = (m: (typeof data.monsters)[number], x: number, y: number): MonsterFlowNode => ({
+      id: crypto.randomUUID(),
+      type: 'monster',
+      position: { x, y },
+      data: {
+        monsterId: m.id,
+        label: m.name,
+        sub: `${m.rank}ランク・${data.families.find((f) => f.id === m.familyId)?.name ?? m.familyId}`,
+        familyColor: familyColor(m.familyId),
+        status: 'none',
+      },
+    });
+
+    const nodeA = toNode(parentA, 40, baseY);
+    const nodeB = toNode(parentB, 260, baseY);
+    const nodeChild = toNode(child, 150, baseY + 130);
+    setNodes((ns) => [...ns, nodeA, nodeB, nodeChild]);
+    setEdges((es) => [
+      ...es,
+      ...[nodeA, nodeB].map((p) => ({
+        id: `e-${p.id}-${nodeChild.id}`,
+        source: p.id,
+        target: nodeChild.id,
+        markerEnd: { type: MarkerType.ArrowClosed },
+      })),
+    ]);
+  };
+
   // スマホにはDeleteキーが無いので、選択したノード・線をボタンで消せるようにする
   const selectedCount =
     nodes.filter((n) => n.selected).length + edges.filter((e) => e.selected).length;
@@ -223,7 +272,10 @@ export default function EditorPage() {
       {/* スマホではキャンバスを先に出す（操作パネルが先だとキャンバスまで遠い） */}
       <div className="flex flex-col gap-4 lg:flex-row">
         <div className="order-1 flex flex-col gap-2 lg:order-2 lg:flex-1">
-          <div className="h-[55vh] min-h-[300px] overflow-hidden rounded-xl border bg-white shadow-sm lg:h-[600px]" style={{ borderColor: 'var(--border)' }}>
+          <div
+            className="relative h-[55vh] min-h-[300px] overflow-hidden rounded-xl border bg-white shadow-sm lg:h-[600px]"
+            style={{ borderColor: 'var(--border)' }}
+          >
             <ReactFlow
               nodes={displayNodes}
               edges={edges}
@@ -239,6 +291,29 @@ export default function EditorPage() {
               <Background />
               <Controls />
             </ReactFlow>
+
+            {/* キャンバスが空のときだけ使い方を重ねて表示する */}
+            {nodes.length === 0 && (
+              <div className="pointer-events-none absolute inset-0 grid place-items-center p-4">
+                <div className="max-w-md rounded-xl border bg-white/95 p-4 shadow-md" style={{ borderColor: 'var(--border)' }}>
+                  <h2 className="font-bold">使い方</h2>
+                  <ol className="mt-2 flex flex-col gap-2 text-sm">
+                    {[
+                      '左の「配合を追加」で親2体を選ぶと、生まれる子の候補が出ます。候補を押すと親2体と子が線でつながった状態で置かれます。',
+                      '自分で組みたいときは「モンスターを追加」で好きな数だけ置き、親の下の丸から子の上の丸へドラッグして線をつなぎます。',
+                      '子の枠が緑になれば配合成立、赤ならその親からは作れません。',
+                    ].map((text, i) => (
+                      <li key={i} className="flex gap-2">
+                        <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[#eef3fd] text-xs font-bold text-[var(--brand-700)]">
+                          {i + 1}
+                        </span>
+                        <span className="leading-relaxed text-[var(--muted)]">{text}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
@@ -258,28 +333,82 @@ export default function EditorPage() {
             モンスターの下側の丸から、子にしたいモンスターの上側の丸へドラッグすると配合線がつながります（親2体→子）。
           </p>
           <ul className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-[var(--muted)]">
-            <li>
-              <span className="mr-1 inline-block h-2 w-2 rounded-full bg-green-500" />
-              配合成立
-            </li>
-            <li>
-              <span className="mr-1 inline-block h-2 w-2 rounded-full bg-red-500" />
-              配合不成立
-            </li>
-            <li>
-              <span className="mr-1 inline-block h-2 w-2 rounded-full bg-amber-500" />
-              親が2体でない
-            </li>
-            <li>
-              <span className="mr-1 inline-block h-2 w-2 rounded-full bg-sky-400" />
-              配合なしで入手可
-            </li>
+            {[
+              { color: 'bg-green-500', label: '配合成立' },
+              { color: 'bg-red-500', label: 'この親からは作れない' },
+              { color: 'bg-amber-500', label: '親が2体そろっていない' },
+              { color: 'bg-sky-400', label: '親を繋がず直接入手する（野生・タマゴ・イベント）' },
+              { color: 'bg-zinc-300', label: '配合が必要（親を繋ぐと判定します）' },
+            ].map((item) => (
+              <li key={item.label}>
+                <span className={`mr-1 inline-block h-2 w-2 rounded-full ${item.color}`} />
+                {item.label}
+              </li>
+            ))}
           </ul>
         </div>
 
-        <aside className="order-2 flex w-full flex-col gap-4 lg:order-1 lg:w-72">
+        <aside className="order-2 flex w-full flex-col gap-4 lg:order-1 lg:w-80">
           <section className="card p-3">
-            <MonsterPicker data={data} value={pickId} onChange={setPickId} label="モンスターを追加" />
+            <h2 className="mb-2 text-sm font-bold">配合を追加</h2>
+            <p className="mb-2 text-[11px] leading-relaxed text-[var(--muted)]">
+              親2体を選ぶと生まれる子の候補が出ます。候補を押すと、線でつながった状態で置かれます。
+            </p>
+            <div className="flex flex-col gap-2">
+              <MonsterPicker data={data} value={parentAId} onChange={setParentAId} label="親①" />
+              <MonsterPicker data={data} value={parentBId} onChange={setParentBId} label="親②" />
+            </div>
+
+            {childCandidates !== null && (
+              <div className="mt-3">
+                <h3 className="text-xs font-semibold">
+                  生まれる子{childCandidates.length > 0 && `（${childCandidates.length}件）`}
+                </h3>
+                {childCandidates.length === 0 ? (
+                  <p className="mt-1 text-xs text-[var(--muted)]">
+                    この組み合わせから生まれる子はデータにありません。
+                  </p>
+                ) : (
+                  <ul className="mt-1 flex max-h-60 flex-col gap-1 overflow-y-auto">
+                    {childCandidates.map((c, i) => (
+                      <li key={`${c.child.id}-${c.method}-${i}`}>
+                        <button
+                          onClick={() => addBreeding(c.child.id)}
+                          className="flex w-full min-h-11 items-center gap-2 rounded-lg border px-2 text-left transition hover:shadow"
+                          style={{
+                            background: familyBackground(c.child.familyId),
+                            borderColor: familyColor(c.child.familyId),
+                          }}
+                        >
+                          <FamilyMark familyId={c.child.familyId} size="sm" />
+                          <span className="min-w-0 flex-1">
+                            <span className="block truncate text-sm font-semibold">
+                              {c.child.name}
+                            </span>
+                            <span className="text-[11px] text-[var(--muted)]">
+                              {c.child.rank}ランク
+                              {c.method === 'special' && '・特殊配合'}
+                            </span>
+                          </span>
+                          <span className="shrink-0 text-xs font-bold text-[var(--brand-700)]">
+                            ＋
+                          </span>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            )}
+          </section>
+
+          <section className="card p-3">
+            <MonsterPicker
+              data={data}
+              value={pickId}
+              onChange={setPickId}
+              label="モンスターを1体だけ追加"
+            />
             <button onClick={addMonster} disabled={!pickId} className="btn btn-primary mt-2 w-full">
               キャンバスに追加
             </button>
