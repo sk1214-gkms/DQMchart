@@ -1,6 +1,6 @@
 'use client';
 // 自動チャート生成: 目標モンスターから配合ツリーを逆算してReact Flowで描画
-import { useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { Background, Controls, MarkerType, ReactFlow } from '@xyflow/react';
 import type { Edge } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
@@ -20,7 +20,13 @@ import { OrientationToggle, useOrientation } from '@/components/Orientation';
 import type { Orientation } from '@/components/Orientation';
 import { useTitleData } from '@/components/TitleProvider';
 import { getRuleset } from '@/lib/engine/registry';
-import type { BreedingMethod, BreedingPlan, Monster, TitleData } from '@/lib/engine/types';
+import type {
+  BreedingMethod,
+  BreedingPlan,
+  BreedingRuleset,
+  Monster,
+  TitleData,
+} from '@/lib/engine/types';
 
 // 縦向きは葉が横に並び深さが縦方向、横向きはその逆になる
 const GAPS: Record<Orientation, { across: number; depth: number }> = {
@@ -42,28 +48,51 @@ function methodLabel(method: BreedingMethod): string {
   return '通常配合';
 }
 
-function buildFlow(plan: BreedingPlan, data: TitleData, orientation: Orientation) {
+function buildFlow(
+  plan: BreedingPlan,
+  data: TitleData,
+  orientation: Orientation,
+  opts: { engine: BreedingRuleset; expanded: Set<string> },
+) {
   const nodes: MonsterFlowNode[] = [];
   const edges: Edge[] = [];
+  const leaves: Monster[] = []; // 実際に集める必要のあるモンスター（展開状態を反映）
+  const steps: string[] = [];
   let seq = 0;
   let leafIndex = 0;
 
   // 親が手前（縦なら上、横なら左）。葉から順に並び位置を決め、子は親の中央に置く。
-  function walk(p: BreedingPlan, depth: number): { id: string; across: number } {
+  // ancestors は循環展開を防ぐための祖先モンスターの集合。
+  function walk(
+    p: BreedingPlan,
+    depth: number,
+    ancestors: Set<string>,
+  ): { id: string; across: number } {
     const id = `n${seq++}`;
     if (p.kind === 'wild') {
+      // 直接入手できるモンスターでも、配合で作る手順を開いていればそちらを展開する
+      const canExpand =
+        !ancestors.has(p.monster.id) && opts.engine.planByBreeding(p.monster.id, data) !== null;
+      if (canExpand && opts.expanded.has(p.monster.id)) {
+        const sub = opts.engine.planByBreeding(p.monster.id, data);
+        if (sub) return walk(sub, depth, new Set([...ancestors, p.monster.id]));
+      }
+
       const across = leafIndex++;
+      leaves.push(p.monster);
       nodes.push({
         id,
         type: 'monster',
         position: toPosition(across, depth, orientation),
         data: {
+          monsterId: p.monster.id,
           label: p.monster.name,
           sub: `${p.monster.rank}ランク・${familyName(data, p.monster.familyId)}\n${
             p.monster.acquisitionDetail ?? `${acquisitionLabel(p.monster.acquisition)}で入手`
-          }`,
+          }${canExpand ? '\n▶ 押すと配合で作る手順を表示' : ''}`,
           familyColor: familyColor(p.monster.familyId),
           orientation,
+          expandable: canExpand,
           status: 'wild',
         },
       });
@@ -73,7 +102,8 @@ function buildFlow(plan: BreedingPlan, data: TitleData, orientation: Orientation
     // 4体配合は祖父母4体の手前に「任意の子」の中間ノードを2つ挟んで描く
     const quad = p.method === 'quad' && p.parents.length === 4;
     const parentDepth = quad ? depth + 2 : depth + 1;
-    const placed = p.parents.map((parent) => walk(parent, parentDepth));
+    const nextAncestors = new Set([...ancestors, p.monster.id]);
+    const placed = p.parents.map((parent) => walk(parent, parentDepth, nextAncestors));
     const across = placed.reduce((s, c) => s + c.across, 0) / placed.length;
 
     let incoming = placed;
@@ -102,17 +132,22 @@ function buildFlow(plan: BreedingPlan, data: TitleData, orientation: Orientation
       });
     }
 
+    // 直接入手できるのに配合で表示しているノードは、押せば元に戻せる
+    const isExpandedHere = p.monster.obtainable === true && opts.expanded.has(p.monster.id);
+
     nodes.push({
       id,
       type: 'monster',
       position: toPosition(across, depth, orientation),
       data: {
+        monsterId: p.monster.id,
         label: p.monster.name,
         sub: `${p.monster.rank}ランク・${familyName(data, p.monster.familyId)}\n${methodLabel(
           p.method,
-        )}で作る`,
+        )}で作る${isExpandedHere ? '\n▼ 押すと直接入手に戻す' : ''}`,
         familyColor: familyColor(p.monster.familyId),
         orientation,
+        expandable: isExpandedHere,
         status: 'ok',
       },
     });
@@ -124,24 +159,19 @@ function buildFlow(plan: BreedingPlan, data: TitleData, orientation: Orientation
         markerEnd: { type: MarkerType.ArrowClosed },
       });
     }
+
+    // 手順は親を先に処理してから積むので、上流から順に並ぶ
+    const parentNames = p.parents.map((x) => x.monster.name).join(' × ');
+    steps.push(
+      p.method === 'quad'
+        ? `${parentNames} の4体を祖父母にして2回配合し、その子同士を配合 → ${p.monster.name}（4体配合）`
+        : `${parentNames} → ${p.monster.name}（${methodLabel(p.method)}）`,
+    );
     return { id, across };
   }
 
-  walk(plan, 0);
-  return { nodes, edges };
-}
-
-function collectSteps(plan: BreedingPlan, out: string[]): void {
-  if (plan.kind !== 'breed') return;
-  for (const parent of plan.parents) collectSteps(parent, out);
-  const parents = plan.parents.map((p) => p.monster.name).join(' × ');
-  if (plan.method === 'quad') {
-    out.push(
-      `${parents} の4体を祖父母にして2回配合し、その子同士を配合 → ${plan.monster.name}（4体配合）`,
-    );
-    return;
-  }
-  out.push(`${parents} → ${plan.monster.name}（${methodLabel(plan.method)}）`);
+  walk(plan, 0, new Set());
+  return { nodes, edges, leaves, steps };
 }
 
 export default function AutoPage() {
@@ -160,38 +190,45 @@ export default function AutoPage() {
     [engine, data, targetId],
   );
 
+  // 葉ノードを押して配合手順を開いたモンスター
+  const [expanded, setExpanded] = useState<Set<string>>(new Set());
+
   const result = useMemo(() => {
     if (!targetId) return null;
     const direct = engine.plan(targetId, data);
     const plan = forceBreeding && breedingPlan ? breedingPlan : direct;
-    if (!plan) return { plan: null, flow: null, steps: [] as string[] };
-    const steps: string[] = [];
-    collectSteps(plan, steps);
-    return { plan, flow: buildFlow(plan, data, orientation), steps };
-  }, [engine, data, targetId, orientation, forceBreeding, breedingPlan]);
+    if (!plan) return { plan: null, flow: null };
+    return { plan, flow: buildFlow(plan, data, orientation, { engine, expanded }) };
+  }, [engine, data, targetId, orientation, forceBreeding, breedingPlan, expanded]);
+
+  const toggleExpand = useCallback((_: unknown, node: MonsterFlowNode) => {
+    if (!node.data.expandable || !node.data.monsterId) return;
+    const id = node.data.monsterId;
+    setExpanded((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }, []);
 
   // 同じ配合を複数回行う場合は回数をまとめる
   const stepCounts = useMemo(() => {
-    if (!result) return [];
+    if (!result?.flow) return [];
     const counts = new Map<string, number>();
-    for (const s of result.steps) counts.set(s, (counts.get(s) ?? 0) + 1);
+    for (const s of result.flow.steps) counts.set(s, (counts.get(s) ?? 0) + 1);
     return Array.from(counts.entries());
   }, [result]);
 
-  // 最初に集める必要のある素材（配合ツリーの葉）を必要数つきで集計
+  // 最初に集める必要のある素材（配合ツリーの葉）を必要数つきで集計。展開状態を反映する
   const materials = useMemo(() => {
-    if (!result?.plan) return [];
+    if (!result?.flow) return [];
     const counts = new Map<string, { monster: Monster; count: number }>();
-    const walk = (p: BreedingPlan): void => {
-      if (p.kind === 'wild') {
-        const cur = counts.get(p.monster.id);
-        if (cur) cur.count += 1;
-        else counts.set(p.monster.id, { monster: p.monster, count: 1 });
-        return;
-      }
-      p.parents.forEach(walk);
-    };
-    walk(result.plan);
+    for (const monster of result.flow.leaves) {
+      const cur = counts.get(monster.id);
+      if (cur) cur.count += 1;
+      else counts.set(monster.id, { monster, count: 1 });
+    }
     return Array.from(counts.values()).sort((a, b) => b.count - a.count);
   }, [result]);
 
@@ -271,6 +308,7 @@ export default function AutoPage() {
                   nodes={result.flow.nodes}
                   edges={result.flow.edges}
                   nodeTypes={nodeTypes}
+                  onNodeClick={toggleExpand}
                   fitView
                   nodesConnectable={false}
                   nodesDraggable={false}
@@ -281,8 +319,9 @@ export default function AutoPage() {
                   <Controls showInteractive={false} />
                 </ReactFlow>
               </div>
-              <p className="text-xs text-[var(--muted)] sm:hidden">
-                チャートは指でドラッグして移動、2本指でズームできます
+              <p className="text-xs text-[var(--muted)]">
+                「▶」が付いたモンスターは配合でも作れます。押すとその配合手順を開けます。
+                <span className="sm:hidden">図は指でドラッグして移動、2本指でズームできます。</span>
               </p>
             </div>
           )}

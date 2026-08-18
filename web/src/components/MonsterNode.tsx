@@ -16,6 +16,8 @@ export type MonsterNodeData = {
   rank?: string;
   /** フロー図の向き。縦なら上下、横なら左右に接続点を置く */
   orientation?: Orientation;
+  /** 押すと配合手順を開閉できるノードか */
+  expandable?: boolean;
   /** エディタでの検証・保存用。自動生成ツリーでは未使用 */
   monsterId?: string;
 };
@@ -43,7 +45,9 @@ export function MonsterNode({ data, selected }: NodeProps<MonsterFlowNode>) {
     <div
       className={`relative min-w-40 overflow-hidden rounded-lg border-2 py-2 pl-4 pr-3 text-xs shadow-sm transition ${
         statusStyles[data.status]
-      } ${selected ? 'ring-2 ring-[var(--brand-500)] ring-offset-1' : ''}`}
+      } ${selected ? 'ring-2 ring-[var(--brand-500)] ring-offset-1' : ''} ${
+        data.expandable ? 'cursor-pointer hover:shadow-md' : ''
+      }`}
     >
       {data.familyColor && (
         <span
