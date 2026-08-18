@@ -16,12 +16,25 @@ import {
   familyColor,
   familyName,
 } from '@/components/MonsterBadges';
+import { OrientationToggle, useOrientation } from '@/components/Orientation';
+import type { Orientation } from '@/components/Orientation';
 import { useTitleData } from '@/components/TitleProvider';
 import { getRuleset } from '@/lib/engine/registry';
 import type { BreedingMethod, BreedingPlan, Monster, TitleData } from '@/lib/engine/types';
 
-const X_GAP = 200;
-const Y_GAP = 140;
+// 縦向きは葉が横に並び深さが縦方向、横向きはその逆になる
+const GAPS: Record<Orientation, { across: number; depth: number }> = {
+  vertical: { across: 200, depth: 150 },
+  horizontal: { across: 96, depth: 260 },
+};
+
+/** 並び位置と深さを、向きに応じた実際の座標に変換する */
+function toPosition(across: number, depth: number, orientation: Orientation) {
+  const gap = GAPS[orientation];
+  return orientation === 'vertical'
+    ? { x: across * gap.across, y: -depth * gap.depth }
+    : { x: -depth * gap.depth, y: across * gap.across };
+}
 
 function methodLabel(method: BreedingMethod): string {
   if (method === 'special') return '特殊配合';
@@ -29,39 +42,39 @@ function methodLabel(method: BreedingMethod): string {
   return '通常配合';
 }
 
-function buildFlow(plan: BreedingPlan, data: TitleData) {
+function buildFlow(plan: BreedingPlan, data: TitleData, orientation: Orientation) {
   const nodes: MonsterFlowNode[] = [];
   const edges: Edge[] = [];
   let seq = 0;
-  let leafX = 0;
+  let leafIndex = 0;
 
-  // 親を上・子を下に配置。葉（野生）から再帰的にx座標を決め、子は親の中央に置く。
-  function walk(p: BreedingPlan, depth: number): { id: string; x: number } {
+  // 親が手前（縦なら上、横なら左）。葉から順に並び位置を決め、子は親の中央に置く。
+  function walk(p: BreedingPlan, depth: number): { id: string; across: number } {
     const id = `n${seq++}`;
     if (p.kind === 'wild') {
-      const x = leafX * X_GAP;
-      leafX += 1;
+      const across = leafIndex++;
       nodes.push({
         id,
         type: 'monster',
-        position: { x, y: -depth * Y_GAP },
+        position: toPosition(across, depth, orientation),
         data: {
           label: p.monster.name,
           sub: `${p.monster.rank}ランク・${familyName(data, p.monster.familyId)}\n${
             p.monster.acquisitionDetail ?? `${acquisitionLabel(p.monster.acquisition)}で入手`
           }`,
           familyColor: familyColor(p.monster.familyId),
+          orientation,
           status: 'wild',
         },
       });
-      return { id, x };
+      return { id, across };
     }
 
-    // 4体配合は祖父母4体の下に「任意の子」の中間ノードを2つ挟んで描く
+    // 4体配合は祖父母4体の手前に「任意の子」の中間ノードを2つ挟んで描く
     const quad = p.method === 'quad' && p.parents.length === 4;
     const parentDepth = quad ? depth + 2 : depth + 1;
     const placed = p.parents.map((parent) => walk(parent, parentDepth));
-    const x = placed.reduce((s, c) => s + c.x, 0) / placed.length;
+    const across = placed.reduce((s, c) => s + c.across, 0) / placed.length;
 
     let incoming = placed;
     if (quad) {
@@ -70,12 +83,12 @@ function buildFlow(plan: BreedingPlan, data: TitleData) {
         [placed[2], placed[3]],
       ].map((pair) => {
         const midId = `n${seq++}`;
-        const midX = (pair[0].x + pair[1].x) / 2;
+        const midAcross = (pair[0].across + pair[1].across) / 2;
         nodes.push({
           id: midId,
           type: 'monster',
-          position: { x: midX, y: -(depth + 1) * Y_GAP },
-          data: { label: '（この2体の子）', sub: '種族は自由', status: 'warn' },
+          position: toPosition(midAcross, depth + 1, orientation),
+          data: { label: '（この2体の子）', sub: '種族は自由', orientation, status: 'warn' },
         });
         for (const gp of pair) {
           edges.push({
@@ -85,20 +98,21 @@ function buildFlow(plan: BreedingPlan, data: TitleData) {
             markerEnd: { type: MarkerType.ArrowClosed },
           });
         }
-        return { id: midId, x: midX };
+        return { id: midId, across: midAcross };
       });
     }
 
     nodes.push({
       id,
       type: 'monster',
-      position: { x, y: -depth * Y_GAP },
+      position: toPosition(across, depth, orientation),
       data: {
         label: p.monster.name,
         sub: `${p.monster.rank}ランク・${familyName(data, p.monster.familyId)}\n${methodLabel(
           p.method,
         )}で作る`,
         familyColor: familyColor(p.monster.familyId),
+        orientation,
         status: 'ok',
       },
     });
@@ -110,7 +124,7 @@ function buildFlow(plan: BreedingPlan, data: TitleData) {
         markerEnd: { type: MarkerType.ArrowClosed },
       });
     }
-    return { id, x };
+    return { id, across };
   }
 
   walk(plan, 0);
@@ -134,14 +148,27 @@ export default function AutoPage() {
   const data = useTitleData();
   const [targetId, setTargetId] = useState('');
 
+  const [orientation, setOrientation] = useOrientation();
+  // 直接入手できるモンスターでも配合ルートを見たいときに切り替える
+  const [forceBreeding, setForceBreeding] = useState(false);
+
+  const engine = useMemo(() => getRuleset(data.ruleset), [data.ruleset]);
+
+  /** 目標が直接入手できる場合でも、配合で作る方法があるか */
+  const breedingPlan = useMemo(
+    () => (targetId ? engine.planByBreeding(targetId, data) : null),
+    [engine, data, targetId],
+  );
+
   const result = useMemo(() => {
     if (!targetId) return null;
-    const plan = getRuleset(data.ruleset).plan(targetId, data);
+    const direct = engine.plan(targetId, data);
+    const plan = forceBreeding && breedingPlan ? breedingPlan : direct;
     if (!plan) return { plan: null, flow: null, steps: [] as string[] };
     const steps: string[] = [];
     collectSteps(plan, steps);
-    return { plan, flow: buildFlow(plan, data), steps };
-  }, [data, targetId]);
+    return { plan, flow: buildFlow(plan, data, orientation), steps };
+  }, [engine, data, targetId, orientation, forceBreeding, breedingPlan]);
 
   // 同じ配合を複数回行う場合は回数をまとめる
   const stepCounts = useMemo(() => {
@@ -218,10 +245,27 @@ export default function AutoPage() {
                 回
               </p>
             )}
+
+            {/* 直接入手できるモンスターでも配合で作れるなら、そちらのルートも見られるようにする */}
+            {targetMonster?.obtainable && breedingPlan && (
+              <label className="flex min-h-11 w-full cursor-pointer items-center gap-2 rounded-lg border px-3 text-sm" style={{ borderColor: 'var(--border)' }}>
+                <input
+                  type="checkbox"
+                  className="h-4 w-4"
+                  checked={forceBreeding}
+                  onChange={(e) => setForceBreeding(e.target.checked)}
+                />
+                配合で作る手順を見る（{breedingPlan.cost}回の配合で作れます）
+              </label>
+            )}
           </div>
 
           {result.flow && result.flow.nodes.length > 1 && (
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-[var(--muted)]">図の向き</span>
+                <OrientationToggle value={orientation} onChange={setOrientation} />
+              </div>
               <div className="h-[60vh] min-h-[300px] overflow-hidden rounded-xl border bg-white shadow-sm sm:h-[540px]" style={{ borderColor: 'var(--border)' }}>
                 <ReactFlow
                   nodes={result.flow.nodes}

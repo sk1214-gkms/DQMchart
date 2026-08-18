@@ -3,6 +3,7 @@
 // 枠線・背景＝配合の状態、左端の帯＝系統（役割の違う情報を色で混ぜない）。
 import { Handle, Position } from '@xyflow/react';
 import type { Node, NodeProps } from '@xyflow/react';
+import type { Orientation } from '@/components/Orientation';
 
 export type MonsterNodeStatus = 'ok' | 'ng' | 'warn' | 'wild' | 'none';
 
@@ -13,6 +14,8 @@ export type MonsterNodeData = {
   /** 系統の識別色。指定があればノード左端に帯で表示する */
   familyColor?: string;
   rank?: string;
+  /** フロー図の向き。縦なら上下、横なら左右に接続点を置く */
+  orientation?: Orientation;
   /** エディタでの検証・保存用。自動生成ツリーでは未使用 */
   monsterId?: string;
 };
@@ -31,6 +34,11 @@ const statusStyles: Record<MonsterNodeStatus, string> = {
 const handleClass = '!h-4 !w-4 !border-2 !border-[var(--brand-500)] !bg-white';
 
 export function MonsterNode({ data, selected }: NodeProps<MonsterFlowNode>) {
+  // 横向きのときは左から右へ流れるよう接続点を左右に置く
+  const horizontal = data.orientation === 'horizontal';
+  const targetPosition = horizontal ? Position.Left : Position.Top;
+  const sourcePosition = horizontal ? Position.Right : Position.Bottom;
+
   return (
     <div
       className={`relative min-w-40 overflow-hidden rounded-lg border-2 py-2 pl-4 pr-3 text-xs shadow-sm transition ${
@@ -44,12 +52,12 @@ export function MonsterNode({ data, selected }: NodeProps<MonsterFlowNode>) {
           style={{ background: data.familyColor }}
         />
       )}
-      <Handle type="target" position={Position.Top} className={handleClass} />
+      <Handle type="target" position={targetPosition} className={handleClass} />
       <div className="font-bold text-[var(--foreground)]">{data.label}</div>
       <div className="mt-0.5 whitespace-pre-line text-[10px] leading-snug text-[var(--muted)]">
         {data.sub}
       </div>
-      <Handle type="source" position={Position.Bottom} className={handleClass} />
+      <Handle type="source" position={sourcePosition} className={handleClass} />
     </div>
   );
 }

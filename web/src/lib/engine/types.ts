@@ -90,6 +90,12 @@ export interface BreedingRuleset {
    * 親2体それぞれの親（＝祖父母4体）が判明しているときに使う。
    */
   quadCandidates(grandparents: Monster[], data: TitleData): BreedingCandidate[];
-  /** 目標モンスターの入手手順を野生入手可能モンスターまで逆算する */
+  /** 目標モンスターの入手手順を、配合なしで入手できるモンスターまで逆算する */
   plan(targetId: string, data: TitleData): BreedingPlan | null;
+  /**
+   * 目標自身は必ず配合で作る場合のプラン。
+   * 野生などで直接入手できるモンスターでも配合ルートを見たいときに使う。
+   * 配合で作る方法がなければ null。
+   */
+  planByBreeding(targetId: string, data: TitleData): BreedingPlan | null;
 }

@@ -93,6 +93,13 @@ class Planner {
     return this.best.get(monsterId) ?? null;
   }
 
+  /** 直接入手を使わず、必ず配合で作る場合のプラン（材料側は最短ルートを使う） */
+  planByBreeding(monsterId: string): BreedingPlan | null {
+    const m = monsterById(this.data, monsterId);
+    if (!m) return null;
+    return this.tryBuild(m);
+  }
+
   private computeAll(): void {
     for (const m of this.data.monsters) {
       if (m.obtainable) this.best.set(m.id, { kind: 'wild', monster: m, cost: 0 });
@@ -233,6 +240,10 @@ export const dqm3Ruleset: BreedingRuleset = {
 
   plan(targetId: string, data: TitleData): BreedingPlan | null {
     return getPlanner(data).plan(targetId);
+  },
+
+  planByBreeding(targetId: string, data: TitleData): BreedingPlan | null {
+    return getPlanner(data).planByBreeding(targetId);
   },
 };
 

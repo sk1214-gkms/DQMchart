@@ -225,6 +225,37 @@ describe('DQM3 逆算プランナー', () => {
     }
   });
 
+  it('直接入手できるモンスターでも配合ルートを取得できる', () => {
+    // 野生入手できるうえに配合でも作れるモンスターを探す
+    const target = data.monsters.find(
+      (m) => m.obtainable && engine.planByBreeding(m.id, data) !== null,
+    );
+    expect(target).toBeDefined();
+
+    // 通常のplanは直接入手（葉）を返す
+    expect(engine.plan(target!.id, data)!.kind).toBe('wild');
+
+    // planByBreedingは配合で作る手順を返す
+    const byBreeding = engine.planByBreeding(target!.id, data)!;
+    expect(byBreeding.kind).toBe('breed');
+    expect(byBreeding.cost).toBeGreaterThanOrEqual(1);
+    if (byBreeding.kind === 'breed' && byBreeding.parents.length === 2) {
+      const ok = engine
+        .candidates(byBreeding.parents[0].monster, byBreeding.parents[1].monster, data)
+        .some((c) => c.child.id === target!.id);
+      expect(ok).toBe(true);
+    }
+  });
+
+  it('配合で作れないモンスターはplanByBreedingがnullを返す', () => {
+    const childIds = new Set([
+      ...data.normalRules.flatMap((r) => r.childIds),
+      ...data.specialRecipes.map((r) => r.childId),
+    ]);
+    const onlyDirect = data.monsters.find((m) => !childIds.has(m.id));
+    if (onlyDirect) expect(engine.planByBreeding(onlyDirect.id, data)).toBeNull();
+  });
+
   it('すべてのモンスターに到達ルートがある', () => {
     const unreachable = data.monsters.filter((x) => engine.plan(x.id, data) === null);
     expect(unreachable.map((m) => m.name)).toEqual([]);

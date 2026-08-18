@@ -17,6 +17,7 @@ import { nodeTypes } from '@/components/MonsterNode';
 import type { MonsterFlowNode, MonsterNodeStatus } from '@/components/MonsterNode';
 import { MonsterPicker } from '@/components/MonsterPicker';
 import { FamilyMark, familyBackground, familyColor } from '@/components/MonsterBadges';
+import { OrientationToggle, useOrientation } from '@/components/Orientation';
 import { useTitleData } from '@/components/TitleProvider';
 import { getRuleset } from '@/lib/engine/registry';
 import {
@@ -39,6 +40,7 @@ export default function EditorPage() {
   const [parentBId, setParentBId] = useState('');
   const [chartId, setChartId] = useState<string | null>(null);
   const [chartName, setChartName] = useState('');
+  const [orientation, setOrientation] = useOrientation();
 
   // 「配合を追加」で選んだ親2体から生まれる子の候補
   const childCandidates = useMemo(() => {
@@ -140,9 +142,13 @@ export default function EditorPage() {
     () =>
       nodes.map((n) => ({
         ...n,
-        data: { ...n.data, status: statusMap.get(n.id) ?? ('none' as MonsterNodeStatus) },
+        data: {
+          ...n.data,
+          status: statusMap.get(n.id) ?? ('none' as MonsterNodeStatus),
+          orientation,
+        },
       })),
-    [nodes, statusMap],
+    [nodes, statusMap, orientation],
   );
 
   const saveChart = () => {
@@ -219,10 +225,6 @@ export default function EditorPage() {
     const child = data.monsters.find((m) => m.id === childId);
     if (!parentA || !parentB || !child) return;
 
-    // 既に置かれているノードの下に新しい組を積む
-    const baseY = nodes.length
-      ? Math.max(...nodes.map((n) => n.position.y)) + 190
-      : 40;
     const toNode = (m: (typeof data.monsters)[number], x: number, y: number): MonsterFlowNode => ({
       id: crypto.randomUUID(),
       type: 'monster',
@@ -236,9 +238,26 @@ export default function EditorPage() {
       },
     });
 
-    const nodeA = toNode(parentA, 40, baseY);
-    const nodeB = toNode(parentB, 260, baseY);
-    const nodeChild = toNode(child, 150, baseY + 130);
+    // 既に置かれているノードと重ならないよう、向きに応じてずらした位置に置く
+    const horizontal = orientation === 'horizontal';
+    const baseX = horizontal
+      ? nodes.length
+        ? Math.max(...nodes.map((n) => n.position.x)) + 300
+        : 40
+      : 40;
+    const baseY = horizontal
+      ? 40
+      : nodes.length
+        ? Math.max(...nodes.map((n) => n.position.y)) + 190
+        : 40;
+
+    const nodeA = toNode(parentA, baseX, baseY);
+    const nodeB = toNode(parentB, horizontal ? baseX : baseX + 220, horizontal ? baseY + 130 : baseY);
+    const nodeChild = toNode(
+      child,
+      horizontal ? baseX + 260 : baseX + 110,
+      horizontal ? baseY + 65 : baseY + 130,
+    );
     setNodes((ns) => [...ns, nodeA, nodeB, nodeChild]);
     setEdges((es) => [
       ...es,
@@ -317,6 +336,7 @@ export default function EditorPage() {
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
+            <OrientationToggle value={orientation} onChange={setOrientation} />
             <button
               onClick={deleteSelected}
               disabled={selectedCount === 0}
