@@ -21,13 +21,28 @@ describe('データ網羅状況', () => {
     const lines: string[] = [
       '# 入手方法が分かっていないモンスター',
       '',
-      'アプリのデータ上、配合でも直接入手でも手に入れられないモンスターの一覧です。',
-      '配合レシピや入手方法が判明したら、`web/src/data/titles/<タイトル>.json` に追記してください。',
+      '**このアプリのデータ上で**、配合でも直接入手でも手に入れられないモンスターの一覧です。',
+      'ゲーム内で本当に入手不可能とは限りません。多くはデータの取りこぼしです',
+      '（例: テリワンSPのマンドラは当初ここに載っていましたが、黄金郷の扉でスカウトできると判明しました）。',
+      '',
+      '配合レシピや入手方法が判明したら `web/src/data/titles/<タイトル>.json` に追記してください。',
+      '`npm test` を実行すると、このファイルは自動で更新されます。',
+      '',
+      '## 表の見方',
       '',
       '- **レシピも入手方法も無い**: そのモンスターを作る配合が1つも登録されておらず、直接入手もできない',
-      '- **素材に到達できない**: 配合レシピはあるが、その材料側にたどり着けない（材料の入手方法が分かれば解決する）',
+      '  → 調べるべきは「配合レシピ」か「スカウト・タマゴ・イベントなどの入手方法」',
+      '- **素材に到達できない**: 配合レシピはあるが、材料側にたどり着けない',
+      '  → 調べるべきは材料のほう。「大元の原因」の列にさかのぼった先を出しています',
       '',
-      'このファイルは `npm test` を実行すると自動で更新されます。',
+      '各タイトルの表の下に「優先して調べたいモンスター」を載せています。',
+      'そこが解決すると芋づる式に他のモンスターも到達可能になります。',
+      '',
+      '## 注意: 配信終了したモンスターについて',
+      '',
+      'すれちがい通信・Wi-Fi配信・コラボ特典などで配られたモンスターは、配信が終了していると',
+      '現在は入手できません。ただしこのアプリは「入手方法が記録されている」ものとして扱うため、',
+      'それらを素材にする配合は一覧に出てきません（実際には作れない場合があります）。',
       '',
     ];
 
@@ -67,17 +82,87 @@ describe('データ網羅状況', () => {
         ...(data.normalRules ?? []).flatMap((r) => r.childIds),
         ...data.specialRecipes.map((r) => r.childId),
       ]);
+      const unreachableIds = new Set(unreachable.map((m) => m.id));
+      const nameOf = (id: string) => data.monsters.find((x) => x.id === id)?.name ?? id;
+
+      /** そのモンスターのレシピで、到達できない素材を集める */
+      const blockersOf = (id: string): string[] => {
+        const blockers = new Set<string>();
+        for (const recipe of data.specialRecipes) {
+          if (recipe.childId !== id) continue;
+          for (const p of recipe.parents) {
+            if (p.kind === 'monster' && unreachableIds.has(p.monsterId)) blockers.add(p.monsterId);
+          }
+        }
+        return [...blockers];
+      };
+
+      /** 素材をたどって、大元で行き止まりになっているモンスターを探す */
+      const rootCausesOf = (id: string): string[] => {
+        const roots = new Set<string>();
+        const seen = new Set<string>();
+        const walk = (current: string) => {
+          if (seen.has(current)) return;
+          seen.add(current);
+          const blockers = blockersOf(current);
+          if (blockers.length === 0) {
+            // これ以上さかのぼれない＝ここが原因
+            if (current !== id) roots.add(current);
+            else if (!childIds.has(current)) roots.add(current);
+            return;
+          }
+          blockers.forEach(walk);
+        };
+        walk(id);
+        return [...roots];
+      };
+
       lines.push(`## ${data.name}`, '');
       lines.push(`到達可能 ${reached}/${total}（${pct}%）／未到達 ${unreachable.length}体`, '');
       if (unreachable.length === 0) {
         lines.push('未到達のモンスターはありません。', '');
       } else {
-        lines.push('| ランク | モンスター | 系統 | 状況 |', '| --- | --- | --- | --- |');
+        lines.push(
+          '| ランク | モンスター | 系統 | 状況 | 直接の原因（到達できない素材） | 大元の原因 |',
+          '| --- | --- | --- | --- | --- | --- |',
+        );
         for (const m of unreachable) {
-          const state = childIds.has(m.id) ? '素材に到達できない' : 'レシピも入手方法も無い';
-          lines.push(`| ${m.rank} | ${m.name} | ${familyName(m.familyId)} | ${state} |`);
+          const hasRecipe = childIds.has(m.id);
+          const state = hasRecipe ? '素材に到達できない' : 'レシピも入手方法も無い';
+          const blockers = blockersOf(m.id).map(nameOf);
+          const roots = rootCausesOf(m.id).map(nameOf);
+          const blockerText = hasRecipe
+            ? blockers.length
+              ? blockers.join('、')
+              : '素材は揃うがレシピの条件を満たせない'
+            : 'レシピ自体が未登録';
+          const rootText = roots.length
+            ? roots.filter((r) => r !== m.name).join('、') || '（自身が行き止まり）'
+            : '（自身が行き止まり）';
+          lines.push(
+            `| ${m.rank} | ${m.name} | ${familyName(m.familyId)} | ${state} | ${blockerText} | ${rootText} |`,
+          );
         }
         lines.push('');
+
+        // 大元の原因になっているモンスターを集計する（ここを調べれば連鎖的に解決する）
+        const rootCount = new Map<string, number>();
+        for (const m of unreachable) {
+          for (const r of rootCausesOf(m.id)) {
+            rootCount.set(r, (rootCount.get(r) ?? 0) + 1);
+          }
+        }
+        const ranked = [...rootCount.entries()]
+          .filter(([, n]) => n > 1)
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, 15);
+        if (ranked.length) {
+          lines.push('**優先して調べたいモンスター**（これが分かると連鎖的に解決します）', '');
+          for (const [id, n] of ranked) {
+            lines.push(`- ${nameOf(id)} … ${n}体の入手を塞いでいる`);
+          }
+          lines.push('');
+        }
       }
 
       // どのタイトルも大半のモンスターに到達できることを保証する
