@@ -44,7 +44,8 @@ function reachable(id) {
     }
   }
   // 位階配合方式: 自分より位階が低い到達可能なモンスターが同系統にいれば作れる
-  if (!ok && data.familyPairs) {
+  // （位階配合の対象外に指定されているモンスターは除く）
+  if (!ok && data.familyPairs && !m.tierExcluded) {
     const lower = data.monsters
       .filter((x) => x.familyId === m.familyId && (x.tier ?? 0) < (m.tier ?? 0))
       .sort((a, b) => (b.tier ?? 0) - (a.tier ?? 0))[0];
