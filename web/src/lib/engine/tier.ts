@@ -83,20 +83,28 @@ function familyOrder(data: TitleData): Map<string, Monster[]> {
   return cached;
 }
 
-/** その系統の中で、指定した位階より1つ上のモンスター（無ければnull＝打ち止め） */
+/**
+ * その系統の中で、指定した位階より1つ上のモンスター（無ければnull＝打ち止め）。
+ * 位階配合では生まれないモンスターは飛ばして、さらに上を見る。
+ */
 function nextInFamily(data: TitleData, familyId: string, tier: number): Monster | null {
   const list = familyOrder(data).get(familyId);
   if (!list) return null;
-  return list.find((m) => tierOf(m) > tier) ?? null;
+  return list.find((m) => tierOf(m) > tier && !m.tierExcluded) ?? null;
 }
 
-/** その系統の中で、指定モンスターの1つ下のモンスター（無ければnull＝最下位） */
+/**
+ * その系統の中で、指定モンスターの1つ下のモンスター（無ければnull＝最下位）。
+ * 逆算で「この子が生まれる親の位階の下限」を求めるのに使うので、
+ * nextInFamilyと同じく位階配合対象外のモンスターは飛ばす。
+ */
 function prevInFamily(data: TitleData, target: Monster): Monster | null {
   const list = familyOrder(data).get(target.familyId);
   if (!list) return null;
   let prev: Monster | null = null;
   for (const m of list) {
     if (tierOf(m) >= tierOf(target)) break;
+    if (m.tierExcluded) continue;
     prev = m;
   }
   return prev;
@@ -197,6 +205,7 @@ class Planner {
    * その範囲に入る親を材料の安いものから選ぶ。
    */
   private tryBuildByTier(m: Monster): BreedingPlan | null {
+    if (m.tierExcluded) return null; // 位階配合では生まれないので特殊配合に頼るしかない
     const prev = prevInFamily(this.data, m);
     const lower = prev ? tierOf(prev) : -1; // 基準の親はこの位階以上
     const upper = tierOf(m); // かつ m 未満

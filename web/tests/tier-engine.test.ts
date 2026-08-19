@@ -94,6 +94,34 @@ describe('位階配合', () => {
     const result = tierRuleset.candidates(m('スラC'), m('ぶつB'), data);
     expect(result.some((c) => c.method === 'special' && c.child.id === 'ドラC')).toBe(true);
   });
+
+  it('位階配合対象外のモンスターは飛ばして次の位階が選ばれる', () => {
+    // スラB(30)を対象外にすると、スラA×ドラA の候補1はスラC(60)になる
+    const excluded: TitleData = {
+      ...data,
+      monsters: data.monsters.map((x) =>
+        x.id === 'スラB' ? { ...x, tierExcluded: true } : x,
+      ),
+    };
+    const ids = tierRuleset
+      .candidates(m('スラA'), m('ドラA'), excluded)
+      .filter((c) => c.method === 'normal')
+      .map((c) => c.child.id);
+    expect(ids).not.toContain('スラB');
+    expect(ids).toContain('スラC');
+  });
+
+  it('位階配合対象外のモンスターは位階配合では逆算されない', () => {
+    const excluded: TitleData = {
+      ...data,
+      monsters: data.monsters.map((x) =>
+        x.id === 'スラB' ? { ...x, tierExcluded: true } : x,
+      ),
+    };
+    const plan = tierRuleset.plan('スラB', excluded);
+    // 特殊配合も無いので作れない
+    expect(plan).toBeNull();
+  });
 });
 
 describe('位階配合の逆算', () => {
