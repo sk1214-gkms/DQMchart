@@ -5,12 +5,14 @@ import dqm3 from '@/data/titles/dqm3.json';
 import iruruka from '@/data/titles/iruruka.json';
 import terrysp from '@/data/titles/terrysp.json';
 import dqmj3 from '@/data/titles/dqmj3.json';
+import dqmj3p from '@/data/titles/dqmj3p.json';
 
 const titles: TitleData[] = [
   dqm3 as TitleData,
   iruruka as TitleData,
   terrysp as TitleData,
   dqmj3 as TitleData,
+  dqmj3p as TitleData,
 ];
 
 export function listTitles(): TitleData[] {
