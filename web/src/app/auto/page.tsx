@@ -1,11 +1,13 @@
 'use client';
 // 自動チャート生成: 目標モンスターから配合ツリーを逆算してReact Flowで描画
 import { useCallback, useMemo, useState } from 'react';
-import { Background, Controls, MarkerType, ReactFlow } from '@xyflow/react';
+import { Background, Controls, ReactFlow, ReactFlowProvider } from '@xyflow/react';
 import type { Edge } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { nodeTypes } from '@/components/MonsterNode';
 import type { MonsterFlowNode } from '@/components/MonsterNode';
+import { ChartImageButton } from '@/components/ChartImageButton';
+import { edgeDefaults } from '@/components/edgeStyle';
 import { MonsterPicker } from '@/components/MonsterPicker';
 import {
   AcquisitionBadge,
@@ -125,7 +127,7 @@ function buildFlow(
             id: `e${gp.id}-${midId}`,
             source: gp.id,
             target: midId,
-            markerEnd: { type: MarkerType.ArrowClosed },
+            ...edgeDefaults,
           });
         }
         return { id: midId, across: midAcross };
@@ -156,7 +158,7 @@ function buildFlow(
         id: `e${parent.id}-${id}`,
         source: parent.id,
         target: id,
-        markerEnd: { type: MarkerType.ArrowClosed },
+        ...edgeDefaults,
       });
     }
 
@@ -174,7 +176,16 @@ function buildFlow(
   return { nodes, edges, leaves, steps };
 }
 
+/** 画像保存はReactFlowの状態を参照するため、ページ全体をProviderで包む */
 export default function AutoPage() {
+  return (
+    <ReactFlowProvider>
+      <AutoPageContent />
+    </ReactFlowProvider>
+  );
+}
+
+function AutoPageContent() {
   const data = useTitleData();
   const [targetId, setTargetId] = useState('');
 
@@ -299,9 +310,12 @@ export default function AutoPage() {
 
           {result.flow && result.flow.nodes.length > 1 && (
             <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 <span className="text-sm text-[var(--muted)]">図の向き</span>
                 <OrientationToggle value={orientation} onChange={setOrientation} />
+                <ChartImageButton
+                  fileName={`${targetMonster?.name ?? 'chart'}_配合チャート`}
+                />
               </div>
               <div className="h-[60vh] min-h-[300px] overflow-hidden rounded-xl border bg-white shadow-sm sm:h-[540px]" style={{ borderColor: 'var(--border)' }}>
                 <ReactFlow

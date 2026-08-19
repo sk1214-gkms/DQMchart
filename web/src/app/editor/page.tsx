@@ -5,14 +5,16 @@ import { useCallback, useMemo, useState, useSyncExternalStore } from 'react';
 import {
   Background,
   Controls,
-  MarkerType,
   ReactFlow,
+  ReactFlowProvider,
   addEdge,
   applyEdgeChanges,
   applyNodeChanges,
 } from '@xyflow/react';
 import type { Connection, Edge, EdgeChange, NodeChange } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
+import { ChartImageButton } from '@/components/ChartImageButton';
+import { edgeDefaults } from '@/components/edgeStyle';
 import { nodeTypes } from '@/components/MonsterNode';
 import type { MonsterFlowNode, MonsterNodeStatus } from '@/components/MonsterNode';
 import { MonsterPicker } from '@/components/MonsterPicker';
@@ -29,7 +31,16 @@ import {
 } from '@/lib/storage';
 import type { SavedChart } from '@/lib/storage';
 
+/** 画像保存はReactFlowの状態を参照するため、ページ全体をProviderで包む */
 export default function EditorPage() {
+  return (
+    <ReactFlowProvider>
+      <EditorPageContent />
+    </ReactFlowProvider>
+  );
+}
+
+function EditorPageContent() {
   const data = useTitleData();
   const engine = useMemo(() => getRuleset(data.ruleset), [data.ruleset]);
 
@@ -67,7 +78,7 @@ export default function EditorPage() {
   );
   const onConnect = useCallback((conn: Connection) => {
     if (conn.source === conn.target) return;
-    setEdges((es) => addEdge({ ...conn, markerEnd: { type: MarkerType.ArrowClosed } }, es));
+    setEdges((es) => addEdge({ ...conn, ...edgeDefaults }, es));
   }, []);
 
   const addMonster = () => {
@@ -200,7 +211,7 @@ export default function EditorPage() {
         id: se.id,
         source: se.source,
         target: se.target,
-        markerEnd: { type: MarkerType.ArrowClosed },
+        ...edgeDefaults,
       })),
     );
   };
@@ -265,7 +276,7 @@ export default function EditorPage() {
         id: `e-${p.id}-${nodeChild.id}`,
         source: p.id,
         target: nodeChild.id,
-        markerEnd: { type: MarkerType.ArrowClosed },
+        ...edgeDefaults,
       })),
     ]);
   };
@@ -337,6 +348,7 @@ export default function EditorPage() {
 
           <div className="flex flex-wrap items-center gap-2">
             <OrientationToggle value={orientation} onChange={setOrientation} />
+            <ChartImageButton fileName={chartName.trim() || '配合チャート'} />
             <button
               onClick={deleteSelected}
               disabled={selectedCount === 0}

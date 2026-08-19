@@ -3,35 +3,37 @@
 import { FamilyIcon } from '@/components/FamilyIcon';
 import type { AcquisitionKind, TitleData } from '@/lib/engine/types';
 
+// 画像として書き出すときSVG内ではCSS変数が解決されないため、色は実際の値で持つ
+// （globals.css の --family-* と同じ値にすること）
 const familyColors: Record<string, string> = {
-  slime: 'var(--family-slime)',
-  dragon: 'var(--family-dragon)',
-  nature: 'var(--family-nature)',
-  beast: 'var(--family-beast)',
-  demon: 'var(--family-demon)',
-  zombie: 'var(--family-zombie)',
-  material: 'var(--family-material)',
-  unknown: 'var(--family-unknown)',
+  slime: '#2a78d6',
+  dragon: '#1baf7a',
+  nature: '#008300',
+  beast: '#eb6834',
+  demon: '#e34948',
+  zombie: '#4a3aa7',
+  material: '#eda100',
+  unknown: '#e87ba4',
 };
 
 const familyBackgrounds: Record<string, string> = {
-  slime: 'var(--family-slime-bg)',
-  dragon: 'var(--family-dragon-bg)',
-  nature: 'var(--family-nature-bg)',
-  beast: 'var(--family-beast-bg)',
-  demon: 'var(--family-demon-bg)',
-  zombie: 'var(--family-zombie-bg)',
-  material: 'var(--family-material-bg)',
-  unknown: 'var(--family-unknown-bg)',
+  slime: '#eef4fd',
+  dragon: '#ecf8f3',
+  nature: '#ebf5eb',
+  beast: '#fdf1ec',
+  demon: '#fdeeee',
+  zombie: '#f0eef9',
+  material: '#fdf6e7',
+  unknown: '#fdeff4',
 };
 
 export function familyColor(familyId: string): string {
-  return familyColors[familyId] ?? 'var(--muted)';
+  return familyColors[familyId] ?? '#5b6478';
 }
 
 /** カード背景に使う淡い系統色 */
 export function familyBackground(familyId: string): string {
-  return familyBackgrounds[familyId] ?? 'var(--surface)';
+  return familyBackgrounds[familyId] ?? '#ffffff';
 }
 
 export function familyName(data: TitleData, familyId: string): string {

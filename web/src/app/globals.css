@@ -151,7 +151,5 @@ body {
   touch-action: none;
 }
 
-.react-flow__edge-path {
-  stroke: #9aa4bd;
-  stroke-width: 2;
-}
+/* 配合線の色と太さは components/edgeStyle.ts でエッジ自身に持たせている
+   （CSSクラス指定だと画像として書き出すときに引き継がれないため） */

@@ -32,6 +32,15 @@ const statusStyles: Record<MonsterNodeStatus, string> = {
   none: 'border-[var(--border)] bg-white',
 };
 
+/** 画像として書き出すときに使う実際の色（CSSクラスと同じ見た目にする） */
+export const statusColors: Record<MonsterNodeStatus, { border: string; bg: string }> = {
+  ok: { border: '#157f4d', bg: '#f1faf5' },
+  ng: { border: '#c92a2a', bg: '#fef2f2' },
+  warn: { border: '#b45309', bg: '#fffbeb' },
+  wild: { border: '#1c6fb8', bg: '#f0f7fd' },
+  none: { border: '#dfe3ee', bg: '#ffffff' },
+};
+
 // 接続点は指でも掴めるよう既定より大きくする
 const handleClass = '!h-4 !w-4 !border-2 !border-[var(--brand-500)] !bg-white';
 
