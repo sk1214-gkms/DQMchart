@@ -96,6 +96,8 @@ export function childTiers(tierA: number, tierB: number): number[] {
 
 /** 位階配合で生まれる子（特殊配合は含まない） */
 function tierCandidates(a: Monster, b: Monster, data: TitleData): Monster[] {
+  // 位階が分かっていないモンスター（特殊配合専用のSSランクなど）は計算に使えない
+  if (a.tier === undefined || b.tier === undefined) return [];
   const out: Monster[] = [];
   for (const tier of childTiers(tierOf(a), tierOf(b))) {
     const m = monsterAtTier(data, tier);
@@ -178,7 +180,7 @@ class Planner {
    * 総当たりだと重いので、計算式を逆に解いて候補の親だけを試す。
    */
   private tryBuildByTier(m: Monster): BreedingPlan | null {
-    if (m.tierExcluded) return null; // 一般配合では生まれない
+    if (m.tierExcluded || m.tier === undefined) return null; // 一般配合では生まれない
     const target = tierOf(m);
     // 作れない位階を飛ばして m にたどり着く場合があるので、狙う位階には幅がある
     const targets = this.tiersLandingOn(m);
