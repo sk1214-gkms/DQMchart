@@ -1,0 +1,9139 @@
+{
+  "id": "dqmj3",
+  "name": "ジョーカー3",
+  "ruleset": "dqmj3",
+  "ranks": [
+    {
+      "id": "F",
+      "order": 0
+    },
+    {
+      "id": "E",
+      "order": 1
+    },
+    {
+      "id": "D",
+      "order": 2
+    },
+    {
+      "id": "C",
+      "order": 3
+    },
+    {
+      "id": "B",
+      "order": 4
+    },
+    {
+      "id": "A",
+      "order": 5
+    },
+    {
+      "id": "S",
+      "order": 6
+    },
+    {
+      "id": "SS",
+      "order": 7
+    }
+  ],
+  "families": [
+    {
+      "id": "slime",
+      "name": "スライム系"
+    },
+    {
+      "id": "dragon",
+      "name": "ドラゴン系"
+    },
+    {
+      "id": "nature",
+      "name": "自然系"
+    },
+    {
+      "id": "beast",
+      "name": "魔獣系"
+    },
+    {
+      "id": "material",
+      "name": "物質系"
+    },
+    {
+      "id": "demon",
+      "name": "悪魔系"
+    },
+    {
+      "id": "zombie",
+      "name": "ゾンビ系"
+    },
+    {
+      "id": "unknown",
+      "name": "？？？系"
+    },
+    {
+      "id": "break",
+      "name": "ブレイク系"
+    }
+  ],
+  "monsters": [
+    {
+      "id": "スライム",
+      "name": "スライム",
+      "familyId": "slime",
+      "rank": "F",
+      "tier": 1,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "静寂の草原"
+    },
+    {
+      "id": "アルミラージ",
+      "name": "アルミラージ",
+      "familyId": "beast",
+      "rank": "F",
+      "tier": 2,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "静寂の草原"
+    },
+    {
+      "id": "オニオーン",
+      "name": "オニオーン",
+      "familyId": "nature",
+      "rank": "F",
+      "tier": 3,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "静寂の草原"
+    },
+    {
+      "id": "ビッグハット",
+      "name": "ビッグハット",
+      "familyId": "beast",
+      "rank": "F",
+      "tier": 4,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "静寂の草原"
+    },
+    {
+      "id": "プリズニャン",
+      "name": "プリズニャン",
+      "familyId": "beast",
+      "rank": "F",
+      "tier": 5,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "冒頭の楽園で「昼寝」を選ぶと初期仲間になる"
+    },
+    {
+      "id": "ドラキー",
+      "name": "ドラキー",
+      "familyId": "beast",
+      "rank": "F",
+      "tier": 6,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "崩落都市（夜）・送電施設。楽園で「おしゃべり」を選ぶと初期仲間にもなる"
+    },
+    {
+      "id": "ナスビナーラ",
+      "name": "ナスビナーラ",
+      "familyId": "nature",
+      "rank": "F",
+      "tier": 7,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "時空の裂け目（異世界マスターのモンスターをスカウト）。楽園で「おしゃべり」以外の選択肢で初期仲間にもなる"
+    },
+    {
+      "id": "フォンデュ",
+      "name": "フォンデュ",
+      "familyId": "material",
+      "rank": "F",
+      "tier": 8,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "時空の裂け目。楽園で「本を読む」を選ぶと初期仲間にもなる"
+    },
+    {
+      "id": "どんぐりベビー",
+      "name": "どんぐりベビー",
+      "familyId": "nature",
+      "rank": "F",
+      "tier": 9,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "静寂の草原"
+    },
+    {
+      "id": "スマイルリザード",
+      "name": "スマイルリザード",
+      "familyId": "dragon",
+      "rank": "F",
+      "tier": 10,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "静寂の草原"
+    },
+    {
+      "id": "オーク",
+      "name": "オーク",
+      "familyId": "beast",
+      "rank": "F",
+      "tier": 11,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "静寂の草原"
+    },
+    {
+      "id": "あばれうしどり",
+      "name": "あばれうしどり",
+      "familyId": "nature",
+      "rank": "F",
+      "tier": 12,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "静寂の草原"
+    },
+    {
+      "id": "グリーンシザー",
+      "name": "グリーンシザー",
+      "familyId": "nature",
+      "rank": "F",
+      "tier": 13,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "静寂の草原"
+    },
+    {
+      "id": "ホイップゴースト",
+      "name": "ホイップゴースト",
+      "familyId": "zombie",
+      "rank": "F",
+      "tier": 14,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "静寂の草原"
+    },
+    {
+      "id": "ドロヌーバ",
+      "name": "ドロヌーバ",
+      "familyId": "material",
+      "rank": "F",
+      "tier": 15,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "静寂の草原（雨天時）"
+    },
+    {
+      "id": "ぐんたいガニ",
+      "name": "ぐんたいガニ",
+      "familyId": "nature",
+      "rank": "F",
+      "tier": 16,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "静寂の草原"
+    },
+    {
+      "id": "デンデン竜",
+      "name": "デンデン竜",
+      "familyId": "dragon",
+      "rank": "F",
+      "tier": 17,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "静寂の草原"
+    },
+    {
+      "id": "ピッキー",
+      "name": "ピッキー",
+      "familyId": "nature",
+      "rank": "F",
+      "tier": 18,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "崩落都市"
+    },
+    {
+      "id": "ベビーパンサー",
+      "name": "ベビーパンサー",
+      "familyId": "beast",
+      "rank": "F",
+      "tier": 19,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "崩落都市"
+    },
+    {
+      "id": "メタッピー",
+      "name": "メタッピー",
+      "familyId": "material",
+      "rank": "F",
+      "tier": 20,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "崩落都市"
+    },
+    {
+      "id": "ボーンバット",
+      "name": "ボーンバット",
+      "familyId": "zombie",
+      "rank": "F",
+      "tier": 21,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "崩落都市"
+    },
+    {
+      "id": "スライムタワー",
+      "name": "スライムタワー",
+      "familyId": "slime",
+      "rank": "F",
+      "tier": 22,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "崩落都市"
+    },
+    {
+      "id": "ドルイド",
+      "name": "ドルイド",
+      "familyId": "demon",
+      "rank": "F",
+      "tier": 23,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "崩落都市"
+    },
+    {
+      "id": "ニードルマン",
+      "name": "ニードルマン",
+      "familyId": "material",
+      "rank": "F",
+      "tier": 24,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "崩落都市"
+    },
+    {
+      "id": "ようかい魚",
+      "name": "ようかい魚",
+      "familyId": "zombie",
+      "rank": "F",
+      "tier": 25,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "崩落都市"
+    },
+    {
+      "id": "メタルハンター",
+      "name": "メタルハンター",
+      "familyId": "material",
+      "rank": "F",
+      "tier": 26,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "送電施設・センタービル"
+    },
+    {
+      "id": "グレムリン",
+      "name": "グレムリン",
+      "familyId": "demon",
+      "rank": "F",
+      "tier": 27,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "センタービル"
+    },
+    {
+      "id": "ドラゴンキッズ",
+      "name": "ドラゴンキッズ",
+      "familyId": "dragon",
+      "rank": "F",
+      "tier": 28,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "崩落都市"
+    },
+    {
+      "id": "スカルガルー",
+      "name": "スカルガルー",
+      "familyId": "beast",
+      "rank": "F",
+      "tier": 29,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "Wi-Fi配信（2016/3/24〜3/31・配信終了）"
+    },
+    {
+      "id": "たけやりへい",
+      "name": "たけやりへい",
+      "familyId": "material",
+      "rank": "F",
+      "tier": 30,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "時空の裂け目"
+    },
+    {
+      "id": "たつのこナイト",
+      "name": "たつのこナイト",
+      "familyId": "dragon",
+      "rank": "F",
+      "tier": 31
+    },
+    {
+      "id": "キラーグース",
+      "name": "キラーグース",
+      "familyId": "nature",
+      "rank": "F",
+      "tier": 32
+    },
+    {
+      "id": "ホイミスライム",
+      "name": "ホイミスライム",
+      "familyId": "slime",
+      "rank": "F",
+      "tier": 33,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "時空の裂け目"
+    },
+    {
+      "id": "サボテンボール",
+      "name": "サボテンボール",
+      "familyId": "nature",
+      "rank": "F",
+      "tier": 34,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "時空の裂け目"
+    },
+    {
+      "id": "ゆめにゅうどう",
+      "name": "ゆめにゅうどう",
+      "familyId": "beast",
+      "rank": "F",
+      "tier": 35,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "時空の裂け目"
+    },
+    {
+      "id": "バブルスライム",
+      "name": "バブルスライム",
+      "familyId": "slime",
+      "rank": "F",
+      "tier": 36
+    },
+    {
+      "id": "さまようよろい",
+      "name": "さまようよろい",
+      "familyId": "zombie",
+      "rank": "F",
+      "tier": 37,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "時空の裂け目"
+    },
+    {
+      "id": "ももんじゃ",
+      "name": "ももんじゃ",
+      "familyId": "beast",
+      "rank": "F",
+      "tier": 38,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "時空の裂け目"
+    },
+    {
+      "id": "ドラゴスライム",
+      "name": "ドラゴスライム",
+      "familyId": "slime",
+      "rank": "F",
+      "tier": 39,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "時空の裂け目"
+    },
+    {
+      "id": "エビルアングラー",
+      "name": "エビルアングラー",
+      "familyId": "nature",
+      "rank": "F",
+      "tier": 40,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "時空の裂け目"
+    },
+    {
+      "id": "おおきづち",
+      "name": "おおきづち",
+      "familyId": "beast",
+      "rank": "F",
+      "tier": 41
+    },
+    {
+      "id": "プチアーノン",
+      "name": "プチアーノン",
+      "familyId": "nature",
+      "rank": "F",
+      "tier": 42
+    },
+    {
+      "id": "キメラ",
+      "name": "キメラ",
+      "familyId": "beast",
+      "rank": "F",
+      "tier": 43,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "時空の裂け目"
+    },
+    {
+      "id": "ベビータイガー",
+      "name": "ベビータイガー",
+      "familyId": "beast",
+      "rank": "F",
+      "tier": 44
+    },
+    {
+      "id": "トドマン",
+      "name": "トドマン",
+      "familyId": "beast",
+      "rank": "F",
+      "tier": 45,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "時空の裂け目"
+    },
+    {
+      "id": "フォレストドラゴ",
+      "name": "フォレストドラゴ",
+      "familyId": "dragon",
+      "rank": "F",
+      "tier": 46,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "時空の裂け目"
+    },
+    {
+      "id": "なげきムーン",
+      "name": "なげきムーン",
+      "familyId": "material",
+      "rank": "F",
+      "tier": 47,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "静寂の草原（夜）"
+    },
+    {
+      "id": "シャイニング",
+      "name": "シャイニング",
+      "familyId": "material",
+      "rank": "F",
+      "tier": 48,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "崩落都市"
+    },
+    {
+      "id": "ゴースト",
+      "name": "ゴースト",
+      "familyId": "zombie",
+      "rank": "F",
+      "tier": 49,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道"
+    },
+    {
+      "id": "マッシュスライム",
+      "name": "マッシュスライム",
+      "familyId": "slime",
+      "rank": "F",
+      "tier": 50,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道（Wi-Fi配信でも入手可能だった）"
+    },
+    {
+      "id": "おばけきのこ",
+      "name": "おばけきのこ",
+      "familyId": "zombie",
+      "rank": "F",
+      "tier": 51,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道"
+    },
+    {
+      "id": "アニマルゾンビ",
+      "name": "アニマルゾンビ",
+      "familyId": "zombie",
+      "rank": "F",
+      "tier": 52,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道"
+    },
+    {
+      "id": "くさった死体",
+      "name": "くさった死体",
+      "familyId": "zombie",
+      "rank": "F",
+      "tier": 53,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道"
+    },
+    {
+      "id": "いたずらもぐら",
+      "name": "いたずらもぐら",
+      "familyId": "beast",
+      "rank": "F",
+      "tier": 54,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "アンデッドガーデン"
+    },
+    {
+      "id": "ギズモ",
+      "name": "ギズモ",
+      "familyId": "material",
+      "rank": "F",
+      "tier": 55,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道"
+    },
+    {
+      "id": "イルカちょうちん",
+      "name": "イルカちょうちん",
+      "familyId": "nature",
+      "rank": "E",
+      "tier": 56,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "静寂の草原"
+    },
+    {
+      "id": "デスファレーナ",
+      "name": "デスファレーナ",
+      "familyId": "nature",
+      "rank": "E",
+      "tier": 57,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "静寂の草原"
+    },
+    {
+      "id": "ヘルコンドル",
+      "name": "ヘルコンドル",
+      "familyId": "beast",
+      "rank": "E",
+      "tier": 58,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "静寂の草原"
+    },
+    {
+      "id": "しびれくらげ",
+      "name": "しびれくらげ",
+      "familyId": "slime",
+      "rank": "E",
+      "tier": 59,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "送電施設"
+    },
+    {
+      "id": "インキュバス",
+      "name": "インキュバス",
+      "familyId": "beast",
+      "rank": "E",
+      "tier": 60
+    },
+    {
+      "id": "ベビル",
+      "name": "ベビル",
+      "familyId": "demon",
+      "rank": "E",
+      "tier": 61
+    },
+    {
+      "id": "たまねぎマン",
+      "name": "たまねぎマン",
+      "familyId": "nature",
+      "rank": "E",
+      "tier": 62
+    },
+    {
+      "id": "ぬすっとウサギ",
+      "name": "ぬすっとウサギ",
+      "familyId": "beast",
+      "rank": "E",
+      "tier": 63
+    },
+    {
+      "id": "スライムベス",
+      "name": "スライムベス",
+      "familyId": "slime",
+      "rank": "E",
+      "tier": 64,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "焦熱の火山"
+    },
+    {
+      "id": "メイジドラキー",
+      "name": "メイジドラキー",
+      "familyId": "beast",
+      "rank": "E",
+      "tier": 65
+    },
+    {
+      "id": "とうろうへい",
+      "name": "とうろうへい",
+      "familyId": "material",
+      "rank": "E",
+      "tier": 66
+    },
+    {
+      "id": "ぬかどこスライム",
+      "name": "ぬかどこスライム",
+      "familyId": "slime",
+      "rank": "E",
+      "tier": 67
+    },
+    {
+      "id": "ヘルコンダクター",
+      "name": "ヘルコンダクター",
+      "familyId": "demon",
+      "rank": "E",
+      "tier": 68
+    },
+    {
+      "id": "タマゴロン",
+      "name": "タマゴロン",
+      "familyId": "slime",
+      "rank": "E",
+      "tier": 69,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "時空の裂け目"
+    },
+    {
+      "id": "フィッシュライダー",
+      "name": "フィッシュライダー",
+      "familyId": "nature",
+      "rank": "E",
+      "tier": 70,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "崩落都市"
+    },
+    {
+      "id": "キラーパンサー",
+      "name": "キラーパンサー",
+      "familyId": "beast",
+      "rank": "E",
+      "tier": 71
+    },
+    {
+      "id": "ひとくいそう",
+      "name": "ひとくいそう",
+      "familyId": "nature",
+      "rank": "E",
+      "tier": 72,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "崩落都市"
+    },
+    {
+      "id": "ダッシュラン",
+      "name": "ダッシュラン",
+      "familyId": "dragon",
+      "rank": "E",
+      "tier": 73,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "崩落都市"
+    },
+    {
+      "id": "ポムポムボム",
+      "name": "ポムポムボム",
+      "familyId": "zombie",
+      "rank": "E",
+      "tier": 74,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "崩落都市"
+    },
+    {
+      "id": "オクトリーチ",
+      "name": "オクトリーチ",
+      "familyId": "nature",
+      "rank": "E",
+      "tier": 75,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "崩落都市"
+    },
+    {
+      "id": "モーモン",
+      "name": "モーモン",
+      "familyId": "demon",
+      "rank": "E",
+      "tier": 76,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "崩落都市"
+    },
+    {
+      "id": "どくろあらい",
+      "name": "どくろあらい",
+      "familyId": "beast",
+      "rank": "E",
+      "tier": 77,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道"
+    },
+    {
+      "id": "がいこつ",
+      "name": "がいこつ",
+      "familyId": "zombie",
+      "rank": "E",
+      "tier": 78,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道"
+    },
+    {
+      "id": "マドルーパー",
+      "name": "マドルーパー",
+      "familyId": "material",
+      "rank": "E",
+      "tier": 79,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道"
+    },
+    {
+      "id": "いっかくウサギ",
+      "name": "いっかくウサギ",
+      "familyId": "beast",
+      "rank": "E",
+      "tier": 80,
+      "tierExcluded": true
+    },
+    {
+      "id": "ポグフィッシュ",
+      "name": "ポグフィッシュ",
+      "familyId": "nature",
+      "rank": "E",
+      "tier": 81
+    },
+    {
+      "id": "デスジャッカル",
+      "name": "デスジャッカル",
+      "familyId": "zombie",
+      "rank": "E",
+      "tier": 82
+    },
+    {
+      "id": "ゴーレム",
+      "name": "ゴーレム",
+      "familyId": "material",
+      "rank": "E",
+      "tier": 83
+    },
+    {
+      "id": "ドラゴン",
+      "name": "ドラゴン",
+      "familyId": "dragon",
+      "rank": "E",
+      "tier": 84
+    },
+    {
+      "id": "アイアンタートル",
+      "name": "アイアンタートル",
+      "familyId": "dragon",
+      "rank": "E",
+      "tier": 85
+    },
+    {
+      "id": "イエティ",
+      "name": "イエティ",
+      "familyId": "beast",
+      "rank": "E",
+      "tier": 86
+    },
+    {
+      "id": "ガルバゴルバ",
+      "name": "ガルバゴルバ",
+      "familyId": "demon",
+      "rank": "E",
+      "tier": 87,
+      "tierExcluded": true
+    },
+    {
+      "id": "おむつっこり",
+      "name": "おむつっこり",
+      "familyId": "nature",
+      "rank": "E",
+      "tier": 88,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "Wi-Fi配信（2016/3/24〜3/31・配信終了）"
+    },
+    {
+      "id": "ガチャコッコ",
+      "name": "ガチャコッコ",
+      "familyId": "material",
+      "rank": "E",
+      "tier": 89
+    },
+    {
+      "id": "リビングデッド",
+      "name": "リビングデッド",
+      "familyId": "zombie",
+      "rank": "E",
+      "tier": 90
+    },
+    {
+      "id": "リザードマン",
+      "name": "リザードマン",
+      "familyId": "dragon",
+      "rank": "E",
+      "tier": 91,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道"
+    },
+    {
+      "id": "エンタシスマン",
+      "name": "エンタシスマン",
+      "familyId": "material",
+      "rank": "E",
+      "tier": 92,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "アンデッドガーデン"
+    },
+    {
+      "id": "ガーゴイル",
+      "name": "ガーゴイル",
+      "familyId": "beast",
+      "rank": "E",
+      "tier": 93,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道"
+    },
+    {
+      "id": "たんすミミック",
+      "name": "たんすミミック",
+      "familyId": "material",
+      "rank": "E",
+      "tier": 94,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "アンデッドガーデン"
+    },
+    {
+      "id": "やみしばり",
+      "name": "やみしばり",
+      "familyId": "material",
+      "rank": "E",
+      "tier": 95,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "凍骨の氷原（夜）"
+    },
+    {
+      "id": "だいおうキッズ",
+      "name": "だいおうキッズ",
+      "familyId": "nature",
+      "rank": "E",
+      "tier": 96,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "黒鉄の監獄塔"
+    },
+    {
+      "id": "くろカビこぞう",
+      "name": "くろカビこぞう",
+      "familyId": "material",
+      "rank": "E",
+      "tier": 97,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "黒鉄の監獄塔"
+    },
+    {
+      "id": "チャームバット",
+      "name": "チャームバット",
+      "familyId": "zombie",
+      "rank": "E",
+      "tier": 98,
+      "tierExcluded": true
+    },
+    {
+      "id": "トロル",
+      "name": "トロル",
+      "familyId": "demon",
+      "rank": "E",
+      "tier": 99
+    },
+    {
+      "id": "なげきの亡霊",
+      "name": "なげきの亡霊",
+      "familyId": "zombie",
+      "rank": "E",
+      "tier": 100
+    },
+    {
+      "id": "ドラゴンバゲージ",
+      "name": "ドラゴンバゲージ",
+      "familyId": "dragon",
+      "rank": "E",
+      "tier": 101
+    },
+    {
+      "id": "ブラックマンティス",
+      "name": "ブラックマンティス",
+      "familyId": "nature",
+      "rank": "E",
+      "tier": 102,
+      "tierExcluded": true
+    },
+    {
+      "id": "スライムつむり",
+      "name": "スライムつむり",
+      "familyId": "slime",
+      "rank": "E",
+      "tier": 103
+    },
+    {
+      "id": "マジカルハット",
+      "name": "マジカルハット",
+      "familyId": "material",
+      "rank": "E",
+      "tier": 104
+    },
+    {
+      "id": "しましまキャット",
+      "name": "しましまキャット",
+      "familyId": "beast",
+      "rank": "E",
+      "tier": 105,
+      "tierExcluded": true
+    },
+    {
+      "id": "パールスライム",
+      "name": "パールスライム",
+      "familyId": "slime",
+      "rank": "E",
+      "tier": 106,
+      "tierExcluded": true
+    },
+    {
+      "id": "コトブキーノ",
+      "name": "コトブキーノ",
+      "familyId": "demon",
+      "rank": "E",
+      "tier": 107,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "時空の裂け目"
+    },
+    {
+      "id": "ブルホーク",
+      "name": "ブルホーク",
+      "familyId": "beast",
+      "rank": "E",
+      "tier": 108
+    },
+    {
+      "id": "ポイズントリル",
+      "name": "ポイズントリル",
+      "familyId": "zombie",
+      "rank": "E",
+      "tier": 109
+    },
+    {
+      "id": "みずたまドラゴン",
+      "name": "みずたまドラゴン",
+      "familyId": "dragon",
+      "rank": "E",
+      "tier": 110
+    },
+    {
+      "id": "ひとくい箱",
+      "name": "ひとくい箱",
+      "familyId": "material",
+      "rank": "E",
+      "tier": 111,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "各地"
+    },
+    {
+      "id": "ワニバーン",
+      "name": "ワニバーン",
+      "familyId": "dragon",
+      "rank": "D",
+      "tier": 112,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "崩落都市"
+    },
+    {
+      "id": "ジェリーマン",
+      "name": "ジェリーマン",
+      "familyId": "material",
+      "rank": "D",
+      "tier": 113,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道"
+    },
+    {
+      "id": "スカルゴン",
+      "name": "スカルゴン",
+      "familyId": "zombie",
+      "rank": "D",
+      "tier": 114,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道・アンデッドガーデン"
+    },
+    {
+      "id": "プリーストナイト",
+      "name": "プリーストナイト",
+      "familyId": "demon",
+      "rank": "D",
+      "tier": 115,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "アンデッドガーデン"
+    },
+    {
+      "id": "じめじめバブル",
+      "name": "じめじめバブル",
+      "familyId": "slime",
+      "rank": "D",
+      "tier": 116,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道"
+    },
+    {
+      "id": "ヘルゴースト",
+      "name": "ヘルゴースト",
+      "familyId": "zombie",
+      "rank": "D",
+      "tier": 117,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道"
+    },
+    {
+      "id": "じごくのハサミ",
+      "name": "じごくのハサミ",
+      "familyId": "nature",
+      "rank": "D",
+      "tier": 118,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道"
+    },
+    {
+      "id": "ガマキャノン",
+      "name": "ガマキャノン",
+      "familyId": "dragon",
+      "rank": "D",
+      "tier": 119,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道"
+    },
+    {
+      "id": "ディープバイター",
+      "name": "ディープバイター",
+      "familyId": "dragon",
+      "rank": "D",
+      "tier": 120,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "凍骨の氷原"
+    },
+    {
+      "id": "キラーマシンライト",
+      "name": "キラーマシンライト",
+      "familyId": "material",
+      "rank": "D",
+      "tier": 121
+    },
+    {
+      "id": "うおのりデビル",
+      "name": "うおのりデビル",
+      "familyId": "nature",
+      "rank": "D",
+      "tier": 122
+    },
+    {
+      "id": "ミステリピラー",
+      "name": "ミステリピラー",
+      "familyId": "material",
+      "rank": "D",
+      "tier": 123
+    },
+    {
+      "id": "メイジキメラ",
+      "name": "メイジキメラ",
+      "familyId": "beast",
+      "rank": "D",
+      "tier": 124
+    },
+    {
+      "id": "アサシンブラッド",
+      "name": "アサシンブラッド",
+      "familyId": "material",
+      "rank": "D",
+      "tier": 125
+    },
+    {
+      "id": "イエローシックル",
+      "name": "イエローシックル",
+      "familyId": "nature",
+      "rank": "D",
+      "tier": 126
+    },
+    {
+      "id": "ストーンマン",
+      "name": "ストーンマン",
+      "familyId": "material",
+      "rank": "D",
+      "tier": 127
+    },
+    {
+      "id": "デンタザウルス",
+      "name": "デンタザウルス",
+      "familyId": "dragon",
+      "rank": "D",
+      "tier": 128
+    },
+    {
+      "id": "クックルー",
+      "name": "クックルー",
+      "familyId": "beast",
+      "rank": "D",
+      "tier": 129
+    },
+    {
+      "id": "ゴルゴンゾーラ",
+      "name": "ゴルゴンゾーラ",
+      "familyId": "material",
+      "rank": "D",
+      "tier": 130
+    },
+    {
+      "id": "ガメゴン",
+      "name": "ガメゴン",
+      "familyId": "dragon",
+      "rank": "D",
+      "tier": 131,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "凍骨の氷原・鉄の箱舟"
+    },
+    {
+      "id": "スライムブレス",
+      "name": "スライムブレス",
+      "familyId": "slime",
+      "rank": "D",
+      "tier": 132,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "凍骨の氷原"
+    },
+    {
+      "id": "ブラウニー",
+      "name": "ブラウニー",
+      "familyId": "beast",
+      "rank": "D",
+      "tier": 133,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "凍骨の氷原"
+    },
+    {
+      "id": "ブリザード",
+      "name": "ブリザード",
+      "familyId": "material",
+      "rank": "D",
+      "tier": 134,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "凍骨の氷原・鉄の箱舟"
+    },
+    {
+      "id": "ピッグマリオン",
+      "name": "ピッグマリオン",
+      "familyId": "nature",
+      "rank": "D",
+      "tier": 135,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "凍骨の氷原"
+    },
+    {
+      "id": "シードラゴンズ",
+      "name": "シードラゴンズ",
+      "familyId": "dragon",
+      "rank": "D",
+      "tier": 136,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "凍骨の氷原・鉄の箱舟"
+    },
+    {
+      "id": "シーデーモン",
+      "name": "シーデーモン",
+      "familyId": "nature",
+      "rank": "D",
+      "tier": 137,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "凍骨の氷原"
+    },
+    {
+      "id": "マリンスライム",
+      "name": "マリンスライム",
+      "familyId": "slime",
+      "rank": "D",
+      "tier": 138,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "鉄の箱舟"
+    },
+    {
+      "id": "フロストギズモ",
+      "name": "フロストギズモ",
+      "familyId": "material",
+      "rank": "D",
+      "tier": 139,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "凍骨の氷原"
+    },
+    {
+      "id": "ダックスビル",
+      "name": "ダックスビル",
+      "familyId": "beast",
+      "rank": "D",
+      "tier": 140,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "黒鉄の監獄塔"
+    },
+    {
+      "id": "エルダードラゴン",
+      "name": "エルダードラゴン",
+      "familyId": "dragon",
+      "rank": "D",
+      "tier": 141
+    },
+    {
+      "id": "メランザーナ",
+      "name": "メランザーナ",
+      "familyId": "nature",
+      "rank": "D",
+      "tier": 142
+    },
+    {
+      "id": "シーライオン",
+      "name": "シーライオン",
+      "familyId": "nature",
+      "rank": "D",
+      "tier": 143
+    },
+    {
+      "id": "シルバーデビル",
+      "name": "シルバーデビル",
+      "familyId": "demon",
+      "rank": "D",
+      "tier": 144
+    },
+    {
+      "id": "スピンサタン",
+      "name": "スピンサタン",
+      "familyId": "material",
+      "rank": "D",
+      "tier": 145,
+      "tierExcluded": true
+    },
+    {
+      "id": "ワンダーエッグ",
+      "name": "ワンダーエッグ",
+      "familyId": "slime",
+      "rank": "D",
+      "tier": 146
+    },
+    {
+      "id": "ホークマン",
+      "name": "ホークマン",
+      "familyId": "beast",
+      "rank": "D",
+      "tier": 147
+    },
+    {
+      "id": "ばくだんいわ",
+      "name": "ばくだんいわ",
+      "familyId": "material",
+      "rank": "D",
+      "tier": 148,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "焦熱の火山"
+    },
+    {
+      "id": "りゅうせんし",
+      "name": "りゅうせんし",
+      "familyId": "dragon",
+      "rank": "D",
+      "tier": 149
+    },
+    {
+      "id": "ダークプラネット",
+      "name": "ダークプラネット",
+      "familyId": "material",
+      "rank": "D",
+      "tier": 150,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "Wi-Fi配信（2016/3/24〜3/31・配信終了）"
+    },
+    {
+      "id": "ゴールドマン",
+      "name": "ゴールドマン",
+      "familyId": "material",
+      "rank": "D",
+      "tier": 151,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "崩落都市"
+    },
+    {
+      "id": "ダンスニードル",
+      "name": "ダンスニードル",
+      "familyId": "nature",
+      "rank": "D",
+      "tier": 152,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "黒鉄の監獄塔"
+    },
+    {
+      "id": "スライムナイト",
+      "name": "スライムナイト",
+      "familyId": "slime",
+      "rank": "D",
+      "tier": 153,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "黒鉄の監獄塔"
+    },
+    {
+      "id": "ヒートギズモ",
+      "name": "ヒートギズモ",
+      "familyId": "material",
+      "rank": "D",
+      "tier": 154,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "黒鉄の監獄塔"
+    },
+    {
+      "id": "フレイム",
+      "name": "フレイム",
+      "familyId": "material",
+      "rank": "D",
+      "tier": 155,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "焦熱の火山・レジスタンス秘密基地"
+    },
+    {
+      "id": "ギガントヒルズ",
+      "name": "ギガントヒルズ",
+      "familyId": "dragon",
+      "rank": "D",
+      "tier": 156,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道"
+    },
+    {
+      "id": "デザートゴースト",
+      "name": "デザートゴースト",
+      "familyId": "beast",
+      "rank": "D",
+      "tier": 157
+    },
+    {
+      "id": "フライングダック",
+      "name": "フライングダック",
+      "familyId": "beast",
+      "rank": "D",
+      "tier": 158
+    },
+    {
+      "id": "とつげきうお",
+      "name": "とつげきうお",
+      "familyId": "nature",
+      "rank": "D",
+      "tier": 159
+    },
+    {
+      "id": "メラリザード",
+      "name": "メラリザード",
+      "familyId": "dragon",
+      "rank": "D",
+      "tier": 160
+    },
+    {
+      "id": "デスマエストロ",
+      "name": "デスマエストロ",
+      "familyId": "zombie",
+      "rank": "D",
+      "tier": 161
+    },
+    {
+      "id": "トンブレロ",
+      "name": "トンブレロ",
+      "familyId": "beast",
+      "rank": "D",
+      "tier": 162
+    },
+    {
+      "id": "スパイクヘッド",
+      "name": "スパイクヘッド",
+      "familyId": "material",
+      "rank": "D",
+      "tier": 163
+    },
+    {
+      "id": "マタンゴ",
+      "name": "マタンゴ",
+      "familyId": "nature",
+      "rank": "D",
+      "tier": 164
+    },
+    {
+      "id": "ナイトメーア",
+      "name": "ナイトメーア",
+      "familyId": "beast",
+      "rank": "D",
+      "tier": 165
+    },
+    {
+      "id": "バブリン",
+      "name": "バブリン",
+      "familyId": "zombie",
+      "rank": "D",
+      "tier": 166
+    },
+    {
+      "id": "ボストロール",
+      "name": "ボストロール",
+      "familyId": "demon",
+      "rank": "D",
+      "tier": 167
+    },
+    {
+      "id": "ほねコウモリ",
+      "name": "ほねコウモリ",
+      "familyId": "zombie",
+      "rank": "D",
+      "tier": 168,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "黒鉄の監獄塔"
+    },
+    {
+      "id": "バトルレックス",
+      "name": "バトルレックス",
+      "familyId": "dragon",
+      "rank": "D",
+      "tier": 169,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "凍骨の氷原"
+    },
+    {
+      "id": "メタルスライム",
+      "name": "メタルスライム",
+      "familyId": "slime",
+      "rank": "D",
+      "tier": 170,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "メタルエリア・光あふれる地・崩落都市・歓楽の霊道"
+    },
+    {
+      "id": "凶スライム",
+      "name": "凶スライム",
+      "familyId": "break",
+      "rank": "D",
+      "tier": 171,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "コア"
+    },
+    {
+      "id": "凶キメラ",
+      "name": "凶キメラ",
+      "familyId": "break",
+      "rank": "D",
+      "tier": 172,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "コア"
+    },
+    {
+      "id": "凶ぐんたいガニ",
+      "name": "凶ぐんたいガニ",
+      "familyId": "break",
+      "rank": "D",
+      "tier": 173,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "コア"
+    },
+    {
+      "id": "凶なげきムーン",
+      "name": "凶なげきムーン",
+      "familyId": "break",
+      "rank": "D",
+      "tier": 174,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶トドマン",
+      "name": "凶トドマン",
+      "familyId": "break",
+      "rank": "D",
+      "tier": 175,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "コア"
+    },
+    {
+      "id": "凶フォレストドラゴ",
+      "name": "凶フォレストドラゴ",
+      "familyId": "break",
+      "rank": "D",
+      "tier": 176,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "コア"
+    },
+    {
+      "id": "ルバンカ",
+      "name": "ルバンカ",
+      "familyId": "material",
+      "rank": "C",
+      "tier": 177,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "静寂の草原"
+    },
+    {
+      "id": "メタルドラゴン",
+      "name": "メタルドラゴン",
+      "familyId": "dragon",
+      "rank": "C",
+      "tier": 178,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "送電施設"
+    },
+    {
+      "id": "マージマタンゴ",
+      "name": "マージマタンゴ",
+      "familyId": "nature",
+      "rank": "C",
+      "tier": 179,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道"
+    },
+    {
+      "id": "ましょうぐも",
+      "name": "ましょうぐも",
+      "familyId": "material",
+      "rank": "C",
+      "tier": 180,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "歓楽の霊道・ワールドマップ"
+    },
+    {
+      "id": "メタルパール",
+      "name": "メタルパール",
+      "familyId": "slime",
+      "rank": "C",
+      "tier": 181,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "メタルエリア・光あふれる地・鉄の箱舟"
+    },
+    {
+      "id": "スカルドン",
+      "name": "スカルドン",
+      "familyId": "zombie",
+      "rank": "C",
+      "tier": 182
+    },
+    {
+      "id": "ベロニャーゴ",
+      "name": "ベロニャーゴ",
+      "familyId": "beast",
+      "rank": "C",
+      "tier": 183,
+      "tierExcluded": true
+    },
+    {
+      "id": "ゴールデンコーン",
+      "name": "ゴールデンコーン",
+      "familyId": "beast",
+      "rank": "C",
+      "tier": 184,
+      "tierExcluded": true
+    },
+    {
+      "id": "かっちゅうアリ",
+      "name": "かっちゅうアリ",
+      "familyId": "nature",
+      "rank": "C",
+      "tier": 185
+    },
+    {
+      "id": "キラースコップ",
+      "name": "キラースコップ",
+      "familyId": "beast",
+      "rank": "C",
+      "tier": 186,
+      "tierExcluded": true
+    },
+    {
+      "id": "ダブルイーター",
+      "name": "ダブルイーター",
+      "familyId": "demon",
+      "rank": "C",
+      "tier": 187,
+      "tierExcluded": true
+    },
+    {
+      "id": "キングスライム",
+      "name": "キングスライム",
+      "familyId": "slime",
+      "rank": "C",
+      "tier": 188,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "時空の裂け目"
+    },
+    {
+      "id": "メイジももんじゃ",
+      "name": "メイジももんじゃ",
+      "familyId": "beast",
+      "rank": "C",
+      "tier": 189
+    },
+    {
+      "id": "キングリザード",
+      "name": "キングリザード",
+      "familyId": "dragon",
+      "rank": "C",
+      "tier": 190
+    },
+    {
+      "id": "バラクーダ",
+      "name": "バラクーダ",
+      "familyId": "nature",
+      "rank": "C",
+      "tier": 191
+    },
+    {
+      "id": "せつげんりゅう",
+      "name": "せつげんりゅう",
+      "familyId": "dragon",
+      "rank": "C",
+      "tier": 192,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "凍骨の氷原"
+    },
+    {
+      "id": "エンゼルスライム",
+      "name": "エンゼルスライム",
+      "familyId": "slime",
+      "rank": "C",
+      "tier": 193,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "凍骨の氷原・凍骨の氷原マスターズロード"
+    },
+    {
+      "id": "サイクロプス",
+      "name": "サイクロプス",
+      "familyId": "demon",
+      "rank": "C",
+      "tier": 194
+    },
+    {
+      "id": "プヨンターゲット",
+      "name": "プヨンターゲット",
+      "familyId": "zombie",
+      "rank": "C",
+      "tier": 195,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "凍骨の氷原"
+    },
+    {
+      "id": "つららスライム",
+      "name": "つららスライム",
+      "familyId": "slime",
+      "rank": "C",
+      "tier": 196,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "鉄の箱舟"
+    },
+    {
+      "id": "アイスゴーレム",
+      "name": "アイスゴーレム",
+      "familyId": "material",
+      "rank": "C",
+      "tier": 197,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "凍骨の氷原・鉄の箱舟"
+    },
+    {
+      "id": "レッドプリン",
+      "name": "レッドプリン",
+      "familyId": "zombie",
+      "rank": "C",
+      "tier": 198,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "鉄の箱舟"
+    },
+    {
+      "id": "じごくのよろい",
+      "name": "じごくのよろい",
+      "familyId": "material",
+      "rank": "C",
+      "tier": 199,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "鉄の箱舟"
+    },
+    {
+      "id": "クロコダイモス",
+      "name": "クロコダイモス",
+      "familyId": "dragon",
+      "rank": "C",
+      "tier": 200,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "凍骨の氷原"
+    },
+    {
+      "id": "あおだけ童子",
+      "name": "あおだけ童子",
+      "familyId": "demon",
+      "rank": "C",
+      "tier": 201,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "黒鉄の監獄塔"
+    },
+    {
+      "id": "エビルホーク",
+      "name": "エビルホーク",
+      "familyId": "beast",
+      "rank": "C",
+      "tier": 202
+    },
+    {
+      "id": "マンドレイク",
+      "name": "マンドレイク",
+      "familyId": "nature",
+      "rank": "C",
+      "tier": 203
+    },
+    {
+      "id": "ベスキング",
+      "name": "ベスキング",
+      "familyId": "slime",
+      "rank": "C",
+      "tier": 204,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "焦熱の火山"
+    },
+    {
+      "id": "アルケミストン",
+      "name": "アルケミストン",
+      "familyId": "beast",
+      "rank": "C",
+      "tier": 205
+    },
+    {
+      "id": "サンダーシャウト",
+      "name": "サンダーシャウト",
+      "familyId": "material",
+      "rank": "C",
+      "tier": 206
+    },
+    {
+      "id": "マザーオクト",
+      "name": "マザーオクト",
+      "familyId": "nature",
+      "rank": "C",
+      "tier": 207
+    },
+    {
+      "id": "ソードフライヤー",
+      "name": "ソードフライヤー",
+      "familyId": "beast",
+      "rank": "C",
+      "tier": 208
+    },
+    {
+      "id": "マッドファルコン",
+      "name": "マッドファルコン",
+      "familyId": "beast",
+      "rank": "C",
+      "tier": 209
+    },
+    {
+      "id": "デビルパピヨン",
+      "name": "デビルパピヨン",
+      "familyId": "nature",
+      "rank": "C",
+      "tier": 210
+    },
+    {
+      "id": "オークキング",
+      "name": "オークキング",
+      "familyId": "beast",
+      "rank": "C",
+      "tier": 211
+    },
+    {
+      "id": "ドラゴメタル",
+      "name": "ドラゴメタル",
+      "familyId": "slime",
+      "rank": "C",
+      "tier": 212,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "黒鉄の監獄塔・屋上"
+    },
+    {
+      "id": "あらくれチャッピー",
+      "name": "あらくれチャッピー",
+      "familyId": "beast",
+      "rank": "C",
+      "tier": 213,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "黒鉄の監獄塔・上層"
+    },
+    {
+      "id": "だいおうイカ",
+      "name": "だいおうイカ",
+      "familyId": "nature",
+      "rank": "C",
+      "tier": 214,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "黒鉄の監獄塔"
+    },
+    {
+      "id": "アイアンクック",
+      "name": "アイアンクック",
+      "familyId": "material",
+      "rank": "C",
+      "tier": 215,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "レジスタンス秘密基地"
+    },
+    {
+      "id": "ベホマスライム",
+      "name": "ベホマスライム",
+      "familyId": "slime",
+      "rank": "C",
+      "tier": 216,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "焦熱の火山・山麓"
+    },
+    {
+      "id": "れんごく天馬",
+      "name": "れんごく天馬",
+      "familyId": "beast",
+      "rank": "C",
+      "tier": 217,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "焦熱の火山"
+    },
+    {
+      "id": "モコフル",
+      "name": "モコフル",
+      "familyId": "nature",
+      "rank": "C",
+      "tier": 218,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "焦熱の火山"
+    },
+    {
+      "id": "きめんどうし",
+      "name": "きめんどうし",
+      "familyId": "demon",
+      "rank": "C",
+      "tier": 219,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "焦熱の火山"
+    },
+    {
+      "id": "ピンクモーモン",
+      "name": "ピンクモーモン",
+      "familyId": "demon",
+      "rank": "C",
+      "tier": 220,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "焦熱の火山"
+    },
+    {
+      "id": "デスプリースト",
+      "name": "デスプリースト",
+      "familyId": "zombie",
+      "rank": "C",
+      "tier": 221,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "焦熱の火山"
+    },
+    {
+      "id": "グール",
+      "name": "グール",
+      "familyId": "zombie",
+      "rank": "C",
+      "tier": 222
+    },
+    {
+      "id": "ナウマンボーグ",
+      "name": "ナウマンボーグ",
+      "familyId": "beast",
+      "rank": "C",
+      "tier": 223
+    },
+    {
+      "id": "ハートナイト",
+      "name": "ハートナイト",
+      "familyId": "slime",
+      "rank": "C",
+      "tier": 224
+    },
+    {
+      "id": "バアルゼブブ",
+      "name": "バアルゼブブ",
+      "familyId": "demon",
+      "rank": "C",
+      "tier": 225
+    },
+    {
+      "id": "ニードルフィン",
+      "name": "ニードルフィン",
+      "familyId": "nature",
+      "rank": "C",
+      "tier": 226
+    },
+    {
+      "id": "パンドラチェスト",
+      "name": "パンドラチェスト",
+      "familyId": "material",
+      "rank": "C",
+      "tier": 227
+    },
+    {
+      "id": "ファンキードラゴ",
+      "name": "ファンキードラゴ",
+      "familyId": "dragon",
+      "rank": "C",
+      "tier": 228
+    },
+    {
+      "id": "キラークラブ",
+      "name": "キラークラブ",
+      "familyId": "nature",
+      "rank": "C",
+      "tier": 229
+    },
+    {
+      "id": "キラータイガー",
+      "name": "キラータイガー",
+      "familyId": "beast",
+      "rank": "C",
+      "tier": 230
+    },
+    {
+      "id": "メガザルロック",
+      "name": "メガザルロック",
+      "familyId": "material",
+      "rank": "C",
+      "tier": 231
+    },
+    {
+      "id": "石炭つむり",
+      "name": "石炭つむり",
+      "familyId": "slime",
+      "rank": "C",
+      "tier": 232,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "焦熱の火山・レジスタンス秘密基地"
+    },
+    {
+      "id": "マグマロン",
+      "name": "マグマロン",
+      "familyId": "material",
+      "rank": "C",
+      "tier": 233,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "焦熱の火山・レジスタンス秘密基地"
+    },
+    {
+      "id": "ダースドラゴン",
+      "name": "ダースドラゴン",
+      "familyId": "dragon",
+      "rank": "C",
+      "tier": 234,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "レジスタンス秘密基地"
+    },
+    {
+      "id": "おにこんぼう",
+      "name": "おにこんぼう",
+      "familyId": "demon",
+      "rank": "C",
+      "tier": 235
+    },
+    {
+      "id": "タホドラキー",
+      "name": "タホドラキー",
+      "familyId": "beast",
+      "rank": "C",
+      "tier": 236
+    },
+    {
+      "id": "メタルトリュフ",
+      "name": "メタルトリュフ",
+      "familyId": "slime",
+      "rank": "C",
+      "tier": 237,
+      "tierExcluded": true
+    },
+    {
+      "id": "ユニコーン",
+      "name": "ユニコーン",
+      "familyId": "beast",
+      "rank": "C",
+      "tier": 238
+    },
+    {
+      "id": "エレメングリーン",
+      "name": "エレメングリーン",
+      "familyId": "material",
+      "rank": "C",
+      "tier": 239,
+      "tierExcluded": true
+    },
+    {
+      "id": "スターキメラ",
+      "name": "スターキメラ",
+      "familyId": "beast",
+      "rank": "C",
+      "tier": 240,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "ワールドマップ"
+    },
+    {
+      "id": "スノーモン",
+      "name": "スノーモン",
+      "familyId": "demon",
+      "rank": "C",
+      "tier": 241,
+      "tierExcluded": true
+    },
+    {
+      "id": "ベビーニュート",
+      "name": "ベビーニュート",
+      "familyId": "dragon",
+      "rank": "C",
+      "tier": 242
+    },
+    {
+      "id": "ももいろ三姉妹",
+      "name": "ももいろ三姉妹",
+      "familyId": "slime",
+      "rank": "C",
+      "tier": 243
+    },
+    {
+      "id": "サウルスロード",
+      "name": "サウルスロード",
+      "familyId": "dragon",
+      "rank": "C",
+      "tier": 244
+    },
+    {
+      "id": "ゴールデンゴーレム",
+      "name": "ゴールデンゴーレム",
+      "familyId": "material",
+      "rank": "C",
+      "tier": 245,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "時空の裂け目"
+    },
+    {
+      "id": "シュプリンガー",
+      "name": "シュプリンガー",
+      "familyId": "dragon",
+      "rank": "C",
+      "tier": 246
+    },
+    {
+      "id": "どろどろマントル",
+      "name": "どろどろマントル",
+      "familyId": "zombie",
+      "rank": "C",
+      "tier": 247,
+      "tierExcluded": true
+    },
+    {
+      "id": "スライムゴールド",
+      "name": "スライムゴールド",
+      "familyId": "slime",
+      "rank": "C",
+      "tier": 248,
+      "tierExcluded": true
+    },
+    {
+      "id": "カラーフォンデュ",
+      "name": "カラーフォンデュ",
+      "familyId": "material",
+      "rank": "C",
+      "tier": 249,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "時空の裂け目"
+    },
+    {
+      "id": "凶スライムベス",
+      "name": "凶スライムベス",
+      "familyId": "break",
+      "rank": "C",
+      "tier": 250,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶スパイクヘッド",
+      "name": "凶スパイクヘッド",
+      "familyId": "break",
+      "rank": "C",
+      "tier": 251,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶おおみみず",
+      "name": "凶おおみみず",
+      "familyId": "break",
+      "rank": "C",
+      "tier": 252,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配信（TSUTAYA等限定→2017/1/9より全国配信）"
+    },
+    {
+      "id": "キラーアーマー",
+      "name": "キラーアーマー",
+      "familyId": "material",
+      "rank": "B",
+      "tier": 253
+    },
+    {
+      "id": "トロルボンバー",
+      "name": "トロルボンバー",
+      "familyId": "demon",
+      "rank": "B",
+      "tier": 254
+    },
+    {
+      "id": "ホークブリザード",
+      "name": "ホークブリザード",
+      "familyId": "beast",
+      "rank": "B",
+      "tier": 255
+    },
+    {
+      "id": "ガルーダ",
+      "name": "ガルーダ",
+      "familyId": "beast",
+      "rank": "B",
+      "tier": 256
+    },
+    {
+      "id": "メタルライダー",
+      "name": "メタルライダー",
+      "familyId": "slime",
+      "rank": "B",
+      "tier": 257
+    },
+    {
+      "id": "ガネーシャエビル",
+      "name": "ガネーシャエビル",
+      "familyId": "beast",
+      "rank": "B",
+      "tier": 258
+    },
+    {
+      "id": "キラーモス",
+      "name": "キラーモス",
+      "familyId": "nature",
+      "rank": "B",
+      "tier": 259
+    },
+    {
+      "id": "えんまのつかい",
+      "name": "えんまのつかい",
+      "familyId": "demon",
+      "rank": "B",
+      "tier": 260
+    },
+    {
+      "id": "ヘルプラネット",
+      "name": "ヘルプラネット",
+      "familyId": "material",
+      "rank": "B",
+      "tier": 261
+    },
+    {
+      "id": "テンタクルス",
+      "name": "テンタクルス",
+      "familyId": "nature",
+      "rank": "B",
+      "tier": 262
+    },
+    {
+      "id": "エビルチクリン",
+      "name": "エビルチクリン",
+      "familyId": "material",
+      "rank": "B",
+      "tier": 263
+    },
+    {
+      "id": "シャドウベビー",
+      "name": "シャドウベビー",
+      "familyId": "beast",
+      "rank": "B",
+      "tier": 264
+    },
+    {
+      "id": "アークデーモン",
+      "name": "アークデーモン",
+      "familyId": "demon",
+      "rank": "B",
+      "tier": 265
+    },
+    {
+      "id": "バザックス",
+      "name": "バザックス",
+      "familyId": "dragon",
+      "rank": "B",
+      "tier": 266
+    },
+    {
+      "id": "サボテンゴールド",
+      "name": "サボテンゴールド",
+      "familyId": "nature",
+      "rank": "B",
+      "tier": 267,
+      "tierExcluded": true
+    },
+    {
+      "id": "ビッグファング",
+      "name": "ビッグファング",
+      "familyId": "dragon",
+      "rank": "B",
+      "tier": 268
+    },
+    {
+      "id": "アークバッファロー",
+      "name": "アークバッファロー",
+      "familyId": "beast",
+      "rank": "B",
+      "tier": 269
+    },
+    {
+      "id": "アモデウス",
+      "name": "アモデウス",
+      "familyId": "demon",
+      "rank": "B",
+      "tier": 270
+    },
+    {
+      "id": "スライムベホマズン",
+      "name": "スライムベホマズン",
+      "familyId": "slime",
+      "rank": "B",
+      "tier": 271
+    },
+    {
+      "id": "まかいファイター",
+      "name": "まかいファイター",
+      "familyId": "dragon",
+      "rank": "B",
+      "tier": 272
+    },
+    {
+      "id": "ひくいどり",
+      "name": "ひくいどり",
+      "familyId": "beast",
+      "rank": "B",
+      "tier": 273
+    },
+    {
+      "id": "ボーンフィッシュ",
+      "name": "ボーンフィッシュ",
+      "familyId": "zombie",
+      "rank": "B",
+      "tier": 274
+    },
+    {
+      "id": "グラコスエビル",
+      "name": "グラコスエビル",
+      "familyId": "nature",
+      "rank": "B",
+      "tier": 275
+    },
+    {
+      "id": "キラーマシン",
+      "name": "キラーマシン",
+      "familyId": "material",
+      "rank": "B",
+      "tier": 276,
+      "tierExcluded": true
+    },
+    {
+      "id": "カイザードラゴン",
+      "name": "カイザードラゴン",
+      "familyId": "dragon",
+      "rank": "B",
+      "tier": 277
+    },
+    {
+      "id": "メタルエンゼル",
+      "name": "メタルエンゼル",
+      "familyId": "slime",
+      "rank": "B",
+      "tier": 278,
+      "tierExcluded": true
+    },
+    {
+      "id": "メタルブラザーズ",
+      "name": "メタルブラザーズ",
+      "familyId": "slime",
+      "rank": "B",
+      "tier": 279,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "すれちがいバトル報酬（7勝）"
+    },
+    {
+      "id": "デザートタンク",
+      "name": "デザートタンク",
+      "familyId": "dragon",
+      "rank": "B",
+      "tier": 280
+    },
+    {
+      "id": "レジェンドホーン",
+      "name": "レジェンドホーン",
+      "familyId": "beast",
+      "rank": "B",
+      "tier": 281
+    },
+    {
+      "id": "ファイアボール",
+      "name": "ファイアボール",
+      "familyId": "material",
+      "rank": "B",
+      "tier": 282
+    },
+    {
+      "id": "ヘルカッチャ",
+      "name": "ヘルカッチャ",
+      "familyId": "material",
+      "rank": "B",
+      "tier": 283
+    },
+    {
+      "id": "オベルジーヌ",
+      "name": "オベルジーヌ",
+      "familyId": "nature",
+      "rank": "B",
+      "tier": 284
+    },
+    {
+      "id": "ギーグハンマー",
+      "name": "ギーグハンマー",
+      "familyId": "demon",
+      "rank": "B",
+      "tier": 285
+    },
+    {
+      "id": "とげジョボー",
+      "name": "とげジョボー",
+      "familyId": "material",
+      "rank": "B",
+      "tier": 286
+    },
+    {
+      "id": "マーブルン",
+      "name": "マーブルン",
+      "familyId": "beast",
+      "rank": "B",
+      "tier": 287,
+      "tierExcluded": true
+    },
+    {
+      "id": "ギガントドラゴン",
+      "name": "ギガントドラゴン",
+      "familyId": "dragon",
+      "rank": "B",
+      "tier": 288
+    },
+    {
+      "id": "ぬしさま",
+      "name": "ぬしさま",
+      "familyId": "nature",
+      "rank": "B",
+      "tier": 289
+    },
+    {
+      "id": "はぐれメタル",
+      "name": "はぐれメタル",
+      "familyId": "slime",
+      "rank": "B",
+      "tier": 290,
+      "tierExcluded": true
+    },
+    {
+      "id": "グレートオーラス",
+      "name": "グレートオーラス",
+      "familyId": "nature",
+      "rank": "B",
+      "tier": 291
+    },
+    {
+      "id": "グレートペリカン",
+      "name": "グレートペリカン",
+      "familyId": "beast",
+      "rank": "B",
+      "tier": 292
+    },
+    {
+      "id": "げんじかぶと",
+      "name": "げんじかぶと",
+      "familyId": "nature",
+      "rank": "B",
+      "tier": 293
+    },
+    {
+      "id": "げんじゅつし",
+      "name": "げんじゅつし",
+      "familyId": "demon",
+      "rank": "B",
+      "tier": 294
+    },
+    {
+      "id": "コープスフライ",
+      "name": "コープスフライ",
+      "familyId": "zombie",
+      "rank": "B",
+      "tier": 295
+    },
+    {
+      "id": "ゴールドパール",
+      "name": "ゴールドパール",
+      "familyId": "slime",
+      "rank": "B",
+      "tier": 296,
+      "tierExcluded": true
+    },
+    {
+      "id": "ギガンテス",
+      "name": "ギガンテス",
+      "familyId": "demon",
+      "rank": "B",
+      "tier": 297
+    },
+    {
+      "id": "サイコマスター",
+      "name": "サイコマスター",
+      "familyId": "demon",
+      "rank": "B",
+      "tier": 298
+    },
+    {
+      "id": "じごくのたまねぎ",
+      "name": "じごくのたまねぎ",
+      "familyId": "nature",
+      "rank": "B",
+      "tier": 299
+    },
+    {
+      "id": "しびれあんこう",
+      "name": "しびれあんこう",
+      "familyId": "nature",
+      "rank": "B",
+      "tier": 300
+    },
+    {
+      "id": "サイレス",
+      "name": "サイレス",
+      "familyId": "beast",
+      "rank": "B",
+      "tier": 301
+    },
+    {
+      "id": "しりょうのきし",
+      "name": "しりょうのきし",
+      "familyId": "zombie",
+      "rank": "B",
+      "tier": 302
+    },
+    {
+      "id": "セージももんじゃ",
+      "name": "セージももんじゃ",
+      "familyId": "beast",
+      "rank": "B",
+      "tier": 303
+    },
+    {
+      "id": "セルゲイナス",
+      "name": "セルゲイナス",
+      "familyId": "material",
+      "rank": "B",
+      "tier": 304
+    },
+    {
+      "id": "ダーティラビッツ",
+      "name": "ダーティラビッツ",
+      "familyId": "beast",
+      "rank": "B",
+      "tier": 305
+    },
+    {
+      "id": "ツイストーチ",
+      "name": "ツイストーチ",
+      "familyId": "material",
+      "rank": "B",
+      "tier": 306
+    },
+    {
+      "id": "デスパロット",
+      "name": "デスパロット",
+      "familyId": "beast",
+      "rank": "B",
+      "tier": 307
+    },
+    {
+      "id": "タイプG",
+      "name": "タイプG",
+      "familyId": "material",
+      "rank": "B",
+      "tier": 308
+    },
+    {
+      "id": "デビルプラント",
+      "name": "デビルプラント",
+      "familyId": "nature",
+      "rank": "B",
+      "tier": 309
+    },
+    {
+      "id": "デビルロード",
+      "name": "デビルロード",
+      "familyId": "demon",
+      "rank": "B",
+      "tier": 310
+    },
+    {
+      "id": "どくどくバルーン",
+      "name": "どくどくバルーン",
+      "familyId": "zombie",
+      "rank": "B",
+      "tier": 311
+    },
+    {
+      "id": "バリイドドッグ",
+      "name": "バリイドドッグ",
+      "familyId": "zombie",
+      "rank": "B",
+      "tier": 312
+    },
+    {
+      "id": "ビッグスロース",
+      "name": "ビッグスロース",
+      "familyId": "beast",
+      "rank": "B",
+      "tier": 313
+    },
+    {
+      "id": "スマイルロック",
+      "name": "スマイルロック",
+      "familyId": "material",
+      "rank": "B",
+      "tier": 314
+    },
+    {
+      "id": "ピラニアン",
+      "name": "ピラニアン",
+      "familyId": "nature",
+      "rank": "B",
+      "tier": 315
+    },
+    {
+      "id": "ブラバニクイーン",
+      "name": "ブラバニクイーン",
+      "familyId": "beast",
+      "rank": "B",
+      "tier": 316
+    },
+    {
+      "id": "マーズフェイス",
+      "name": "マーズフェイス",
+      "familyId": "material",
+      "rank": "B",
+      "tier": 317,
+      "tierExcluded": true
+    },
+    {
+      "id": "マポレーナ",
+      "name": "マポレーナ",
+      "familyId": "demon",
+      "rank": "B",
+      "tier": 318
+    },
+    {
+      "id": "メタルホイミン",
+      "name": "メタルホイミン",
+      "familyId": "slime",
+      "rank": "B",
+      "tier": 319
+    },
+    {
+      "id": "メトロゴースト",
+      "name": "メトロゴースト",
+      "familyId": "zombie",
+      "rank": "B",
+      "tier": 320
+    },
+    {
+      "id": "リュウイーソー",
+      "name": "リュウイーソー",
+      "familyId": "zombie",
+      "rank": "B",
+      "tier": 321
+    },
+    {
+      "id": "レオン・ビュブロ",
+      "name": "レオン・ビュブロ",
+      "familyId": "beast",
+      "rank": "B",
+      "tier": 322
+    },
+    {
+      "id": "シーザーレインボー",
+      "name": "シーザーレインボー",
+      "familyId": "nature",
+      "rank": "B",
+      "tier": 323
+    },
+    {
+      "id": "ギャスモン",
+      "name": "ギャスモン",
+      "familyId": "material",
+      "rank": "B",
+      "tier": 324,
+      "tierExcluded": true
+    },
+    {
+      "id": "若葉の精霊",
+      "name": "若葉の精霊",
+      "familyId": "nature",
+      "rank": "B",
+      "tier": 325
+    },
+    {
+      "id": "ミミック",
+      "name": "ミミック",
+      "familyId": "material",
+      "rank": "B",
+      "tier": 326,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶メイジキメラ",
+      "name": "凶メイジキメラ",
+      "familyId": "break",
+      "rank": "B",
+      "tier": 327,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶じごくのハサミ",
+      "name": "凶じごくのハサミ",
+      "familyId": "break",
+      "rank": "B",
+      "tier": 328,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶メタルスライム",
+      "name": "凶メタルスライム",
+      "familyId": "break",
+      "rank": "B",
+      "tier": 329,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶マッドファルコン",
+      "name": "凶マッドファルコン",
+      "familyId": "break",
+      "rank": "B",
+      "tier": 330,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶エルダードラゴン",
+      "name": "凶エルダードラゴン",
+      "familyId": "break",
+      "rank": "B",
+      "tier": 331,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶ダークプラネット",
+      "name": "凶ダークプラネット",
+      "familyId": "break",
+      "rank": "B",
+      "tier": 332,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶シーライオン",
+      "name": "凶シーライオン",
+      "familyId": "break",
+      "rank": "B",
+      "tier": 333,
+      "tierExcluded": true
+    },
+    {
+      "id": "バロンナイト",
+      "name": "バロンナイト",
+      "familyId": "material",
+      "rank": "A",
+      "tier": 334
+    },
+    {
+      "id": "ウルベア魔神兵",
+      "name": "ウルベア魔神兵",
+      "familyId": "material",
+      "rank": "A",
+      "tier": 335
+    },
+    {
+      "id": "クラーゴン",
+      "name": "クラーゴン",
+      "familyId": "nature",
+      "rank": "A",
+      "tier": 336
+    },
+    {
+      "id": "大地の竜バウギア",
+      "name": "大地の竜バウギア",
+      "familyId": "dragon",
+      "rank": "A",
+      "tier": 337
+    },
+    {
+      "id": "とげこんぼう",
+      "name": "とげこんぼう",
+      "familyId": "beast",
+      "rank": "A",
+      "tier": 338
+    },
+    {
+      "id": "キングエレファント",
+      "name": "キングエレファント",
+      "familyId": "beast",
+      "rank": "A",
+      "tier": 339
+    },
+    {
+      "id": "アックスドラゴン",
+      "name": "アックスドラゴン",
+      "familyId": "dragon",
+      "rank": "A",
+      "tier": 340
+    },
+    {
+      "id": "海のまもりガメ",
+      "name": "海のまもりガメ",
+      "familyId": "dragon",
+      "rank": "A",
+      "tier": 341
+    },
+    {
+      "id": "うみぼうず",
+      "name": "うみぼうず",
+      "familyId": "material",
+      "rank": "A",
+      "tier": 342
+    },
+    {
+      "id": "伐採マシン",
+      "name": "伐採マシン",
+      "familyId": "material",
+      "rank": "A",
+      "tier": 343
+    },
+    {
+      "id": "リトルライバーン",
+      "name": "リトルライバーン",
+      "familyId": "dragon",
+      "rank": "A",
+      "tier": 344
+    },
+    {
+      "id": "オリエンタシス",
+      "name": "オリエンタシス",
+      "familyId": "material",
+      "rank": "A",
+      "tier": 345
+    },
+    {
+      "id": "ガニラス",
+      "name": "ガニラス",
+      "familyId": "nature",
+      "rank": "A",
+      "tier": 346
+    },
+    {
+      "id": "ガメゴンロード",
+      "name": "ガメゴンロード",
+      "familyId": "dragon",
+      "rank": "A",
+      "tier": 347
+    },
+    {
+      "id": "アイスボンバー",
+      "name": "アイスボンバー",
+      "familyId": "nature",
+      "rank": "A",
+      "tier": 348
+    },
+    {
+      "id": "キャノンキング",
+      "name": "キャノンキング",
+      "familyId": "dragon",
+      "rank": "A",
+      "tier": 349
+    },
+    {
+      "id": "スライムマデュラ",
+      "name": "スライムマデュラ",
+      "familyId": "slime",
+      "rank": "A",
+      "tier": 350
+    },
+    {
+      "id": "ヴォルカドラゴン",
+      "name": "ヴォルカドラゴン",
+      "familyId": "dragon",
+      "rank": "A",
+      "tier": 351
+    },
+    {
+      "id": "ブラックゴイル",
+      "name": "ブラックゴイル",
+      "familyId": "beast",
+      "rank": "A",
+      "tier": 352
+    },
+    {
+      "id": "暗黒大樹の番人",
+      "name": "暗黒大樹の番人",
+      "familyId": "nature",
+      "rank": "A",
+      "tier": 353
+    },
+    {
+      "id": "エビルソーサラー",
+      "name": "エビルソーサラー",
+      "familyId": "demon",
+      "rank": "A",
+      "tier": 354
+    },
+    {
+      "id": "大怨霊マアモン",
+      "name": "大怨霊マアモン",
+      "familyId": "zombie",
+      "rank": "A",
+      "tier": 355
+    },
+    {
+      "id": "黒き花婿",
+      "name": "黒き花婿",
+      "familyId": "material",
+      "rank": "A",
+      "tier": 356
+    },
+    {
+      "id": "シャドウパンサー",
+      "name": "シャドウパンサー",
+      "familyId": "beast",
+      "rank": "A",
+      "tier": 357,
+      "tierExcluded": true
+    },
+    {
+      "id": "キラーピッケル",
+      "name": "キラーピッケル",
+      "familyId": "beast",
+      "rank": "A",
+      "tier": 358,
+      "tierExcluded": true
+    },
+    {
+      "id": "かげのきし",
+      "name": "かげのきし",
+      "familyId": "zombie",
+      "rank": "A",
+      "tier": 359,
+      "tierExcluded": true
+    },
+    {
+      "id": "ジャミラス",
+      "name": "ジャミラス",
+      "familyId": "beast",
+      "rank": "A",
+      "tier": 360,
+      "tierExcluded": true
+    },
+    {
+      "id": "ドラゴンゾンビ",
+      "name": "ドラゴンゾンビ",
+      "familyId": "zombie",
+      "rank": "A",
+      "tier": 361,
+      "tierExcluded": true
+    },
+    {
+      "id": "キースドラゴン",
+      "name": "キースドラゴン",
+      "familyId": "dragon",
+      "rank": "A",
+      "tier": 362,
+      "tierExcluded": true
+    },
+    {
+      "id": "キャット・リベリオ",
+      "name": "キャット・リベリオ",
+      "familyId": "beast",
+      "rank": "A",
+      "tier": 363,
+      "tierExcluded": true
+    },
+    {
+      "id": "キャプテンドラゴ",
+      "name": "キャプテンドラゴ",
+      "familyId": "dragon",
+      "rank": "A",
+      "tier": 364,
+      "tierExcluded": true
+    },
+    {
+      "id": "グラコス",
+      "name": "グラコス",
+      "familyId": "nature",
+      "rank": "A",
+      "tier": 365,
+      "tierExcluded": true
+    },
+    {
+      "id": "黒竜丸",
+      "name": "黒竜丸",
+      "familyId": "beast",
+      "rank": "A",
+      "tier": 366,
+      "tierExcluded": true
+    },
+    {
+      "id": "トリカトラプス",
+      "name": "トリカトラプス",
+      "familyId": "dragon",
+      "rank": "A",
+      "tier": 367,
+      "tierExcluded": true
+    },
+    {
+      "id": "シルバリヌス",
+      "name": "シルバリヌス",
+      "familyId": "material",
+      "rank": "A",
+      "tier": 368,
+      "tierExcluded": true
+    },
+    {
+      "id": "ダークトロル",
+      "name": "ダークトロル",
+      "familyId": "demon",
+      "rank": "A",
+      "tier": 369,
+      "tierExcluded": true
+    },
+    {
+      "id": "ドラキーマ",
+      "name": "ドラキーマ",
+      "familyId": "beast",
+      "rank": "A",
+      "tier": 370,
+      "tierExcluded": true
+    },
+    {
+      "id": "ダブルバングル",
+      "name": "ダブルバングル",
+      "familyId": "demon",
+      "rank": "A",
+      "tier": 371,
+      "tierExcluded": true
+    },
+    {
+      "id": "ゴールデントーテム",
+      "name": "ゴールデントーテム",
+      "familyId": "slime",
+      "rank": "A",
+      "tier": 372,
+      "tierExcluded": true
+    },
+    {
+      "id": "テラノライナー",
+      "name": "テラノライナー",
+      "familyId": "dragon",
+      "rank": "A",
+      "tier": 373,
+      "tierExcluded": true
+    },
+    {
+      "id": "にじくじゃく",
+      "name": "にじくじゃく",
+      "familyId": "beast",
+      "rank": "A",
+      "tier": 374,
+      "tierExcluded": true
+    },
+    {
+      "id": "ベヒードス",
+      "name": "ベヒードス",
+      "familyId": "dragon",
+      "rank": "A",
+      "tier": 375,
+      "tierExcluded": true
+    },
+    {
+      "id": "エメラルドーン",
+      "name": "エメラルドーン",
+      "familyId": "material",
+      "rank": "A",
+      "tier": 376,
+      "tierExcluded": true
+    },
+    {
+      "id": "バルザック",
+      "name": "バルザック",
+      "familyId": "demon",
+      "rank": "A",
+      "tier": 377,
+      "tierExcluded": true
+    },
+    {
+      "id": "ほねリーダー",
+      "name": "ほねリーダー",
+      "familyId": "zombie",
+      "rank": "A",
+      "tier": 378,
+      "tierExcluded": true
+    },
+    {
+      "id": "ゴールドエンゼル",
+      "name": "ゴールドエンゼル",
+      "familyId": "slime",
+      "rank": "A",
+      "tier": 379,
+      "tierExcluded": true
+    },
+    {
+      "id": "ボボンガー",
+      "name": "ボボンガー",
+      "familyId": "dragon",
+      "rank": "A",
+      "tier": 380,
+      "tierExcluded": true
+    },
+    {
+      "id": "マッドスミス",
+      "name": "マッドスミス",
+      "familyId": "zombie",
+      "rank": "A",
+      "tier": 381,
+      "tierExcluded": true
+    },
+    {
+      "id": "ムーンキメラ",
+      "name": "ムーンキメラ",
+      "familyId": "beast",
+      "rank": "A",
+      "tier": 382,
+      "tierExcluded": true
+    },
+    {
+      "id": "メカバーン",
+      "name": "メカバーン",
+      "familyId": "material",
+      "rank": "A",
+      "tier": 383,
+      "tierExcluded": true
+    },
+    {
+      "id": "メタルキング",
+      "name": "メタルキング",
+      "familyId": "slime",
+      "rank": "A",
+      "tier": 384,
+      "tierExcluded": true
+    },
+    {
+      "id": "グレイトドラゴン",
+      "name": "グレイトドラゴン",
+      "familyId": "dragon",
+      "rank": "A",
+      "tier": 385,
+      "tierExcluded": true
+    },
+    {
+      "id": "ラマダ",
+      "name": "ラマダ",
+      "familyId": "demon",
+      "rank": "A",
+      "tier": 386,
+      "tierExcluded": true
+    },
+    {
+      "id": "れんごくちょう",
+      "name": "れんごくちょう",
+      "familyId": "beast",
+      "rank": "A",
+      "tier": 387,
+      "tierExcluded": true
+    },
+    {
+      "id": "ロイヤルミミック",
+      "name": "ロイヤルミミック",
+      "familyId": "material",
+      "rank": "A",
+      "tier": 388,
+      "tierExcluded": true
+    },
+    {
+      "id": "ワイトキング",
+      "name": "ワイトキング",
+      "familyId": "zombie",
+      "rank": "A",
+      "tier": 389,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶キングリザード",
+      "name": "凶キングリザード",
+      "familyId": "break",
+      "rank": "A",
+      "tier": 390,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶だいおうイカ",
+      "name": "凶だいおうイカ",
+      "familyId": "break",
+      "rank": "A",
+      "tier": 391,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶とげジョボー",
+      "name": "凶とげジョボー",
+      "familyId": "break",
+      "rank": "A",
+      "tier": 392,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶スカルゴン",
+      "name": "凶スカルゴン",
+      "familyId": "break",
+      "rank": "A",
+      "tier": 393,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶スターキメラ",
+      "name": "凶スターキメラ",
+      "familyId": "break",
+      "rank": "A",
+      "tier": 394,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶キラークラブ",
+      "name": "凶キラークラブ",
+      "familyId": "break",
+      "rank": "A",
+      "tier": 395,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶ギガンテス",
+      "name": "凶ギガンテス",
+      "familyId": "break",
+      "rank": "A",
+      "tier": 396,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶メタルドラゴン",
+      "name": "凶メタルドラゴン",
+      "familyId": "break",
+      "rank": "A",
+      "tier": 397,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶にじくじゃく",
+      "name": "凶にじくじゃく",
+      "familyId": "break",
+      "rank": "S",
+      "tier": 398,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶ヴォルカドラゴン",
+      "name": "凶ヴォルカドラゴン",
+      "familyId": "break",
+      "rank": "S",
+      "tier": 399,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶マーズフェイス",
+      "name": "凶マーズフェイス",
+      "familyId": "break",
+      "rank": "S",
+      "tier": 400,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶グレートオーラス",
+      "name": "凶グレートオーラス",
+      "familyId": "break",
+      "rank": "S",
+      "tier": 401,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶クラーゴン",
+      "name": "凶クラーゴン",
+      "familyId": "break",
+      "rank": "S",
+      "tier": 402,
+      "tierExcluded": true
+    },
+    {
+      "id": "ゴールデンスライム",
+      "name": "ゴールデンスライム",
+      "familyId": "slime",
+      "rank": "S",
+      "tier": 403,
+      "tierExcluded": true
+    },
+    {
+      "id": "パンドラボックス",
+      "name": "パンドラボックス",
+      "familyId": "material",
+      "rank": "S",
+      "tier": 404,
+      "tierExcluded": true
+    },
+    {
+      "id": "トマホーガー",
+      "name": "トマホーガー",
+      "familyId": "dragon",
+      "rank": "S",
+      "tier": 405,
+      "tierExcluded": true
+    },
+    {
+      "id": "れんごくまちょう",
+      "name": "れんごくまちょう",
+      "familyId": "beast",
+      "rank": "S",
+      "tier": 406,
+      "tierExcluded": true
+    },
+    {
+      "id": "モテモテ",
+      "name": "モテモテ",
+      "familyId": "beast",
+      "rank": "S",
+      "tier": 407,
+      "tierExcluded": true
+    },
+    {
+      "id": "だいおうクジラ",
+      "name": "だいおうクジラ",
+      "familyId": "nature",
+      "rank": "S",
+      "tier": 408,
+      "tierExcluded": true
+    },
+    {
+      "id": "アカツキショウグン",
+      "name": "アカツキショウグン",
+      "familyId": "dragon",
+      "rank": "S",
+      "tier": 409,
+      "tierExcluded": true
+    },
+    {
+      "id": "アスタロト",
+      "name": "アスタロト",
+      "familyId": "material",
+      "rank": "S",
+      "tier": 410,
+      "tierExcluded": true
+    },
+    {
+      "id": "ガメゴンレジェンド",
+      "name": "ガメゴンレジェンド",
+      "familyId": "dragon",
+      "rank": "S",
+      "tier": 411,
+      "tierExcluded": true
+    },
+    {
+      "id": "ブラックチャック",
+      "name": "ブラックチャック",
+      "familyId": "beast",
+      "rank": "S",
+      "tier": 412,
+      "tierExcluded": true
+    },
+    {
+      "id": "キラーマシン2",
+      "name": "キラーマシン2",
+      "familyId": "material",
+      "rank": "S",
+      "tier": 413,
+      "tierExcluded": true
+    },
+    {
+      "id": "グラコス5世",
+      "name": "グラコス5世",
+      "familyId": "nature",
+      "rank": "S",
+      "tier": 414,
+      "tierExcluded": true
+    },
+    {
+      "id": "ゲルバトロス",
+      "name": "ゲルバトロス",
+      "familyId": "beast",
+      "rank": "S",
+      "tier": 415,
+      "tierExcluded": true
+    },
+    {
+      "id": "ブラックモス",
+      "name": "ブラックモス",
+      "familyId": "nature",
+      "rank": "S",
+      "tier": 416,
+      "tierExcluded": true
+    },
+    {
+      "id": "ダークモーモン",
+      "name": "ダークモーモン",
+      "familyId": "demon",
+      "rank": "S",
+      "tier": 417,
+      "tierExcluded": true
+    },
+    {
+      "id": "聖銀のどくろあらい",
+      "name": "聖銀のどくろあらい",
+      "familyId": "beast",
+      "rank": "S",
+      "tier": 418,
+      "tierExcluded": true
+    },
+    {
+      "id": "けがれの渦",
+      "name": "けがれの渦",
+      "familyId": "zombie",
+      "rank": "S",
+      "tier": 419,
+      "tierExcluded": true
+    },
+    {
+      "id": "ゴールドオーク",
+      "name": "ゴールドオーク",
+      "familyId": "beast",
+      "rank": "S",
+      "tier": 420,
+      "tierExcluded": true
+    },
+    {
+      "id": "ごくらくちょう",
+      "name": "ごくらくちょう",
+      "familyId": "beast",
+      "rank": "S",
+      "tier": 421,
+      "tierExcluded": true
+    },
+    {
+      "id": "シュバルツシュルト",
+      "name": "シュバルツシュルト",
+      "familyId": "material",
+      "rank": "S",
+      "tier": 422,
+      "tierExcluded": true
+    },
+    {
+      "id": "スライムエンペラー",
+      "name": "スライムエンペラー",
+      "familyId": "slime",
+      "rank": "S",
+      "tier": 423,
+      "tierExcluded": true
+    },
+    {
+      "id": "ダークネビュラス",
+      "name": "ダークネビュラス",
+      "familyId": "material",
+      "rank": "S",
+      "tier": 424,
+      "tierExcluded": true
+    },
+    {
+      "id": "ドラゴンガイア",
+      "name": "ドラゴンガイア",
+      "familyId": "dragon",
+      "rank": "S",
+      "tier": 425,
+      "tierExcluded": true
+    },
+    {
+      "id": "トロルバッコス",
+      "name": "トロルバッコス",
+      "familyId": "demon",
+      "rank": "S",
+      "tier": 426,
+      "tierExcluded": true
+    },
+    {
+      "id": "のろいの岩",
+      "name": "のろいの岩",
+      "familyId": "material",
+      "rank": "S",
+      "tier": 427,
+      "tierExcluded": true
+    },
+    {
+      "id": "バラモスゾンビ",
+      "name": "バラモスゾンビ",
+      "familyId": "zombie",
+      "rank": "S",
+      "tier": 428,
+      "tierExcluded": true
+    },
+    {
+      "id": "ブラックゴーレム",
+      "name": "ブラックゴーレム",
+      "familyId": "material",
+      "rank": "S",
+      "tier": 429,
+      "tierExcluded": true
+    },
+    {
+      "id": "ブラックドラゴン",
+      "name": "ブラックドラゴン",
+      "familyId": "dragon",
+      "rank": "S",
+      "tier": 430,
+      "tierExcluded": true
+    },
+    {
+      "id": "ギガデーモン",
+      "name": "ギガデーモン",
+      "familyId": "demon",
+      "rank": "S",
+      "tier": 431,
+      "tierExcluded": true
+    },
+    {
+      "id": "ポセイドン",
+      "name": "ポセイドン",
+      "familyId": "nature",
+      "rank": "S",
+      "tier": 432,
+      "tierExcluded": true
+    },
+    {
+      "id": "ヘルジュラシック",
+      "name": "ヘルジュラシック",
+      "familyId": "dragon",
+      "rank": "S",
+      "tier": 433,
+      "tierExcluded": true
+    },
+    {
+      "id": "レジェンドホース",
+      "name": "レジェンドホース",
+      "familyId": "beast",
+      "rank": "S",
+      "tier": 434,
+      "tierExcluded": true
+    },
+    {
+      "id": "ふくまねき",
+      "name": "ふくまねき",
+      "familyId": "demon",
+      "rank": "S",
+      "tier": 435,
+      "tierExcluded": true
+    },
+    {
+      "id": "レティス",
+      "name": "レティス",
+      "familyId": "beast",
+      "rank": "S",
+      "tier": 436,
+      "tierExcluded": true
+    },
+    {
+      "id": "ベリアル",
+      "name": "ベリアル",
+      "familyId": "demon",
+      "rank": "S",
+      "tier": 437,
+      "tierExcluded": true
+    },
+    {
+      "id": "バズズ",
+      "name": "バズズ",
+      "familyId": "demon",
+      "rank": "S",
+      "tier": 438,
+      "tierExcluded": true
+    },
+    {
+      "id": "アトラス",
+      "name": "アトラス",
+      "familyId": "demon",
+      "rank": "S",
+      "tier": 439,
+      "tierExcluded": true
+    },
+    {
+      "id": "キラーマジンガ",
+      "name": "キラーマジンガ",
+      "familyId": "material",
+      "rank": "S",
+      "tier": 440,
+      "tierExcluded": true
+    },
+    {
+      "id": "ロードコープス",
+      "name": "ロードコープス",
+      "familyId": "zombie",
+      "rank": "S",
+      "tier": 441,
+      "tierExcluded": true
+    },
+    {
+      "id": "ドラゴン・ウー",
+      "name": "ドラゴン・ウー",
+      "familyId": "dragon",
+      "rank": "S",
+      "tier": 442,
+      "tierExcluded": true
+    },
+    {
+      "id": "密林の守人",
+      "name": "密林の守人",
+      "familyId": "nature",
+      "rank": "S",
+      "tier": 443,
+      "tierExcluded": true
+    },
+    {
+      "id": "深海の守護者",
+      "name": "深海の守護者",
+      "familyId": "material",
+      "rank": "S",
+      "tier": 444,
+      "tierExcluded": true
+    },
+    {
+      "id": "赤飛竜",
+      "name": "赤飛竜",
+      "familyId": "dragon",
+      "rank": "S",
+      "tier": 445,
+      "tierExcluded": true
+    },
+    {
+      "id": "青飛竜",
+      "name": "青飛竜",
+      "familyId": "dragon",
+      "rank": "S",
+      "tier": 446,
+      "tierExcluded": true
+    },
+    {
+      "id": "黄飛竜",
+      "name": "黄飛竜",
+      "familyId": "dragon",
+      "rank": "S",
+      "tier": 447,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶鳥フレス",
+      "name": "凶鳥フレス",
+      "familyId": "beast",
+      "rank": "S",
+      "tier": 448,
+      "tierExcluded": true
+    },
+    {
+      "id": "水竜ギルギッシュ",
+      "name": "水竜ギルギッシュ",
+      "familyId": "dragon",
+      "rank": "S",
+      "tier": 449,
+      "tierExcluded": true
+    },
+    {
+      "id": "妖魔ジュリアンテ",
+      "name": "妖魔ジュリアンテ",
+      "familyId": "demon",
+      "rank": "S",
+      "tier": 450,
+      "tierExcluded": true
+    },
+    {
+      "id": "妖剣士オーレン",
+      "name": "妖剣士オーレン",
+      "familyId": "zombie",
+      "rank": "S",
+      "tier": 451,
+      "tierExcluded": true
+    },
+    {
+      "id": "悪魔ザイガス",
+      "name": "悪魔ザイガス",
+      "familyId": "demon",
+      "rank": "S",
+      "tier": 452,
+      "tierExcluded": true
+    },
+    {
+      "id": "怪獣プスゴン",
+      "name": "怪獣プスゴン",
+      "familyId": "dragon",
+      "rank": "S",
+      "tier": 453,
+      "tierExcluded": true
+    },
+    {
+      "id": "怪蟲アラグネ",
+      "name": "怪蟲アラグネ",
+      "familyId": "nature",
+      "rank": "S",
+      "tier": 454,
+      "tierExcluded": true
+    },
+    {
+      "id": "天魔クァバルナ",
+      "name": "天魔クァバルナ",
+      "familyId": "demon",
+      "rank": "S",
+      "tier": 455,
+      "tierExcluded": true
+    },
+    {
+      "id": "魔軍師イッド",
+      "name": "魔軍師イッド",
+      "familyId": "dragon",
+      "rank": "S",
+      "tier": 456,
+      "tierExcluded": true
+    },
+    {
+      "id": "呪術師マリーン",
+      "name": "呪術師マリーン",
+      "familyId": "demon",
+      "rank": "S",
+      "tier": 457,
+      "tierExcluded": true
+    },
+    {
+      "id": "魔人ゼクセン",
+      "name": "魔人ゼクセン",
+      "familyId": "demon",
+      "rank": "S",
+      "tier": 458,
+      "tierExcluded": true
+    },
+    {
+      "id": "舞踏魔プレシアンナ",
+      "name": "舞踏魔プレシアンナ",
+      "familyId": "demon",
+      "rank": "S",
+      "tier": 459,
+      "tierExcluded": true
+    },
+    {
+      "id": "月夜の将",
+      "name": "月夜の将",
+      "familyId": "zombie",
+      "rank": "S",
+      "tier": 460,
+      "tierExcluded": true
+    },
+    {
+      "id": "青天竜バルケロス",
+      "name": "青天竜バルケロス",
+      "familyId": "dragon",
+      "rank": "S",
+      "tier": 461,
+      "tierExcluded": true
+    },
+    {
+      "id": "スーパーキラーマシン",
+      "name": "スーパーキラーマシン",
+      "familyId": "material",
+      "rank": "S",
+      "tier": 462,
+      "tierExcluded": true
+    },
+    {
+      "id": "レジウィング",
+      "name": "レジウィング",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 463,
+      "tierExcluded": true
+    },
+    {
+      "id": "レジマリン",
+      "name": "レジマリン",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 464,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "マスターズロード：歓楽の霊道"
+    },
+    {
+      "id": "レジアクセル",
+      "name": "レジアクセル",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 465,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "マスターズロード：静寂の草原"
+    },
+    {
+      "id": "凶ドラゴンガイア",
+      "name": "凶ドラゴンガイア",
+      "familyId": "break",
+      "rank": "SS",
+      "tier": 466,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶ドラゴンゾンビ",
+      "name": "凶ドラゴンゾンビ",
+      "familyId": "break",
+      "rank": "SS",
+      "tier": 467,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶メカバーン",
+      "name": "凶メカバーン",
+      "familyId": "break",
+      "rank": "SS",
+      "tier": 468,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶アトラス",
+      "name": "凶アトラス",
+      "familyId": "break",
+      "rank": "SS",
+      "tier": 469,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶アークデーモン",
+      "name": "凶アークデーモン",
+      "familyId": "break",
+      "rank": "SS",
+      "tier": 470,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶ぬしさま",
+      "name": "凶ぬしさま",
+      "familyId": "break",
+      "rank": "SS",
+      "tier": 471,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶レオン・ビュブロ",
+      "name": "凶レオン・ビュブロ",
+      "familyId": "break",
+      "rank": "SS",
+      "tier": 472,
+      "tierExcluded": true
+    },
+    {
+      "id": "大食王ボーショック",
+      "name": "大食王ボーショック",
+      "familyId": "break",
+      "rank": "SS",
+      "tier": 473,
+      "tierExcluded": true
+    },
+    {
+      "id": "強奪王ブンドルド",
+      "name": "強奪王ブンドルド",
+      "familyId": "break",
+      "rank": "SS",
+      "tier": 474,
+      "tierExcluded": true
+    },
+    {
+      "id": "狡猾王アーザムーク",
+      "name": "狡猾王アーザムーク",
+      "familyId": "break",
+      "rank": "SS",
+      "tier": 475,
+      "tierExcluded": true
+    },
+    {
+      "id": "拷問王イッタブル",
+      "name": "拷問王イッタブル",
+      "familyId": "break",
+      "rank": "SS",
+      "tier": 476,
+      "tierExcluded": true
+    },
+    {
+      "id": "サンチョ",
+      "name": "サンチョ",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 477,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "イベントバトル5日目報酬"
+    },
+    {
+      "id": "メーダボード",
+      "name": "メーダボード",
+      "familyId": "demon",
+      "rank": "SS",
+      "tier": 478,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "Wi-Fi配信（2016/4/1〜）"
+    },
+    {
+      "id": "キラークリムゾン",
+      "name": "キラークリムゾン",
+      "familyId": "material",
+      "rank": "SS",
+      "tier": 479,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配信（セブンスポット限定→2017/1/9より全国配信）"
+    },
+    {
+      "id": "ニジゴロン",
+      "name": "ニジゴロン",
+      "familyId": "slime",
+      "rank": "SS",
+      "tier": 480,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "Wi-Fi配信（2016/4/8〜）"
+    },
+    {
+      "id": "まおうのたまご",
+      "name": "まおうのたまご",
+      "familyId": "slime",
+      "rank": "SS",
+      "tier": 481,
+      "tierExcluded": true
+    },
+    {
+      "id": "砂塵の幻馬",
+      "name": "砂塵の幻馬",
+      "familyId": "beast",
+      "rank": "SS",
+      "tier": 483,
+      "tierExcluded": true
+    },
+    {
+      "id": "ドラゴンデストロイ",
+      "name": "ドラゴンデストロイ",
+      "familyId": "dragon",
+      "rank": "SS",
+      "tier": 484,
+      "tierExcluded": true
+    },
+    {
+      "id": "グランシーザー",
+      "name": "グランシーザー",
+      "familyId": "dragon",
+      "rank": "SS",
+      "tier": 487,
+      "tierExcluded": true
+    },
+    {
+      "id": "オーシャンボーン",
+      "name": "オーシャンボーン",
+      "familyId": "nature",
+      "rank": "SS",
+      "tier": 488,
+      "tierExcluded": true
+    },
+    {
+      "id": "悪魔長ジウギス",
+      "name": "悪魔長ジウギス",
+      "familyId": "demon",
+      "rank": "SS",
+      "tier": 490,
+      "tierExcluded": true
+    },
+    {
+      "id": "暴君バサグランデ",
+      "name": "暴君バサグランデ",
+      "familyId": "beast",
+      "rank": "SS",
+      "tier": 491,
+      "tierExcluded": true
+    },
+    {
+      "id": "覚醒プスゴン",
+      "name": "覚醒プスゴン",
+      "familyId": "dragon",
+      "rank": "SS",
+      "tier": 492,
+      "tierExcluded": true
+    },
+    {
+      "id": "守護者ラズバーン",
+      "name": "守護者ラズバーン",
+      "familyId": "demon",
+      "rank": "SS",
+      "tier": 493,
+      "tierExcluded": true
+    },
+    {
+      "id": "破戒王ベルムド",
+      "name": "破戒王ベルムド",
+      "familyId": "demon",
+      "rank": "SS",
+      "tier": 494,
+      "tierExcluded": true
+    },
+    {
+      "id": "魔女グレイツェル",
+      "name": "魔女グレイツェル",
+      "familyId": "demon",
+      "rank": "SS",
+      "tier": 495,
+      "tierExcluded": true
+    },
+    {
+      "id": "ゴールドマジンガ",
+      "name": "ゴールドマジンガ",
+      "familyId": "material",
+      "rank": "SS",
+      "tier": 496,
+      "tierExcluded": true
+    },
+    {
+      "id": "キングホイミスライム",
+      "name": "キングホイミスライム",
+      "familyId": "slime",
+      "rank": "SS",
+      "tier": 497,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配信（ニンテンドー3DSステーション限定）"
+    },
+    {
+      "id": "グレートノチョーラZ",
+      "name": "グレートノチョーラZ",
+      "familyId": "material",
+      "rank": "SS",
+      "tier": 498,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "勝ち抜きバトル100連勝"
+    },
+    {
+      "id": "ゴールドノチョーラZ",
+      "name": "ゴールドノチョーラZ",
+      "familyId": "material",
+      "rank": "SS",
+      "tier": 499,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配信（セブンスポット限定→2017/1/9より全国配信）"
+    },
+    {
+      "id": "プラチナノチョーラZ",
+      "name": "プラチナノチョーラZ",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 500,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "完全攻略本（ガイドブック）封入特典／2017/1/9より配信"
+    },
+    {
+      "id": "カンダタセブン",
+      "name": "カンダタセブン",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 501,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "すれちがい対戦50勝"
+    },
+    {
+      "id": "プラチナキング",
+      "name": "プラチナキング",
+      "familyId": "slime",
+      "rank": "SS",
+      "tier": 503,
+      "tierExcluded": true
+    },
+    {
+      "id": "ファイナルウェポン",
+      "name": "ファイナルウェポン",
+      "familyId": "material",
+      "rank": "SS",
+      "tier": 504,
+      "tierExcluded": true
+    },
+    {
+      "id": "魔人リンジャーラ",
+      "name": "魔人リンジャーラ",
+      "familyId": "demon",
+      "rank": "SS",
+      "tier": 505,
+      "tierExcluded": true
+    },
+    {
+      "id": "豪魔将ブレンダ",
+      "name": "豪魔将ブレンダ",
+      "familyId": "demon",
+      "rank": "SS",
+      "tier": 506,
+      "tierExcluded": true
+    },
+    {
+      "id": "幻魔将ファズマ",
+      "name": "幻魔将ファズマ",
+      "familyId": "dragon",
+      "rank": "SS",
+      "tier": 507,
+      "tierExcluded": true
+    },
+    {
+      "id": "豪魔将ベリンダ",
+      "name": "豪魔将ベリンダ",
+      "familyId": "demon",
+      "rank": "SS",
+      "tier": 508,
+      "tierExcluded": true
+    },
+    {
+      "id": "獣魔将ガルレイ",
+      "name": "獣魔将ガルレイ",
+      "familyId": "beast",
+      "rank": "SS",
+      "tier": 510,
+      "tierExcluded": true
+    },
+    {
+      "id": "魔元帥ゼルドラド",
+      "name": "魔元帥ゼルドラド",
+      "familyId": "demon",
+      "rank": "SS",
+      "tier": 511,
+      "tierExcluded": true
+    },
+    {
+      "id": "ジャハガロス",
+      "name": "ジャハガロス",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 512,
+      "tierExcluded": true
+    },
+    {
+      "id": "キングスペーディオ",
+      "name": "キングスペーディオ",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 513,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配信（ルイーダの酒場等限定→2017/1/9より全国配信）"
+    },
+    {
+      "id": "デモンスペーディオ",
+      "name": "デモンスペーディオ",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 514,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配信（ルイーダの酒場等限定→2017/1/9より全国配信）"
+    },
+    {
+      "id": "JOKER",
+      "name": "JOKER",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 515,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "すれちがい対戦100勝ごと"
+    },
+    {
+      "id": "ガルマッゾ",
+      "name": "ガルマッゾ",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 516,
+      "tierExcluded": true
+    },
+    {
+      "id": "ガルビルス",
+      "name": "ガルビルス",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 517,
+      "tierExcluded": true
+    },
+    {
+      "id": "竜王",
+      "name": "竜王",
+      "familyId": "dragon",
+      "rank": "SS",
+      "tier": 519,
+      "tierExcluded": true
+    },
+    {
+      "id": "破壊神シドー",
+      "name": "破壊神シドー",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 520,
+      "tierExcluded": true
+    },
+    {
+      "id": "大魔王ゾーマ",
+      "name": "大魔王ゾーマ",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 521,
+      "tierExcluded": true
+    },
+    {
+      "id": "デスピサロ",
+      "name": "デスピサロ",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 522,
+      "tierExcluded": true
+    },
+    {
+      "id": "魔王ミルドラース",
+      "name": "魔王ミルドラース",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 523,
+      "tierExcluded": true
+    },
+    {
+      "id": "大魔王デスタムーア",
+      "name": "大魔王デスタムーア",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 524,
+      "tierExcluded": true
+    },
+    {
+      "id": "魔王オルゴ・デミーラ",
+      "name": "魔王オルゴ・デミーラ",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 525,
+      "tierExcluded": true
+    },
+    {
+      "id": "闇の王ヴラート",
+      "name": "闇の王ヴラート",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 527,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "Wi-Fi配信（2016/4/15〜）"
+    },
+    {
+      "id": "ヒヒュドラード",
+      "name": "ヒヒュドラード",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 529,
+      "tierExcluded": true
+    },
+    {
+      "id": "竜神王",
+      "name": "竜神王",
+      "familyId": "dragon",
+      "rank": "SS",
+      "tier": 530,
+      "tierExcluded": true
+    },
+    {
+      "id": "堕天使エルギオス",
+      "name": "堕天使エルギオス",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 531,
+      "tierExcluded": true
+    },
+    {
+      "id": "冥獣王ネルゲル",
+      "name": "冥獣王ネルゲル",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 532,
+      "tierExcluded": true
+    },
+    {
+      "id": "凶エスターク",
+      "name": "凶エスターク",
+      "familyId": "break",
+      "rank": "SS",
+      "tier": 533,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "すれちがいバトル報酬（表ボス討伐後）"
+    },
+    {
+      "id": "メタルゴッデス",
+      "name": "メタルゴッデス",
+      "familyId": "slime",
+      "rank": "SS",
+      "tier": 534,
+      "tierExcluded": true
+    },
+    {
+      "id": "ラーミア",
+      "name": "ラーミア",
+      "familyId": "beast",
+      "rank": "SS",
+      "tier": 535,
+      "tierExcluded": true
+    },
+    {
+      "id": "エスターク",
+      "name": "エスターク",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 537,
+      "tierExcluded": true
+    },
+    {
+      "id": "ガルマザード",
+      "name": "ガルマザード",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 538,
+      "tierExcluded": true
+    },
+    {
+      "id": "海の神ワダツミ",
+      "name": "海の神ワダツミ",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 539,
+      "tierExcluded": true
+    },
+    {
+      "id": "陸の神ヤチホコ",
+      "name": "陸の神ヤチホコ",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 540,
+      "tierExcluded": true
+    },
+    {
+      "id": "空の神ホアカリ",
+      "name": "空の神ホアカリ",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 541,
+      "tierExcluded": true
+    },
+    {
+      "id": "闇竜シャムダ",
+      "name": "闇竜シャムダ",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 542,
+      "tierExcluded": true
+    },
+    {
+      "id": "真・災厄の王",
+      "name": "真・災厄の王",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 543,
+      "tierExcluded": true
+    },
+    {
+      "id": "魔勇者アンルシア",
+      "name": "魔勇者アンルシア",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 544,
+      "tierExcluded": true
+    },
+    {
+      "id": "名もなき闇の王",
+      "name": "名もなき闇の王",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 545,
+      "tierExcluded": true
+    },
+    {
+      "id": "ダースガルマ",
+      "name": "ダースガルマ",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 546,
+      "tierExcluded": true
+    },
+    {
+      "id": "創造神マデサゴーラ",
+      "name": "創造神マデサゴーラ",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 547,
+      "tierExcluded": true
+    },
+    {
+      "id": "ダグジャガルマ",
+      "name": "ダグジャガルマ",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tier": 548,
+      "tierExcluded": true
+    },
+    {
+      "id": "ほうおう",
+      "name": "ほうおう",
+      "familyId": "beast",
+      "rank": "SS",
+      "tierExcluded": true
+    },
+    {
+      "id": "アッフェブラック",
+      "name": "アッフェブラック",
+      "familyId": "demon",
+      "rank": "SS",
+      "tierExcluded": true
+    },
+    {
+      "id": "エンペラン",
+      "name": "エンペラン",
+      "familyId": "slime",
+      "rank": "SS",
+      "tierExcluded": true
+    },
+    {
+      "id": "トワイライトメア",
+      "name": "トワイライトメア",
+      "familyId": "beast",
+      "rank": "SS",
+      "tierExcluded": true
+    },
+    {
+      "id": "妖魔将ゲジュラ",
+      "name": "妖魔将ゲジュラ",
+      "familyId": "nature",
+      "rank": "SS",
+      "tierExcluded": true
+    },
+    {
+      "id": "暗黒神ラプソーン",
+      "name": "暗黒神ラプソーン",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tierExcluded": true
+    },
+    {
+      "id": "神鳥レティス",
+      "name": "神鳥レティス",
+      "familyId": "beast",
+      "rank": "SS",
+      "tierExcluded": true
+    },
+    {
+      "id": "聖竜ミラクレア",
+      "name": "聖竜ミラクレア",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tierExcluded": true
+    },
+    {
+      "id": "闘神レオソード",
+      "name": "闘神レオソード",
+      "familyId": "unknown",
+      "rank": "SS",
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "すれちがい対戦100勝ごと"
+    },
+    {
+      "id": "黒飛竜",
+      "name": "黒飛竜",
+      "familyId": "dragon",
+      "rank": "SS",
+      "tierExcluded": true
+    }
+  ],
+  "specialRecipes": [
+    {
+      "id": "sp_000_キメラ",
+      "childId": "キメラ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ドラキー"
+        },
+        {
+          "kind": "family",
+          "familyId": "dragon"
+        }
+      ]
+    },
+    {
+      "id": "sp_001_スライムタワー",
+      "childId": "スライムタワー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スライム"
+        },
+        {
+          "kind": "family",
+          "familyId": "slime"
+        }
+      ]
+    },
+    {
+      "id": "sp_002_デンデン竜",
+      "childId": "デンデン竜",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ドラゴンキッズ"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ]
+    },
+    {
+      "id": "sp_003_トドマン",
+      "childId": "トドマン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ももんじゃ"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ]
+    },
+    {
+      "id": "sp_004_ドラゴスライム",
+      "childId": "ドラゴスライム",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スライム"
+        },
+        {
+          "kind": "family",
+          "familyId": "dragon"
+        }
+      ]
+    },
+    {
+      "id": "sp_005_フォレストドラゴ",
+      "childId": "フォレストドラゴ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ドラゴンキッズ"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ]
+    },
+    {
+      "id": "sp_007_メタッピー",
+      "childId": "メタッピー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ドラキー"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ]
+    },
+    {
+      "id": "sp_008_ゆめにゅうどう",
+      "childId": "ゆめにゅうどう",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "あばれうしどり"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast"
+        }
+      ]
+    },
+    {
+      "id": "sp_009_いっかくウサギ",
+      "childId": "いっかくウサギ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "アルミラージ"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ]
+    },
+    {
+      "id": "sp_010_ガルバゴルバ",
+      "childId": "ガルバゴルバ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グレムリン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "グレムリン"
+        }
+      ]
+    },
+    {
+      "id": "sp_011_しましまキャット",
+      "childId": "しましまキャット",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "プリズニャン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "プリズニャン"
+        }
+      ]
+    },
+    {
+      "id": "sp_012_たまねぎマン",
+      "childId": "たまねぎマン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "オニオーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スマイルリザード"
+        }
+      ]
+    },
+    {
+      "id": "sp_013_チャームバット",
+      "childId": "チャームバット",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ボーンバット"
+        },
+        {
+          "kind": "family",
+          "familyId": "slime"
+        }
+      ]
+    },
+    {
+      "id": "sp_014_どくろあらい",
+      "childId": "どくろあらい",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スカルガルー"
+        },
+        {
+          "kind": "family",
+          "familyId": "zombie"
+        }
+      ]
+    },
+    {
+      "id": "sp_015_ドラゴン",
+      "childId": "ドラゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ドラゴンキッズ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ドラゴンキッズ"
+        }
+      ]
+    },
+    {
+      "id": "sp_016_パールスライム",
+      "childId": "パールスライム",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "タマゴロン"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ]
+    },
+    {
+      "id": "sp_017_ブラックマンティス",
+      "childId": "ブラックマンティス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グリーンシザー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "くろカビこぞう"
+        }
+      ]
+    },
+    {
+      "id": "sp_018_みずたまドラゴン",
+      "childId": "みずたまドラゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スマイルリザード"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ニードルマン"
+        }
+      ]
+    },
+    {
+      "id": "sp_019_メイジドラキー",
+      "childId": "メイジドラキー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ドラキー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ドルイド"
+        }
+      ]
+    },
+    {
+      "id": "sp_020_リビングデッド",
+      "childId": "リビングデッド",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "くさった死体"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "グレムリン"
+        }
+      ]
+    },
+    {
+      "id": "sp_021_エルダードラゴン",
+      "childId": "エルダードラゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "リザードマン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ガメゴン"
+        }
+      ]
+    },
+    {
+      "id": "sp_022_ギガントヒルズ",
+      "childId": "ギガントヒルズ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "デンタザウルス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "イエティ"
+        }
+      ]
+    },
+    {
+      "id": "sp_023_キラーマシンライト",
+      "childId": "キラーマシンライト",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "メタルハンター"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メタルハンター"
+        }
+      ]
+    },
+    {
+      "id": "sp_024_スカルゴン",
+      "childId": "スカルゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "リザードマン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ポムポムボム"
+        }
+      ]
+    },
+    {
+      "id": "sp_025_スピンサタン",
+      "childId": "スピンサタン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "シャイニング"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "くろカビこぞう"
+        }
+      ]
+    },
+    {
+      "id": "sp_026_ダークプラネット",
+      "childId": "ダークプラネット",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "なげきムーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "くろカビこぞう"
+        }
+      ]
+    },
+    {
+      "id": "sp_027_バトルレックス",
+      "childId": "バトルレックス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ダッシュラン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キラーマシンライト"
+        }
+      ]
+    },
+    {
+      "id": "sp_028_ヒートギズモ",
+      "childId": "ヒートギズモ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ギズモ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "フレイム"
+        }
+      ]
+    },
+    {
+      "id": "sp_029_ホークマン",
+      "childId": "ホークマン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ヘルコンドル"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon"
+        }
+      ]
+    },
+    {
+      "id": "sp_030_メイジキメラ",
+      "childId": "メイジキメラ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キメラ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ドルイド"
+        }
+      ]
+    },
+    {
+      "id": "sp_031_ワンダーエッグ",
+      "childId": "ワンダーエッグ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "タマゴロン"
+        },
+        {
+          "kind": "family",
+          "familyId": "dragon"
+        }
+      ]
+    },
+    {
+      "id": "sp_032_エレメングリーン",
+      "childId": "エレメングリーン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "フレイム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ブリザード"
+        }
+      ]
+    },
+    {
+      "id": "sp_033_キラースコップ",
+      "childId": "キラースコップ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "いたずらもぐら"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "アサシンブラッド"
+        }
+      ]
+    },
+    {
+      "id": "sp_034_グール",
+      "childId": "グール",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "リビングデッド"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ベビル"
+        }
+      ]
+    },
+    {
+      "id": "sp_035_ゴールデンコーン",
+      "childId": "ゴールデンコーン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "いっかくウサギ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴールドマン"
+        }
+      ]
+    },
+    {
+      "id": "sp_036_サウルスロード",
+      "childId": "サウルスロード",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "デンタザウルス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "じごくのハサミ"
+        }
+      ]
+    },
+    {
+      "id": "sp_037_スカルドン",
+      "childId": "スカルドン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "りゅうせんし"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "バブリン"
+        }
+      ]
+    },
+    {
+      "id": "sp_038_スターキメラ",
+      "childId": "スターキメラ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "メイジキメラ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "きめんどうし"
+        }
+      ]
+    },
+    {
+      "id": "sp_039_スノーモン",
+      "childId": "スノーモン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ピンクモーモン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "イエティ"
+        }
+      ]
+    },
+    {
+      "id": "sp_040_スライムゴールド",
+      "childId": "スライムゴールド",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "メタルスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴールドマン"
+        }
+      ]
+    },
+    {
+      "id": "sp_041_ダースドラゴン",
+      "childId": "ダースドラゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "メラリザード"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メラリザード"
+        }
+      ]
+    },
+    {
+      "id": "sp_042_ダブルイーター",
+      "childId": "ダブルイーター",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ベビル"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ベビル"
+        }
+      ]
+    },
+    {
+      "id": "sp_043_タホドラキー",
+      "childId": "タホドラキー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "メイジドラキー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "きめんどうし"
+        }
+      ]
+    },
+    {
+      "id": "sp_044_つららスライム",
+      "childId": "つららスライム",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スライムつむり"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ブリザード"
+        }
+      ]
+    },
+    {
+      "id": "sp_045_パンドラチェスト",
+      "childId": "パンドラチェスト",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "たんすミミック"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ひとくい箱"
+        }
+      ]
+    },
+    {
+      "id": "sp_046_ファンキードラゴ",
+      "childId": "ファンキードラゴ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "みずたまドラゴン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スパイクヘッド"
+        }
+      ]
+    },
+    {
+      "id": "sp_047_ベロニャーゴ",
+      "childId": "ベロニャーゴ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "しましまキャット"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "しましまキャット"
+        }
+      ]
+    },
+    {
+      "id": "sp_048_メタルドラゴン",
+      "childId": "メタルドラゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "メタルスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ドラゴン"
+        }
+      ]
+    },
+    {
+      "id": "sp_049_メタルトリュフ",
+      "childId": "メタルトリュフ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "じめじめバブル"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メタルスライム"
+        }
+      ]
+    },
+    {
+      "id": "sp_050_メタルパール",
+      "childId": "メタルパール",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "パールスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メタルスライム"
+        }
+      ]
+    },
+    {
+      "id": "sp_051_えんまのつかい",
+      "childId": "えんまのつかい",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "あおだけ童子"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "くろカビこぞう"
+        }
+      ]
+    },
+    {
+      "id": "sp_052_ガルーダ",
+      "childId": "ガルーダ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ヘルコンドル"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "れんごく天馬"
+        }
+      ]
+    },
+    {
+      "id": "sp_053_ギガントドラゴン",
+      "childId": "ギガントドラゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "サウルスロード"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "デザートゴースト"
+        }
+      ]
+    },
+    {
+      "id": "sp_054_キラーアーマー",
+      "childId": "キラーアーマー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "レッドプリン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "じごくのよろい"
+        }
+      ]
+    },
+    {
+      "id": "sp_055_キラーマシン",
+      "childId": "キラーマシン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キラーマシンライト"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キラーマシンライト"
+        }
+      ]
+    },
+    {
+      "id": "sp_056_ゴールドパール",
+      "childId": "ゴールドパール",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "パールスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライムゴールド"
+        }
+      ]
+    },
+    {
+      "id": "sp_057_サイレス",
+      "childId": "サイレス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "エビルホーク"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "くろカビこぞう"
+        }
+      ]
+    },
+    {
+      "id": "sp_058_サボテンゴールド",
+      "childId": "サボテンゴールド",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ダンスニードル"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライムゴールド"
+        }
+      ]
+    },
+    {
+      "id": "sp_059_セルゲイナス",
+      "childId": "セルゲイナス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ゴールデンゴーレム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ベビーニュート"
+        }
+      ]
+    },
+    {
+      "id": "sp_060_タイプG",
+      "childId": "タイプG",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キラーマシン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キラーマシン"
+        }
+      ]
+    },
+    {
+      "id": "sp_061_はぐれメタル",
+      "childId": "はぐれメタル",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "メタルスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メタルスライム"
+        }
+      ]
+    },
+    {
+      "id": "sp_062_バザックス",
+      "childId": "バザックス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "サウルスロード"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キラークラブ"
+        }
+      ]
+    },
+    {
+      "id": "sp_063_マーズフェイス",
+      "childId": "マーズフェイス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ダークプラネット"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メガザルロック"
+        }
+      ]
+    },
+    {
+      "id": "sp_064_マーブルン",
+      "childId": "マーブルン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ベロニャーゴ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ベロニャーゴ"
+        }
+      ]
+    },
+    {
+      "id": "sp_065_メタルエンゼル",
+      "childId": "メタルエンゼル",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "エンゼルスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メタルスライム"
+        }
+      ]
+    },
+    {
+      "id": "sp_066_メタルブラザーズ",
+      "childId": "メタルブラザーズ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スライムタワー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メタルスライム"
+        }
+      ]
+    },
+    {
+      "id": "sp_067_メタルホイミン",
+      "childId": "メタルホイミン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ベホマスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ドラゴメタル"
+        }
+      ]
+    },
+    {
+      "id": "sp_068_メタルライダー",
+      "childId": "メタルライダー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スライムナイト"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ドラゴメタル"
+        }
+      ]
+    },
+    {
+      "id": "sp_069_暗黒大樹の番人",
+      "childId": "暗黒大樹の番人",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "若葉の精霊"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スピンサタン"
+        }
+      ]
+    },
+    {
+      "id": "sp_070_エメラルドーン",
+      "childId": "エメラルドーン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ゴールデンゴーレム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "リトルライバーン"
+        }
+      ]
+    },
+    {
+      "id": "sp_071_かげのきし",
+      "childId": "かげのきし",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "しりょうのきし"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スピンサタン"
+        }
+      ]
+    },
+    {
+      "id": "sp_072_ガメゴンロード",
+      "childId": "ガメゴンロード",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "トリカトラプス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "海のまもりガメ"
+        }
+      ]
+    },
+    {
+      "id": "sp_073_キースドラゴン",
+      "childId": "キースドラゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ベビーニュート"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ベビーニュート"
+        }
+      ]
+    },
+    {
+      "id": "sp_074_キャプテンドラゴ",
+      "childId": "キャプテンドラゴ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ファンキードラゴ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "とげジョボー"
+        }
+      ]
+    },
+    {
+      "id": "sp_075_凶ギガンテス",
+      "childId": "凶ギガンテス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶だいおうイカ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ギガンテス"
+        }
+      ]
+    },
+    {
+      "id": "sp_076_キラーピッケル",
+      "childId": "キラーピッケル",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キラースコップ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "サンダーシャウト"
+        }
+      ]
+    },
+    {
+      "id": "sp_077_グラコス",
+      "childId": "グラコス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グラコスエビル"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "大怨霊マアモン"
+        }
+      ]
+    },
+    {
+      "id": "sp_078_グレイトドラゴン",
+      "childId": "グレイトドラゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キングリザード"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キングエレファント"
+        }
+      ]
+    },
+    {
+      "id": "sp_079_ゴールデントーテム",
+      "childId": "ゴールデントーテム",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スライムタワー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライムゴールド"
+        }
+      ]
+    },
+    {
+      "id": "sp_080_ゴールドエンゼル",
+      "childId": "ゴールドエンゼル",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "エンゼルスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライムゴールド"
+        }
+      ]
+    },
+    {
+      "id": "sp_081_黒竜丸",
+      "childId": "黒竜丸",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "れんごく天馬"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "大怨霊マアモン"
+        }
+      ]
+    },
+    {
+      "id": "sp_082_シャドウパンサー",
+      "childId": "シャドウパンサー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キラータイガー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スピンサタン"
+        }
+      ]
+    },
+    {
+      "id": "sp_083_ジャミラス",
+      "childId": "ジャミラス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "サイレス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ましょうぐも"
+        }
+      ]
+    },
+    {
+      "id": "sp_084_シルバリヌス",
+      "childId": "シルバリヌス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "セルゲイナス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スノーモン"
+        }
+      ]
+    },
+    {
+      "id": "sp_085_スライムマデュラ",
+      "childId": "スライムマデュラ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "つららスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "石炭つむり"
+        }
+      ]
+    },
+    {
+      "id": "sp_086_ダークトロル",
+      "childId": "ダークトロル",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "トロルボンバー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "大怨霊マアモン"
+        }
+      ]
+    },
+    {
+      "id": "sp_087_ダブルバングル",
+      "childId": "ダブルバングル",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "バアルゼブブ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "バアルゼブブ"
+        }
+      ]
+    },
+    {
+      "id": "sp_088_テラノライナー",
+      "childId": "テラノライナー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ダースドラゴン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キラータイガー"
+        }
+      ]
+    },
+    {
+      "id": "sp_089_ドラキーマ",
+      "childId": "ドラキーマ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "タホドラキー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "げんじゅつし"
+        }
+      ]
+    },
+    {
+      "id": "sp_090_ドラゴンゾンビ",
+      "childId": "ドラゴンゾンビ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "シュプリンガー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "プヨンターゲット"
+        }
+      ]
+    },
+    {
+      "id": "sp_091_トリカトラプス",
+      "childId": "トリカトラプス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "バザックス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ガニラス"
+        }
+      ]
+    },
+    {
+      "id": "sp_092_伐採マシン",
+      "childId": "伐採マシン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "タイプG"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "タイプG"
+        }
+      ]
+    },
+    {
+      "id": "sp_093_バルザック",
+      "childId": "バルザック",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "とげこんぼう"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "とげこんぼう"
+        }
+      ]
+    },
+    {
+      "id": "sp_094_ベヒードス",
+      "childId": "ベヒードス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "バザックス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ビッグスロース"
+        }
+      ]
+    },
+    {
+      "id": "sp_095_ほねリーダー",
+      "childId": "ほねリーダー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "コープスフライ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "マーズフェイス"
+        }
+      ]
+    },
+    {
+      "id": "sp_096_ボボンガー",
+      "childId": "ボボンガー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ドラゴンバゲージ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "マーズフェイス"
+        }
+      ]
+    },
+    {
+      "id": "sp_097_マッドスミス",
+      "childId": "マッドスミス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グール"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "バアルゼブブ"
+        }
+      ]
+    },
+    {
+      "id": "sp_098_ムーンキメラ",
+      "childId": "ムーンキメラ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スターキメラ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "げんじゅつし"
+        }
+      ]
+    },
+    {
+      "id": "sp_099_メカバーン",
+      "childId": "メカバーン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "メタルドラゴン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライムゴールド"
+        }
+      ]
+    },
+    {
+      "id": "sp_100_ラマダ",
+      "childId": "ラマダ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "サイクロプス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "おにこんぼう"
+        }
+      ]
+    },
+    {
+      "id": "sp_101_れんごくちょう",
+      "childId": "れんごくちょう",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ひくいどり"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "まかいファイター"
+        }
+      ]
+    },
+    {
+      "id": "sp_102_ロイヤルミミック",
+      "childId": "ロイヤルミミック",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "パンドラチェスト"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ミミック"
+        }
+      ]
+    },
+    {
+      "id": "sp_103_青飛竜",
+      "childId": "青飛竜",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "アカツキショウグン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライムエンペラー"
+        }
+      ]
+    },
+    {
+      "id": "sp_104_アカツキショウグン",
+      "childId": "アカツキショウグン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "まかいファイター"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "バロンナイト"
+        }
+      ]
+    },
+    {
+      "id": "sp_105_赤飛竜",
+      "childId": "赤飛竜",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "アカツキショウグン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライムマデュラ"
+        }
+      ]
+    },
+    {
+      "id": "sp_106_悪魔ザイガス",
+      "childId": "悪魔ザイガス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "バズズ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "アカツキショウグン"
+        }
+      ]
+    },
+    {
+      "id": "sp_107_アスタロト",
+      "childId": "アスタロト",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "エメラルドーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ピンクモーモン"
+        }
+      ]
+    },
+    {
+      "id": "sp_108_アトラス",
+      "childId": "アトラス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ラマダ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ギーグハンマー"
+        }
+      ]
+    },
+    {
+      "id": "sp_109_怪獣プスゴン",
+      "childId": "怪獣プスゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ボボンガー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴールデンスライム"
+        }
+      ]
+    },
+    {
+      "id": "sp_110_怪蟲アラグネ",
+      "childId": "怪蟲アラグネ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "アイスボンバー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "けがれの渦"
+        }
+      ]
+    },
+    {
+      "id": "sp_111_ガメゴンレジェンド",
+      "childId": "ガメゴンレジェンド",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ガメゴンロード"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "海のまもりガメ"
+        }
+      ]
+    },
+    {
+      "id": "sp_112_ギガデーモン",
+      "childId": "ギガデーモン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ブラックチャック"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ブラックチャック"
+        }
+      ]
+    },
+    {
+      "id": "sp_113_黄飛竜",
+      "childId": "黄飛竜",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "アカツキショウグン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴールデンスライム"
+        }
+      ]
+    },
+    {
+      "id": "sp_114_凶クラーゴン",
+      "childId": "凶クラーゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶だいおうイカ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "クラーゴン"
+        }
+      ]
+    },
+    {
+      "id": "sp_115_凶鳥フレス",
+      "childId": "凶鳥フレス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "れんごくちょう"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "黒き花婿"
+        }
+      ]
+    },
+    {
+      "id": "sp_116_キラーマジンガ",
+      "childId": "キラーマジンガ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キラーマシン2"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "シュバルツシュルト"
+        }
+      ]
+    },
+    {
+      "id": "sp_117_ゲルバトロス",
+      "childId": "ゲルバトロス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ジャミラス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ブラックゴイル"
+        }
+      ]
+    },
+    {
+      "id": "sp_118_ゴールドオーク",
+      "childId": "ゴールドオーク",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "オークキング"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライムゴールド"
+        }
+      ]
+    },
+    {
+      "id": "sp_119_ごくらくちょう",
+      "childId": "ごくらくちょう",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ガルーダ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "黒竜丸"
+        }
+      ]
+    },
+    {
+      "id": "sp_120_呪術師マリーン",
+      "childId": "呪術師マリーン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "トロルバッコス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ギガデーモン"
+        }
+      ]
+    },
+    {
+      "id": "sp_121_シュバルツシュルト",
+      "childId": "シュバルツシュルト",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キラーアーマー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "黒き花婿"
+        }
+      ]
+    },
+    {
+      "id": "sp_122_深海の守護者",
+      "childId": "深海の守護者",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "黒き花婿"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "グラコス5世"
+        }
+      ]
+    },
+    {
+      "id": "sp_123_水竜ギルギッシュ",
+      "childId": "水竜ギルギッシュ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ガメゴンレジェンド"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ドラゴンガイア"
+        }
+      ]
+    },
+    {
+      "id": "sp_124_青天竜バルケロス",
+      "childId": "青天竜バルケロス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "水竜ギルギッシュ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "深海の守護者"
+        }
+      ]
+    },
+    {
+      "id": "sp_125_ダークネビュラス",
+      "childId": "ダークネビュラス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "メカバーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "黒き花婿"
+        }
+      ]
+    },
+    {
+      "id": "sp_126_ダークモーモン",
+      "childId": "ダークモーモン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "マポレーナ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ブラックチャック"
+        }
+      ]
+    },
+    {
+      "id": "sp_127_だいおうクジラ",
+      "childId": "だいおうクジラ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ぬしさま"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "暗黒大樹の番人"
+        }
+      ]
+    },
+    {
+      "id": "sp_128_月夜の将",
+      "childId": "月夜の将",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "妖剣士オーレン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "アカツキショウグン"
+        }
+      ]
+    },
+    {
+      "id": "sp_129_天魔クァバルナ",
+      "childId": "天魔クァバルナ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ウルベア魔神兵"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "レティス"
+        }
+      ]
+    },
+    {
+      "id": "sp_130_トマホーガー",
+      "childId": "トマホーガー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "アックスドラゴン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "大地の竜バウギア"
+        }
+      ]
+    },
+    {
+      "id": "sp_131_ドラゴン・ウー",
+      "childId": "ドラゴン・ウー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "トリカトラプス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "モテモテ"
+        }
+      ]
+    },
+    {
+      "id": "sp_132_トロルバッコス",
+      "childId": "トロルバッコス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ダークトロル"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ラマダ"
+        }
+      ]
+    },
+    {
+      "id": "sp_133_バズズ",
+      "childId": "バズズ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "デビルロード"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "黒き花婿"
+        }
+      ]
+    },
+    {
+      "id": "sp_134_バラモスゾンビ",
+      "childId": "バラモスゾンビ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "まかいファイター"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "リュウイーソー"
+        }
+      ]
+    },
+    {
+      "id": "sp_135_ふくまねき",
+      "childId": "ふくまねき",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "モテモテ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "聖銀のどくろあらい"
+        }
+      ]
+    },
+    {
+      "id": "sp_136_舞踏魔プレシアンナ",
+      "childId": "舞踏魔プレシアンナ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "妖魔ジュリアンテ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "怪獣プスゴン"
+        }
+      ]
+    },
+    {
+      "id": "sp_137_ブラックゴーレム",
+      "childId": "ブラックゴーレム",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "オリエンタシス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "シュバルツシュルト"
+        }
+      ]
+    },
+    {
+      "id": "sp_138_ブラックチャック",
+      "childId": "ブラックチャック",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "とげこんぼう"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "シャドウパンサー"
+        }
+      ]
+    },
+    {
+      "id": "sp_139_ブラックドラゴン",
+      "childId": "ブラックドラゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グレイトドラゴン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "暗黒大樹の番人"
+        }
+      ]
+    },
+    {
+      "id": "sp_140_ブラックモス",
+      "childId": "ブラックモス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キラーモス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "暗黒大樹の番人"
+        }
+      ]
+    },
+    {
+      "id": "sp_141_ベリアル",
+      "childId": "ベリアル",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "アークデーモン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴールデンゴーレム"
+        }
+      ]
+    },
+    {
+      "id": "sp_142_ヘルジュラシック",
+      "childId": "ヘルジュラシック",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キースドラゴン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "シャドウパンサー"
+        }
+      ]
+    },
+    {
+      "id": "sp_143_ポセイドン",
+      "childId": "ポセイドン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グレートオーラス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "クラーゴン"
+        }
+      ]
+    },
+    {
+      "id": "sp_144_魔軍師イッド",
+      "childId": "魔軍師イッド",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "エビルソーサラー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キャプテンドラゴ"
+        }
+      ]
+    },
+    {
+      "id": "sp_145_魔人ゼクセン",
+      "childId": "魔人ゼクセン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "悪魔ザイガス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ロードコープス"
+        }
+      ]
+    },
+    {
+      "id": "sp_146_密林の守人",
+      "childId": "密林の守人",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "暗黒大樹の番人"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "デビルプラント"
+        }
+      ]
+    },
+    {
+      "id": "sp_147_モテモテ",
+      "childId": "モテモテ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ビッグスロース"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "サボテンゴールド"
+        }
+      ]
+    },
+    {
+      "id": "sp_148_妖魔ジュリアンテ",
+      "childId": "妖魔ジュリアンテ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キャット・リベリオ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "シャドウパンサー"
+        }
+      ]
+    },
+    {
+      "id": "sp_149_レジェンドホース",
+      "childId": "レジェンドホース",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "黒竜丸"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライムエンペラー"
+        }
+      ],
+      "note": "DQMJ3P(プロ)の配合表では「黒竜丸×マポレーナ」とされている"
+    },
+    {
+      "id": "sp_150_ロードコープス",
+      "childId": "ロードコープス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ワイトキング"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "エビルソーサラー"
+        }
+      ]
+    },
+    {
+      "id": "sp_151_悪魔長ジウギス",
+      "childId": "悪魔長ジウギス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "魔人ゼクセン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ドラゴンデストロイ"
+        }
+      ]
+    },
+    {
+      "id": "sp_152_アッフェブラック",
+      "childId": "アッフェブラック",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "バズズ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "深海の守護者"
+        }
+      ]
+    },
+    {
+      "id": "sp_153_暗黒神ラプソーン",
+      "childId": "暗黒神ラプソーン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "魔元帥ゼルドラド"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ジャハガロス"
+        }
+      ],
+      "note": "DQMJ3P(プロ)では「ラプソーン×ジャハガロス」とされている"
+    },
+    {
+      "id": "sp_154_海の神ワダツミ",
+      "childId": "海の神ワダツミ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ポセイドン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "オーシャンボーン"
+        }
+      ]
+    },
+    {
+      "id": "sp_155_エスターク",
+      "childId": "エスターク",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶エスターク"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "JOKER"
+        }
+      ],
+      "note": "DQMJ3P(プロ)では4体配合(プチターク・デスピサロ等)に変更されている"
+    },
+    {
+      "id": "sp_156_オーシャンボーン",
+      "childId": "オーシャンボーン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "だいおうクジラ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "深海の守護者"
+        }
+      ]
+    },
+    {
+      "id": "sp_157_覚醒プスゴン",
+      "childId": "覚醒プスゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "怪獣プスゴン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ドラゴン・ウー"
+        }
+      ]
+    },
+    {
+      "id": "sp_158_ガルビルス",
+      "childId": "ガルビルス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ガルマッゾ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "大魔王デスタムーア"
+        }
+      ]
+    },
+    {
+      "id": "sp_159_ガルマザード",
+      "childId": "ガルマザード",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ガルビルス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "海の神ワダツミ"
+        }
+      ]
+    },
+    {
+      "id": "sp_160_凶アークデーモン",
+      "childId": "凶アークデーモン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶にじくじゃく"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "アークデーモン"
+        }
+      ]
+    },
+    {
+      "id": "sp_161_凶アトラス",
+      "childId": "凶アトラス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶ギガンテス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "アトラス"
+        }
+      ]
+    },
+    {
+      "id": "sp_162_凶ドラゴンガイア",
+      "childId": "凶ドラゴンガイア",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶キングリザード"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ドラゴンガイア"
+        }
+      ]
+    },
+    {
+      "id": "sp_163_凶メカバーン",
+      "childId": "凶メカバーン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶メタルドラゴン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メカバーン"
+        }
+      ]
+    },
+    {
+      "id": "sp_164_グランシーザー",
+      "childId": "グランシーザー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ブラックドラゴン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "密林の守人"
+        }
+      ]
+    },
+    {
+      "id": "sp_165_幻魔将ファズマ",
+      "childId": "幻魔将ファズマ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "魔軍師イッド"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "魔女グレイツェル"
+        }
+      ]
+    },
+    {
+      "id": "sp_166_狡猾王アーザムーク",
+      "childId": "狡猾王アーザムーク",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶ぬしさま"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "アモデウス"
+        }
+      ]
+    },
+    {
+      "id": "sp_167_強奪王ブンドルド",
+      "childId": "強奪王ブンドルド",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶レオン・ビュブロ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ロードコープス"
+        }
+      ]
+    },
+    {
+      "id": "sp_168_豪魔将ブレンダ",
+      "childId": "豪魔将ブレンダ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "呪術師マリーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ベリアル"
+        }
+      ]
+    },
+    {
+      "id": "sp_169_豪魔将ベリンダ",
+      "childId": "豪魔将ベリンダ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "呪術師マリーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "アトラス"
+        }
+      ]
+    },
+    {
+      "id": "sp_170_拷問王イッタブル",
+      "childId": "拷問王イッタブル",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶レオン・ビュブロ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ブラックゴーレム"
+        }
+      ]
+    },
+    {
+      "id": "sp_171_獣魔将ガルレイ",
+      "childId": "獣魔将ガルレイ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "暴君バサグランデ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "破戒王ベルムド"
+        }
+      ]
+    },
+    {
+      "id": "sp_172_砂塵の幻馬",
+      "childId": "砂塵の幻馬",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "レジェンドホース"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ガメゴンレジェンド"
+        }
+      ]
+    },
+    {
+      "id": "sp_173_ジャハガロス",
+      "childId": "ジャハガロス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "砂塵の幻馬"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "アッフェブラック"
+        }
+      ]
+    },
+    {
+      "id": "sp_174_守護者ラズバーン",
+      "childId": "守護者ラズバーン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "暴君バサグランデ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "天魔クァバルナ"
+        }
+      ]
+    },
+    {
+      "id": "sp_175_真・災厄の王",
+      "childId": "真・災厄の王",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "闇竜シャムダ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "エスターク"
+        }
+      ]
+    },
+    {
+      "id": "sp_176_神鳥レティス",
+      "childId": "神鳥レティス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "レティス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キングスペーディオ"
+        }
+      ]
+    },
+    {
+      "id": "sp_177_聖竜ミラクレア",
+      "childId": "聖竜ミラクレア",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ラーミア"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "魔王オルゴ・デミーラ"
+        }
+      ]
+    },
+    {
+      "id": "sp_178_創造神マデサゴーラ",
+      "childId": "創造神マデサゴーラ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "魔勇者アンルシア"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "冥獣王ネルゲル"
+        }
+      ]
+    },
+    {
+      "id": "sp_179_空の神ホアカリ",
+      "childId": "空の神ホアカリ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "メタルゴッデス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "堕天使エルギオス"
+        }
+      ]
+    },
+    {
+      "id": "sp_180_ダースガルマ",
+      "childId": "ダースガルマ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "名もなき闇の王"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ガルマザード"
+        }
+      ]
+    },
+    {
+      "id": "sp_181_大食王ボーショック",
+      "childId": "大食王ボーショック",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶ぬしさま"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴールドオーク"
+        }
+      ]
+    },
+    {
+      "id": "sp_182_大魔王ゾーマ",
+      "childId": "大魔王ゾーマ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ほうおう"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "バラモスゾンビ"
+        }
+      ],
+      "note": "DQMJ3P(プロ)では4体配合(ゾーマズデビル・バラモス等)に変更されている"
+    },
+    {
+      "id": "sp_183_ダグジャガルマ",
+      "childId": "ダグジャガルマ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ダースガルマ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "創造神マデサゴーラ"
+        }
+      ]
+    },
+    {
+      "id": "sp_184_堕天使エルギオス",
+      "childId": "堕天使エルギオス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "暗黒神ラプソーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キングホイミスライム"
+        }
+      ]
+    },
+    {
+      "id": "sp_185_ドラゴンデストロイ",
+      "childId": "ドラゴンデストロイ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "トマホーガー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ヘルジュラシック"
+        }
+      ]
+    },
+    {
+      "id": "sp_186_トワイライトメア",
+      "childId": "トワイライトメア",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "レジェンドホース"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "レティス"
+        }
+      ]
+    },
+    {
+      "id": "sp_187_破戒王ベルムド",
+      "childId": "破戒王ベルムド",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "月夜の将"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "レオン・ビュブロ"
+        }
+      ]
+    },
+    {
+      "id": "sp_188_ヒヒュドラード",
+      "childId": "ヒヒュドラード",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "闘神レオソード"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "デモンスペーディオ"
+        }
+      ],
+      "note": "DQMJ3P(プロ)では「邪獣ヒヒュルデ×キングモーモン」とされている"
+    },
+    {
+      "id": "sp_189_ファイナルウェポン",
+      "childId": "ファイナルウェポン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スーパーキラーマシン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴールドマジンガ"
+        }
+      ],
+      "note": "DQMJ3P(プロ)では「ゴールドマジンガ×ほうおう」とされている"
+    },
+    {
+      "id": "sp_190_プラチナキング",
+      "childId": "プラチナキング",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "黒き花婿"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "大怨霊マアモン"
+        }
+      ],
+      "note": "同出典に4体配合レシピも併記されている"
+    },
+    {
+      "id": "sp_191_ほうおう",
+      "childId": "ほうおう",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ごくらくちょう"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "レジェンドホース"
+        }
+      ]
+    },
+    {
+      "id": "sp_192_暴君バサグランデ",
+      "childId": "暴君バサグランデ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "レオン・ビュブロ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ポセイドン"
+        }
+      ]
+    },
+    {
+      "id": "sp_193_魔王オルゴ・デミーラ",
+      "childId": "魔王オルゴ・デミーラ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "青天竜バルケロス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "悪魔長ジウギス"
+        }
+      ]
+    },
+    {
+      "id": "sp_194_魔王ミルドラース",
+      "childId": "魔王ミルドラース",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "アスタロト"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "アカツキショウグン"
+        }
+      ]
+    },
+    {
+      "id": "sp_195_魔女グレイツェル",
+      "childId": "魔女グレイツェル",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "舞踏魔プレシアンナ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "怪蟲アラグネ"
+        }
+      ]
+    },
+    {
+      "id": "sp_196_魔人リンジャーラ",
+      "childId": "魔人リンジャーラ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "破戒王ベルムド"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "トワイライトメア"
+        }
+      ]
+    },
+    {
+      "id": "sp_197_魔勇者アンルシア",
+      "childId": "魔勇者アンルシア",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "真・災厄の王"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "空の神ホアカリ"
+        }
+      ]
+    },
+    {
+      "id": "sp_198_冥獣王ネルゲル",
+      "childId": "冥獣王ネルゲル",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ヒヒュドラード"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "陸の神ヤチホコ"
+        }
+      ]
+    },
+    {
+      "id": "sp_199_メタルゴッデス",
+      "childId": "メタルゴッデス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "プラチナキング"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ファイナルウェポン"
+        }
+      ]
+    },
+    {
+      "id": "sp_200_闇竜シャムダ",
+      "childId": "闇竜シャムダ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "破壊神シドー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "大魔王ゾーマ"
+        }
+      ]
+    },
+    {
+      "id": "sp_201_妖魔将ゲジュラ",
+      "childId": "妖魔将ゲジュラ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "怪蟲アラグネ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "覚醒プスゴン"
+        }
+      ]
+    },
+    {
+      "id": "sp_202_ラーミア",
+      "childId": "ラーミア",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "神鳥レティス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "JOKER"
+        }
+      ],
+      "note": "DQMJ3P(プロ)では「神鳥レティス×プチターク」とされている"
+    },
+    {
+      "id": "sp_203_陸の神ヤチホコ",
+      "childId": "陸の神ヤチホコ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "竜神王"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "聖竜ミラクレア"
+        }
+      ]
+    },
+    {
+      "id": "sp_204_竜王",
+      "childId": "竜王",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グランシーザー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "黒飛竜"
+        }
+      ],
+      "note": "DQMJ3P(プロ)では「りゅうおう×黒飛竜」とされている"
+    },
+    {
+      "id": "sp_205_竜神王",
+      "childId": "竜神王",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "竜王"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ラーミア"
+        }
+      ]
+    },
+    {
+      "id": "sp_206_若葉の精霊",
+      "childId": "若葉の精霊",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "マンドレイク"
+        }
+      ],
+      "note": "出典の表に親Bが記載されておらず、親1体分のみ取得。レシピは不完全"
+    },
+    {
+      "id": "sp_207_キラーパンサー",
+      "childId": "キラーパンサー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ベビーパンサー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ベビーパンサー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ベビーパンサー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ベビーパンサー"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_208_オークキング",
+      "childId": "オークキング",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "オーク"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "オーク"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "オーク"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "オーク"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_209_おにこんぼう",
+      "childId": "おにこんぼう",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "おおきづち"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "おおきづち"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "おおきづち"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "おおきづち"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_210_キラータイガー",
+      "childId": "キラータイガー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ベビータイガー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ベビータイガー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ベビータイガー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ベビータイガー"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_211_キングスライム",
+      "childId": "キングスライム",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライム"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_212_キングリザード",
+      "childId": "キングリザード",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "リザードマン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "リザードマン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "リザードマン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "リザードマン"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_213_ゴールデンゴーレム",
+      "childId": "ゴールデンゴーレム",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "フレイム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "フレイム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ブリザード"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ブリザード"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_214_だいおうイカ",
+      "childId": "だいおうイカ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "だいおうキッズ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "だいおうキッズ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "だいおうキッズ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "だいおうキッズ"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_215_どろどろマントル",
+      "childId": "どろどろマントル",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "レッドプリン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "レッドプリン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "レッドプリン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "レッドプリン"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_216_ベスキング",
+      "childId": "ベスキング",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スライムベス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライムベス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライムベス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライムベス"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_217_ベホマスライム",
+      "childId": "ベホマスライム",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ホイミスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ホイミスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ホイミスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ホイミスライム"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_218_メガザルロック",
+      "childId": "メガザルロック",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ばくだんいわ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ばくだんいわ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ばくだんいわ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ばくだんいわ"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_219_カイザードラゴン",
+      "childId": "カイザードラゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "りゅうせんし"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "りゅうせんし"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "りゅうせんし"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "りゅうせんし"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_220_ギーグハンマー",
+      "childId": "ギーグハンマー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ブラウニー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ブラウニー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ブラウニー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ブラウニー"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_221_ギャスモン",
+      "childId": "ギャスモン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "エレメングリーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "エレメングリーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "エレメングリーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "エレメングリーン"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_222_スマイルロック",
+      "childId": "スマイルロック",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "メガザルロック"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メガザルロック"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メガザルロック"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メガザルロック"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_223_スライムベホマズン",
+      "childId": "スライムベホマズン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ベホマスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ベホマスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ベホマスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ベホマスライム"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_224_どくどくバルーン",
+      "childId": "どくどくバルーン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "どろどろマントル"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "どろどろマントル"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "どろどろマントル"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "どろどろマントル"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_225_キャット・リベリオ",
+      "childId": "キャット・リベリオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "マーブルン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "マーブルン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "マーブルン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "マーブルン"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_226_キャノンキング",
+      "childId": "キャノンキング",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "デザートタンク"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "デザートタンク"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "デザートタンク"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "デザートタンク"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_227_キングエレファント",
+      "childId": "キングエレファント",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ナウマンボーグ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ナウマンボーグ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ナウマンボーグ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ナウマンボーグ"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_228_シャドウパンサー",
+      "childId": "シャドウパンサー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "シャドウベビー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "シャドウベビー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "シャドウベビー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "シャドウベビー"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_229_大怨霊マアモン",
+      "childId": "大怨霊マアモン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "どくどくバルーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "どくどくバルーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "どくどくバルーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "どくどくバルーン"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_230_大地の竜バウギア",
+      "childId": "大地の竜バウギア",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "りゅうせんし"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "りゅうせんし"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "りゅうせんし"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "りゅうせんし"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_231_にじくじゃく",
+      "childId": "にじくじゃく",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ひくいどり"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ひくいどり"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ホークブリザード"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ホークブリザード"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_232_メタルキング",
+      "childId": "メタルキング",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "メタルスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メタルスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メタルスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メタルスライム"
+        }
+      ],
+      "note": "同出典にメタルスライム4体のレシピも併記されている 4体配合"
+    },
+    {
+      "id": "sp_233_メタルキング",
+      "childId": "メタルキング",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "メタルスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メタルパール"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メタルエンゼル"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メタルブラザーズ"
+        }
+      ],
+      "note": "同出典にメタルスライム4体のレシピも併記されている 4体配合"
+    },
+    {
+      "id": "sp_234_ワイトキング",
+      "childId": "ワイトキング",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "デスプリースト"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "デスプリースト"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "デスプリースト"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "デスプリースト"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_235_キラーマシン2",
+      "childId": "キラーマシン2",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ゴールデンゴーレム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴールデンゴーレム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キラーマシン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キラーマシン"
+        }
+      ],
+      "note": "同出典に別レシピも併記されている 4体配合"
+    },
+    {
+      "id": "sp_236_キラーマシン2",
+      "childId": "キラーマシン2",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "バロンナイト"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "バロンナイト"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キラーマシン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キラーマシン"
+        }
+      ],
+      "note": "同出典に別レシピも併記されている 4体配合"
+    },
+    {
+      "id": "sp_237_グラコス5世",
+      "childId": "グラコス5世",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グラコス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "グラコス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "グラコス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "グラコス"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_238_けがれの渦",
+      "childId": "けがれの渦",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "大怨霊マアモン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "大怨霊マアモン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "大怨霊マアモン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "大怨霊マアモン"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_239_ゴールデンスライム",
+      "childId": "ゴールデンスライム",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スライムゴールド"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴールドパール"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴールドエンゼル"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴールデントーテム"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_240_スーパーキラーマシン",
+      "childId": "スーパーキラーマシン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キラーマシン2"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キラーマシン2"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ダークネビュラス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ダークネビュラス"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_241_スライムエンペラー",
+      "childId": "スライムエンペラー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スライムマデュラ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライムマデュラ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メタルキング"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メタルキング"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_242_聖銀のどくろあらい",
+      "childId": "聖銀のどくろあらい",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "どくろあらい"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "どくろあらい"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "はぐれメタル"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "はぐれメタル"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_243_ドラゴンガイア",
+      "childId": "ドラゴンガイア",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "まかいファイター"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "まかいファイター"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "まかいファイター"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "まかいファイター"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_244_のろいの岩",
+      "childId": "のろいの岩",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スマイルロック"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スマイルロック"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スマイルロック"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スマイルロック"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_245_妖剣士オーレン",
+      "childId": "妖剣士オーレン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "かげのきし"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "かげのきし"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "かげのきし"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "かげのきし"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_246_レティス",
+      "childId": "レティス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ごくらくちょう"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "れんごくまちょう"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "アスタロト"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ふくまねき"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_247_れんごくまちょう",
+      "childId": "れんごくまちょう",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ひくいどり"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ひくいどり"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ひくいどり"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ひくいどり"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_248_ガルマッゾ",
+      "childId": "ガルマッゾ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "大食王ボーショック"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "強奪王ブンドルド"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "狡猾王アーザムーク"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "拷問王イッタブル"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_249_凶ぬしさま",
+      "childId": "凶ぬしさま",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶アトラス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "凶クラーゴン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "凶メカバーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "サンチョ"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_250_凶レオン・ビュブロ",
+      "childId": "凶レオン・ビュブロ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶ドラゴンガイア"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "凶ドラゴンゾンビ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "凶アークデーモン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "サンチョ"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_251_黒飛竜",
+      "childId": "黒飛竜",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "赤飛竜"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "青飛竜"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "黄飛竜"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ブラックゴーレム"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_252_ゴールドマジンガ",
+      "childId": "ゴールドマジンガ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キラーマジンガ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キラーマジンガ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴールデンスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴールデンスライム"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_253_大魔王デスタムーア",
+      "childId": "大魔王デスタムーア",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ゲルバトロス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "グラコス5世"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "守護者ラズバーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "魔人リンジャーラ"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_254_デスピサロ",
+      "childId": "デスピサロ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ギガデーモン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ポセイドン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "凶アトラス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "凶メカバーン"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_255_破壊神シドー",
+      "childId": "破壊神シドー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "バズズ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "アトラス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ベリアル"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "凶アークデーモン"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_256_プラチナキング",
+      "childId": "プラチナキング",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スライムエンペラー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライムエンペラー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴールデンスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴールデンスライム"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_257_魔元帥ゼルドラド",
+      "childId": "魔元帥ゼルドラド",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "幻魔将ファズマ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "獣魔将ガルレイ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "妖魔将ゲジュラ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "豪魔将ベリンダ"
+        }
+      ],
+      "note": "4体配合"
+    },
+    {
+      "id": "sp_258_名もなき闇の王",
+      "childId": "名もなき闇の王",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "デスピサロ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "魔王ミルドラース"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "グレートノチョーラZ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "カンダタセブン"
+        }
+      ],
+      "note": "「グレートノチョーラZ」は出典の表記のまま 4体配合"
+    },
+    {
+      "id": "sp_259_ゴールドマン",
+      "childId": "ゴールドマン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "メタルドラゴン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "フレイム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ブリザード"
+        }
+      ],
+      "note": "出典の表には3体しか記載がなく、4体目は読み取れなかった（レシピ不完全） 4体配合"
+    },
+    {
+      "id": "sp_262_凶ヴォルカドラゴン",
+      "childId": "凶ヴォルカドラゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶エルダードラゴン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ヴォルカドラゴン"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_263_凶グレートオーラス",
+      "childId": "凶グレートオーラス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶シーライオン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "グレートオーラス"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_264_凶マーズフェイス",
+      "childId": "凶マーズフェイス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶ダークプラネット"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "マーズフェイス"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_272_れんごくまちょう",
+      "childId": "れんごくまちょう",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ムーンキメラ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ガルーダ"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_273_凶キラークラブ",
+      "childId": "凶キラークラブ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶じごくのハサミ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キラークラブ"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_274_凶スカルゴン",
+      "childId": "凶スカルゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶キングリザード"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スカルゴン"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_275_凶スターキメラ",
+      "childId": "凶スターキメラ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶メイジキメラ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スターキメラ"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_276_凶とげジョボー",
+      "childId": "凶とげジョボー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶スパイクヘッド"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "とげジョボー"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_277_凶メタルドラゴン",
+      "childId": "凶メタルドラゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶キングリザード"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メタルドラゴン"
+        }
+      ],
+      "note": "DQMJ3P(プロ)の配合表に記載。game-senmu.comの無印一覧にも同じレシピあり"
+    },
+    {
+      "id": "sp_287_凶エルダードラゴン",
+      "childId": "凶エルダードラゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶フォレストドラゴ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "エルダードラゴン"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_288_凶シーライオン",
+      "childId": "凶シーライオン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶トドマン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "シーライオン"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_289_凶じごくのハサミ",
+      "childId": "凶じごくのハサミ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶ぐんたいガニ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "じごくのハサミ"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_290_凶ダークプラネット",
+      "childId": "凶ダークプラネット",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶なげきムーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ダークプラネット"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_291_凶マッドファルコン",
+      "childId": "凶マッドファルコン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶キメラ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "マッドファルコン"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_292_凶メイジキメラ",
+      "childId": "凶メイジキメラ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶キメラ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メイジキメラ"
+        }
+      ],
+      "note": "DQMJ3P(プロ)の配合表に記載。game-senmu.comの無印一覧にも同じレシピあり"
+    },
+    {
+      "id": "sp_293_凶メタルスライム",
+      "childId": "凶メタルスライム",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶スライムベス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メタルスライム"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_294_凶スパイクヘッド",
+      "childId": "凶スパイクヘッド",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶キメラ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スパイクヘッド"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_295_凶スライムベス",
+      "childId": "凶スライムベス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶スライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライムベス"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_296_凶ぐんたいガニ",
+      "childId": "凶ぐんたいガニ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶スライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ぐんたいガニ"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_297_凶トドマン",
+      "childId": "凶トドマン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶スライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "トドマン"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_298_凶なげきムーン",
+      "childId": "凶なげきムーン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶キメラ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "なげきムーン"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_299_凶フォレストドラゴ",
+      "childId": "凶フォレストドラゴ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶スライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "フォレストドラゴ"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_301_エンペラン",
+      "childId": "エンペラン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ニジゴロン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "冥獣王ネルゲル"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_303_凶エスターク",
+      "childId": "凶エスターク",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "エスターク"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "凶おおみみず"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_304_凶ドラゴンゾンビ",
+      "childId": "凶ドラゴンゾンビ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶スカルゴン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ドラゴンゾンビ"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_305_まおうのたまご",
+      "childId": "まおうのたまご",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ニジゴロン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "大魔王ゾーマ"
+        }
+      ],
+      "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    }
+  ]
+}
