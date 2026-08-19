@@ -3,9 +3,11 @@
 import type { BreedingRuleset } from './types';
 import { dqm3Ruleset } from './dqm3';
 import { tierRuleset } from './tier';
+import { dqmj3Ruleset } from './dqmj3';
 
 const rulesets: Record<string, BreedingRuleset> = {
   dqm3: dqm3Ruleset,
+  dqmj3: dqmj3Ruleset, // ジョーカー3方式（位階を計算式で求める）
   tier: tierRuleset, // 位階配合方式（イルルカSPなど）
 };
 
