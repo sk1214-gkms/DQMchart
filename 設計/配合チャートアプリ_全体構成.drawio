@@ -369,4 +369,111 @@
       </root>
     </mxGraphModel>
   </diagram>
+  <diagram name="v4_2方式対応_イルルカSP追加_2026-08-19" id="arch-v4">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1200" pageHeight="860">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="ttl" value="配合チャートアプリ 全体アーキテクチャ（v4 2026-08-19 配合方式の異なる2タイトルに対応）" style="text;html=1;fontSize=16;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="60" y="10" width="980" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="U" value="ユーザー（ブラウザ：PC / スマホ）&#10;URLを知っている人のみ利用" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="400" y="60" width="300" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="FE" value="Next.js Webアプリ（Vercel公開済み・検索エンジン非掲載）&#10;スマホ対応／画像保存／フロー図の縦横切替" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="380" y="170" width="340" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="SB" value="チャート保存（ChartStore抽象）&#10;①現在: localStorage（ブラウザ内）&#10;②未実装: Supabase Auth+DB&#10;（Googleログイン・アカウント別保存）" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="830" y="150" width="290" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="M1" value="手動チャートエディタ&#10;配置・接続＋成立判定" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="80" y="310" width="230" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="M2" value="自動チャート生成／配合シミュレータ&#10;逆算・子候補表示・配合手順の展開" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="380" y="310" width="340" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="M3" value="タイトル切替&#10;DQM3 / イルルカSP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="790" y="310" width="230" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="REG" value="ルールセットレジストリ（registry.ts）&#10;タイトルのruleset名からエンジン実装を解決する&#10;※UI側は配合方式の違いを知らない" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="380" y="440" width="340" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="E1" value="DQM3方式エンジン（dqm3.ts）&#10;通常配合＝系統ペア×ランク表を参照&#10;親超えランク不可／ランクアップは特殊配合&#10;4体配合は祖父母4体で判定" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="80" y="580" width="300" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="E2" value="位階配合方式エンジン（tier.ts）&#10;同系統＝強い親の位階1つ上&#10;異系統＝父系統・母系統・系統表の3候補&#10;系統最上位で打ち止め" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="720" y="580" width="300" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="PLAN" value="逆算プランナー（両方式で共通の考え方）&#10;入手できるモンスターを起点にコストが下がらなくなるまで緩和&#10;※循環する配合依存でも取りこぼさない" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="400" y="580" width="300" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="D1" value="dqm3.json&#10;モンスター526体／通常配合126&#10;特殊配合372（4体19）／到達率100%" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="80" y="730" width="300" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="D2" value="iruruka.json&#10;モンスター902体（位階1〜903）／系統表28&#10;特殊配合608（4体87）／到達率98.8%" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="720" y="730" width="300" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="U" target="FE">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="保存・読込" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;startArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="FE" target="SB">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;exitX=0.1;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="FE" target="M1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="FE" target="M2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;exitX=0.9;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="FE" target="M3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="M1" target="REG">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M2" target="REG">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" value="ruleset名で解決" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=1;entryY=0.5;" edge="1" parent="1" source="M3" target="REG">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;exitX=0.15;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="REG" target="E1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;exitX=0.85;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="REG" target="E2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e11" value="共有" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;startArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="E1" target="PLAN">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e12" value="共有" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;startArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="PLAN" target="E2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e13" value="参照" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="E1" target="D1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e14" value="参照" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="E2" target="D2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="legend" value="凡例：橙=ユーザー操作／青=アプリ・UI／灰=配合ルール（決定論）／緑=共通の逆算ロジック／紫=データ　※v3からの変更：位階配合エンジンとイルルカSPデータを追加。新タイトル対応はエンジン実装＋JSONの追加のみでUI変更は不要" style="text;html=1;fontSize=12;align=left;" vertex="1" parent="1">
+          <mxGeometry x="60" y="835" width="1080" height="24" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
 </mxfile>
