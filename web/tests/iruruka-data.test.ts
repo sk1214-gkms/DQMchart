@@ -37,7 +37,7 @@ describe('イルルカSP マスタデータ', () => {
       expect(ids.has(recipe.childId)).toBe(true);
       for (const p of recipe.parents) {
         if (p.kind === 'monster') expect(ids.has(p.monsterId)).toBe(true);
-        else expect(fams.has(p.familyId)).toBe(true);
+        else if (p.kind === 'family') expect(fams.has(p.familyId)).toBe(true);
       }
     }
   });

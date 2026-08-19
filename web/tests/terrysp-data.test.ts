@@ -28,7 +28,7 @@ describe('テリワンSP マスタデータ', () => {
       expect(ids.has(recipe.childId)).toBe(true);
       for (const p of recipe.parents) {
         if (p.kind === 'monster') expect(ids.has(p.monsterId)).toBe(true);
-        else expect(fams.has(p.familyId)).toBe(true);
+        else if (p.kind === 'family') expect(fams.has(p.familyId)).toBe(true);
       }
     }
   });
@@ -94,11 +94,20 @@ describe('テリワンSP 逆算プランナー', () => {
     expect(checked).toBeGreaterThan(10);
   });
 
-  it('大半のモンスターに到達ルートがある', () => {
-    // 「神獣系」を親に指定するレシピが系統IDに落とせず未収録のため、
-    // それを材料とする上位モンスターにも到達できていない
+  it('ほぼすべてのモンスターに到達ルートがある', () => {
+    // 到達できないのはSSランク最上位の数体だけ（素材のレシピが未収集）
     const reachable = data.monsters.filter((x) => engine.plan(x.id, data) !== null);
-    expect(reachable.length / data.monsters.length).toBeGreaterThan(0.85);
+    expect(reachable.length / data.monsters.length).toBeGreaterThan(0.95);
+  });
+
+  it('神獣は具体的なモンスター指定で配合できる', () => {
+    // 「神獣系」というグループ指定を具体名に展開してある
+    const shinju = m('スペディオ');
+    const recipes = data.specialRecipes.filter((r) =>
+      r.parents.some((p) => p.kind === 'monster' && p.monsterId === shinju.id),
+    );
+    expect(recipes.length).toBeGreaterThan(0);
+    expect(engine.plan('キングスペーディオ', data)).not.toBeNull();
   });
 
   it('逆算の葉はすべて配合なしで入手できる', () => {

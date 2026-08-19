@@ -40,9 +40,11 @@ export default function SimulatePage() {
       .map((r) => ({
         recipeId: r.id,
         childName: monsterName(r.childId),
-        parentNames: r.parents.map((p) =>
-          p.kind === 'monster' ? monsterName(p.monsterId) : familyLabel(p.familyId),
-        ),
+        parentNames: r.parents.map((p) => {
+          if (p.kind === 'monster') return monsterName(p.monsterId);
+          if (p.kind === 'family') return familyLabel(p.familyId);
+          return 'なんでも';
+        }),
       }));
   }, [data, aId, bId]);
 

@@ -55,7 +55,9 @@ export interface FamilyPairRule {
 
 export type RecipeParent =
   | { kind: 'monster'; monsterId: string }
-  | { kind: 'family'; familyId: string };
+  | { kind: 'family'; familyId: string }
+  /** 相手は問わない（片親だけが決まっているレシピで使う） */
+  | { kind: 'any' };
 
 /** 特殊配合（固定レシピ）。DQM3では子は上位親と同ランクか1つ上 */
 export interface SpecialRecipe {

@@ -26,6 +26,7 @@ function tierOf(m: Monster): number {
 }
 
 function parentMatches(p: RecipeParent, m: Monster): boolean {
+  if (p.kind === 'any') return true;
   return p.kind === 'monster' ? p.monsterId === m.id : p.familyId === m.familyId;
 }
 
@@ -260,6 +261,7 @@ class Planner {
     if (p.kind === 'monster') {
       return p.monsterId === childId ? null : this.plan(p.monsterId);
     }
+    if (p.kind === 'any') return this.cheapestOf((x) => x.id !== childId);
     return this.cheapestOf((x) => x.familyId === p.familyId && x.id !== childId);
   }
 

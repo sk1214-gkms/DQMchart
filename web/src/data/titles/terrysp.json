@@ -220,7 +220,10 @@
       "familyId": "slime",
       "rank": "F",
       "tier": 15,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "「まちびとの扉(黄金郷)」でスカウト。配合・タマゴ・他国はいずれも不可（Fランク／配合では絶対に生まれない）"
     },
     {
       "id": "ゴースト",
@@ -726,7 +729,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "しろいタマゴ の孵化で入手 / ぎんのタマゴ の孵化で入手"
+      "acquisitionDetail": "しろいタマゴ の孵化で入手 / ぎんのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化のみ"
     },
     {
       "id": "ポイズンリザード",
@@ -775,7 +778,10 @@
       "familyId": "nature",
       "rank": "F",
       "tier": 70,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "「とまどいの扉(黄金郷)」でスカウト。配合・タマゴ・他国はいずれも不可（Fランク／配合では絶対に生まれない）"
     },
     {
       "id": "マドハンド",
@@ -1027,7 +1033,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる"
+      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる / 配合では入手不可。タマゴの孵化または他国マスターからのスカウト"
     },
     {
       "id": "ダッシュラン",
@@ -1065,7 +1071,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる / しろいタマゴ の孵化で入手"
+      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる / しろいタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化のみ"
     },
     {
       "id": "ドロヌーバ",
@@ -1215,7 +1221,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる"
+      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる / 配合では入手不可。タマゴの孵化または他国マスターからのスカウト"
     },
     {
       "id": "おどるほうせき",
@@ -1428,7 +1434,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる"
+      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる / 配合では入手不可。タマゴの孵化または他国マスターからのスカウト"
     },
     {
       "id": "ビックアイ",
@@ -1806,7 +1812,7 @@
       "tier": 173,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "まよいの扉のボス（撃破で仲間になる）"
+      "acquisitionDetail": "まよいの扉のボス（撃破で仲間になる） / 「まよいの扉」のボス。配合でも入手可"
     },
     {
       "id": "あばれこまいぬ",
@@ -2130,7 +2136,10 @@
       "familyId": "zombie",
       "rank": "D",
       "tier": 205,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "「しあわせの扉」でスカウト。配合では入手不可（Dランク・ゾンビ系）"
     },
     {
       "id": "プチアーノン",
@@ -2151,7 +2160,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "しろいタマゴ の孵化で入手"
+      "acquisitionDetail": "しろいタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化のみ"
     },
     {
       "id": "トドマン",
@@ -2401,7 +2410,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "しろいタマゴ の孵化で入手"
+      "acquisitionDetail": "しろいタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化のみ"
     },
     {
       "id": "スラ忍ブルー",
@@ -2675,7 +2684,10 @@
       "familyId": "beast",
       "rank": "C",
       "tier": 259,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "配合では入手不可。タマゴの孵化のみ"
     },
     {
       "id": "プオーン",
@@ -2686,7 +2698,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる / きんのタマゴ の孵化で入手"
+      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる / きんのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化または他国マスターからのスカウト"
     },
     {
       "id": "エビルポット",
@@ -3263,7 +3275,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "きんのタマゴ の孵化で入手"
+      "acquisitionDetail": "きんのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化のみ"
     },
     {
       "id": "ククリ",
@@ -3274,7 +3286,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "きんのタマゴ の孵化で入手"
+      "acquisitionDetail": "きんのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化のみ"
     },
     {
       "id": "はぐれメタル",
@@ -3315,7 +3327,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "ほろびの扉・黄金郷 に出現（スカウト可）"
+      "acquisitionDetail": "ほろびの扉・黄金郷 に出現（スカウト可） / 黄金郷「ほろびの扉」でスカウト（Bランク）"
     },
     {
       "id": "コングヘッド",
@@ -3343,7 +3355,10 @@
       "familyId": "demon",
       "rank": "B",
       "tier": 325,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "黄金郷「しれんの扉」でスカウト（Bランク）"
     },
     {
       "id": "バリクナジャ",
@@ -3457,7 +3472,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "しあわせの扉・黄金郷 に出現（スカウト可）"
+      "acquisitionDetail": "しあわせの扉・黄金郷 に出現（スカウト可） / 黄金郷「しあわせの扉」でスカウト（Bランク）"
     },
     {
       "id": "ダークスライム",
@@ -3508,7 +3523,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "旅の扉・しんじつの扉 に出現（スカウト可）"
+      "acquisitionDetail": "旅の扉・しんじつの扉 に出現（スカウト可） / 「真実の扉」で極稀に出現"
     },
     {
       "id": "エビルチャリオット",
@@ -3550,7 +3565,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "きぼうの扉・光あふれる地 に出現（スカウト可）"
+      "acquisitionDetail": "きぼうの扉・光あふれる地 に出現（スカウト可） / 「希望の扉」の初期地点で出現、スカウト"
     },
     {
       "id": "シャークマジュ",
@@ -3591,7 +3606,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "ぎんのタマゴ の孵化で入手 / きんのタマゴ の孵化で入手"
+      "acquisitionDetail": "ぎんのタマゴ の孵化で入手 / きんのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化のみ"
     },
     {
       "id": "だいあくまの書",
@@ -3627,7 +3642,10 @@
       "familyId": "zombie",
       "rank": "B",
       "tier": 353,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "黄金郷「しんじつの扉」でスカウト（Bランク）"
     },
     {
       "id": "ワンダーエッグ",
@@ -3740,7 +3758,10 @@
       "familyId": "slime",
       "rank": "B",
       "tier": 364,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "配合では入手不可。タマゴの孵化または他国マスターからのスカウト"
     },
     {
       "id": "ヘルダイバー",
@@ -3816,7 +3837,10 @@
       "familyId": "slime",
       "rank": "B",
       "tier": 372,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "配合では入手不可。タマゴの孵化または他国マスターからのスカウト"
     },
     {
       "id": "ドラゴンライダー",
@@ -3958,7 +3982,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "きんのタマゴ の孵化で入手"
+      "acquisitionDetail": "きんのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化のみ"
     },
     {
       "id": "スライムベホマズン",
@@ -3990,7 +4014,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "さそいの扉・黄金郷 に出現（スカウト可）"
+      "acquisitionDetail": "さそいの扉・黄金郷 に出現（スカウト可） / 黄金郷「さそいの扉」でスカウト（Bランク）"
     },
     {
       "id": "よろいムカデ",
@@ -4173,7 +4197,7 @@
       "tier": 407,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "旅の扉・さいはての扉 に出現（スカウト可）"
+      "acquisitionDetail": "旅の扉・さいはての扉 に出現（スカウト可） / 「さいはての扉」でスカウト。配合でも入手可（とうだいタイガー×相手問わず／ダークホーン4体配合）"
     },
     {
       "id": "シールドオーガ",
@@ -4398,7 +4422,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる / きんのタマゴ の孵化で入手"
+      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる / きんのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化または他国マスターからのスカウト"
     },
     {
       "id": "タイムマスター",
@@ -4417,7 +4441,10 @@
       "familyId": "zombie",
       "rank": "A",
       "tier": 433,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "魔戦士4体を仲間にした後、星空闘技場で話しかける"
     },
     {
       "id": "黄泉の花",
@@ -4425,7 +4452,10 @@
       "familyId": "slime",
       "rank": "A",
       "tier": 434,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "黄金郷「たびだちの扉」でスカウト（Aランク）"
     },
     {
       "id": "ブラッドポリス",
@@ -4433,7 +4463,10 @@
       "familyId": "nature",
       "rank": "A",
       "tier": 435,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "黄金郷「まもりの扉」でスカウト（Aランク）"
     },
     {
       "id": "いなずまビリー",
@@ -4441,7 +4474,10 @@
       "familyId": "beast",
       "rank": "A",
       "tier": 436,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "黄金郷「ゆうきの扉」でスカウト（Aランク）"
     },
     {
       "id": "グレイトボンバー",
@@ -4449,7 +4485,10 @@
       "familyId": "material",
       "rank": "A",
       "tier": 437,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "黄金郷「いかりの扉」でスカウト（Aランク）"
     },
     {
       "id": "ダークサキュバス",
@@ -4457,7 +4496,10 @@
       "familyId": "demon",
       "rank": "A",
       "tier": 438,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "黄金郷「やすらぎの扉」でスカウト（Aランク）"
     },
     {
       "id": "オカルトビスク",
@@ -4487,7 +4529,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる / きんのタマゴ の孵化で入手 / にじいろのタマゴ の孵化で入手"
+      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる / きんのタマゴ の孵化で入手 / にじいろのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化または他国マスターからのスカウト"
     },
     {
       "id": "プチットガールズ",
@@ -4520,7 +4562,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる / にじいろのタマゴ の孵化で入手"
+      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる / にじいろのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化または他国マスターからのスカウト"
     },
     {
       "id": "メタルカイザー",
@@ -4660,7 +4702,10 @@
       "familyId": "slime",
       "rank": "A",
       "tier": 457,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "配合では入手不可。タマゴの孵化または他国マスターからのスカウト"
     },
     {
       "id": "ガルーダ",
@@ -4835,7 +4880,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる / きんのタマゴ の孵化で入手 / にじいろのタマゴ の孵化で入手"
+      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる / きんのタマゴ の孵化で入手 / にじいろのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化または他国マスターからのスカウト"
     },
     {
       "id": "どぐう戦士",
@@ -4947,7 +4992,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "きんのタマゴ の孵化で入手 / にじいろのタマゴ の孵化で入手"
+      "acquisitionDetail": "きんのタマゴ の孵化で入手 / にじいろのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化のみ"
     },
     {
       "id": "プチターク",
@@ -4958,7 +5003,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "きんのタマゴ の孵化で入手 / にじいろのタマゴ の孵化で入手"
+      "acquisitionDetail": "きんのタマゴ の孵化で入手 / にじいろのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化のみ"
     },
     {
       "id": "ミルドラース",
@@ -4993,7 +5038,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "きんのタマゴ の孵化で入手 / にじいろのタマゴ の孵化で入手"
+      "acquisitionDetail": "きんのタマゴ の孵化で入手 / にじいろのタマゴ の孵化で入手 / タマゴ（虹のタマゴ／金のタマゴ）から孵化。神獣が出るタマゴは金と虹のみ（白・銀は不可）。配合でも入手可（神獣×しぜん系）"
     },
     {
       "id": "ウィンデオ",
@@ -5004,7 +5049,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "きんのタマゴ の孵化で入手 / にじいろのタマゴ の孵化で入手"
+      "acquisitionDetail": "きんのタマゴ の孵化で入手 / にじいろのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化のみ"
     },
     {
       "id": "ガルハート",
@@ -5023,7 +5068,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "きんのタマゴ の孵化で入手 / にじいろのタマゴ の孵化で入手"
+      "acquisitionDetail": "きんのタマゴ の孵化で入手 / にじいろのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化のみ"
     },
     {
       "id": "グラブゾン",
@@ -5042,7 +5087,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "きんのタマゴ の孵化で入手 / にじいろのタマゴ の孵化で入手"
+      "acquisitionDetail": "きんのタマゴ の孵化で入手 / にじいろのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化のみ"
     },
     {
       "id": "ディアノーグ",
@@ -5061,7 +5106,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "きんのタマゴ の孵化で入手 / にじいろのタマゴ の孵化で入手"
+      "acquisitionDetail": "きんのタマゴ の孵化で入手 / にじいろのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化のみ"
     },
     {
       "id": "長老ピピット",
@@ -5170,7 +5215,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "しあわせの扉・黄金郷のボス"
+      "acquisitionDetail": "しあわせの扉・黄金郷のボス / 「しあわせの扉(黄金郷)」（Sランク）"
     },
     {
       "id": "キラーマシン２",
@@ -5200,7 +5245,10 @@
       "familyId": "dragon",
       "rank": "S",
       "tier": 511,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "「さそいの扉(黄金郷)」のボス。特殊配合 ドラゴビショップ×ドラゴンロード でも入手可"
     },
     {
       "id": "スライダークロボ",
@@ -5230,7 +5278,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 514,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "「かがみの扉(黄金郷)」のボスとして出現し、倒すと確実に仲間になる。加えて特殊配合 メルトア×ダークサキュバス でも入手可"
     },
     {
       "id": "レティス",
@@ -5508,7 +5559,10 @@
       "familyId": "material",
       "rank": "S",
       "tier": 542,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "勝ち抜き戦100勝の報酬"
     },
     {
       "id": "タイタニス",
@@ -5792,7 +5846,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 570,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "「れっぷうの扉(黄金郷)」のボス。配合では入手不可"
     },
     {
       "id": "クシャラミ",
@@ -5800,7 +5857,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 571,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "「らいうんの扉(黄金郷)」のボス"
     },
     {
       "id": "バルバルー",
@@ -5808,7 +5868,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 572,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "「だいちの扉(黄金郷)」のボス"
     },
     {
       "id": "ドメディ",
@@ -5997,7 +6060,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "にじいろのタマゴ の孵化で入手"
+      "acquisitionDetail": "にじいろのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化のみ"
     },
     {
       "id": "スライバ船",
@@ -6008,7 +6071,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "にじいろのタマゴ の孵化で入手"
+      "acquisitionDetail": "にじいろのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化のみ"
     },
     {
       "id": "魔王ジェイム",
@@ -6043,7 +6106,10 @@
       "familyId": "material",
       "rank": "SS",
       "tier": 598,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "勝ち抜き戦110勝の報酬"
     },
     {
       "id": "魔戦士ホゲイラ",
@@ -6138,7 +6204,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "にじいろのタマゴ の孵化で入手"
+      "acquisitionDetail": "にじいろのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化のみ"
     },
     {
       "id": "ガルマッゾ",
@@ -6149,7 +6215,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "たくらみの扉のボス（撃破で仲間になる） / にじいろのタマゴ の孵化で入手"
+      "acquisitionDetail": "たくらみの扉のボス（撃破で仲間になる） / にじいろのタマゴ の孵化で入手 / 「たくらみの扉」のボス。特殊配合 スライムマデュラ×(ムドー/カンダタワイフ/カンダタおやぶん) でも入手可"
     },
     {
       "id": "闇の王ヴラート",
@@ -6195,7 +6261,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "にじいろのタマゴ の孵化で入手"
+      "acquisitionDetail": "にじいろのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化のみ"
     },
     {
       "id": "エリスグール",
@@ -6241,7 +6307,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる / にじいろのタマゴ の孵化で入手"
+      "acquisitionDetail": "他国マスターが連れており、スカウトアタックで仲間にできる / にじいろのタマゴ の孵化で入手 / 配合では入手不可。タマゴの孵化または他国マスターからのスカウト"
     },
     {
       "id": "グレイナル",
@@ -12885,6 +12951,1296 @@
         }
       ],
       "note": "4体配合"
+    },
+    {
+      "id": "sp_402_スペディオ",
+      "childId": "スペディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キングスペーディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ],
+      "note": "神獣 × しぜん系。ランク指定は情報源に明記なし（相方がSランク以上だとキングスペーディオになるため、実質はSランク未満のしぜん系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_403_スペディオ",
+      "childId": "スペディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ディアノーグ"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ],
+      "note": "神獣 × しぜん系。ランク指定は情報源に明記なし（相方がSランク以上だとキングスペーディオになるため、実質はSランク未満のしぜん系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_404_スペディオ",
+      "childId": "スペディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ディアノーグエース"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ],
+      "note": "神獣 × しぜん系。ランク指定は情報源に明記なし（相方がSランク以上だとキングスペーディオになるため、実質はSランク未満のしぜん系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_405_スペディオ",
+      "childId": "スペディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ガルハート"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ],
+      "note": "神獣 × しぜん系。ランク指定は情報源に明記なし（相方がSランク以上だとキングスペーディオになるため、実質はSランク未満のしぜん系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_406_スペディオ",
+      "childId": "スペディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "クインガルハート"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ],
+      "note": "神獣 × しぜん系。ランク指定は情報源に明記なし（相方がSランク以上だとキングスペーディオになるため、実質はSランク未満のしぜん系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_407_スペディオ",
+      "childId": "スペディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グラブゾン"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ],
+      "note": "神獣 × しぜん系。ランク指定は情報源に明記なし（相方がSランク以上だとキングスペーディオになるため、実質はSランク未満のしぜん系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_408_スペディオ",
+      "childId": "スペディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グラブゾンジャック"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ],
+      "note": "神獣 × しぜん系。ランク指定は情報源に明記なし（相方がSランク以上だとキングスペーディオになるため、実質はSランク未満のしぜん系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_409_スペディオ",
+      "childId": "スペディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "JOKER"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ],
+      "note": "神獣 × しぜん系。ランク指定は情報源に明記なし（相方がSランク以上だとキングスペーディオになるため、実質はSランク未満のしぜん系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_410_スペディオ",
+      "childId": "スペディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "デモンスペーディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ],
+      "note": "神獣 × しぜん系。ランク指定は情報源に明記なし（相方がSランク以上だとキングスペーディオになるため、実質はSランク未満のしぜん系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_411_ガルハート",
+      "childId": "ガルハート",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スペディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon"
+        }
+      ],
+      "note": "神獣 × あくま系。ランク指定は情報源に明記なし（相方がSランク以上だとクインガルハートになるため、実質はSランク未満のあくま系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_412_ガルハート",
+      "childId": "ガルハート",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キングスペーディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon"
+        }
+      ],
+      "note": "神獣 × あくま系。ランク指定は情報源に明記なし（相方がSランク以上だとクインガルハートになるため、実質はSランク未満のあくま系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_413_ガルハート",
+      "childId": "ガルハート",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ディアノーグ"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon"
+        }
+      ],
+      "note": "神獣 × あくま系。ランク指定は情報源に明記なし（相方がSランク以上だとクインガルハートになるため、実質はSランク未満のあくま系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_414_ガルハート",
+      "childId": "ガルハート",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ディアノーグエース"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon"
+        }
+      ],
+      "note": "神獣 × あくま系。ランク指定は情報源に明記なし（相方がSランク以上だとクインガルハートになるため、実質はSランク未満のあくま系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_415_ガルハート",
+      "childId": "ガルハート",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "クインガルハート"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon"
+        }
+      ],
+      "note": "神獣 × あくま系。ランク指定は情報源に明記なし（相方がSランク以上だとクインガルハートになるため、実質はSランク未満のあくま系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_416_ガルハート",
+      "childId": "ガルハート",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グラブゾン"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon"
+        }
+      ],
+      "note": "神獣 × あくま系。ランク指定は情報源に明記なし（相方がSランク以上だとクインガルハートになるため、実質はSランク未満のあくま系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_417_ガルハート",
+      "childId": "ガルハート",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グラブゾンジャック"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon"
+        }
+      ],
+      "note": "神獣 × あくま系。ランク指定は情報源に明記なし（相方がSランク以上だとクインガルハートになるため、実質はSランク未満のあくま系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_418_ガルハート",
+      "childId": "ガルハート",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "JOKER"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon"
+        }
+      ],
+      "note": "神獣 × あくま系。ランク指定は情報源に明記なし（相方がSランク以上だとクインガルハートになるため、実質はSランク未満のあくま系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_419_ガルハート",
+      "childId": "ガルハート",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "デモンスペーディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon"
+        }
+      ],
+      "note": "神獣 × あくま系。ランク指定は情報源に明記なし（相方がSランク以上だとクインガルハートになるため、実質はSランク未満のあくま系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_420_グラブゾン",
+      "childId": "グラブゾン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スペディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ],
+      "note": "神獣 × ぶっしつ系。ランク指定は情報源に明記なし（相方がSランク以上だとグラブゾンジャックになるため、実質はSランク未満のぶっしつ系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_421_グラブゾン",
+      "childId": "グラブゾン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キングスペーディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ],
+      "note": "神獣 × ぶっしつ系。ランク指定は情報源に明記なし（相方がSランク以上だとグラブゾンジャックになるため、実質はSランク未満のぶっしつ系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_422_グラブゾン",
+      "childId": "グラブゾン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ディアノーグ"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ],
+      "note": "神獣 × ぶっしつ系。ランク指定は情報源に明記なし（相方がSランク以上だとグラブゾンジャックになるため、実質はSランク未満のぶっしつ系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_423_グラブゾン",
+      "childId": "グラブゾン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ディアノーグエース"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ],
+      "note": "神獣 × ぶっしつ系。ランク指定は情報源に明記なし（相方がSランク以上だとグラブゾンジャックになるため、実質はSランク未満のぶっしつ系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_424_グラブゾン",
+      "childId": "グラブゾン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ガルハート"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ],
+      "note": "神獣 × ぶっしつ系。ランク指定は情報源に明記なし（相方がSランク以上だとグラブゾンジャックになるため、実質はSランク未満のぶっしつ系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_425_グラブゾン",
+      "childId": "グラブゾン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "クインガルハート"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ],
+      "note": "神獣 × ぶっしつ系。ランク指定は情報源に明記なし（相方がSランク以上だとグラブゾンジャックになるため、実質はSランク未満のぶっしつ系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_426_グラブゾン",
+      "childId": "グラブゾン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グラブゾンジャック"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ],
+      "note": "神獣 × ぶっしつ系。ランク指定は情報源に明記なし（相方がSランク以上だとグラブゾンジャックになるため、実質はSランク未満のぶっしつ系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_427_グラブゾン",
+      "childId": "グラブゾン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "JOKER"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ],
+      "note": "神獣 × ぶっしつ系。ランク指定は情報源に明記なし（相方がSランク以上だとグラブゾンジャックになるため、実質はSランク未満のぶっしつ系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_428_グラブゾン",
+      "childId": "グラブゾン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "デモンスペーディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ],
+      "note": "神獣 × ぶっしつ系。ランク指定は情報源に明記なし（相方がSランク以上だとグラブゾンジャックになるため、実質はSランク未満のぶっしつ系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_429_ディアノーグ",
+      "childId": "ディアノーグ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スペディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast"
+        }
+      ],
+      "note": "神獣 × まじゅう系。ランク指定は情報源に明記なし（相方がSランク以上だとディアノーグエースになるため、実質はSランク未満のまじゅう系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_430_ディアノーグ",
+      "childId": "ディアノーグ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キングスペーディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast"
+        }
+      ],
+      "note": "神獣 × まじゅう系。ランク指定は情報源に明記なし（相方がSランク以上だとディアノーグエースになるため、実質はSランク未満のまじゅう系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_431_ディアノーグ",
+      "childId": "ディアノーグ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ディアノーグエース"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast"
+        }
+      ],
+      "note": "神獣 × まじゅう系。ランク指定は情報源に明記なし（相方がSランク以上だとディアノーグエースになるため、実質はSランク未満のまじゅう系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_432_ディアノーグ",
+      "childId": "ディアノーグ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ガルハート"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast"
+        }
+      ],
+      "note": "神獣 × まじゅう系。ランク指定は情報源に明記なし（相方がSランク以上だとディアノーグエースになるため、実質はSランク未満のまじゅう系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_433_ディアノーグ",
+      "childId": "ディアノーグ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "クインガルハート"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast"
+        }
+      ],
+      "note": "神獣 × まじゅう系。ランク指定は情報源に明記なし（相方がSランク以上だとディアノーグエースになるため、実質はSランク未満のまじゅう系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_434_ディアノーグ",
+      "childId": "ディアノーグ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グラブゾン"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast"
+        }
+      ],
+      "note": "神獣 × まじゅう系。ランク指定は情報源に明記なし（相方がSランク以上だとディアノーグエースになるため、実質はSランク未満のまじゅう系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_435_ディアノーグ",
+      "childId": "ディアノーグ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グラブゾンジャック"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast"
+        }
+      ],
+      "note": "神獣 × まじゅう系。ランク指定は情報源に明記なし（相方がSランク以上だとディアノーグエースになるため、実質はSランク未満のまじゅう系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_436_ディアノーグ",
+      "childId": "ディアノーグ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "JOKER"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast"
+        }
+      ],
+      "note": "神獣 × まじゅう系。ランク指定は情報源に明記なし（相方がSランク以上だとディアノーグエースになるため、実質はSランク未満のまじゅう系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_437_ディアノーグ",
+      "childId": "ディアノーグ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "デモンスペーディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast"
+        }
+      ],
+      "note": "神獣 × まじゅう系。ランク指定は情報源に明記なし（相方がSランク以上だとディアノーグエースになるため、実質はSランク未満のまじゅう系）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_438_キングスペーディオ",
+      "childId": "キングスペーディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スペディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ],
+      "note": "神獣 × しぜん系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_439_キングスペーディオ",
+      "childId": "キングスペーディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ディアノーグ"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ],
+      "note": "神獣 × しぜん系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_440_キングスペーディオ",
+      "childId": "キングスペーディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ディアノーグエース"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ],
+      "note": "神獣 × しぜん系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_441_キングスペーディオ",
+      "childId": "キングスペーディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ガルハート"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ],
+      "note": "神獣 × しぜん系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_442_キングスペーディオ",
+      "childId": "キングスペーディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "クインガルハート"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ],
+      "note": "神獣 × しぜん系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_443_キングスペーディオ",
+      "childId": "キングスペーディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グラブゾン"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ],
+      "note": "神獣 × しぜん系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_444_キングスペーディオ",
+      "childId": "キングスペーディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グラブゾンジャック"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ],
+      "note": "神獣 × しぜん系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_445_キングスペーディオ",
+      "childId": "キングスペーディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "JOKER"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ],
+      "note": "神獣 × しぜん系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_446_キングスペーディオ",
+      "childId": "キングスペーディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "デモンスペーディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature"
+        }
+      ],
+      "note": "神獣 × しぜん系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_447_クインガルハート",
+      "childId": "クインガルハート",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スペディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon"
+        }
+      ],
+      "note": "神獣 × あくま系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_448_クインガルハート",
+      "childId": "クインガルハート",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キングスペーディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon"
+        }
+      ],
+      "note": "神獣 × あくま系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_449_クインガルハート",
+      "childId": "クインガルハート",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ディアノーグ"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon"
+        }
+      ],
+      "note": "神獣 × あくま系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_450_クインガルハート",
+      "childId": "クインガルハート",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ディアノーグエース"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon"
+        }
+      ],
+      "note": "神獣 × あくま系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_451_クインガルハート",
+      "childId": "クインガルハート",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ガルハート"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon"
+        }
+      ],
+      "note": "神獣 × あくま系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_452_クインガルハート",
+      "childId": "クインガルハート",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グラブゾン"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon"
+        }
+      ],
+      "note": "神獣 × あくま系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_453_クインガルハート",
+      "childId": "クインガルハート",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グラブゾンジャック"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon"
+        }
+      ],
+      "note": "神獣 × あくま系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_454_クインガルハート",
+      "childId": "クインガルハート",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "JOKER"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon"
+        }
+      ],
+      "note": "神獣 × あくま系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_455_クインガルハート",
+      "childId": "クインガルハート",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "デモンスペーディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon"
+        }
+      ],
+      "note": "神獣 × あくま系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_456_グラブゾンジャック",
+      "childId": "グラブゾンジャック",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スペディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ],
+      "note": "神獣 × ぶっしつ系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_457_グラブゾンジャック",
+      "childId": "グラブゾンジャック",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キングスペーディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ],
+      "note": "神獣 × ぶっしつ系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_458_グラブゾンジャック",
+      "childId": "グラブゾンジャック",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ディアノーグ"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ],
+      "note": "神獣 × ぶっしつ系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_459_グラブゾンジャック",
+      "childId": "グラブゾンジャック",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ディアノーグエース"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ],
+      "note": "神獣 × ぶっしつ系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_460_グラブゾンジャック",
+      "childId": "グラブゾンジャック",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ガルハート"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ],
+      "note": "神獣 × ぶっしつ系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_461_グラブゾンジャック",
+      "childId": "グラブゾンジャック",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "クインガルハート"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ],
+      "note": "神獣 × ぶっしつ系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_462_グラブゾンジャック",
+      "childId": "グラブゾンジャック",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グラブゾン"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ],
+      "note": "神獣 × ぶっしつ系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_463_グラブゾンジャック",
+      "childId": "グラブゾンジャック",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "JOKER"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ],
+      "note": "神獣 × ぶっしつ系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_464_グラブゾンジャック",
+      "childId": "グラブゾンジャック",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "デモンスペーディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "material"
+        }
+      ],
+      "note": "神獣 × ぶっしつ系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_465_ディアノーグエース",
+      "childId": "ディアノーグエース",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スペディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast"
+        }
+      ],
+      "note": "神獣 × まじゅう系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_466_ディアノーグエース",
+      "childId": "ディアノーグエース",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キングスペーディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast"
+        }
+      ],
+      "note": "神獣 × まじゅう系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_467_ディアノーグエース",
+      "childId": "ディアノーグエース",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ディアノーグ"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast"
+        }
+      ],
+      "note": "神獣 × まじゅう系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_468_ディアノーグエース",
+      "childId": "ディアノーグエース",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ガルハート"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast"
+        }
+      ],
+      "note": "神獣 × まじゅう系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_469_ディアノーグエース",
+      "childId": "ディアノーグエース",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "クインガルハート"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast"
+        }
+      ],
+      "note": "神獣 × まじゅう系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_470_ディアノーグエース",
+      "childId": "ディアノーグエース",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グラブゾン"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast"
+        }
+      ],
+      "note": "神獣 × まじゅう系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_471_ディアノーグエース",
+      "childId": "ディアノーグエース",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グラブゾンジャック"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast"
+        }
+      ],
+      "note": "神獣 × まじゅう系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_472_ディアノーグエース",
+      "childId": "ディアノーグエース",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "JOKER"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast"
+        }
+      ],
+      "note": "神獣 × まじゅう系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_473_ディアノーグエース",
+      "childId": "ディアノーグエース",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "デモンスペーディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast"
+        }
+      ],
+      "note": "神獣 × まじゅう系（相方はSランク以上）／「神獣」を具体名に展開したもの"
+    },
+    {
+      "id": "sp_474_アンクルホーン",
+      "childId": "アンクルホーン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "バッファロン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メッサーラ"
+        }
+      ],
+      "note": "特殊配合"
+    },
+    {
+      "id": "sp_475_アンクルホーン",
+      "childId": "アンクルホーン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "バッファロン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ダークホーン"
+        }
+      ],
+      "note": "特殊配合"
+    },
+    {
+      "id": "sp_476_怪力軍曹イボイノス",
+      "childId": "怪力軍曹イボイノス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "バルバルー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴレオン将軍"
+        }
+      ],
+      "note": "特殊配合"
+    },
+    {
+      "id": "sp_482_竜皇帝バルグディス",
+      "childId": "竜皇帝バルグディス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "魔戦士メイザー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キングヒドラ"
+        }
+      ],
+      "note": "特殊配合"
+    },
+    {
+      "id": "sp_487_JOKER",
+      "childId": "JOKER",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キングスペーディオ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ラーミア"
+        }
+      ],
+      "note": "特殊配合"
+    },
+    {
+      "id": "sp_488_邪獣ヒヒュルデ",
+      "childId": "邪獣ヒヒュルデ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ヒヒュルデの使い"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "邪神レオソード"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ギスヴァーグ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "海王神"
+        }
+      ],
+      "note": "4体配合（指定4体が祖父母になるように配合する） 4体配合"
+    },
+    {
+      "id": "sp_494_ギスヴァーグ",
+      "childId": "ギスヴァーグ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "マガルギ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "オムド・ロレス"
+        }
+      ],
+      "note": "特殊配合"
+    },
+    {
+      "id": "sp_497_海王神",
+      "childId": "海王神",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ダークドレアム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライバ船"
+        }
+      ],
+      "note": "特殊配合"
+    },
+    {
+      "id": "sp_501_魔戦士メイザー",
+      "childId": "魔戦士メイザー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "魔戦士ルギウス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "名をうばわれし王"
+        }
+      ],
+      "note": "特殊配合"
+    },
+    {
+      "id": "sp_502_ゲルニック将軍",
+      "childId": "ゲルニック将軍",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ジャミ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ジャミラス"
+        }
+      ],
+      "note": "特殊配合。他国マスターからもスカウト可"
+    },
+    {
+      "id": "sp_509_闘神レオソード",
+      "childId": "闘神レオソード",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "JOKER"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "少年レオソード"
+        }
+      ],
+      "note": "特殊配合"
+    },
+    {
+      "id": "sp_510_メッサーラ",
+      "childId": "メッサーラ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "バリクナジャ"
+        },
+        {
+          "kind": "any"
+        }
+      ],
+      "note": "バリクナジャ×相手問わずの特殊配合。相方無指定のためアプリの型に収まらない場合は要調整"
+    },
+    {
+      "id": "sp_554_バベルボブル",
+      "childId": "バベルボブル",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "バル"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ベル"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ボル"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ブル"
+        }
+      ],
+      "note": "4体配合（指定4体が祖父母になるように配合する） 4体配合"
     }
   ]
 }
