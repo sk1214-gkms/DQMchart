@@ -43,8 +43,20 @@ function reachable(id) {
       break;
     }
   }
+  // 位階配合方式: 自分より位階が低い到達可能なモンスターが同系統にいれば作れる
+  if (!ok && data.familyPairs) {
+    const lower = data.monsters
+      .filter((x) => x.familyId === m.familyId && (x.tier ?? 0) < (m.tier ?? 0))
+      .sort((a, b) => (b.tier ?? 0) - (a.tier ?? 0))[0];
+    if (lower && reachable(lower.id)) {
+      const partner = data.monsters.some(
+        (x) => x.id !== m.id && (x.tier ?? 0) <= (lower.tier ?? 0) && reachable(x.id),
+      );
+      if (partner) ok = true;
+    }
+  }
   if (!ok) {
-    for (const rule of data.normalRules) {
+    for (const rule of data.normalRules ?? []) {
       if (!rule.childIds.includes(id)) continue;
       const anchor = data.monsters.some(
         (x) => x.familyId === rule.familyA && x.rank === rule.rank && x.id !== id && reachable(x.id),
@@ -78,7 +90,7 @@ function reachable(id) {
 }
 
 const childIds = new Set([
-  ...data.normalRules.flatMap((r) => r.childIds),
+  ...(data.normalRules ?? []).flatMap((r) => r.childIds),
   ...data.specialRecipes.map((r) => r.childId),
 ]);
 
@@ -96,7 +108,8 @@ console.log(`  配合なしで入手可: ${wild.length}体 (${pct(wild.length)})
 console.log(
   `    野生スカウト ${countBy('wild')}体 / タマゴ ${countBy('egg')}体 / イベント ${countBy('event')}体`,
 );
-console.log(`通常配合: ${data.normalRules.length}エントリ`);
+if (data.normalRules) console.log(`通常配合: ${data.normalRules.length}エントリ`);
+if (data.familyPairs) console.log(`位階配合: 系統組み合わせ ${data.familyPairs.length}件`);
 console.log(
   `特殊配合: ${data.specialRecipes.length}件 (うち4体配合 ${
     data.specialRecipes.filter((r) => r.parents.length === 4).length
@@ -105,7 +118,8 @@ console.log(
 console.log(`到達可能: ${data.monsters.length - unreachable.length}体 (${pct(data.monsters.length - unreachable.length)})`);
 console.log('');
 
-if (orphans.length) {
+// 位階配合方式ではレシピが無くても位階から作れるため、この一覧は表示しない
+if (orphans.length && !data.familyPairs) {
   console.log(`■ 入手手段が空白（野生でも配合でも入手できない）: ${orphans.length}体`);
   for (const m of orphans) console.log(`  ${m.name} (${m.rank}・${familyName(m.familyId)})`);
   console.log('');

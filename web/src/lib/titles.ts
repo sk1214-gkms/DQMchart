@@ -2,8 +2,9 @@
 // 当面はJSON同梱。タイトル追加時は data/titles/ にJSONを置いてここに登録する。
 import type { TitleData } from './engine/types';
 import dqm3 from '@/data/titles/dqm3.json';
+import iruruka from '@/data/titles/iruruka.json';
 
-const titles: TitleData[] = [dqm3 as TitleData];
+const titles: TitleData[] = [dqm3 as TitleData, iruruka as TitleData];
 
 export function listTitles(): TitleData[] {
   return titles;
