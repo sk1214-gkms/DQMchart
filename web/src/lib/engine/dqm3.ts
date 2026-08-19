@@ -63,7 +63,7 @@ function normalCandidates(a: Monster, b: Monster, data: TitleData): Monster[] {
   const key = pairKey(a.familyId, b.familyId);
   const ranks = Array.from(new Set([a.rank, b.rank]));
   const out: Monster[] = [];
-  for (const rule of data.normalRules) {
+  for (const rule of data.normalRules ?? []) {
     if (pairKey(rule.familyA, rule.familyB) !== key) continue;
     if (!ranks.includes(rule.rank)) continue;
     for (const id of rule.childIds) {
@@ -148,7 +148,7 @@ class Planner {
     // 通常配合テーブル:
     // 子が載っているエントリ(famA×famB, rank r)について、
     // 片親=famA・ランクr、もう片親=famB・ランクr以下（入替も試す）で最小コストの親を選ぶ。
-    for (const rule of this.data.normalRules) {
+    for (const rule of this.data.normalRules ?? []) {
       if (!rule.childIds.includes(m.id)) continue;
       const assignments: Array<[string, string]> = [
         [rule.familyA, rule.familyB],

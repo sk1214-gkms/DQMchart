@@ -26,6 +26,11 @@ export interface Monster {
   acquisition?: AcquisitionKind;
   /** 入手方法の詳細（タマゴの色・出現場所・イベント条件など） */
   acquisitionDetail?: string;
+  /**
+   * 位階（大きいほど上位）。位階配合方式のタイトルで使う。
+   * 「位階が1つ上」は同じ系統の中で次に位階が大きいモンスターを指す。
+   */
+  tier?: number;
 }
 
 /** 通常配合テーブルの1エントリ: 系統ペア×ランク → 子候補 */
@@ -34,6 +39,13 @@ export interface NormalRule {
   familyB: string;
   rank: string;
   childIds: string[];
+}
+
+/** 位階配合で親2体の系統から「別系統の子」の系統を決める表 */
+export interface FamilyPairRule {
+  familyA: string;
+  familyB: string;
+  childFamilyId: string;
 }
 
 export type RecipeParent =
@@ -56,7 +68,10 @@ export interface TitleData {
   ranks: RankDef[];
   families: FamilyDef[];
   monsters: Monster[];
-  normalRules: NormalRule[];
+  /** DQM3方式の通常配合表（位階配合方式のタイトルでは持たない） */
+  normalRules?: NormalRule[];
+  /** 位階配合方式の系統組み合わせ表（DQM3方式のタイトルでは持たない） */
+  familyPairs?: FamilyPairRule[];
   specialRecipes: SpecialRecipe[];
 }
 

@@ -17,7 +17,7 @@ const rankOrder = (rank: string) => data.ranks.find((r) => r.id === rank)!.order
 describe('マスタデータの整合性', () => {
   it('通常配合表の子がすべてモンスター一覧に存在する', () => {
     const ids = new Set(data.monsters.map((x) => x.id));
-    for (const rule of data.normalRules) {
+    for (const rule of data.normalRules ?? []) {
       for (const child of rule.childIds) expect(ids.has(child)).toBe(true);
     }
   });
@@ -36,7 +36,7 @@ describe('マスタデータの整合性', () => {
 
   it('すべてのモンスターに入手手段がある（配合で作れるか、配合なしで入手できる）', () => {
     const childIds = new Set([
-      ...data.normalRules.flatMap((r) => r.childIds),
+      ...(data.normalRules ?? []).flatMap((r) => r.childIds),
       ...data.specialRecipes.map((r) => r.childId),
     ]);
     const orphans = data.monsters.filter((m) => !m.obtainable && !childIds.has(m.id));
@@ -51,9 +51,9 @@ describe('マスタデータの整合性', () => {
   });
 
   it('通常配合表はG〜Bランクのみで、系統ペアごとに子が2体', () => {
-    const ranks = new Set(data.normalRules.map((r) => r.rank));
+    const ranks = new Set((data.normalRules ?? []).map((r) => r.rank));
     expect([...ranks].sort()).toEqual(['B', 'C', 'D', 'E', 'F', 'G']);
-    for (const rule of data.normalRules) {
+    for (const rule of data.normalRules ?? []) {
       expect(rule.childIds).toHaveLength(2);
       expect(rule.familyA).not.toBe(rule.familyB); // 同系統ペアは表に存在しない
     }
@@ -146,7 +146,7 @@ describe('DQM3 特殊配合', () => {
     });
     expect(gainsRank).toBe(true);
     // 通常配合表側は親ランクを超えないことを全件確認
-    for (const rule of data.normalRules) {
+    for (const rule of data.normalRules ?? []) {
       for (const childId of rule.childIds) {
         expect(rankOrder(m(childId).rank)).toBeLessThanOrEqual(rankOrder(rule.rank));
       }
@@ -249,7 +249,7 @@ describe('DQM3 逆算プランナー', () => {
 
   it('配合で作れないモンスターはplanByBreedingがnullを返す', () => {
     const childIds = new Set([
-      ...data.normalRules.flatMap((r) => r.childIds),
+      ...(data.normalRules ?? []).flatMap((r) => r.childIds),
       ...data.specialRecipes.map((r) => r.childId),
     ]);
     const onlyDirect = data.monsters.find((m) => !childIds.has(m.id));
