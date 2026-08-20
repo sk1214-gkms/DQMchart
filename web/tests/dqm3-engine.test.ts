@@ -256,8 +256,11 @@ describe('DQM3 逆算プランナー', () => {
     if (onlyDirect) expect(engine.planByBreeding(onlyDirect.id, data)).toBeNull();
   });
 
-  it('すべてのモンスターに到達ルートがある', () => {
-    const unreachable = data.monsters.filter((x) => engine.plan(x.id, data) === null);
+  it('配信終了したもの以外はすべて到達ルートがある', () => {
+    // マクドナルドコラボの3体は2024年1月に配信が終了しており、今から入手する手段がない
+    const unreachable = data.monsters
+      .filter((x) => !x.discontinued)
+      .filter((x) => engine.plan(x.id, data) === null);
     expect(unreachable.map((m) => m.name)).toEqual([]);
   });
 });

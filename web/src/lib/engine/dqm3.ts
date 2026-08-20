@@ -103,7 +103,10 @@ class Planner {
 
   private computeAll(): void {
     for (const m of this.data.monsters) {
-      if (m.obtainable) this.best.set(m.id, { kind: 'wild', monster: m, cost: 0 });
+      // 配信が終了して今は手に入らないものは、配合ツリーの出発点にしない
+      if (m.obtainable && !m.discontinued) {
+        this.best.set(m.id, { kind: 'wild', monster: m, cost: 0 });
+      }
     }
     // 1周で最低1体は確定するため、反復回数はモンスター数で頭打ちになる
     for (let i = 0; i < this.data.monsters.length; i++) {

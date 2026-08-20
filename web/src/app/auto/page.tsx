@@ -375,7 +375,7 @@ function AutoPageContent() {
                         </span>
                       </div>
                       <div className="mt-1 flex flex-wrap items-center gap-1.5">
-                        <AcquisitionBadge kind={monster.acquisition} />
+                        <AcquisitionBadge kind={monster.acquisition} discontinued={monster.discontinued} />
                         {monster.acquisitionDetail && (
                           <span className="text-[11px] text-[var(--muted)]">
                             {monster.acquisitionDetail}

@@ -2765,7 +2765,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "TSUTAYAでDSのWi-Fi配信(2017年5月31日まで)"
+      "acquisitionDetail": "TSUTAYAでDSのWi-Fi配信(2017年5月31日まで)",
+      "discontinued": true
     },
     {
       "id": "カラーフォンデュ",
@@ -2825,7 +2826,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "e-STORE予約特典のダウンロードコード/Wi-Fiプレゼントディスク配信"
+      "acquisitionDetail": "e-STORE予約特典のダウンロードコード/Wi-Fiプレゼントディスク配信",
+      "discontinued": true
     },
     {
       "id": "プチットⅢ",
@@ -2836,7 +2838,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Amazon予約特典のダウンロードコード/Wi-Fiプレゼントディスク配信"
+      "acquisitionDetail": "Amazon予約特典のダウンロードコード/Wi-Fiプレゼントディスク配信",
+      "discontinued": true
     },
     {
       "id": "プチットⅣ",
@@ -4475,7 +4478,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fi配信(2017年2月23日〜)"
+      "acquisitionDetail": "Wi-Fi配信(2017年2月23日〜)",
+      "discontinued": true
     },
     {
       "id": "スライムファミリー",
@@ -4497,7 +4501,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fiプレゼントディスク配信(モンパレコラボ)"
+      "acquisitionDetail": "Wi-Fiプレゼントディスク配信(モンパレコラボ)",
+      "discontinued": true
     },
     {
       "id": "スライダーヒーロー",
@@ -4508,7 +4513,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fi配信(2017年2月9日〜)"
+      "acquisitionDetail": "Wi-Fi配信(2017年2月9日〜)",
+      "discontinued": true
     },
     {
       "id": "死神スライダーク",
@@ -4519,7 +4525,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "攻略本『最強データ＋ガイドブック for PRO』のプレゼントコード特典。2017年9月1日以降はインターネット通信広場のWi-Fi PRESENTでプレゼントディスクを受け取り、センタービル地下1階のディスクマシーンで使用・クリアして入手。配合不可"
+      "acquisitionDetail": "攻略本『最強データ＋ガイドブック for PRO』のプレゼントコード特典。2017年9月1日以降はインターネット通信広場のWi-Fi PRESENTでプレゼントディスクを受け取り、センタービル地下1階のディスクマシーンで使用・クリアして入手。配合不可",
+      "discontinued": true
     },
     {
       "id": "スライダーガール",
@@ -4530,7 +4537,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "3DSステーションでのWi-Fi配信"
+      "acquisitionDetail": "3DSステーションでのWi-Fi配信",
+      "discontinued": true
     },
     {
       "id": "ドン・モグーラ",
@@ -4563,7 +4571,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "ドラゴンクエストX とのコラボ限定。DQ10でキーエンブレムを1個以上獲得して応募し、もらえるプレゼントコードでディスクを入手（配布は2017/3/2〜2017/12/31で終了済み）。配合では作れない"
+      "acquisitionDetail": "ドラゴンクエストX とのコラボ限定。DQ10でキーエンブレムを1個以上獲得して応募し、もらえるプレゼントコードでディスクを入手（配布は2017/3/2〜2017/12/31で終了済み）。配合では作れない",
+      "discontinued": true
     },
     {
       "id": "みならい神獣",
@@ -4585,7 +4594,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fiプレゼントディスク配信/7SPOTでDS配信"
+      "acquisitionDetail": "Wi-Fiプレゼントディスク配信/7SPOTでDS配信",
+      "discontinued": true
     },
     {
       "id": "ククリ",
@@ -4596,7 +4606,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fiプレゼントディスク配信/ローソン秋葉原 すれちがい配信"
+      "acquisitionDetail": "Wi-Fiプレゼントディスク配信/ローソン秋葉原 すれちがい配信",
+      "discontinued": true
     },
     {
       "id": "長老ピピット",
@@ -4615,7 +4626,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fiプレゼントディスク配信/TSUTAYAでDS配信"
+      "acquisitionDetail": "Wi-Fiプレゼントディスク配信/TSUTAYAでDS配信",
+      "discontinued": true
     },
     {
       "id": "スペディオ",
@@ -5042,7 +5054,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "すれちがい対戦で稀に現れる「SQEXの刺客」に勝利すると入手"
+      "acquisitionDetail": "すれちがい対戦で稀に現れる「SQEXの刺客」に勝利すると入手",
+      "discontinued": true
     },
     {
       "id": "シャドーノーブル",
@@ -5219,7 +5232,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "すれちがいバトル50勝で入手"
+      "acquisitionDetail": "すれちがいバトル50勝で入手",
+      "discontinued": true
     },
     {
       "id": "スライダークロボ",
@@ -5864,7 +5878,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "いつのまに通信で配信され、ワールドマップに出現する"
+      "acquisitionDetail": "いつのまに通信で配信され、ワールドマップに出現する",
+      "discontinued": true
     },
     {
       "id": "グレートノチョーラＺ",
@@ -6046,7 +6061,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "すれちがいバトルで『SQEXの刺客』として現れることがあり、勝利すると仲間になる。配合では作れない"
+      "acquisitionDetail": "すれちがいバトルで『SQEXの刺客』として現れることがあり、勝利すると仲間になる。配合では作れない",
+      "discontinued": true
     },
     {
       "id": "はぐれメタルキング",
@@ -6068,7 +6084,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fiプレゼントディスク配信/スクウェア・エニックスカフェ秋葉原 すれちがい配信"
+      "acquisitionDetail": "Wi-Fiプレゼントディスク配信/スクウェア・エニックスカフェ秋葉原 すれちがい配信",
+      "discontinued": true
     },
     {
       "id": "魔戦士ルギウス",
@@ -6079,7 +6096,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fiプレゼントディスク配信/店頭すれちがい配信"
+      "acquisitionDetail": "Wi-Fiプレゼントディスク配信/店頭すれちがい配信",
+      "discontinued": true
     },
     {
       "id": "ガルマッゾ",
@@ -6117,7 +6135,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fiプレゼントディスク配信(星ドラコラボ)"
+      "acquisitionDetail": "Wi-Fiプレゼントディスク配信(星ドラコラボ)",
+      "discontinued": true
     },
     {
       "id": "竜王",
@@ -6216,7 +6235,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fiプレゼント（配信）限定。配合では作れない"
+      "acquisitionDetail": "Wi-Fiプレゼント（配信）限定。配合では作れない",
+      "discontinued": true
     },
     {
       "id": "トーポ",
@@ -6271,7 +6291,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fiプレゼントディスク配信/7SPOTでDS配信"
+      "acquisitionDetail": "Wi-Fiプレゼントディスク配信/7SPOTでDS配信",
+      "discontinued": true
     },
     {
       "id": "キングスペーディオ",
@@ -6457,7 +6478,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fi配信(2017年2月9日〜)"
+      "acquisitionDetail": "Wi-Fi配信(2017年2月9日〜)",
+      "discontinued": true
     },
     {
       "id": "ラーミア",
@@ -6503,7 +6525,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fi配信(2017年2月16日〜)"
+      "acquisitionDetail": "Wi-Fi配信(2017年2月16日〜)",
+      "discontinued": true
     },
     {
       "id": "グレイナル",
@@ -6666,7 +6689,8 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "DQMスーパーライトの条件達成で配布されるプレゼントコードで入手"
+      "acquisitionDetail": "DQMスーパーライトの条件達成で配布されるプレゼントコードで入手",
+      "discontinued": true
     },
     {
       "id": "真・魔王ザラーム",

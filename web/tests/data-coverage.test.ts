@@ -30,6 +30,8 @@ describe('データ網羅状況', () => {
       '',
       '## 表の見方',
       '',
+      '- **配信終了で入手不可**: Wi-Fi配信・すれちがい通信・配布コードなどが終了しており、今から入手する手段がない',
+      '  → データの不足ではありません。調べても解決しません',
       '- **レシピも入手方法も無い**: そのモンスターを作る配合が1つも登録されておらず、直接入手もできない',
       '  → 調べるべきは「配合レシピ」か「スカウト・タマゴ・イベントなどの入手方法」',
       '- **素材に到達できない**: 配合レシピはあるが、材料側にたどり着けない',
@@ -128,7 +130,11 @@ describe('データ網羅状況', () => {
         );
         for (const m of unreachable) {
           const hasRecipe = childIds.has(m.id);
-          const state = hasRecipe ? '素材に到達できない' : 'レシピも入手方法も無い';
+          const state = m.discontinued
+            ? '配信終了で入手不可'
+            : hasRecipe
+              ? '素材に到達できない'
+              : 'レシピも入手方法も無い';
           const blockers = blockersOf(m.id).map(nameOf);
           const roots = rootCausesOf(m.id).map(nameOf);
           const blockerText = hasRecipe
@@ -165,8 +171,10 @@ describe('データ網羅状況', () => {
         }
       }
 
-      // どのタイトルも大半のモンスターに到達できることを保証する
-      expect(reached / total).toBeGreaterThan(0.85);
+      // 配信終了で入手できなくなったものを除けば、ほぼ全てに到達できるはず
+      const blockedByDiscontinued = unreachable.filter((m) => m.discontinued).length;
+      const reachableIfAvailable = (reached + blockedByDiscontinued) / total;
+      expect(reachableIfAvailable).toBeGreaterThan(0.9);
     }
 
     mkdirSync(dirname(REPORT_PATH), { recursive: true });

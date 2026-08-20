@@ -82,12 +82,28 @@ export function acquisitionLabel(kind: AcquisitionKind | undefined): string {
   return '野生';
 }
 
-export function AcquisitionBadge({ kind }: { kind: AcquisitionKind | undefined }) {
+export function AcquisitionBadge({
+  kind,
+  discontinued,
+}: {
+  kind: AcquisitionKind | undefined;
+  discontinued?: boolean;
+}) {
   const styles: Record<string, string> = {
     wild: 'bg-sky-50 text-sky-800 border-sky-200',
     egg: 'bg-amber-50 text-amber-800 border-amber-200',
     event: 'bg-fuchsia-50 text-fuchsia-800 border-fuchsia-200',
   };
+  if (discontinued) {
+    return (
+      <span
+        className="inline-flex items-center rounded border border-zinc-300 bg-zinc-100 px-1.5 py-0.5 text-[11px] text-zinc-500"
+        title="配信・通信が終了しているため、今から入手することはできません"
+      >
+        配信終了
+      </span>
+    );
+  }
   return (
     <span
       className={`inline-flex items-center rounded border px-1.5 py-0.5 text-[11px] ${
