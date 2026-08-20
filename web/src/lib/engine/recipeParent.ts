@@ -19,12 +19,20 @@ export function parentMatches(data: TitleData, p: RecipeParent, m: Monster): boo
   if (p.kind === 'any') return true;
   if (p.kind === 'monster') return p.monsterId === m.id;
   if (p.familyId !== m.familyId) return false;
-  if (p.minRankId === undefined) return true;
-  // 「自然系のSランク以上」のような下限付きの指定
+  if (p.minRankId === undefined && p.maxRankId === undefined) return true;
+  // 「自然系のSランク以上」「自然系のAランク以下」のようなランクの範囲つきの指定
   const order = rankOrder(data);
-  const need = order.get(p.minRankId);
   const has = order.get(m.rank);
-  return need !== undefined && has !== undefined && has >= need;
+  if (has === undefined) return false;
+  if (p.minRankId !== undefined) {
+    const min = order.get(p.minRankId);
+    if (min === undefined || has < min) return false;
+  }
+  if (p.maxRankId !== undefined) {
+    const max = order.get(p.maxRankId);
+    if (max === undefined || has > max) return false;
+  }
+  return true;
 }
 
 /** 2体用レシピが親(a,b)に一致するか（順不同。4体配合はquadCandidatesで扱う） */

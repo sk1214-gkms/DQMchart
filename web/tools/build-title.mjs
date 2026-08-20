@@ -10,8 +10,12 @@
 //     ranks: ["F","E",...],
 //     families: [{ id, name }],
 //     monsters: [{ name, family, rank, tier, obtainable, method, detail, tierExcluded }],
-//     recipes:  [{ child, kind, parents: [{ type, name, minRank }] }]
+//     recipes:  [{ child, kind, parents: [{ type, name, minRank, maxRank }] }],
+//     groups:   { "神獣": ["スペディオ", ...] }   // 親の type:"group" で参照する
 //   }
+//
+// 「どれか1体でよい」という親（神獣など）はデータの形では表せないので、
+// 構成員ごとのレシピに展開する。
 //
 // 系統の掛け合わせ表（familyPairs）はジョーカー1からイルルカまで共通なので、
 // イルルカSPのものをそのまま流用する。
@@ -91,6 +95,62 @@ for (const m of src.monsters) {
   monsters.push(entry);
 }
 
+const groups = src.groups ?? {};
+
+/** 親1体分の条件を、データの形に直す。「どれか1体」は複数返す */
+function parentVariants(p, childId) {
+  if (p.type === 'any') return [{ kind: 'any' }];
+  if (p.type === 'group') {
+    const members = groups[p.name] ?? groups[(p.name ?? '').split(/[(（]/)[0].trim()];
+    if (!members?.length) {
+      problems.push(`レシピ ${childId}: グループ「${p.name}」の構成員が groups にない`);
+      return [];
+    }
+    const missing = members.filter((n) => !seen.has(n.trim()));
+    for (const n of missing) problems.push(`グループ「${p.name}」の${n}がモンスター一覧にない`);
+    return members
+      .filter((n) => seen.has(n.trim()))
+      .map((n) => ({ kind: 'monster', monsterId: n.trim() }));
+  }
+  if (p.type === 'family' || p.type === 'condition') {
+    // condition は「自然系Sランク以上」のように系統とランク条件が1つの文字列になっている
+    let name = p.name ?? '';
+    let minRank = p.minRank;
+    let maxRank = p.maxRank;
+    if (p.type === 'condition') {
+      const m = name.match(/^(.+?系)\s*([A-Z]{1,2})ランク(以上|以下)$/);
+      if (!m) {
+        problems.push(`レシピ ${childId}: 条件「${name}」を読み取れない`);
+        return [];
+      }
+      name = m[1];
+      if (m[3] === '以上') minRank = m[2];
+      else maxRank = m[2];
+    }
+    const familyId = familyIdOf(name, `レシピ ${childId} の親`);
+    if (!familyId) return [];
+    const parent = { kind: 'family', familyId };
+    for (const [rank, key] of [
+      [minRank, 'minRankId'],
+      [maxRank, 'maxRankId'],
+    ]) {
+      if (!rank) continue;
+      if (!rankIds.has(rank)) {
+        problems.push(`レシピ ${childId}: 未知のランク「${rank}」`);
+        return [];
+      }
+      parent[key] = rank;
+    }
+    return [parent];
+  }
+  const monsterId = (p.name ?? '').trim();
+  if (!seen.has(monsterId)) {
+    problems.push(`レシピ ${childId} の親「${p.name}」がモンスター一覧にない`);
+    return [];
+  }
+  return [{ kind: 'monster', monsterId }];
+}
+
 const specialRecipes = [];
 const recipeKeys = new Set();
 for (const [i, r] of (src.recipes ?? []).entries()) {
@@ -99,50 +159,37 @@ for (const [i, r] of (src.recipes ?? []).entries()) {
     problems.push(`レシピ${i}: 子「${r.child}」がモンスター一覧にない`);
     continue;
   }
-  const parents = [];
-  let ok = true;
+  // 親ごとの候補を組み合わせて、具体的なレシピに展開する
+  let combos = [[]];
   for (const p of r.parents ?? []) {
-    if (p.type === 'any') {
-      parents.push({ kind: 'any' });
-    } else if (p.type === 'family') {
-      const familyId = familyIdOf(p.name, `レシピ ${childId} の親`);
-      if (!familyId) {
-        ok = false;
-        break;
-      }
-      const parent = { kind: 'family', familyId };
-      if (p.minRank) {
-        if (!rankIds.has(p.minRank)) {
-          problems.push(`レシピ ${childId}: 未知のランク下限「${p.minRank}」`);
-          ok = false;
-          break;
-        }
-        parent.minRankId = p.minRank;
-      }
-      parents.push(parent);
-    } else {
-      const monsterId = (p.name ?? '').trim();
-      if (!seen.has(monsterId)) {
-        problems.push(`レシピ ${childId} の親「${p.name}」がモンスター一覧にない`);
-        ok = false;
-        break;
-      }
-      parents.push({ kind: 'monster', monsterId });
+    const variants = parentVariants(p, childId);
+    if (!variants.length) {
+      combos = [];
+      break;
     }
-  }
-  if (!ok) continue;
-  if (parents.length !== 2 && parents.length !== 4) {
-    problems.push(`レシピ ${childId}: 親が${parents.length}体（2体か4体のみ対応）`);
-    continue;
+    combos = combos.flatMap((base) => variants.map((v) => [...base, v]));
   }
 
-  const key = `${childId}|${JSON.stringify(parents)}`;
-  if (recipeKeys.has(key)) continue; // 同じ内容のレシピは1つにまとめる
-  recipeKeys.add(key);
+  for (const parents of combos) {
+    if (parents.length !== 2 && parents.length !== 4) {
+      problems.push(`レシピ ${childId}: 親が${parents.length}体（2体か4体のみ対応）`);
+      break;
+    }
+    // 自分自身を親にするレシピは意味がないので落とす
+    if (parents.some((p) => p.kind === 'monster' && p.monsterId === childId)) continue;
 
-  const entry = { id: `sp_${String(i).padStart(3, '0')}_${childId}`, childId, parents };
-  if (r.notes) entry.note = r.notes.trim();
-  specialRecipes.push(entry);
+    const key = `${childId}|${JSON.stringify(parents)}`;
+    if (recipeKeys.has(key)) continue; // 同じ内容のレシピは1つにまとめる
+    recipeKeys.add(key);
+
+    const entry = {
+      id: `sp_${String(specialRecipes.length).padStart(3, '0')}_${childId}`,
+      childId,
+      parents,
+    };
+    if (r.notes) entry.note = r.notes.trim();
+    specialRecipes.push(entry);
+  }
 }
 
 const data = {
