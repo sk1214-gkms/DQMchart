@@ -7556,17 +7556,6 @@
       ]
     },
     {
-      "id": "sp_206_若葉の精霊",
-      "childId": "若葉の精霊",
-      "parents": [
-        {
-          "kind": "monster",
-          "monsterId": "マンドレイク"
-        }
-      ],
-      "note": "出典の表に親Bが記載されておらず、親1体分のみ取得。レシピは不完全"
-    },
-    {
       "id": "sp_207_キラーパンサー",
       "childId": "キラーパンサー",
       "parents": [
@@ -8763,25 +8752,6 @@
       "note": "「グレートノチョーラZ」は出典の表記のまま 4体配合"
     },
     {
-      "id": "sp_259_ゴールドマン",
-      "childId": "ゴールドマン",
-      "parents": [
-        {
-          "kind": "monster",
-          "monsterId": "メタルドラゴン"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "フレイム"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "ブリザード"
-        }
-      ],
-      "note": "出典の表には3体しか記載がなく、4体目は読み取れなかった（レシピ不完全） 4体配合"
-    },
-    {
       "id": "sp_262_凶ヴォルカドラゴン",
       "childId": "凶ヴォルカドラゴン",
       "parents": [
@@ -9172,19 +9142,42 @@
       "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
     },
     {
-      "id": "sp_add_026_ダースガルマ",
-      "childId": "ダースガルマ",
+      "id": "sp_fix_暗黒大樹の番人",
+      "childId": "暗黒大樹の番人",
       "parents": [
         {
           "kind": "monster",
-          "monsterId": "ガルマザード"
+          "monsterId": "若葉の精霊"
         },
         {
           "kind": "monster",
-          "monsterId": "名もなき闇の王"
+          "monsterId": "マンドレイク"
         }
       ],
-      "note": "特殊配合。capch(無印)・spwiki(無印)の両方で一致。"
+      "note": "出典の表で子が1行ずれていたのを修正（誤: 若葉の精霊←マンドレイク）"
+    },
+    {
+      "id": "sp_fix_ゴールデンゴーレム",
+      "childId": "ゴールデンゴーレム",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ゴールドマン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "メタルドラゴン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "フレイム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ブリザード"
+        }
+      ],
+      "note": "出典の表で子が1行ずれていたのを修正（誤: ゴールドマン←3体） 4体配合"
     }
   ]
 }

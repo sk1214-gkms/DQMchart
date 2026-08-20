@@ -11953,75 +11953,6 @@
       "note": "特殊配合。攻略の虎は『かみさま』表記、攻略広場は『神さま』表記。通信広場で金コイン2枚での交換も可 4体配合"
     },
     {
-      "id": "sp_add_020_マスタードラゴン",
-      "childId": "マスタードラゴン",
-      "parents": [
-        {
-          "kind": "monster",
-          "monsterId": "神竜"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "グレイナル"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "バルボロス"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "じげんりゅう"
-        }
-      ],
-      "note": "特殊配合 4体配合"
-    },
-    {
-      "id": "sp_add_021_バルボロス",
-      "childId": "バルボロス",
-      "parents": [
-        {
-          "kind": "monster",
-          "monsterId": "ギュメイ将軍"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "ゲルニック将軍"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "ゴレオン将軍"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "ヘルクラッシャー"
-        }
-      ],
-      "note": "特殊配合。通信広場で金コイン2枚での交換も可 4体配合"
-    },
-    {
-      "id": "sp_add_022_ヘルクラッシャー",
-      "childId": "ヘルクラッシャー",
-      "parents": [
-        {
-          "kind": "monster",
-          "monsterId": "シャンタク"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "魔王の使い"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "デスカイザー"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "シャドーノーブル"
-        }
-      ],
-      "note": "特殊配合 4体配合"
-    },
-    {
       "id": "sp_add_023_スラキャンサー",
       "childId": "スラキャンサー",
       "parents": [
@@ -12045,52 +11976,6 @@
       "note": "特殊配合。通信広場で金コイン2枚での交換も可 4体配合"
     },
     {
-      "id": "sp_add_030_ダークドレアム",
-      "childId": "ダークドレアム",
-      "parents": [
-        {
-          "kind": "monster",
-          "monsterId": "デュラン"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "ダグジャガルマ"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "大魔王マデュラージャ"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "フォロボス"
-        }
-      ],
-      "note": "特殊配合 4体配合"
-    },
-    {
-      "id": "sp_add_031_グランドラゴーン",
-      "childId": "グランドラゴーン",
-      "parents": [
-        {
-          "kind": "monster",
-          "monsterId": "グランエスターク"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "キングヒドラ"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "ゴールドアクセル"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "大魔王マデュラージャ"
-        }
-      ],
-      "note": "特殊配合 4体配合"
-    },
-    {
       "id": "sp_add_039_ムド―",
       "childId": "ムド―",
       "parents": [
@@ -12104,29 +11989,6 @@
         }
       ],
       "note": "特殊配合。通信広場で金コイン2枚での交換も可"
-    },
-    {
-      "id": "sp_add_040_鬼眼王バーン",
-      "childId": "鬼眼王バーン",
-      "parents": [
-        {
-          "kind": "monster",
-          "monsterId": "キルバーン"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "ミストバーン"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "大魔王バーン"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "魔界神マデュラーシャ"
-        }
-      ],
-      "note": "特殊配合。Ver.1.2アップデート後のみ作成可能。ダイの大冒険コラボ 4体配合"
     }
   ]
 }

@@ -8879,34 +8879,6 @@
       ]
     },
     {
-      "id": "sp_148_アンクルホーン",
-      "childId": "アンクルホーン",
-      "parents": [
-        {
-          "kind": "monster",
-          "monsterId": "アンクルホーン"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "ダークホーン"
-        }
-      ]
-    },
-    {
-      "id": "sp_149_アンクルホーン",
-      "childId": "アンクルホーン",
-      "parents": [
-        {
-          "kind": "monster",
-          "monsterId": "アンクルホーン"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "メッサーラ"
-        }
-      ]
-    },
-    {
       "id": "sp_150_イデアラゴン",
       "childId": "イデアラゴン",
       "parents": [
@@ -9084,10 +9056,10 @@
         },
         {
           "kind": "monster",
-          "monsterId": "ガルーダ"
+          "monsterId": "ワニバーン"
         }
       ],
-      "note": "アルテマの表記のまま。片親がガルーダ自身となっており要検証"
+      "note": "出典の表で親の1体を誤読していたのを修正（ガルーダ→ワニバーン）"
     },
     {
       "id": "sp_164_ギガミュータント",
@@ -14120,36 +14092,6 @@
       "note": "特殊配合"
     },
     {
-      "id": "sp_476_怪力軍曹イボイノス",
-      "childId": "怪力軍曹イボイノス",
-      "parents": [
-        {
-          "kind": "monster",
-          "monsterId": "バルバルー"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "ゴレオン将軍"
-        }
-      ],
-      "note": "特殊配合"
-    },
-    {
-      "id": "sp_482_竜皇帝バルグディス",
-      "childId": "竜皇帝バルグディス",
-      "parents": [
-        {
-          "kind": "monster",
-          "monsterId": "魔戦士メイザー"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "キングヒドラ"
-        }
-      ],
-      "note": "特殊配合"
-    },
-    {
       "id": "sp_487_JOKER",
       "childId": "JOKER",
       "parents": [
@@ -14160,44 +14102,6 @@
         {
           "kind": "monster",
           "monsterId": "ラーミア"
-        }
-      ],
-      "note": "特殊配合"
-    },
-    {
-      "id": "sp_488_邪獣ヒヒュルデ",
-      "childId": "邪獣ヒヒュルデ",
-      "parents": [
-        {
-          "kind": "monster",
-          "monsterId": "ヒヒュルデの使い"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "邪神レオソード"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "ギスヴァーグ"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "海王神"
-        }
-      ],
-      "note": "4体配合（指定4体が祖父母になるように配合する） 4体配合"
-    },
-    {
-      "id": "sp_494_ギスヴァーグ",
-      "childId": "ギスヴァーグ",
-      "parents": [
-        {
-          "kind": "monster",
-          "monsterId": "マガルギ"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "オムド・ロレス"
         }
       ],
       "note": "特殊配合"
@@ -14233,36 +14137,6 @@
       "note": "特殊配合"
     },
     {
-      "id": "sp_502_ゲルニック将軍",
-      "childId": "ゲルニック将軍",
-      "parents": [
-        {
-          "kind": "monster",
-          "monsterId": "ジャミ"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "ジャミラス"
-        }
-      ],
-      "note": "特殊配合。他国マスターからもスカウト可"
-    },
-    {
-      "id": "sp_509_闘神レオソード",
-      "childId": "闘神レオソード",
-      "parents": [
-        {
-          "kind": "monster",
-          "monsterId": "JOKER"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "少年レオソード"
-        }
-      ],
-      "note": "特殊配合"
-    },
-    {
       "id": "sp_510_メッサーラ",
       "childId": "メッサーラ",
       "parents": [
@@ -14275,29 +14149,6 @@
         }
       ],
       "note": "バリクナジャ×相手問わずの特殊配合。相方無指定のためアプリの型に収まらない場合は要調整"
-    },
-    {
-      "id": "sp_554_バベルボブル",
-      "childId": "バベルボブル",
-      "parents": [
-        {
-          "kind": "monster",
-          "monsterId": "バル"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "ベル"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "ボル"
-        },
-        {
-          "kind": "monster",
-          "monsterId": "ブル"
-        }
-      ],
-      "note": "4体配合（指定4体が祖父母になるように配合する） 4体配合"
     },
     {
       "id": "sp_add_000_魔壺インヘーラー",
