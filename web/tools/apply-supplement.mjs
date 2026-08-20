@@ -80,8 +80,19 @@ for (const o of supplement.obtainable ?? []) {
 const existingKeys = new Set(
   data.specialRecipes.map((r) => `${r.childId}|${JSON.stringify(r.parents)}`),
 );
+// 何度も補完を流し込むとIDがぶつかるので、既に使われている番号は飛ばす
+const usedIds = new Set(data.specialRecipes.map((r) => r.id));
+function newId(childId) {
+  for (let n = 0; ; n++) {
+    const id = `sp_add_${n.toString().padStart(3, '0')}_${childId}`;
+    if (!usedIds.has(id)) {
+      usedIds.add(id);
+      return id;
+    }
+  }
+}
 
-for (const [i, r] of (supplement.recipes ?? []).entries()) {
+for (const r of supplement.recipes ?? []) {
   const childId = resolve(r.child);
   if (!childId) {
     report.skipped.push(`レシピ: ${r.child}（一覧に無い）`);
@@ -120,7 +131,7 @@ for (const [i, r] of (supplement.recipes ?? []).entries()) {
   if (existingKeys.has(key)) continue;
   existingKeys.add(key);
 
-  const entry = { id: `sp_add_${i.toString().padStart(3, '0')}_${childId}`, childId, parents };
+  const entry = { id: newId(childId), childId, parents };
   const note = [r.notes, r.kind === '4体' ? '4体配合' : ''].filter(Boolean).join(' ').trim();
   if (note) entry.note = note;
   data.specialRecipes.push(entry);
