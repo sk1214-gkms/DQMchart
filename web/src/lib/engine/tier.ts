@@ -21,8 +21,14 @@ function monsterById(data: TitleData, id: string): Monster | undefined {
   return data.monsters.find((m) => m.id === id);
 }
 
+/**
+ * 位階。ジョーカー1のように位階表が途中で打ち切られている作品では、
+ * 表より上のモンスターの位階が公開されていない。
+ * それらは「表のどれよりも上」なので、最弱(0)ではなく最強として扱う。
+ * 0にしてしまうと、上位モンスターを弱い親として扱った配合が出てしまう。
+ */
 function tierOf(m: Monster): number {
-  return m.tier ?? 0;
+  return m.tier ?? Number.POSITIVE_INFINITY;
 }
 
 

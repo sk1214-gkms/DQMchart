@@ -84,7 +84,9 @@ for (const m of src.monsters) {
 
   const entry = { id: name, name, familyId, rank: m.rank };
   if (m.tier !== null && m.tier !== undefined) entry.tier = m.tier;
-  else problems.push(`モンスター ${name}: 位階が不明`);
+  // 位階表が途中までしか公開されていない作品があるので、
+  // 位階配合の対象外なら位階が無くても構わない
+  else if (!m.tierExcluded) problems.push(`モンスター ${name}: 位階が不明なのに位階配合の対象`);
   if (m.obtainable) {
     entry.obtainable = true;
     entry.acquisition = m.method === 'egg' ? 'egg' : m.method === 'wild' ? 'wild' : 'event';

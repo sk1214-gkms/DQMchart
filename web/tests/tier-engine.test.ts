@@ -151,3 +151,45 @@ describe('位階配合の逆算', () => {
     }
   });
 });
+
+// ジョーカー1のように位階表が途中で打ち切られている作品では、
+// 表より上のモンスターの位階が公開されていない。
+// 最弱として扱ってしまうと、上位モンスターを弱い親にした嘘の配合が出るので、
+// 「表のどれよりも上」として扱えているかを確かめる。
+describe('位階が分かっていないモンスター', () => {
+  const withUnknown: TitleData = {
+    ...data,
+    id: 'unknown-tier',
+    monsters: [
+      ...monsters,
+      // 位階表に載っていない上位モンスター（位階配合では生まれない）
+      { id: '強スラ', name: '強スラ', familyId: 'slime', rank: 'B', obtainable: true, tierExcluded: true },
+    ],
+  };
+  const pick = (id: string) => withUnknown.monsters.find((x) => x.id === id)!;
+
+  it('位階の分からない親は最強として扱われ、位階配合の子が出ない', () => {
+    const ids = tierRuleset
+      .candidates(pick('強スラ'), pick('スラA'), withUnknown)
+      .filter((c) => c.method === 'normal')
+      .map((c) => c.child.id);
+    // 親自身の種族だけが残る（スラAより上のスライムは生まれない）
+    expect(ids.sort()).toEqual(['スラA', '強スラ']);
+  });
+
+  it('位階の分からない親同士でも位階配合の子は出ない', () => {
+    const ids = tierRuleset
+      .candidates(pick('強スラ'), pick('強スラ'), withUnknown)
+      .filter((c) => c.method === 'normal')
+      .map((c) => c.child.id);
+    expect(ids).toEqual(['強スラ']);
+  });
+
+  it('位階が分かっている組み合わせは今までどおり', () => {
+    const ids = tierRuleset
+      .candidates(pick('スラA'), pick('スラB'), withUnknown)
+      .filter((c) => c.method === 'normal')
+      .map((c) => c.child.id);
+    expect(ids).toContain('スラC');
+  });
+});

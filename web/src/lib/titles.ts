@@ -6,6 +6,7 @@ import iruruka from '@/data/titles/iruruka.json';
 import terrysp from '@/data/titles/terrysp.json';
 import dqmj3 from '@/data/titles/dqmj3.json';
 import dqmj3p from '@/data/titles/dqmj3p.json';
+import dqmj1 from '@/data/titles/dqmj1.json';
 import dqmj2 from '@/data/titles/dqmj2.json';
 import dqmj2p from '@/data/titles/dqmj2p.json';
 
@@ -15,6 +16,7 @@ const titles: TitleData[] = [
   terrysp as TitleData,
   dqmj3 as TitleData,
   dqmj3p as TitleData,
+  dqmj1 as TitleData,
   dqmj2 as TitleData,
   dqmj2p as TitleData,
 ];
