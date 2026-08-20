@@ -13,6 +13,22 @@ const METHOD_LABEL: Record<string, string> = {
   quad: '4体配合',
 };
 
+/**
+ * 入手方法の説明はいくつも並んでいることがあるので、ツリーでは先頭の1つだけ出す。
+ * 「夢見るタマゴ(金/虹)」のように括弧の中に区切り文字が入ることがあるため、
+ * 括弧の外にある区切りだけで切る。
+ */
+function firstDetail(detail: string): string {
+  let depth = 0;
+  for (let i = 0; i < detail.length; i++) {
+    const c = detail[i];
+    if (c === '（' || c === '(') depth += 1;
+    else if (c === '）' || c === ')') depth = Math.max(0, depth - 1);
+    else if (depth === 0 && (c === '／' || c === '/' || c === '。')) return detail.slice(0, i).trim();
+  }
+  return detail.trim();
+}
+
 /** ツリーの1行 */
 type TreeLine = {
   text: string;
@@ -33,7 +49,7 @@ function buildLines(plan: BreedingPlan): TreeLine[] {
     if (repeated) return `${name}（上記と同じ）`;
     if (p.kind === 'wild') {
       const how = m.acquisitionDetail
-        ? m.acquisitionDetail.split(/[／/。]/)[0].trim()
+        ? firstDetail(m.acquisitionDetail)
         : `${acquisitionLabel(m.acquisition)}で入手`;
       return `${name}（${how}）`;
     }

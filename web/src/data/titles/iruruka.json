@@ -6374,7 +6374,10 @@
       "familyId": "slime",
       "rank": "S",
       "tier": 677,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "カメハの不思議な冒険隊(Sランクのモンスターを渡した時のみ、まれに連れて帰る)。夢見るタマゴ(金/虹)からも入手可。配合不可(GameWith・アルテマとも配合欄「なし」/「配合 ×」)。"
     },
     {
       "id": "ブラックドラゴン",
@@ -6758,7 +6761,10 @@
       "familyId": "material",
       "rank": "S",
       "tier": 716,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(金/虹)の「？」枠から入手。カメハの不思議な冒険隊でも入手報告あり。配合不可。"
     },
     {
       "id": "グリフィンクス",
@@ -6777,7 +6783,10 @@
       "familyId": "zombie",
       "rank": "S",
       "tier": 718,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(金/虹)から入手。極限攻略も「位階配合によって仲間にすることは不可、特殊配合の組み合わせも無い」と明記。"
     },
     {
       "id": "ヘルゴラゴ",
@@ -6785,7 +6794,10 @@
       "familyId": "beast",
       "rank": "S",
       "tier": 719,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "「じゅうおうの試練のカギ」のボス討伐クエストをクリアした報酬。ボス(ヘルゴラゴ)を倒すと同じモンスターが仲間になる。抽選に当たると「攻撃力アップSP」が3つ目のスキルとして付く。試練のカギはエンディング後のストーリーを進めると入手。配合不可。"
     },
     {
       "id": "キングアズライル",
@@ -6793,7 +6805,10 @@
       "familyId": "beast",
       "rank": "S",
       "tier": 720,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "「おうじゃの試練のカギ」のボス討伐クエストのクリア報酬(ボスはキングアズライル＋にじくじゃく×2)。抽選で「すばやさアップSP」が付く。配合不可。"
     },
     {
       "id": "ダークマター",
@@ -6801,7 +6816,10 @@
       "familyId": "material",
       "rank": "S",
       "tier": 721,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "「とこやみの試練のカギ」のボス討伐クエストのクリア報酬(ボスはダークマター＋ゴールデンゴーレム×2)。抽選で「かしこさアップSP」が付く。配合不可。"
     },
     {
       "id": "ポセイドン",
@@ -6809,7 +6827,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 722,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "「わだつみの試練のカギ」のボス討伐クエストのクリア報酬(ボスはポセイドン＋グラコス)。抽選で「守備力アップSP」が付く。配合不可。"
     },
     {
       "id": "タイタニス",
@@ -6841,7 +6862,10 @@
       "familyId": "beast",
       "rank": "S",
       "tier": 726,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(金/虹)から入手。Gサイズ。配合不可(GameWith Sランク配合表「なし」)。"
     },
     {
       "id": "ゆうれい船",
@@ -6849,7 +6873,10 @@
       "familyId": "zombie",
       "rank": "S",
       "tier": 727,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(金/虹)から入手(GameWith個別ページで唯一の入手手段と明記)。カメハの不思議な冒険隊でも入手報告あり。配合不可。なお「ダークドレアム × ゆうれい船 = 海王神」の素材側になる。"
     },
     {
       "id": "キングモーモン",
@@ -7181,7 +7208,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 761,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(金/虹)から低確率で入手。オンライン他国マスター(カンダタ系を連れた特別なマスター)に勝利してスカウトするルートもある。配合不可。デスピサロの4体配合素材。"
     },
     {
       "id": "カンダタおやぶん",
@@ -7189,7 +7219,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 762,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(金/虹)から入手。オンライン他国マスター乱入バトルでのスカウトも有力ルート。配合不可。デスピサロの4体配合素材。"
     },
     {
       "id": "エッグラ＆チキーラ",
@@ -7252,7 +7285,10 @@
       "familyId": "dragon",
       "rank": "S",
       "tier": 768,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "カメハの不思議な冒険隊(Sランクを渡した時のみ、まれに入手)。ほかに夢見るタマゴでの孵化、フィールドで遭遇した際に「超しもふり肉」でスカウトする方法も報告されている。配合不可(極限攻略「このモンスターを生み出す配合組み合わせはありません」)。"
     },
     {
       "id": "ニジゴロン",
@@ -7260,7 +7296,10 @@
       "familyId": "slime",
       "rank": "S",
       "tier": 769,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "カメハの不思議な冒険隊(Sランクを渡した時のみ、まれに入手)。夢見るタマゴからも入手可。配合不可。"
     },
     {
       "id": "モンスターパレード",
@@ -7268,7 +7307,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 770,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(金/虹)から入手。神聖系Mサイズ・位階770。野生出現なし、配合不可。"
     },
     {
       "id": "覇海軍王ジャコラ",
@@ -7394,7 +7436,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 785,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "オンライン他国マスターの特別バトル(カンダタレディースを連れているカメハ)に勝利して入手。夢見るタマゴ(虹)からも入手可だが確率は非常に低い。配合不可。図鑑コンプの最難関の一つとされる。デスピサロの4体配合素材。"
     },
     {
       "id": "スラブラスター",
@@ -7470,7 +7515,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 793,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "オンライン他国マスターのカンダタロックスを連れているカメハに勝利して入手(GameWith)。アルテマは「タマゴ ○」、神ゲー攻略のコメントにも「夢見るタマゴ(虹)の『？』のタマゴから出た」との報告があり、虹の夢見るタマゴでも入手可。配合不可(極限攻略「位階配合によって仲間にすることは不可」)。メタルゴッデスの4体配合素材。"
     },
     {
       "id": "カンダタセブン",
@@ -7743,7 +7791,10 @@
       "familyId": "material",
       "rank": "SS",
       "tier": 823,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "にじのタマゴ／夢見るタマゴ(虹)から入手。発売当初は入手手段が存在しない不具合があり、2020/9/11のVer.1.0.1アップデートで虹のタマゴから孵化するようになった5体(スラリン船・スライバ船・魔戦車ダビド・ゴールドマジンガ・神殿レイダメテス)の1体。にじのタマゴは水・土・日の通信ショップで150,000G。配合不可。冥王ネルゲル/ダースガルマ/メタルゴッデス等の素材になる。"
     },
     {
       "id": "ワルぼう",
@@ -7800,7 +7851,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 829,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "「まぼろしのカギ」のクリア報酬。まぼろしのカギはさいごのカギで裏ボス・エスタークを倒した後、マルタのへそのワルぼうに話しかけると入手。7ステージ(6連続クエスト)を最後までクリアするとかみさまが仲間になる。GameWithには「まぼろしのカギの報酬(現在報酬対象外)」の注記があり、錬金カギのランダム報酬としては出ない模様。他国マスターの夢見るタマゴ経由でも理論上可能だが相手の配信データ依存で現実的でない。配合不可。"
     },
     {
       "id": "わたぼう",
@@ -7819,7 +7873,10 @@
       "familyId": "material",
       "rank": "SS",
       "tier": 831,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(虹)の「？」枠から入手。物質系Gサイズ。配合不可(アルテマ「配合では入手できません、唯一の入手手段はタマゴ」)。スラ・ブラスター/はぐれメタルキングの配合素材になる。"
     },
     {
       "id": "大魔王デスタムーア",
@@ -7956,7 +8013,10 @@
       "familyId": "material",
       "rank": "SS",
       "tier": 847,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(虹)から入手。アルテマには「鍵錬金のクリア報酬」でも入手可との記載あり。物質系Gサイズ・図鑑No.847。配合不可。"
     },
     {
       "id": "ラプソーン",
@@ -8012,7 +8072,10 @@
       "familyId": "dragon",
       "rank": "SS",
       "tier": 854,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(虹)から入手。Game8のタマゴ限定モンスター記事でもキラーマシン3・エリスグールと並ぶ「タマゴでしか手に入らない高レア」として挙げられている。配合不可。"
     },
     {
       "id": "海王神",
