@@ -57,6 +57,23 @@ function matchesUnordered(reqs: RecipeParent[], monsters: Monster[]): boolean {
   return assign(0);
 }
 
+/** 子モンスターごとに特殊配合レシピをまとめた索引 */
+const recipesByChildCache = new WeakMap<TitleData, Map<string, SpecialRecipe[]>>();
+
+function recipesByChild(data: TitleData): Map<string, SpecialRecipe[]> {
+  let cached = recipesByChildCache.get(data);
+  if (!cached) {
+    cached = new Map();
+    for (const r of data.specialRecipes) {
+      const list = cached.get(r.childId);
+      if (list) list.push(r);
+      else cached.set(r.childId, [r]);
+    }
+    recipesByChildCache.set(data, cached);
+  }
+  return cached;
+}
+
 /** 位階番号からモンスターを引く索引。データごとに使い回す */
 const tierIndexCache = new WeakMap<TitleData, Map<number, Monster>>();
 
@@ -66,6 +83,29 @@ function tierIndex(data: TitleData): Map<number, Monster> {
     cached = new Map();
     for (const m of data.monsters) cached.set(tierOf(m), m);
     tierIndexCache.set(data, cached);
+  }
+  return cached;
+}
+
+/**
+ * 位階の「1の位」ごとにモンスターをまとめた索引。
+ * 逆算では「1の位がいくつの親が必要か」が式から一意に決まるため、
+ * 全モンスターを走査せずに候補を絞り込める。
+ */
+const onesIndexCache = new WeakMap<TitleData, Map<number, Monster[]>>();
+
+function onesIndex(data: TitleData): Map<number, Monster[]> {
+  let cached = onesIndexCache.get(data);
+  if (!cached) {
+    cached = new Map();
+    for (let d = 0; d <= 9; d++) cached.set(d, []);
+    for (const m of data.monsters) {
+      if (m.tier === undefined) continue;
+      cached.get(tierOf(m) % 10)!.push(m);
+    }
+    // 位階の小さい順に並べておくと、範囲で打ち切れる
+    for (const list of cached.values()) list.sort((x, y) => tierOf(x) - tierOf(y));
+    onesIndexCache.set(data, cached);
   }
   return cached;
 }
@@ -152,8 +192,7 @@ class Planner {
   private tryBuild(m: Monster): BreedingPlan | null {
     let best: BreedingPlan | null = null;
 
-    for (const recipe of this.data.specialRecipes) {
-      if (recipe.childId !== m.id) continue;
+    for (const recipe of recipesByChild(this.data).get(m.id) ?? []) {
       if (recipe.parents.length !== 2 && recipe.parents.length !== 4) continue;
       const parentPlans = recipe.parents.map((p) => this.planForRequirement(p, m.id));
       if (parentPlans.some((p) => p === null)) continue;
@@ -204,10 +243,12 @@ class Planner {
     };
 
     const index = tierIndex(this.data);
+    const ones = onesIndex(this.data);
+
     for (const goal of targets) {
-      // 候補3（平均）から: high + low が goal*2 か goal*2+1
+      // 候補3（平均）: (high + low) / 2 の切り捨てが goal → high + low は goal*2 か goal*2+1
       for (const sum of [goal * 2, goal * 2 + 1]) {
-        for (let high = Math.ceil(sum / 2); high <= Math.min(sum - 1, target * 2); high++) {
+        for (let high = Math.ceil(sum / 2); high <= sum - 1; high++) {
           const low = sum - high;
           if (low < 1 || low > high) continue;
           const pa = index.get(high);
@@ -215,13 +256,37 @@ class Planner {
           if (pa && pb) consider(pa, pb);
         }
       }
-      // 候補1: high + (low の1の位) = goal → high は goal-9 〜 goal
+
+      // 候補1: 1の位の合計が10以上なら high + (lowの1の位) = goal、
+      //        10未満なら high + (lowの1の位) + 10 = goal。
+      // どちらも high を決めれば必要な「lowの1の位」が一意に定まるので、
+      // その1の位を持つモンスターだけを見ればよい（全走査が不要）。
       for (let high = Math.max(1, goal - 19); high <= goal; high++) {
         const pa = index.get(high);
         if (!pa) continue;
-        for (const [lowTier, pb] of index) {
-          if (lowTier > high) continue;
-          consider(pa, pb);
+        for (const offset of [0, 10]) {
+          const lowOnes = goal - high - offset;
+          if (lowOnes < 0 || lowOnes > 9) continue;
+          for (const pb of ones.get(lowOnes) ?? []) {
+            if (tierOf(pb) > high) break; // 位階順に並んでいるので以降は範囲外
+            consider(pa, pb);
+          }
+        }
+      }
+
+      // 候補2: 1の位の合計が10以上なら low + (highの1の位) - 5 = goal、
+      //        10未満なら low + (highの1の位) + 5 = goal。
+      // low を決めれば必要な「highの1の位」が定まる。
+      for (let low = Math.max(1, goal - 14); low <= goal + 5; low++) {
+        const pb = index.get(low);
+        if (!pb) continue;
+        for (const offset of [-5, 5]) {
+          const highOnes = goal - low - offset;
+          if (highOnes < 0 || highOnes > 9) continue;
+          for (const pa of ones.get(highOnes) ?? []) {
+            if (tierOf(pa) < low) continue; // highはlow以上
+            consider(pa, pb);
+          }
         }
       }
     }
