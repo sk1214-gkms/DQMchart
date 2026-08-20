@@ -60,7 +60,11 @@ export interface FamilyPairRule {
 
 export type RecipeParent =
   | { kind: 'monster'; monsterId: string }
-  | { kind: 'family'; familyId: string }
+  /**
+   * 系統で指定する親。イルルカSPの神獣配合のように
+   * 「自然系のSランク以上」という下限が付くことがあるので minRankId を持てる。
+   */
+  | { kind: 'family'; familyId: string; minRankId?: string }
   /** 相手は問わない（片親だけが決まっているレシピで使う） */
   | { kind: 'any' };
 

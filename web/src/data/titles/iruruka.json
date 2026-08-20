@@ -79,7 +79,8 @@
       "tier": 1,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "ストーリー開始時（序盤のイベント）に1体もらえる。見た目・性別・性格をプレイヤーが決められる。2体目は裏ストーリーのラスボス（裏ボス）撃破後にモンスター牧場（自宅）で入手でき、同時に「モントナーの宝珠」3個ももらえる。位階配合では作成不可（極限攻略「位階配合によって仲間にすることは不可。」）、特殊配合の組み合わせも無し。野生出現・スカウト・タマゴ・他国マスターでの入手はいずれも不可。なお配合仕様として「モントナーはどのモンスターと配合してもモントナーが生まれる」（＝配合先が存在しない）ため、既に持っているモントナーを親にすればモントナーは再生産できるが、新規入手手段にはならない。"
+      "acquisitionDetail": "ストーリー開始時（序盤のイベント）に1体もらえる。見た目・性別・性格をプレイヤーが決められる。2体目は裏ストーリーのラスボス（裏ボス）撃破後にモンスター牧場（自宅）で入手でき、同時に「モントナーの宝珠」3個ももらえる。位階配合では作成不可（極限攻略「位階配合によって仲間にすることは不可。」）、特殊配合の組み合わせも無し。野生出現・スカウト・タマゴ・他国マスターでの入手はいずれも不可。なお配合仕様として「モントナーはどのモンスターと配合してもモントナーが生まれる」（＝配合先が存在しない）ため、既に持っているモントナーを親にすればモントナーは再生産できるが、新規入手手段にはならない。 / モンスター牧場で裏ボス撃破後に仲間に(2匹目)",
+      "tierExcluded": true
     },
     {
       "id": "スライム",
@@ -89,7 +90,8 @@
       "tier": 3,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "砂漠の世界 フィールド"
+      "acquisitionDetail": "砂漠の世界 フィールド",
+      "tierExcluded": true
     },
     {
       "id": "ドラゴンキッズ",
@@ -109,7 +111,8 @@
       "tier": 5,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "はじまりの海岸（マルタの国・序盤）"
+      "acquisitionDetail": "はじまりの海岸（マルタの国・序盤）",
+      "tierExcluded": true
     },
     {
       "id": "はりせんもぐら",
@@ -139,7 +142,8 @@
       "tier": 8,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "水の世界 フィールド"
+      "acquisitionDetail": "水の世界 フィールド",
+      "tierExcluded": true
     },
     {
       "id": "スモーク",
@@ -149,7 +153,8 @@
       "tier": 9,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "水の世界 いにしえの灯台"
+      "acquisitionDetail": "水の世界 いにしえの灯台 / 水の世界 いにしえの灯台5階でピクシーのお供として出現",
+      "tierExcluded": true
     },
     {
       "id": "デビルパイン",
@@ -233,7 +238,8 @@
       "tier": 18,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "水の世界 フィールド"
+      "acquisitionDetail": "水の世界 フィールド",
+      "tierExcluded": true
     },
     {
       "id": "マンドラ",
@@ -243,7 +249,8 @@
       "tier": 19,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪と氷の世界 まよいの森"
+      "acquisitionDetail": "雪と氷の世界 まよいの森",
+      "tierExcluded": true
     },
     {
       "id": "ホイップゴースト",
@@ -294,7 +301,8 @@
       "tier": 25,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "狭間の世界／ドークの館"
+      "acquisitionDetail": "狭間の世界／ドークの館",
+      "tierExcluded": true
     },
     {
       "id": "きりかぶおばけ",
@@ -351,7 +359,8 @@
       "tier": 31,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "水の世界 フィールド"
+      "acquisitionDetail": "水の世界 フィールド / 転生モンスター(転生元:ファーラット)。水の世界 ポローニャの村左上の砂浜",
+      "tierExcluded": true
     },
     {
       "id": "ネジまきどり",
@@ -371,7 +380,8 @@
       "tier": 33,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪と氷の世界 フィールド"
+      "acquisitionDetail": "雪と氷の世界 フィールド",
+      "tierExcluded": true
     },
     {
       "id": "ピクシー",
@@ -431,7 +441,8 @@
       "tier": 39,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "砂漠の世界 フィールド"
+      "acquisitionDetail": "砂漠の世界 フィールド / 転生モンスター(転生元:サボテンボール)。砂漠の世界 アッシアの町前",
+      "tierExcluded": true
     },
     {
       "id": "おおきづち",
@@ -631,7 +642,11 @@
       "name": "カバシラー",
       "familyId": "nature",
       "rank": "F",
-      "tier": 62
+      "tier": 62,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "白いタマゴ(F〜D)から孵化"
     },
     {
       "id": "スカルライダー",
@@ -641,7 +656,8 @@
       "tier": 63,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（砂漠の世界）"
+      "acquisitionDetail": "他国マスター（砂漠の世界）",
+      "tierExcluded": true
     },
     {
       "id": "ミノーン",
@@ -698,7 +714,8 @@
       "tier": 69,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "水の世界 フィールド"
+      "acquisitionDetail": "水の世界 フィールド",
+      "tierExcluded": true
     },
     {
       "id": "はねスライム",
@@ -760,7 +777,11 @@
       "name": "アクアマリンホーク",
       "familyId": "nature",
       "rank": "F",
-      "tier": 77
+      "tier": 77,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(自然系)から孵化"
     },
     {
       "id": "かまっち",
@@ -770,14 +791,19 @@
       "tier": 78,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（砂漠の世界）"
+      "acquisitionDetail": "他国マスター（砂漠の世界）",
+      "tierExcluded": true
     },
     {
       "id": "あおバチ騎兵",
       "name": "あおバチ騎兵",
       "familyId": "nature",
       "rank": "F",
-      "tier": 79
+      "tier": 79,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "水の世界 ポローニャの村周辺でスカウト(ビーライダーの転生元のため同エリアの野生モンスター)"
     },
     {
       "id": "ドラゴスライム",
@@ -845,14 +871,19 @@
       "tier": 87,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（砂漠の世界）"
+      "acquisitionDetail": "他国マスター（砂漠の世界）",
+      "tierExcluded": true
     },
     {
       "id": "エテポンゲ",
       "name": "エテポンゲ",
       "familyId": "zombie",
       "rank": "F",
-      "tier": 88
+      "tier": 88,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "天空の世界 死者の城前の毒溜まり付近でスカウト。配合×"
     },
     {
       "id": "エミュー",
@@ -903,14 +934,16 @@
       "tier": 94,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（砂漠の世界）"
+      "acquisitionDetail": "他国マスター（砂漠の世界）",
+      "tierExcluded": true
     },
     {
       "id": "シーメーダ",
       "name": "シーメーダ",
       "familyId": "demon",
       "rank": "F",
-      "tier": 95
+      "tier": 95,
+      "tierExcluded": true
     },
     {
       "id": "スライムファング",
@@ -964,14 +997,16 @@
       "tier": 101,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（砂漠の世界）"
+      "acquisitionDetail": "他国マスター（砂漠の世界）",
+      "tierExcluded": true
     },
     {
       "id": "おにこぞう",
       "name": "おにこぞう",
       "familyId": "demon",
       "rank": "F",
-      "tier": 102
+      "tier": 102,
+      "tierExcluded": true
     },
     {
       "id": "オコボルト",
@@ -981,7 +1016,8 @@
       "tier": 103,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "砂漠の世界 フィールド"
+      "acquisitionDetail": "砂漠の世界 フィールド",
+      "tierExcluded": true
     },
     {
       "id": "かれくさネズミ",
@@ -991,7 +1027,8 @@
       "tier": 104,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "天空の世界 フィールド"
+      "acquisitionDetail": "天空の世界 フィールド",
+      "tierExcluded": true
     },
     {
       "id": "まじゅつし",
@@ -1063,7 +1100,11 @@
       "name": "かまいたち",
       "familyId": "nature",
       "rank": "E",
-      "tier": 113
+      "tier": 113,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(自然系)から孵化"
     },
     {
       "id": "オニムカデ",
@@ -1073,7 +1114,8 @@
       "tier": 114,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "水の世界 フィールド"
+      "acquisitionDetail": "水の世界 フィールド",
+      "tierExcluded": true
     },
     {
       "id": "スライムつむり",
@@ -1131,7 +1173,11 @@
       "name": "トマトマーレ",
       "familyId": "slime",
       "rank": "E",
-      "tier": 121
+      "tier": 121,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "転生モンスター(転生元:マンドラ)。雪と氷の世界 まよいの森(昼・毒の沼地の中)。スカウトのみ"
     },
     {
       "id": "ボーンプリズナー",
@@ -1148,7 +1194,11 @@
       "name": "あばれうしどり",
       "familyId": "nature",
       "rank": "E",
-      "tier": 123
+      "tier": 123,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "白いタマゴ(F〜D)から孵化"
     },
     {
       "id": "ぶちスライム",
@@ -1185,7 +1235,8 @@
       "tier": 127,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "水の世界 フィールド"
+      "acquisitionDetail": "水の世界 フィールド",
+      "tierExcluded": true
     },
     {
       "id": "よるのていおう",
@@ -1226,7 +1277,8 @@
       "tier": 132,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（砂漠の世界）"
+      "acquisitionDetail": "他国マスター（砂漠の世界）",
+      "tierExcluded": true
     },
     {
       "id": "サーベルきつね",
@@ -1236,14 +1288,16 @@
       "tier": 133,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "砂漠の世界 フィールド"
+      "acquisitionDetail": "砂漠の世界 フィールド",
+      "tierExcluded": true
     },
     {
       "id": "ドロルメイジ",
       "name": "ドロルメイジ",
       "familyId": "zombie",
       "rank": "E",
-      "tier": 134
+      "tier": 134,
+      "tierExcluded": true
     },
     {
       "id": "キングコブラ",
@@ -1321,7 +1375,11 @@
       "name": "シールドこぞう",
       "familyId": "material",
       "rank": "E",
-      "tier": 143
+      "tier": 143,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "天空の世界:魔王の城近辺、小さな洞くつでスカウト。配合×/他国×/タマゴ×"
     },
     {
       "id": "テールイーター",
@@ -1418,7 +1476,8 @@
       "tier": 153,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪と氷の世界 フィールド"
+      "acquisitionDetail": "雪と氷の世界 フィールド / 転生モンスター(転生元:アルミラージ)。雪と氷の世界 まよいの森手前",
+      "tierExcluded": true
     },
     {
       "id": "ひとくい箱",
@@ -1490,7 +1549,8 @@
       "tier": 162,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "水の世界 フィールド"
+      "acquisitionDetail": "水の世界 フィールド",
+      "tierExcluded": true
     },
     {
       "id": "どんぐりヘビー",
@@ -1510,14 +1570,16 @@
       "tier": 164,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（天空の世界）"
+      "acquisitionDetail": "他国マスター（天空の世界）",
+      "tierExcluded": true
     },
     {
       "id": "ばくだんいわ",
       "name": "ばくだんいわ",
       "familyId": "material",
       "rank": "E",
-      "tier": 165
+      "tier": 165,
+      "tierExcluded": true
     },
     {
       "id": "ブッチョマン",
@@ -1527,14 +1589,16 @@
       "tier": 166,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪と氷の世界 フィールド"
+      "acquisitionDetail": "雪と氷の世界 フィールド",
+      "tierExcluded": true
     },
     {
       "id": "エビルドライブ",
       "name": "エビルドライブ",
       "familyId": "zombie",
       "rank": "E",
-      "tier": 167
+      "tier": 167,
+      "tierExcluded": true
     },
     {
       "id": "トロピカルスライム",
@@ -1724,7 +1788,8 @@
       "tier": 189,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "水の世界 フィールド"
+      "acquisitionDetail": "水の世界 フィールド",
+      "tierExcluded": true
     },
     {
       "id": "アクアスライム",
@@ -1798,7 +1863,8 @@
       "name": "のろいのランプ",
       "familyId": "material",
       "rank": "E",
-      "tier": 197
+      "tier": 197,
+      "tierExcluded": true
     },
     {
       "id": "スノーム",
@@ -1886,70 +1952,110 @@
       "name": "ビーライダー",
       "familyId": "nature",
       "rank": "D",
-      "tier": 207
+      "tier": 207,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "転生モンスター(転生元:あおバチ騎兵)。水の世界 ポローニャの村左上の海上。スカウトのみ"
     },
     {
       "id": "スラ忍イエロー",
       "name": "スラ忍イエロー",
       "familyId": "slime",
       "rank": "D",
-      "tier": 208
+      "tier": 208,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "白のタマゴ・銀のタマゴから孵化。配合×/スカウト×/他国×"
     },
     {
       "id": "スラ忍レッド",
       "name": "スラ忍レッド",
       "familyId": "slime",
       "rank": "D",
-      "tier": 209
+      "tier": 209,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(スライム系)から孵化"
     },
     {
       "id": "スラ忍ブラウン",
       "name": "スラ忍ブラウン",
       "familyId": "slime",
       "rank": "D",
-      "tier": 210
+      "tier": 210,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "白のタマゴ・銀のタマゴから孵化(イエロー/ブラックと同枠と推定)"
     },
     {
       "id": "スラ忍グリーン",
       "name": "スラ忍グリーン",
       "familyId": "slime",
       "rank": "D",
-      "tier": 211
+      "tier": 211,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "白のタマゴ・銀のタマゴから孵化(イエロー/ブラックと同枠と推定)"
     },
     {
       "id": "スラ忍パープル",
       "name": "スラ忍パープル",
       "familyId": "slime",
       "rank": "D",
-      "tier": 212
+      "tier": 212,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "白のタマゴ・銀のタマゴから孵化(イエロー/ブラックと同枠と推定)"
     },
     {
       "id": "スラ忍ブルー",
       "name": "スラ忍ブルー",
       "familyId": "slime",
       "rank": "D",
-      "tier": 213
+      "tier": 213,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(スライム系)から孵化"
     },
     {
       "id": "スラ忍オレンジ",
       "name": "スラ忍オレンジ",
       "familyId": "slime",
       "rank": "D",
-      "tier": 214
+      "tier": 214,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(スライム系)から孵化"
     },
     {
       "id": "スラ忍ピンク",
       "name": "スラ忍ピンク",
       "familyId": "slime",
       "rank": "D",
-      "tier": 215
+      "tier": 215,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "白のタマゴ・銀のタマゴから孵化(イエロー/ブラックと同枠と推定)"
     },
     {
       "id": "スラ忍ブラック",
       "name": "スラ忍ブラック",
       "familyId": "slime",
       "rank": "D",
-      "tier": 216
+      "tier": 216,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "白のタマゴ・銀のタマゴから孵化。配合×/スカウト×/他国×"
     },
     {
       "id": "神将ベニヒ",
@@ -1959,7 +2065,8 @@
       "tier": 217,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "しろいタマゴ（主）／ぎんのタマゴから孵化。しろいタマゴはマルタの国の大通りの道具屋で1個1,000G（割引で800G）。鑑定名が「運命の」のタマゴから九神将が生まれる。他にカメハのふしぎな冒険隊でDランクモンスターだけを渡すと一定確率で連れ帰る、錬金カギ／めぐりあいのカギの世界でスカウト、オンライン他国マスター経由でも入手可。位階配合・特殊配合では作成不可。"
+      "acquisitionDetail": "しろいタマゴ（主）／ぎんのタマゴから孵化。しろいタマゴはマルタの国の大通りの道具屋で1個1,000G（割引で800G）。鑑定名が「運命の」のタマゴから九神将が生まれる。他にカメハのふしぎな冒険隊でDランクモンスターだけを渡すと一定確率で連れ帰る、錬金カギ／めぐりあいのカギの世界でスカウト、オンライン他国マスター経由でも入手可。位階配合・特殊配合では作成不可。 / 白いタマゴ(F〜D)から孵化",
+      "tierExcluded": true
     },
     {
       "id": "神将タイシャ",
@@ -1969,7 +2076,8 @@
       "tier": 218,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "しろいタマゴ（主）／ぎんのタマゴから孵化。鑑定名「運命の」で九神将が出る。しろいタマゴはマルタの国の大通りの道具屋で1,000G（割引800G）。カメハのふしぎな冒険隊（Dランクのみ渡す）、錬金カギ／めぐりあいのカギの世界でのスカウトでも入手可。位階配合・特殊配合では作成不可。"
+      "acquisitionDetail": "しろいタマゴ（主）／ぎんのタマゴから孵化。鑑定名「運命の」で九神将が出る。しろいタマゴはマルタの国の大通りの道具屋で1,000G（割引800G）。カメハのふしぎな冒険隊（Dランクのみ渡す）、錬金カギ／めぐりあいのカギの世界でのスカウトでも入手可。位階配合・特殊配合では作成不可。 / 白いタマゴ(F〜D)から孵化",
+      "tierExcluded": true
     },
     {
       "id": "神将ゲッパク",
@@ -1979,7 +2087,8 @@
       "tier": 219,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "しろいタマゴ（主）／ぎんのタマゴから孵化。鑑定名「運命の」で九神将が出る。しろいタマゴはマルタの国の大通りの道具屋で1,000G（割引800G）。カメハのふしぎな冒険隊（Dランクのみ渡す）、錬金カギ／めぐりあいのカギの世界でのスカウトでも入手可。位階配合・特殊配合では作成不可。"
+      "acquisitionDetail": "しろいタマゴ（主）／ぎんのタマゴから孵化。鑑定名「運命の」で九神将が出る。しろいタマゴはマルタの国の大通りの道具屋で1,000G（割引800G）。カメハのふしぎな冒険隊（Dランクのみ渡す）、錬金カギ／めぐりあいのカギの世界でのスカウトでも入手可。位階配合・特殊配合では作成不可。 / 白いタマゴ(F〜D)から孵化",
+      "tierExcluded": true
     },
     {
       "id": "神将シオン",
@@ -1989,7 +2098,8 @@
       "tier": 220,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "しろいタマゴ（主）／ぎんのタマゴから孵化。鑑定名「運命の」で九神将が出る。九神将のうちシオンだけはご当地スキルを持たない。カメハのふしぎな冒険隊（Dランクのみ渡す）、錬金カギ／めぐりあいのカギの世界でのスカウトでも入手可。位階配合・特殊配合では作成不可（極限攻略「特殊配合の組み合わせは無し。」）。"
+      "acquisitionDetail": "しろいタマゴ（主）／ぎんのタマゴから孵化。鑑定名「運命の」で九神将が出る。九神将のうちシオンだけはご当地スキルを持たない。カメハのふしぎな冒険隊（Dランクのみ渡す）、錬金カギ／めぐりあいのカギの世界でのスカウトでも入手可。位階配合・特殊配合では作成不可（極限攻略「特殊配合の組み合わせは無し。」）。 / 白いタマゴ(F〜D)から孵化",
+      "tierExcluded": true
     },
     {
       "id": "神将テツグロ",
@@ -1999,7 +2109,8 @@
       "tier": 221,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "しろいタマゴ（主）／ぎんのタマゴから孵化。鑑定名「運命の」で九神将が出る。しろいタマゴはマルタの国の大通りの道具屋で1,000G（割引800G）。カメハのふしぎな冒険隊（Dランクのみ渡す）、錬金カギ／めぐりあいのカギの世界でのスカウトでも入手可。位階配合・特殊配合では作成不可。"
+      "acquisitionDetail": "しろいタマゴ（主）／ぎんのタマゴから孵化。鑑定名「運命の」で九神将が出る。しろいタマゴはマルタの国の大通りの道具屋で1,000G（割引800G）。カメハのふしぎな冒険隊（Dランクのみ渡す）、錬金カギ／めぐりあいのカギの世界でのスカウトでも入手可。位階配合・特殊配合では作成不可。 / 白いタマゴ(F〜D)から孵化",
+      "tierExcluded": true
     },
     {
       "id": "神将コガネ",
@@ -2009,7 +2120,8 @@
       "tier": 222,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "しろいタマゴ（主）／ぎんのタマゴから孵化。鑑定名「運命の」で九神将が出る。しろいタマゴはマルタの国の大通りの道具屋で1,000G（割引800G）。カメハのふしぎな冒険隊（Dランクのみ渡す）、錬金カギ／めぐりあいのカギの世界でのスカウトでも入手可。位階配合・特殊配合では作成不可。"
+      "acquisitionDetail": "しろいタマゴ（主）／ぎんのタマゴから孵化。鑑定名「運命の」で九神将が出る。しろいタマゴはマルタの国の大通りの道具屋で1,000G（割引800G）。カメハのふしぎな冒険隊（Dランクのみ渡す）、錬金カギ／めぐりあいのカギの世界でのスカウトでも入手可。位階配合・特殊配合では作成不可。 / 白いタマゴ(F〜D)から孵化",
+      "tierExcluded": true
     },
     {
       "id": "神将セイラン",
@@ -2019,7 +2131,8 @@
       "tier": 223,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "しろいタマゴ（主）／ぎんのタマゴから孵化。鑑定名「運命の」で九神将が出る。しろいタマゴはマルタの国の大通りの道具屋で1,000G（割引800G）。カメハのふしぎな冒険隊（Dランクのみ渡す）、錬金カギ／めぐりあいのカギの世界でのスカウトでも入手可。位階配合・特殊配合では作成不可。"
+      "acquisitionDetail": "しろいタマゴ（主）／ぎんのタマゴから孵化。鑑定名「運命の」で九神将が出る。しろいタマゴはマルタの国の大通りの道具屋で1,000G（割引800G）。カメハのふしぎな冒険隊（Dランクのみ渡す）、錬金カギ／めぐりあいのカギの世界でのスカウトでも入手可。位階配合・特殊配合では作成不可。 / 白いタマゴ(F〜D)から孵化",
+      "tierExcluded": true
     },
     {
       "id": "神将トキワ",
@@ -2029,7 +2142,8 @@
       "tier": 224,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "しろいタマゴ（主）／ぎんのタマゴから孵化。鑑定名「運命の」で九神将が出る。しろいタマゴはマルタの国の大通りの道具屋で1,000G（割引800G）。カメハのふしぎな冒険隊（Dランクのみ渡す）、錬金カギ／めぐりあいのカギの世界でのスカウトでも入手可。位階配合・特殊配合では作成不可。"
+      "acquisitionDetail": "しろいタマゴ（主）／ぎんのタマゴから孵化。鑑定名「運命の」で九神将が出る。しろいタマゴはマルタの国の大通りの道具屋で1,000G（割引800G）。カメハのふしぎな冒険隊（Dランクのみ渡す）、錬金カギ／めぐりあいのカギの世界でのスカウトでも入手可。位階配合・特殊配合では作成不可。 / 白いタマゴ(F〜D)から孵化",
+      "tierExcluded": true
     },
     {
       "id": "神将スオウ",
@@ -2039,7 +2153,8 @@
       "tier": 225,
       "obtainable": true,
       "acquisition": "egg",
-      "acquisitionDetail": "しろいタマゴ（主）／ぎんのタマゴから孵化。鑑定名「運命の」で九神将が出る。しろいタマゴはマルタの国の大通りの道具屋で1,000G（割引800G）。カメハのふしぎな冒険隊（Dランクのみ渡す）、錬金カギ／めぐりあいのカギの世界でのスカウトでも入手可。位階配合・特殊配合では作成不可。"
+      "acquisitionDetail": "しろいタマゴ（主）／ぎんのタマゴから孵化。鑑定名「運命の」で九神将が出る。しろいタマゴはマルタの国の大通りの道具屋で1,000G（割引800G）。カメハのふしぎな冒険隊（Dランクのみ渡す）、錬金カギ／めぐりあいのカギの世界でのスカウトでも入手可。位階配合・特殊配合では作成不可。 / 白いタマゴ(F〜D)から孵化",
+      "tierExcluded": true
     },
     {
       "id": "パールモービル",
@@ -2049,7 +2164,8 @@
       "tier": 226,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪と氷の世界 フィールド"
+      "acquisitionDetail": "雪と氷の世界 フィールド / 雪と氷の世界 イーストリア南(夜)にごくまれに出現",
+      "tierExcluded": true
     },
     {
       "id": "スライムナイト",
@@ -2069,7 +2185,8 @@
       "tier": 228,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪と氷の世界 フィールド"
+      "acquisitionDetail": "雪と氷の世界 フィールド / 転生モンスター(転生元:スライムナイト)。雪と氷の世界 ウェスターニャ前",
+      "tierExcluded": true
     },
     {
       "id": "ドラゴンマッド",
@@ -2099,7 +2216,8 @@
       "tier": 231,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "砂漠の世界 フィールド"
+      "acquisitionDetail": "砂漠の世界 フィールド / 転生モンスター(転生元:キメラ)。砂漠の世界 ほこら南東の岩前",
+      "tierExcluded": true
     },
     {
       "id": "ブラウニー",
@@ -2119,7 +2237,8 @@
       "tier": 233,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "水の世界 火山島の洞くつ"
+      "acquisitionDetail": "水の世界 火山島の洞くつ",
+      "tierExcluded": true
     },
     {
       "id": "とげこんぼう",
@@ -2129,7 +2248,8 @@
       "tier": 234,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "宿り木の塔（クリア後）"
+      "acquisitionDetail": "宿り木の塔（クリア後） / 転生モンスター(転生元:ブラウニー)。宿り木の世界 宿り木の塔2階",
+      "tierExcluded": true
     },
     {
       "id": "ギズモ",
@@ -2160,14 +2280,22 @@
       "name": "メイデンドール",
       "familyId": "zombie",
       "rank": "D",
-      "tier": 238
+      "tier": 238,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "雪と氷の世界:迷いの森でスカウト。配合×/他国×/タマゴ×"
     },
     {
       "id": "イカずきん",
       "name": "イカずきん",
       "familyId": "nature",
       "rank": "D",
-      "tier": 239
+      "tier": 239,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(自然系)から孵化"
     },
     {
       "id": "ストーンスライム",
@@ -2238,14 +2366,16 @@
       "tier": 247,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "砂漠の世界 フィールド"
+      "acquisitionDetail": "砂漠の世界 フィールド / 夢見るタマゴ(スライム系)から孵化",
+      "tierExcluded": true
     },
     {
       "id": "ダースドラゴン",
       "name": "ダースドラゴン",
       "familyId": "dragon",
       "rank": "D",
-      "tier": 248
+      "tier": 248,
+      "tierExcluded": true
     },
     {
       "id": "くらやみハーピー",
@@ -2255,7 +2385,8 @@
       "tier": 249,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "水の世界 いにしえの灯台"
+      "acquisitionDetail": "水の世界 いにしえの灯台",
+      "tierExcluded": true
     },
     {
       "id": "ビーンファイター",
@@ -2265,7 +2396,8 @@
       "tier": 250,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "天空の世界 フィールド"
+      "acquisitionDetail": "天空の世界 フィールド",
+      "tierExcluded": true
     },
     {
       "id": "キラーパンサー",
@@ -2275,14 +2407,16 @@
       "tier": 251,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "砂漠の世界 フィールド"
+      "acquisitionDetail": "砂漠の世界 フィールド",
+      "tierExcluded": true
     },
     {
       "id": "トーテムキラー",
       "name": "トーテムキラー",
       "familyId": "material",
       "rank": "D",
-      "tier": 252
+      "tier": 252,
+      "tierExcluded": true
     },
     {
       "id": "おおドラキー",
@@ -2292,14 +2426,16 @@
       "tier": 253,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "ピラミッド（砂漠の世界クリア後）"
+      "acquisitionDetail": "ピラミッド（砂漠の世界クリア後）",
+      "tierExcluded": true
     },
     {
       "id": "のろいのマスク",
       "name": "のろいのマスク",
       "familyId": "zombie",
       "rank": "D",
-      "tier": 254
+      "tier": 254,
+      "tierExcluded": true
     },
     {
       "id": "たつのこナイト",
@@ -2370,7 +2506,8 @@
       "tier": 262,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（エスターク仲間化後にランダム出現・スカウト可）"
+      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（エスターク仲間化後にランダム出現・スカウト可）",
+      "tierExcluded": true
     },
     {
       "id": "メドーサボール",
@@ -2380,14 +2517,19 @@
       "tier": 263,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（エスターク仲間化後にランダム出現・スカウト可）"
+      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（エスターク仲間化後にランダム出現・スカウト可）",
+      "tierExcluded": true
     },
     {
       "id": "おおなめくじ",
       "name": "おおなめくじ",
       "familyId": "zombie",
       "rank": "D",
-      "tier": 264
+      "tier": 264,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "タマゴから孵化。カメハの不思議な冒険隊。配合×/スカウト×/他国×"
     },
     {
       "id": "ボックススライム",
@@ -2414,7 +2556,8 @@
       "tier": 267,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪と氷の世界 国境の鉱山"
+      "acquisitionDetail": "雪と氷の世界 国境の鉱山",
+      "tierExcluded": true
     },
     {
       "id": "グランドシャーク",
@@ -2462,14 +2605,19 @@
       "name": "おおみみず",
       "familyId": "nature",
       "rank": "D",
-      "tier": 273
+      "tier": 273,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(自然系)から孵化"
     },
     {
       "id": "ガマキャノン",
       "name": "ガマキャノン",
       "familyId": "beast",
       "rank": "D",
-      "tier": 274
+      "tier": 274,
+      "tierExcluded": true
     },
     {
       "id": "バブルデーモン",
@@ -2479,7 +2627,8 @@
       "tier": 275,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（エスターク仲間化後にランダム出現・スカウト可）"
+      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（エスターク仲間化後にランダム出現・スカウト可）",
+      "tierExcluded": true
     },
     {
       "id": "エンゼルスライム",
@@ -2551,7 +2700,11 @@
       "name": "プチアーノン",
       "familyId": "nature",
       "rank": "D",
-      "tier": 284
+      "tier": 284,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "白いタマゴ(F〜D)から孵化"
     },
     {
       "id": "あばれこまいぬ",
@@ -2561,7 +2714,8 @@
       "tier": 285,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（雪と氷の世界）"
+      "acquisitionDetail": "他国マスター（雪と氷の世界）",
+      "tierExcluded": true
     },
     {
       "id": "ギガントヒルズ",
@@ -2612,7 +2766,8 @@
       "tier": 291,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（天空の世界）"
+      "acquisitionDetail": "他国マスター（天空の世界）",
+      "tierExcluded": true
     },
     {
       "id": "マネマネ",
@@ -2622,7 +2777,8 @@
       "tier": 292,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "湖上の魔塔（クリア後）"
+      "acquisitionDetail": "湖上の魔塔（クリア後）",
+      "tierExcluded": true
     },
     {
       "id": "もりもりスライム",
@@ -2693,7 +2849,8 @@
       "tier": 300,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（水の世界）"
+      "acquisitionDetail": "他国マスター（水の世界）",
+      "tierExcluded": true
     },
     {
       "id": "ふくぶくろ",
@@ -2703,7 +2860,8 @@
       "tier": 301,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "各地に稀に出現"
+      "acquisitionDetail": "各地に稀に出現",
+      "tierExcluded": true
     },
     {
       "id": "スピンスライム",
@@ -2747,7 +2905,8 @@
       "tier": 306,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪と氷の世界 フィールド"
+      "acquisitionDetail": "雪と氷の世界 フィールド",
+      "tierExcluded": true
     },
     {
       "id": "ブリザード",
@@ -2781,21 +2940,30 @@
       "name": "デスコピオン",
       "familyId": "nature",
       "rank": "D",
-      "tier": 310
+      "tier": 310,
+      "tierExcluded": true
     },
     {
       "id": "あくまの書",
       "name": "あくまの書",
       "familyId": "material",
       "rank": "D",
-      "tier": 311
+      "tier": 311,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配合の副産物。余りスキル3種・合計150P未満"
     },
     {
       "id": "あくまの黙示録",
       "name": "あくまの黙示録",
       "familyId": "material",
       "rank": "D",
-      "tier": 312
+      "tier": 312,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配合の副産物。余りスキル3種・合計150P以上"
     },
     {
       "id": "アイアンタートル",
@@ -2859,7 +3027,11 @@
       "name": "スペクテット",
       "familyId": "demon",
       "rank": "D",
-      "tier": 319
+      "tier": 319,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(悪魔系)から孵化"
     },
     {
       "id": "ピエロスライム",
@@ -2960,7 +3132,8 @@
       "tier": 330,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "オンライン他国マスターの闘技場中央に日替わりで乱入する特別なマスター「カメハ」に勝つと、カメハが連れているモンスターから1体が仲間になる。カメハの編成パターンの1つが「カンダタこぶん／カンダタ／カンダタこぶん」なので、この編成の日に勝つと入手できる。加えてカメハのふしぎな冒険隊（Dランクに調整して渡す）からも入手可能とされる。配合（位階・特殊とも）不可、野生スカウト不可、通常の他国マスターからも不可。極限攻略のデータでは位階330・Dランク・？？？系・サイズS。"
+      "acquisitionDetail": "オンライン他国マスターの闘技場中央に日替わりで乱入する特別なマスター「カメハ」に勝つと、カメハが連れているモンスターから1体が仲間になる。カメハの編成パターンの1つが「カンダタこぶん／カンダタ／カンダタこぶん」なので、この編成の日に勝つと入手できる。加えてカメハのふしぎな冒険隊（Dランクに調整して渡す）からも入手可能とされる。配合（位階・特殊とも）不可、野生スカウト不可、通常の他国マスターからも不可。極限攻略のデータでは位階330・Dランク・？？？系・サイズS。",
+      "tierExcluded": true
     },
     {
       "id": "大魔王の右手",
@@ -2970,7 +3143,8 @@
       "tier": 331,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（天空の世界）"
+      "acquisitionDetail": "他国マスター（天空の世界） / 夢見るタマゴ(???系)から孵化",
+      "tierExcluded": true
     },
     {
       "id": "大魔王の左手",
@@ -2980,7 +3154,8 @@
       "tier": 332,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（天空の世界）"
+      "acquisitionDetail": "他国マスター（天空の世界） / 夢見るタマゴ(???系)から孵化",
+      "tierExcluded": true
     },
     {
       "id": "ピーチスライム",
@@ -2990,7 +3165,8 @@
       "tier": 333,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "はじまりの海岸（SP版追加）／宿り木の塔"
+      "acquisitionDetail": "はじまりの海岸（SP版追加）／宿り木の塔 / クリア後、マルタの世界「はじまりの海岸」。条件なし",
+      "tierExcluded": true
     },
     {
       "id": "レモンスライム",
@@ -3000,14 +3176,19 @@
       "tier": 334,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "砂漠の世界 フィールド"
+      "acquisitionDetail": "砂漠の世界 フィールド / クリア後、砂漠の世界「オアシスキャンプの西」悪天候限定",
+      "tierExcluded": true
     },
     {
       "id": "ライムスライム",
       "name": "ライムスライム",
       "familyId": "slime",
       "rank": "C",
-      "tier": 335
+      "tier": 335,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "クリア後、水の世界「ポートリッツの町の北西」夜限定"
     },
     {
       "id": "ベリースライム",
@@ -3017,7 +3198,8 @@
       "tier": 336,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "水の世界 フィールド"
+      "acquisitionDetail": "水の世界 フィールド / クリア後、水の世界「西の岬の洞窟がある島の北」昼限定",
+      "tierExcluded": true
     },
     {
       "id": "チェリースライム",
@@ -3027,7 +3209,8 @@
       "tier": 337,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "天空の世界 フィールド"
+      "acquisitionDetail": "天空の世界 フィールド / クリア後、天空の世界「ヒータノの町の南」晴れ限定",
+      "tierExcluded": true
     },
     {
       "id": "ホイップスライム",
@@ -3037,7 +3220,8 @@
       "tier": 338,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪と氷の世界 フィールド"
+      "acquisitionDetail": "雪と氷の世界 フィールド / クリア後、雪と氷の世界「北の山の中腹」悪天候限定",
+      "tierExcluded": true
     },
     {
       "id": "プリンスライム",
@@ -3047,7 +3231,8 @@
       "tier": 339,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "天空の世界 フィールド"
+      "acquisitionDetail": "天空の世界 フィールド / クリア後、天空の世界「魔王の城北の小島」悪天候限定",
+      "tierExcluded": true
     },
     {
       "id": "ぶちキング",
@@ -3067,7 +3252,8 @@
       "tier": 341,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪と氷の世界 まよいの森"
+      "acquisitionDetail": "雪と氷の世界 まよいの森",
+      "tierExcluded": true
     },
     {
       "id": "へびこうもり",
@@ -3121,7 +3307,8 @@
       "name": "オーガヘッド",
       "familyId": "demon",
       "rank": "C",
-      "tier": 347
+      "tier": 347,
+      "tierExcluded": true
     },
     {
       "id": "スラッピー",
@@ -3135,7 +3322,11 @@
       "name": "グリーンモッキー",
       "familyId": "beast",
       "rank": "C",
-      "tier": 349
+      "tier": 349,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "転生モンスター(転生元:かれくさネズミ)。天空の世界 ペイの町前(南西)。スカウトのみ"
     },
     {
       "id": "メタルドラゴン",
@@ -3165,7 +3356,8 @@
       "tier": 352,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪と氷の世界 まよいの森"
+      "acquisitionDetail": "雪と氷の世界 まよいの森 / 転生モンスター(転生元:じんめんじゅ)。雪と氷の世界 まよいの森",
+      "tierExcluded": true
     },
     {
       "id": "ライオンヘッド",
@@ -3212,14 +3404,16 @@
       "tier": 357,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "天空の世界 フィールド"
+      "acquisitionDetail": "天空の世界 フィールド / 転生モンスター(転生元:くさった死体)。天空の世界 死者の城手前毒沼付近",
+      "tierExcluded": true
     },
     {
       "id": "もりもりベス",
       "name": "もりもりベス",
       "familyId": "slime",
       "rank": "C",
-      "tier": 358
+      "tier": 358,
+      "tierExcluded": true
     },
     {
       "id": "アラウネ",
@@ -3229,35 +3423,40 @@
       "tier": 359,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "天空の世界 フィールド"
+      "acquisitionDetail": "天空の世界 フィールド",
+      "tierExcluded": true
     },
     {
       "id": "海竜",
       "name": "海竜",
       "familyId": "dragon",
       "rank": "C",
-      "tier": 360
+      "tier": 360,
+      "tierExcluded": true
     },
     {
       "id": "ヘルコンドル",
       "name": "ヘルコンドル",
       "familyId": "nature",
       "rank": "C",
-      "tier": 361
+      "tier": 361,
+      "tierExcluded": true
     },
     {
       "id": "ガーゴイル",
       "name": "ガーゴイル",
       "familyId": "beast",
       "rank": "C",
-      "tier": 362
+      "tier": 362,
+      "tierExcluded": true
     },
     {
       "id": "くもの大王",
       "name": "くもの大王",
       "familyId": "material",
       "rank": "C",
-      "tier": 363
+      "tier": 363,
+      "tierExcluded": true
     },
     {
       "id": "じごくのもんばん",
@@ -3267,7 +3466,8 @@
       "tier": 364,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "宿り木の塔（クリア後）"
+      "acquisitionDetail": "宿り木の塔（クリア後）",
+      "tierExcluded": true
     },
     {
       "id": "かぼちゃの騎士",
@@ -3277,7 +3477,8 @@
       "tier": 365,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（砂漠の世界）"
+      "acquisitionDetail": "他国マスター（砂漠の世界）",
+      "tierExcluded": true
     },
     {
       "id": "メタルライダー",
@@ -3308,7 +3509,11 @@
       "name": "フェアリーバット",
       "familyId": "demon",
       "rank": "C",
-      "tier": 369
+      "tier": 369,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "雪と氷の世界:まよいの森でスカウト。遭遇率は低め"
     },
     {
       "id": "マーマン",
@@ -3410,7 +3615,8 @@
       "tier": 381,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "宿り木の塔（クリア後）"
+      "acquisitionDetail": "宿り木の塔（クリア後）",
+      "tierExcluded": true
     },
     {
       "id": "れんごく天馬",
@@ -3420,14 +3626,16 @@
       "tier": 382,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "宿り木の塔（クリア後）"
+      "acquisitionDetail": "宿り木の塔（クリア後）",
+      "tierExcluded": true
     },
     {
       "id": "デスフラッター",
       "name": "デスフラッター",
       "familyId": "nature",
       "rank": "C",
-      "tier": 383
+      "tier": 383,
+      "tierExcluded": true
     },
     {
       "id": "プオーン",
@@ -3437,14 +3645,19 @@
       "tier": 384,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（水の世界）"
+      "acquisitionDetail": "他国マスター（水の世界） / 雪と氷の世界の他国マスターからスカウト。夢見るタマゴ(魔獣系)からも入手可",
+      "tierExcluded": true
     },
     {
       "id": "メタルハンター",
       "name": "メタルハンター",
       "familyId": "material",
       "rank": "C",
-      "tier": 385
+      "tier": 385,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "銀のタマゴ(F〜A)から孵化"
     },
     {
       "id": "シーゴーレム",
@@ -3454,21 +3667,27 @@
       "tier": 386,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "水の世界 青の洞くつ"
+      "acquisitionDetail": "水の世界 青の洞くつ",
+      "tierExcluded": true
     },
     {
       "id": "なぞのしんかん",
       "name": "なぞのしんかん",
       "familyId": "demon",
       "rank": "C",
-      "tier": 387
+      "tier": 387,
+      "tierExcluded": true
     },
     {
       "id": "ダンスキャロット",
       "name": "ダンスキャロット",
       "familyId": "zombie",
       "rank": "C",
-      "tier": 388
+      "tier": 388,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(ゾンビ系)から孵化"
     },
     {
       "id": "バルンバ",
@@ -3577,14 +3796,22 @@
       "name": "リザードマン",
       "familyId": "dragon",
       "rank": "C",
-      "tier": 401
+      "tier": 401,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(ドラゴン系)から孵化"
     },
     {
       "id": "ファンキーバード",
       "name": "ファンキーバード",
       "familyId": "nature",
       "rank": "C",
-      "tier": 402
+      "tier": 402,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "雪と氷の世界:北の山でスカウト。配合×/他国×/タマゴ×"
     },
     {
       "id": "アイアンブルドー",
@@ -3594,7 +3821,8 @@
       "tier": 403,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（雪と氷の世界）"
+      "acquisitionDetail": "他国マスター（雪と氷の世界）",
+      "tierExcluded": true
     },
     {
       "id": "フィアーパペット",
@@ -3604,7 +3832,8 @@
       "tier": 404,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "湖上の魔塔（クリア後）"
+      "acquisitionDetail": "湖上の魔塔（クリア後）",
+      "tierExcluded": true
     },
     {
       "id": "ベホマスライム",
@@ -3645,7 +3874,11 @@
       "name": "セイレーンゴースト",
       "familyId": "zombie",
       "rank": "C",
-      "tier": 409
+      "tier": 409,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "転生モンスター(転生元:メイデンドール)。雪と氷の世界 まよいの森(左上の一角)。スカウトのみ"
     },
     {
       "id": "ジェネラルダンテ",
@@ -3703,7 +3936,8 @@
       "tier": 416,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "天空の世界 フィールド"
+      "acquisitionDetail": "天空の世界 フィールド / 転生モンスター(転生元:トンブレロ)。天空の世界 風の塔前",
+      "tierExcluded": true
     },
     {
       "id": "ゴーレム",
@@ -3730,7 +3964,11 @@
       "name": "ドラゴビショップ",
       "familyId": "dragon",
       "rank": "C",
-      "tier": 419
+      "tier": 419,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "かいぞくのカギ・湖上の魔塔でスカウト。位階配合不可・特殊配合の組み合わせ無し"
     },
     {
       "id": "ウインドマージ",
@@ -3750,14 +3988,16 @@
       "tier": 421,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（砂漠の世界）"
+      "acquisitionDetail": "他国マスター（砂漠の世界）",
+      "tierExcluded": true
     },
     {
       "id": "ソードファントム",
       "name": "ソードファントム",
       "familyId": "zombie",
       "rank": "C",
-      "tier": 422
+      "tier": 422,
+      "tierExcluded": true
     },
     {
       "id": "ライバーン",
@@ -3932,14 +4172,22 @@
       "name": "だいあくまの書",
       "familyId": "material",
       "rank": "C",
-      "tier": 441
+      "tier": 441,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配合の副産物。余りスキル4種・合計200P未満"
     },
     {
       "id": "だいあくまの黙示録",
       "name": "だいあくまの黙示録",
       "familyId": "material",
       "rank": "C",
-      "tier": 442
+      "tier": 442,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配合の副産物。余りスキル4種・合計200P以上"
     },
     {
       "id": "バブルキング",
@@ -4040,14 +4288,22 @@
       "name": "ティコ",
       "familyId": "unknown",
       "rank": "C",
-      "tier": 453
+      "tier": 453,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(???系)から孵化"
     },
     {
       "id": "ククリ",
       "name": "ククリ",
       "familyId": "unknown",
       "rank": "C",
-      "tier": 454
+      "tier": 454,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "銀のタマゴ(F〜A)、および夢見るタマゴ(ゾンビ系)から孵化"
     },
     {
       "id": "まどうスライム",
@@ -4067,7 +4323,8 @@
       "tier": 456,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "宿り木の塔（クリア後）"
+      "acquisitionDetail": "宿り木の塔（クリア後）",
+      "tierExcluded": true
     },
     {
       "id": "シーホース",
@@ -4094,7 +4351,8 @@
       "name": "メガザルロック",
       "familyId": "material",
       "rank": "B",
-      "tier": 459
+      "tier": 459,
+      "tierExcluded": true
     },
     {
       "id": "コングヘッド",
@@ -4144,7 +4402,8 @@
       "tier": 464,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "宿り木の塔（クリア後） / 光あふれる地（裏ボス撃破後・光あふれる地のカギ）"
+      "acquisitionDetail": "宿り木の塔（クリア後） / 光あふれる地（裏ボス撃破後・光あふれる地のカギ）",
+      "tierExcluded": true
     },
     {
       "id": "アルゴングレート",
@@ -4154,28 +4413,35 @@
       "tier": 465,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（水の世界）"
+      "acquisitionDetail": "他国マスター（水の世界）",
+      "tierExcluded": true
     },
     {
       "id": "よろいムカデ",
       "name": "よろいムカデ",
       "familyId": "nature",
       "rank": "B",
-      "tier": 466
+      "tier": 466,
+      "tierExcluded": true
     },
     {
       "id": "ポンポコあにき",
       "name": "ポンポコあにき",
       "familyId": "beast",
       "rank": "B",
-      "tier": 467
+      "tier": 467,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(魔獣系)から孵化。カメハの不思議な冒険隊でも入手可。配合×/スカウト×/他国×。Bランク魔獣系Sサイズ"
     },
     {
       "id": "エビルチャリオット",
       "name": "エビルチャリオット",
       "familyId": "material",
       "rank": "B",
-      "tier": 468
+      "tier": 468,
+      "tierExcluded": true
     },
     {
       "id": "ボストロール",
@@ -4185,7 +4451,8 @@
       "tier": 469,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "砂漠の世界 東の洞くつ"
+      "acquisitionDetail": "砂漠の世界 東の洞くつ",
+      "tierExcluded": true
     },
     {
       "id": "キラーアンブレラ",
@@ -4199,7 +4466,11 @@
       "name": "ゆうれい船長",
       "familyId": "zombie",
       "rank": "B",
-      "tier": 471
+      "tier": 471,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(ゾンビ系)から孵化"
     },
     {
       "id": "ダークスライム",
@@ -4304,14 +4575,22 @@
       "name": "キラーポッド",
       "familyId": "material",
       "rank": "B",
-      "tier": 483
+      "tier": 483,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "天空の世界でスカウト。配合×。SP追加モンスター"
     },
     {
       "id": "ワイヤーマン",
       "name": "ワイヤーマン",
       "familyId": "material",
       "rank": "B",
-      "tier": 484
+      "tier": 484,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "転生モンスター(転生元:くみひもこぞう)。水の世界 海神の神殿1階の東。スカウトのみ。称号「鉄条」"
     },
     {
       "id": "ダークホビット",
@@ -4338,14 +4617,22 @@
       "name": "シャドーノーブル",
       "familyId": "zombie",
       "rank": "B",
-      "tier": 487
+      "tier": 487,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "転生モンスター(転生元:ボーンナイト)。宿り木の世界 宿り木の塔4階への道。スカウトのみ"
     },
     {
       "id": "ルーファ",
       "name": "ルーファ",
       "familyId": "slime",
       "rank": "B",
-      "tier": 488
+      "tier": 488,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(スライム系)から孵化"
     },
     {
       "id": "リザードファッツ",
@@ -4355,7 +4642,8 @@
       "tier": 489,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（水の世界）"
+      "acquisitionDetail": "他国マスター（水の世界）",
+      "tierExcluded": true
     },
     {
       "id": "タイラントワーム",
@@ -4365,7 +4653,8 @@
       "tier": 490,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（エスターク仲間化後にランダム出現・スカウト可）"
+      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（エスターク仲間化後にランダム出現・スカウト可）",
+      "tierExcluded": true
     },
     {
       "id": "ウイングタイガー",
@@ -4375,7 +4664,8 @@
       "tier": 491,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（エスターク仲間化後にランダム出現・スカウト可） / 他国マスター（水の世界）"
+      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（エスターク仲間化後にランダム出現・スカウト可） / 他国マスター（水の世界）",
+      "tierExcluded": true
     },
     {
       "id": "マッスルガード",
@@ -4389,14 +4679,16 @@
       "name": "デーモンレスラー",
       "familyId": "demon",
       "rank": "B",
-      "tier": 493
+      "tier": 493,
+      "tierExcluded": true
     },
     {
       "id": "ナイトリッチ",
       "name": "ナイトリッチ",
       "familyId": "zombie",
       "rank": "B",
-      "tier": 494
+      "tier": 494,
+      "tierExcluded": true
     },
     {
       "id": "ワンダーエッグ",
@@ -4417,7 +4709,8 @@
       "name": "ぶちスライムベス",
       "familyId": "slime",
       "rank": "B",
-      "tier": 497
+      "tier": 497,
+      "tierExcluded": true
     },
     {
       "id": "メダパニシックル",
@@ -4431,7 +4724,11 @@
       "name": "デスマドモアゼル",
       "familyId": "zombie",
       "rank": "B",
-      "tier": 499
+      "tier": 499,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "てんくうのカギ・魔王の城でスカウト。位階配合不可・特殊配合の組み合わせ無し"
     },
     {
       "id": "ゆめにゅうどう",
@@ -4472,28 +4769,35 @@
       "name": "スライダーヒーロー",
       "familyId": "slime",
       "rank": "B",
-      "tier": 504
+      "tier": 504,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "タマゴから孵化。カメハの不思議な冒険隊。配合×/スカウト×/他国×"
     },
     {
       "id": "トライワインダー",
       "name": "トライワインダー",
       "familyId": "dragon",
       "rank": "B",
-      "tier": 505
+      "tier": 505,
+      "tierExcluded": true
     },
     {
       "id": "ダンジョンえび",
       "name": "ダンジョンえび",
       "familyId": "nature",
       "rank": "B",
-      "tier": 506
+      "tier": 506,
+      "tierExcluded": true
     },
     {
       "id": "ヘルパイレーツ",
       "name": "ヘルパイレーツ",
       "familyId": "demon",
       "rank": "B",
-      "tier": 507
+      "tier": 507,
+      "tierExcluded": true
     },
     {
       "id": "病魔パンデルム",
@@ -4503,7 +4807,8 @@
       "tier": 508,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（雪と氷の世界）"
+      "acquisitionDetail": "他国マスター（雪と氷の世界）",
+      "tierExcluded": true
     },
     {
       "id": "ダークナイト",
@@ -4557,7 +4862,11 @@
       "name": "ドラゴンロード",
       "familyId": "dragon",
       "rank": "B",
-      "tier": 514
+      "tier": 514,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "宿り木の世界:やどりぎの塔4Fでスカウト。配合×/他国×/タマゴ×"
     },
     {
       "id": "メッサーラ",
@@ -4621,7 +4930,8 @@
       "tier": 521,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "天空の世界 フィールド"
+      "acquisitionDetail": "天空の世界 フィールド / 転生モンスター(転生元:キラーマシン)。天空の世界 魔王の城前の段差",
+      "tierExcluded": true
     },
     {
       "id": "デスタランチュラ",
@@ -4699,7 +5009,11 @@
       "name": "死神スライダーク",
       "familyId": "slime",
       "rank": "B",
-      "tier": 530
+      "tier": 530,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "タマゴから孵化。カメハの不思議な冒険隊。配合×/スカウト×/他国×。Bランクスライム系"
     },
     {
       "id": "ドラゴンライダー",
@@ -4709,7 +5023,8 @@
       "tier": 531,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "宿り木の塔（クリア後）"
+      "acquisitionDetail": "宿り木の塔（クリア後）",
+      "tierExcluded": true
     },
     {
       "id": "キラーピッケル",
@@ -4719,7 +5034,8 @@
       "tier": 532,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（雪と氷の世界）"
+      "acquisitionDetail": "他国マスター（雪と氷の世界） / 雪と氷の世界の他国マスターからスカウト",
+      "tierExcluded": true
     },
     {
       "id": "ジャミラス",
@@ -4729,7 +5045,8 @@
       "tier": 533,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（宿り木の塔）"
+      "acquisitionDetail": "他国マスター（宿り木の塔）",
+      "tierExcluded": true
     },
     {
       "id": "じごくのメンドーサ",
@@ -4739,7 +5056,8 @@
       "tier": 534,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "ピラミッド（砂漠の世界クリア後）"
+      "acquisitionDetail": "ピラミッド（砂漠の世界クリア後）",
+      "tierExcluded": true
     },
     {
       "id": "クイーンスライム",
@@ -4858,14 +5176,22 @@
       "name": "魔王の書",
       "familyId": "material",
       "rank": "B",
-      "tier": 548
+      "tier": 548,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配合の副産物。余りスキル5種以上・合計250P未満"
     },
     {
       "id": "魔王の黙示録",
       "name": "魔王の黙示録",
       "familyId": "material",
       "rank": "B",
-      "tier": 549
+      "tier": 549,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配合の副産物。余りスキル5種以上・合計250P以上"
     },
     {
       "id": "ダークキング",
@@ -4915,7 +5241,8 @@
       "tier": 554,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "天空の世界 賢者の塔"
+      "acquisitionDetail": "天空の世界 賢者の塔",
+      "tierExcluded": true
     },
     {
       "id": "ランプの魔王",
@@ -4969,42 +5296,63 @@
       "tier": 560,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（雪と氷の世界）"
+      "acquisitionDetail": "他国マスター（雪と氷の世界）",
+      "tierExcluded": true
     },
     {
       "id": "マッドハニービー",
       "name": "マッドハニービー",
       "familyId": "nature",
       "rank": "B",
-      "tier": 561
+      "tier": 561,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "天空の世界のフィールドでスカウト"
     },
     {
       "id": "少年レオソード",
       "name": "少年レオソード",
       "familyId": "unknown",
       "rank": "B",
-      "tier": 562
+      "tier": 562,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "オンライン他国マスターの乱入モンスター。および錬金カギのクリア報酬(鍵世界のマップには出現しない)。配合×"
     },
     {
       "id": "あらくれパンダ",
       "name": "あらくれパンダ",
       "familyId": "beast",
       "rank": "A",
-      "tier": 563
+      "tier": 563,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "転生モンスター(転生元:グリズリー)。雪と氷の世界 北の山前(雪)。スカウトのみ"
     },
     {
       "id": "ウルフドラゴン",
       "name": "ウルフドラゴン",
       "familyId": "dragon",
       "rank": "A",
-      "tier": 564
+      "tier": 564,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "雪と氷の世界:イーストリア前のフィールドでスカウト。SP追加モンスター"
     },
     {
       "id": "スライムファミリー",
       "name": "スライムファミリー",
       "familyId": "slime",
       "rank": "A",
-      "tier": 565
+      "tier": 565,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(スライム系)から孵化"
     },
     {
       "id": "ブラッドポリス",
@@ -5035,7 +5383,8 @@
       "name": "いなずまビリー",
       "familyId": "beast",
       "rank": "A",
-      "tier": 569
+      "tier": 569,
+      "tierExcluded": true
     },
     {
       "id": "木馬の騎士",
@@ -5063,14 +5412,16 @@
       "name": "ずしおうまる",
       "familyId": "dragon",
       "rank": "A",
-      "tier": 573
+      "tier": 573,
+      "tierExcluded": true
     },
     {
       "id": "ダークサキュバス",
       "name": "ダークサキュバス",
       "familyId": "demon",
       "rank": "A",
-      "tier": 574
+      "tier": 574,
+      "tierExcluded": true
     },
     {
       "id": "ブオーン",
@@ -5080,7 +5431,8 @@
       "tier": 575,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（エスターク仲間化後にランダム出現・スカウト可） / 他国マスター（水の世界）"
+      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（エスターク仲間化後にランダム出現・スカウト可） / 他国マスター（水の世界）",
+      "tierExcluded": true
     },
     {
       "id": "トラップボックス",
@@ -5090,14 +5442,16 @@
       "tier": 576,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（水の世界）"
+      "acquisitionDetail": "他国マスター（水の世界）",
+      "tierExcluded": true
     },
     {
       "id": "トロルボンバー",
       "name": "トロルボンバー",
       "familyId": "demon",
       "rank": "A",
-      "tier": 577
+      "tier": 577,
+      "tierExcluded": true
     },
     {
       "id": "黒竜丸",
@@ -5107,7 +5461,8 @@
       "tier": 578,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "宿り木の塔（クリア後）"
+      "acquisitionDetail": "宿り木の塔（クリア後）",
+      "tierExcluded": true
     },
     {
       "id": "サンダーバード",
@@ -5134,7 +5489,8 @@
       "tier": 581,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪と氷の世界 フィールド"
+      "acquisitionDetail": "雪と氷の世界 フィールド",
+      "tierExcluded": true
     },
     {
       "id": "ボル",
@@ -5154,7 +5510,8 @@
       "tier": 583,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（水の世界）"
+      "acquisitionDetail": "他国マスター（水の世界）",
+      "tierExcluded": true
     },
     {
       "id": "ベル",
@@ -5164,7 +5521,8 @@
       "tier": 584,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（水の世界）"
+      "acquisitionDetail": "他国マスター（水の世界） / 銀のタマゴ(F〜A)、虹のタマゴ、および夢見るタマゴ(物質系)から孵化",
+      "tierExcluded": true
     },
     {
       "id": "ブル",
@@ -5174,7 +5532,8 @@
       "tier": 585,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（水の世界）"
+      "acquisitionDetail": "他国マスター（水の世界） / 夢見るタマゴ(物質系)から孵化",
+      "tierExcluded": true
     },
     {
       "id": "魔王の使い",
@@ -5198,7 +5557,11 @@
       "name": "スライダーキッズ",
       "familyId": "slime",
       "rank": "A",
-      "tier": 588
+      "tier": 588,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "オンライン他国マスター30勝報酬"
     },
     {
       "id": "ワニバーン",
@@ -5208,14 +5571,16 @@
       "tier": 589,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（水の世界）"
+      "acquisitionDetail": "他国マスター（水の世界）",
+      "tierExcluded": true
     },
     {
       "id": "キマイラロード",
       "name": "キマイラロード",
       "familyId": "beast",
       "rank": "A",
-      "tier": 590
+      "tier": 590,
+      "tierExcluded": true
     },
     {
       "id": "シールドオーガ",
@@ -5225,7 +5590,8 @@
       "tier": 591,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "宿り木の塔（クリア後）"
+      "acquisitionDetail": "宿り木の塔（クリア後）",
+      "tierExcluded": true
     },
     {
       "id": "ライオネック",
@@ -5235,7 +5601,8 @@
       "tier": 592,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "天空の世界 フィールド"
+      "acquisitionDetail": "天空の世界 フィールド",
+      "tierExcluded": true
     },
     {
       "id": "デュラハンナイト",
@@ -5249,7 +5616,8 @@
       "name": "皇帝ガナサダイ",
       "familyId": "zombie",
       "rank": "A",
-      "tier": 594
+      "tier": 594,
+      "tierExcluded": true
     },
     {
       "id": "マスタースライム",
@@ -5276,7 +5644,11 @@
       "name": "スライムタール",
       "familyId": "slime",
       "rank": "A",
-      "tier": 597
+      "tier": 597,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "水の世界:火山島の洞くつ地下2階(マップ左上の広い場所)でスカウト。SP追加モンスター"
     },
     {
       "id": "ウルトラキメイラ",
@@ -5303,7 +5675,11 @@
       "name": "クイーンモーモン",
       "familyId": "beast",
       "rank": "A",
-      "tier": 600
+      "tier": 600,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "転生モンスター(転生元:マポレーナ)。宿り木の世界 宿り木の塔1階/塔前。スカウトのみ"
     },
     {
       "id": "怒りの魔人",
@@ -5320,7 +5696,8 @@
       "name": "黄泉の花",
       "familyId": "slime",
       "rank": "A",
-      "tier": 602
+      "tier": 602,
+      "tierExcluded": true
     },
     {
       "id": "ホエールマージ",
@@ -5388,14 +5765,20 @@
       "name": "セバスチャン",
       "familyId": "zombie",
       "rank": "A",
-      "tier": 610
+      "tier": 610,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "タマゴから孵化。カメハの不思議な冒険隊でも入手可。配合×/スカウト×/他国×。Aランクゾンビ系Sサイズ。配合先としても使用不可"
     },
     {
       "id": "カンダタ",
       "name": "カンダタ",
       "familyId": "unknown",
       "rank": "A",
-      "tier": 611
+      "tier": 611,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "カメハが連れてきたカンダタを倒すと仲間になる(オンライン他国マスター)"
     },
     {
       "id": "アサシンブロス",
@@ -5405,7 +5788,7 @@
       "tier": 612,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（水の世界）"
+      "acquisitionDetail": "他国マスター（水の世界） / 水の世界の他国マスターからスカウト。銀/虹のタマゴからも入手可"
     },
     {
       "id": "プチットガールズ",
@@ -5425,7 +5808,7 @@
       "tier": 614,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "天空の世界 フィールド"
+      "acquisitionDetail": "天空の世界 フィールド / 水の世界の他国マスターからスカウト"
     },
     {
       "id": "デスソシスト",
@@ -5463,7 +5846,10 @@
       "name": "バルザックビースト",
       "familyId": "beast",
       "rank": "A",
-      "tier": 619
+      "tier": 619,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "勝ち抜きバトルで50勝の報酬"
     },
     {
       "id": "グラコス",
@@ -5510,7 +5896,7 @@
       "tier": 624,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（雪と氷の世界）"
+      "acquisitionDetail": "他国マスター（雪と氷の世界） / 天空の世界の他国マスターからスカウト。夢見るタマゴ(自然系)からも入手可"
     },
     {
       "id": "ゴンズ",
@@ -5544,7 +5930,10 @@
       "name": "スライダーガール",
       "familyId": "slime",
       "rank": "A",
-      "tier": 628
+      "tier": 628,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "オンライン他国マスター40勝報酬"
     },
     {
       "id": "ガルーダ",
@@ -5774,7 +6163,10 @@
       "name": "ヘルクラウド",
       "familyId": "material",
       "rank": "A",
-      "tier": 654
+      "tier": 654,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "モンスター格闘場で女戦士がお見合い相手に選出。銀/虹のタマゴからも入手可"
     },
     {
       "id": "大王イカ",
@@ -5798,7 +6190,10 @@
       "name": "プチターク",
       "familyId": "unknown",
       "rank": "A",
-      "tier": 657
+      "tier": 657,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(???系)から孵化"
     },
     {
       "id": "ミルドラース",
@@ -5826,14 +6221,20 @@
       "name": "スペディオ",
       "familyId": "unknown",
       "rank": "A",
-      "tier": 661
+      "tier": 661,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "銀のタマゴ(F〜A)、きんのタマゴ、夢見るタマゴから孵化"
     },
     {
       "id": "ガルハート",
       "name": "ガルハート",
       "familyId": "unknown",
       "rank": "A",
-      "tier": 662
+      "tier": 662,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(???系)から孵化"
     },
     {
       "id": "グラブゾン",
@@ -5891,70 +6292,97 @@
       "name": "ウィンデオ",
       "familyId": "unknown",
       "rank": "A",
-      "tier": 669
+      "tier": 669,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "にじのタマゴ(A〜SS)、きんのタマゴ、夢見るタマゴから孵化"
     },
     {
       "id": "フレイシャ",
       "name": "フレイシャ",
       "familyId": "unknown",
       "rank": "A",
-      "tier": 670
+      "tier": 670,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "にじのタマゴ(A〜SS)から孵化"
     },
     {
       "id": "アックル",
       "name": "アックル",
       "familyId": "unknown",
       "rank": "A",
-      "tier": 671
+      "tier": 671,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "にじのタマゴ(A〜SS)から孵化"
     },
     {
       "id": "ガオガイヤ",
       "name": "ガオガイヤ",
       "familyId": "unknown",
       "rank": "A",
-      "tier": 672
+      "tier": 672,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "にじのタマゴ(A〜SS)から孵化"
     },
     {
       "id": "チョコゴーレム",
       "name": "チョコゴーレム",
       "familyId": "material",
       "rank": "S",
-      "tier": 673
+      "tier": 673,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "オンライン他国マスターの乱入モンスター"
     },
     {
       "id": "かくれんぼう",
       "name": "かくれんぼう",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 674
+      "tier": 674,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "きんのタマゴ(C〜S)・にじのタマゴから孵化"
     },
     {
       "id": "プチぼう",
       "name": "プチぼう",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 675
+      "tier": 675,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(???系)から孵化。またはマルタのへそで裏ボス撃破後にわるぼうに話しかける"
     },
     {
       "id": "クリスタルスライム",
       "name": "クリスタルスライム",
       "familyId": "slime",
       "rank": "S",
-      "tier": 676
+      "tier": 676,
+      "tierExcluded": true
     },
     {
       "id": "勇車スラリンガル",
       "name": "勇車スラリンガル",
       "familyId": "slime",
       "rank": "S",
-      "tier": 677
+      "tier": 677,
+      "tierExcluded": true
     },
     {
       "id": "ブラックドラゴン",
       "name": "ブラックドラゴン",
       "familyId": "dragon",
       "rank": "S",
-      "tier": 678
+      "tier": 678,
+      "tierExcluded": true
     },
     {
       "id": "ぬしさま",
@@ -5964,35 +6392,43 @@
       "tier": 679,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（雪と氷の世界）"
+      "acquisitionDetail": "他国マスター（雪と氷の世界）",
+      "tierExcluded": true
     },
     {
       "id": "怪力軍曹イボイノス",
       "name": "怪力軍曹イボイノス",
       "familyId": "nature",
       "rank": "S",
-      "tier": 680
+      "tier": 680,
+      "tierExcluded": true
     },
     {
       "id": "邪眼皇帝アウルート",
       "name": "邪眼皇帝アウルート",
       "familyId": "demon",
       "rank": "S",
-      "tier": 681
+      "tier": 681,
+      "tierExcluded": true
     },
     {
       "id": "魔剣神レパルド",
       "name": "魔剣神レパルド",
       "familyId": "beast",
       "rank": "S",
-      "tier": 682
+      "tier": 682,
+      "tierExcluded": true
     },
     {
       "id": "キラーマシン2",
       "name": "キラーマシン2",
       "familyId": "material",
       "rank": "S",
-      "tier": 683
+      "tier": 683,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "きんのタマゴ(C〜S)・にじのタマゴから孵化"
     },
     {
       "id": "アトラス",
@@ -6002,7 +6438,8 @@
       "tier": 684,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（雪と氷の世界）"
+      "acquisitionDetail": "他国マスター（雪と氷の世界）",
+      "tierExcluded": true
     },
     {
       "id": "スライダークロボ",
@@ -6012,21 +6449,27 @@
       "tier": 685,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（宿り木の塔）"
+      "acquisitionDetail": "他国マスター（宿り木の塔） / オンライン他国マスター50勝報酬以降",
+      "tierExcluded": true
     },
     {
       "id": "ギガントドラゴン",
       "name": "ギガントドラゴン",
       "familyId": "dragon",
       "rank": "S",
-      "tier": 686
+      "tier": 686,
+      "tierExcluded": true
     },
     {
       "id": "レティス",
       "name": "レティス",
       "familyId": "nature",
       "rank": "S",
-      "tier": 687
+      "tier": 687,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(???系)から孵化。カメハの不思議な冒険隊でも入手可。配合×/スカウト×/他国×/タマゴ○。Sランク自然系Gサイズ"
     },
     {
       "id": "キングレオ",
@@ -6036,7 +6479,8 @@
       "tier": 688,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（天空の世界）"
+      "acquisitionDetail": "他国マスター（天空の世界）",
+      "tierExcluded": true
     },
     {
       "id": "ダーククリスタル",
@@ -6046,7 +6490,8 @@
       "tier": 689,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪と氷の世界 雪山の氷穴"
+      "acquisitionDetail": "雪と氷の世界 雪山の氷穴",
+      "tierExcluded": true
     },
     {
       "id": "やまたのおろち",
@@ -6056,7 +6501,8 @@
       "tier": 690,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（エスターク仲間化後にランダム出現・スカウト可）"
+      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（エスターク仲間化後にランダム出現・スカウト可）",
+      "tierExcluded": true
     },
     {
       "id": "ローズバトラー",
@@ -6066,21 +6512,24 @@
       "tier": 691,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（雪と氷の世界）"
+      "acquisitionDetail": "他国マスター（雪と氷の世界） / きんのタマゴ(C〜S)・にじのタマゴから孵化",
+      "tierExcluded": true
     },
     {
       "id": "おにこんぼう",
       "name": "おにこんぼう",
       "familyId": "beast",
       "rank": "S",
-      "tier": 692
+      "tier": 692,
+      "tierExcluded": true
     },
     {
       "id": "ゴールデンゴーレム",
       "name": "ゴールデンゴーレム",
       "familyId": "material",
       "rank": "S",
-      "tier": 693
+      "tier": 693,
+      "tierExcluded": true
     },
     {
       "id": "アクバー",
@@ -6090,28 +6539,35 @@
       "tier": 694,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（天空の世界）"
+      "acquisitionDetail": "他国マスター（天空の世界）",
+      "tierExcluded": true
     },
     {
       "id": "ワイトキング",
       "name": "ワイトキング",
       "familyId": "zombie",
       "rank": "S",
-      "tier": 695
+      "tier": 695,
+      "tierExcluded": true
     },
     {
       "id": "スラ忍シルバー",
       "name": "スラ忍シルバー",
       "familyId": "slime",
       "rank": "S",
-      "tier": 696
+      "tier": 696,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(スライム系)から孵化"
     },
     {
       "id": "軍神トガミヒメ",
       "name": "軍神トガミヒメ",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 697
+      "tier": 697,
+      "tierExcluded": true
     },
     {
       "id": "セルゲイナス",
@@ -6121,14 +6577,19 @@
       "tier": 698,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "宿り木の塔（クリア後）"
+      "acquisitionDetail": "宿り木の塔（クリア後）",
+      "tierExcluded": true
     },
     {
       "id": "シルバリヌス",
       "name": "シルバリヌス",
       "familyId": "dragon",
       "rank": "S",
-      "tier": 699
+      "tier": 699,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "転生モンスター(転生元:セルゲイナス)。宿り木の世界 宿り木の塔5階への道"
     },
     {
       "id": "ホーンビートル",
@@ -6138,7 +6599,8 @@
       "tier": 700,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（天空の世界）"
+      "acquisitionDetail": "他国マスター（天空の世界） / きんのタマゴ(C〜S)・にじのタマゴから孵化",
+      "tierExcluded": true
     },
     {
       "id": "にじくじゃく",
@@ -6148,7 +6610,8 @@
       "tier": 701,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "宿り木の塔（クリア後）"
+      "acquisitionDetail": "宿り木の塔（クリア後）",
+      "tierExcluded": true
     },
     {
       "id": "デスマシーン",
@@ -6158,14 +6621,16 @@
       "tier": 702,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（天空の世界）"
+      "acquisitionDetail": "他国マスター（天空の世界）",
+      "tierExcluded": true
     },
     {
       "id": "死神の騎士",
       "name": "死神の騎士",
       "familyId": "demon",
       "rank": "S",
-      "tier": 703
+      "tier": 703,
+      "tierExcluded": true
     },
     {
       "id": "バラモスゾンビ",
@@ -6175,21 +6640,27 @@
       "tier": 704,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（宿り木の塔）"
+      "acquisitionDetail": "他国マスター（宿り木の塔）",
+      "tierExcluded": true
     },
     {
       "id": "スラ忍ゴールド",
       "name": "スラ忍ゴールド",
       "familyId": "slime",
       "rank": "S",
-      "tier": 705
+      "tier": 705,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(スライム系)から孵化"
     },
     {
       "id": "武神クニクズシ",
       "name": "武神クニクズシ",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 706
+      "tier": 706,
+      "tierExcluded": true
     },
     {
       "id": "ガマデウス",
@@ -6199,21 +6670,24 @@
       "tier": 707,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（天空の世界）"
+      "acquisitionDetail": "他国マスター（天空の世界）",
+      "tierExcluded": true
     },
     {
       "id": "ドラゴンマシン",
       "name": "ドラゴンマシン",
       "familyId": "material",
       "rank": "S",
-      "tier": 708
+      "tier": 708,
+      "tierExcluded": true
     },
     {
       "id": "エビルプリースト",
       "name": "エビルプリースト",
       "familyId": "demon",
       "rank": "S",
-      "tier": 709
+      "tier": 709,
+      "tierExcluded": true
     },
     {
       "id": "名をうばわれし王",
@@ -6223,14 +6697,19 @@
       "tier": 710,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（天空の世界）"
+      "acquisitionDetail": "他国マスター（天空の世界）",
+      "tierExcluded": true
     },
     {
       "id": "キャットリベリオ",
       "name": "キャットリベリオ",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 711
+      "tier": 711,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "きんのタマゴ(C〜S)・にじのタマゴから孵化"
     },
     {
       "id": "スライムマデュラ",
@@ -6240,14 +6719,16 @@
       "tier": 712,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（天空の世界）"
+      "acquisitionDetail": "他国マスター（天空の世界）",
+      "tierExcluded": true
     },
     {
       "id": "はくりゅうおう",
       "name": "はくりゅうおう",
       "familyId": "dragon",
       "rank": "S",
-      "tier": 713
+      "tier": 713,
+      "tierExcluded": true
     },
     {
       "id": "さそりアーマー",
@@ -6257,7 +6738,8 @@
       "tier": 714,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "宿り木の塔（クリア後）"
+      "acquisitionDetail": "宿り木の塔（クリア後）",
+      "tierExcluded": true
     },
     {
       "id": "バルザック",
@@ -6267,14 +6749,16 @@
       "tier": 715,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（天空の世界）"
+      "acquisitionDetail": "他国マスター（天空の世界）",
+      "tierExcluded": true
     },
     {
       "id": "キラーマシン3",
       "name": "キラーマシン3",
       "familyId": "material",
       "rank": "S",
-      "tier": 716
+      "tier": 716,
+      "tierExcluded": true
     },
     {
       "id": "グリフィンクス",
@@ -6284,77 +6768,88 @@
       "tier": 717,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "砂漠の世界 フィールド"
+      "acquisitionDetail": "砂漠の世界 フィールド / 砂漠の世界 ピラミッド前のスフィンクス像に扮して出現",
+      "tierExcluded": true
     },
     {
       "id": "ラザマナス",
       "name": "ラザマナス",
       "familyId": "zombie",
       "rank": "S",
-      "tier": 718
+      "tier": 718,
+      "tierExcluded": true
     },
     {
       "id": "ヘルゴラゴ",
       "name": "ヘルゴラゴ",
       "familyId": "beast",
       "rank": "S",
-      "tier": 719
+      "tier": 719,
+      "tierExcluded": true
     },
     {
       "id": "キングアズライル",
       "name": "キングアズライル",
       "familyId": "beast",
       "rank": "S",
-      "tier": 720
+      "tier": 720,
+      "tierExcluded": true
     },
     {
       "id": "ダークマター",
       "name": "ダークマター",
       "familyId": "material",
       "rank": "S",
-      "tier": 721
+      "tier": 721,
+      "tierExcluded": true
     },
     {
       "id": "ポセイドン",
       "name": "ポセイドン",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 722
+      "tier": 722,
+      "tierExcluded": true
     },
     {
       "id": "タイタニス",
       "name": "タイタニス",
       "familyId": "demon",
       "rank": "S",
-      "tier": 723
+      "tier": 723,
+      "tierExcluded": true
     },
     {
       "id": "メルトア",
       "name": "メルトア",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 724
+      "tier": 724,
+      "tierExcluded": true
     },
     {
       "id": "フールフール",
       "name": "フールフール",
       "familyId": "dragon",
       "rank": "S",
-      "tier": 725
+      "tier": 725,
+      "tierExcluded": true
     },
     {
       "id": "衝撃のしっぽ団",
       "name": "衝撃のしっぽ団",
       "familyId": "beast",
       "rank": "S",
-      "tier": 726
+      "tier": 726,
+      "tierExcluded": true
     },
     {
       "id": "ゆうれい船",
       "name": "ゆうれい船",
       "familyId": "zombie",
       "rank": "S",
-      "tier": 727
+      "tier": 727,
+      "tierExcluded": true
     },
     {
       "id": "キングモーモン",
@@ -6364,14 +6859,16 @@
       "tier": 728,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（天空の世界）"
+      "acquisitionDetail": "他国マスター（天空の世界） / 天空の世界の他国マスターからスカウト",
+      "tierExcluded": true
     },
     {
       "id": "バベルボブル",
       "name": "バベルボブル",
       "familyId": "material",
       "rank": "S",
-      "tier": 729
+      "tier": 729,
+      "tierExcluded": true
     },
     {
       "id": "ヘルバトラー",
@@ -6381,14 +6878,16 @@
       "tier": 730,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（宿り木の塔）"
+      "acquisitionDetail": "他国マスター（宿り木の塔）",
+      "tierExcluded": true
     },
     {
       "id": "シャンタク",
       "name": "シャンタク",
       "familyId": "dragon",
       "rank": "S",
-      "tier": 731
+      "tier": 731,
+      "tierExcluded": true
     },
     {
       "id": "魔導鬼べドラー",
@@ -6398,7 +6897,8 @@
       "tier": 732,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（天空の世界）"
+      "acquisitionDetail": "他国マスター（天空の世界）",
+      "tierExcluded": true
     },
     {
       "id": "若葉の精霊",
@@ -6408,7 +6908,8 @@
       "tier": 733,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（天空の世界）"
+      "acquisitionDetail": "他国マスター（天空の世界） / 天空の世界の他国マスターからスカウト(ほぼ他の入手手段なし)",
+      "tierExcluded": true
     },
     {
       "id": "大怨霊マアモン",
@@ -6418,21 +6919,27 @@
       "tier": 734,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（天空の世界）"
+      "acquisitionDetail": "他国マスター（天空の世界） / 天空の世界の他国マスターからスカウト(ほぼ他の入手手段なし)",
+      "tierExcluded": true
     },
     {
       "id": "怪獣プスゴン",
       "name": "怪獣プスゴン",
       "familyId": "dragon",
       "rank": "S",
-      "tier": 735
+      "tier": 735,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "カメハの不思議な冒険隊。およびオンライン他国マスターの乱入モンスター。配合×。Sランクドラゴン系Mサイズ。3DS版のSQEX(カメハ)乱入戦から経路変更"
     },
     {
       "id": "大地の竜バウギア",
       "name": "大地の竜バウギア",
       "familyId": "dragon",
       "rank": "S",
-      "tier": 736
+      "tier": 736,
+      "tierExcluded": true
     },
     {
       "id": "悪魔ザイガス",
@@ -6442,42 +6949,51 @@
       "tier": 737,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（天空の世界）"
+      "acquisitionDetail": "他国マスター（天空の世界） / 天空の世界の他国マスターからスカウト(ほぼ他の入手手段なし)",
+      "tierExcluded": true
     },
     {
       "id": "ウルベア魔神兵",
       "name": "ウルベア魔神兵",
       "familyId": "material",
       "rank": "S",
-      "tier": 738
+      "tier": 738,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "勝ち抜きバトルで100勝の報酬"
     },
     {
       "id": "リーズレット",
       "name": "リーズレット",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 739
+      "tier": 739,
+      "tierExcluded": true
     },
     {
       "id": "水竜ギルギッシュ",
       "name": "水竜ギルギッシュ",
       "familyId": "dragon",
       "rank": "S",
-      "tier": 740
+      "tier": 740,
+      "tierExcluded": true
     },
     {
       "id": "妖剣士オーレン",
       "name": "妖剣士オーレン",
       "familyId": "zombie",
       "rank": "S",
-      "tier": 741
+      "tier": 741,
+      "tierExcluded": true
     },
     {
       "id": "魔竜ネドラ",
       "name": "魔竜ネドラ",
       "familyId": "dragon",
       "rank": "S",
-      "tier": 742
+      "tier": 742,
+      "tierExcluded": true
     },
     {
       "id": "りゅうおう",
@@ -6487,14 +7003,16 @@
       "tier": 743,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（宿り木の塔）"
+      "acquisitionDetail": "他国マスター（宿り木の塔）",
+      "tierExcluded": true
     },
     {
       "id": "ハーゴン",
       "name": "ハーゴン",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 744
+      "tier": 744,
+      "tierExcluded": true
     },
     {
       "id": "バラモス",
@@ -6504,7 +7022,8 @@
       "tier": 745,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（宿り木の塔）"
+      "acquisitionDetail": "他国マスター（宿り木の塔）",
+      "tierExcluded": true
     },
     {
       "id": "ムドー",
@@ -6514,35 +7033,46 @@
       "tier": 746,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（宿り木の塔）"
+      "acquisitionDetail": "他国マスター（宿り木の塔）",
+      "tierExcluded": true
     },
     {
       "id": "ドーク",
       "name": "ドーク",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 747
+      "tier": 747,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "モンスター格闘場で日替わりイベントバトル7日目クリア後に出現"
     },
     {
       "id": "魔王デスタムーア",
       "name": "魔王デスタムーア",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 748
+      "tier": 748,
+      "tierExcluded": true
     },
     {
       "id": "フォロボシータ",
       "name": "フォロボシータ",
       "familyId": "demon",
       "rank": "S",
-      "tier": 749
+      "tier": 749,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "通信お見合い水曜日、ストーリークリア後に5匹目に追加"
     },
     {
       "id": "破壊神シドー",
       "name": "破壊神シドー",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 750
+      "tier": 750,
+      "tierExcluded": true
     },
     {
       "id": "フォロボス",
@@ -6552,21 +7082,27 @@
       "tier": 751,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（宿り木の塔）"
+      "acquisitionDetail": "他国マスター（宿り木の塔）",
+      "tierExcluded": true
     },
     {
       "id": "キャプテンクロウ",
       "name": "キャプテンクロウ",
       "familyId": "zombie",
       "rank": "S",
-      "tier": 752
+      "tier": 752,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "水の世界の幽霊船(夜限定)クリア後に出現、倒すと仲間に"
     },
     {
       "id": "グランスライム",
       "name": "グランスライム",
       "familyId": "slime",
       "rank": "S",
-      "tier": 753
+      "tier": 753,
+      "tierExcluded": true
     },
     {
       "id": "スラキャンサー",
@@ -6576,7 +7112,8 @@
       "tier": 754,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（エスターク仲間化後にランダム出現・スカウト可）"
+      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（エスターク仲間化後にランダム出現・スカウト可）",
+      "tierExcluded": true
     },
     {
       "id": "オセアーノン",
@@ -6586,7 +7123,8 @@
       "tier": 755,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（天空の世界）"
+      "acquisitionDetail": "他国マスター（天空の世界）",
+      "tierExcluded": true
     },
     {
       "id": "ドルマゲス",
@@ -6596,14 +7134,16 @@
       "tier": 756,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（宿り木の塔）"
+      "acquisitionDetail": "他国マスター（宿り木の塔）",
+      "tierExcluded": true
     },
     {
       "id": "キラーマジンガ",
       "name": "キラーマジンガ",
       "familyId": "material",
       "rank": "S",
-      "tier": 757
+      "tier": 757,
+      "tierExcluded": true
     },
     {
       "id": "ゴールデンスライム",
@@ -6613,14 +7153,16 @@
       "tier": 758,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（天空の世界）"
+      "acquisitionDetail": "他国マスター（天空の世界）",
+      "tierExcluded": true
     },
     {
       "id": "暗黒皇帝ガナサダイ",
       "name": "暗黒皇帝ガナサダイ",
       "familyId": "zombie",
       "rank": "S",
-      "tier": 759
+      "tier": 759,
+      "tierExcluded": true
     },
     {
       "id": "暗黒の魔神",
@@ -6630,168 +7172,210 @@
       "tier": 760,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（宿り木の塔）"
+      "acquisitionDetail": "他国マスター（宿り木の塔）",
+      "tierExcluded": true
     },
     {
       "id": "カンダタワイフ",
       "name": "カンダタワイフ",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 761
+      "tier": 761,
+      "tierExcluded": true
     },
     {
       "id": "カンダタおやぶん",
       "name": "カンダタおやぶん",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 762
+      "tier": 762,
+      "tierExcluded": true
     },
     {
       "id": "エッグラ＆チキーラ",
       "name": "エッグラ＆チキーラ",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 763
+      "tier": 763,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "通信お見合い日曜日、ストーリークリア後に5匹目に追加"
     },
     {
       "id": "カカロン",
       "name": "カカロン",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 764
+      "tier": 764,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(???系)から孵化。カメハの不思議な冒険隊でも入手可。配合×。Sランク???系Mサイズ"
     },
     {
       "id": "クシャラミ",
       "name": "クシャラミ",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 765
+      "tier": 765,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(???系)から孵化。カメハの不思議な冒険隊でも入手可。配合×/スカウト×/他国×。Sランク???系Mサイズ"
     },
     {
       "id": "バルバルー",
       "name": "バルバルー",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 766
+      "tier": 766,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "金のタマゴ・虹のタマゴから孵化。カメハの不思議な冒険隊でも入手可。配合×/スカウト×/他国×"
     },
     {
       "id": "ドメディ",
       "name": "ドメディ",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 767
+      "tier": 767,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "きんのタマゴ(C〜S)・にじのタマゴから孵化"
     },
     {
       "id": "Vロン",
       "name": "Vロン",
       "familyId": "dragon",
       "rank": "S",
-      "tier": 768
+      "tier": 768,
+      "tierExcluded": true
     },
     {
       "id": "ニジゴロン",
       "name": "ニジゴロン",
       "familyId": "slime",
       "rank": "S",
-      "tier": 769
+      "tier": 769,
+      "tierExcluded": true
     },
     {
       "id": "モンスターパレード",
       "name": "モンスターパレード",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 770
+      "tier": 770,
+      "tierExcluded": true
     },
     {
       "id": "覇海軍王ジャコラ",
       "name": "覇海軍王ジャコラ",
       "familyId": "dragon",
       "rank": "S",
-      "tier": 771
+      "tier": 771,
+      "tierExcluded": true
     },
     {
       "id": "邪竜軍王ガリンガ",
       "name": "邪竜軍王ガリンガ",
       "familyId": "dragon",
       "rank": "S",
-      "tier": 772
+      "tier": 772,
+      "tierExcluded": true
     },
     {
       "id": "屍騎軍王ゾルデ",
       "name": "屍騎軍王ゾルデ",
       "familyId": "zombie",
       "rank": "S",
-      "tier": 773
+      "tier": 773,
+      "tierExcluded": true
     },
     {
       "id": "妖魔軍王ブギー",
       "name": "妖魔軍王ブギー",
       "familyId": "demon",
       "rank": "S",
-      "tier": 774
+      "tier": 774,
+      "tierExcluded": true
     },
     {
       "id": "鉄鬼軍王キラゴルド",
       "name": "鉄鬼軍王キラゴルド",
       "familyId": "material",
       "rank": "S",
-      "tier": 775
+      "tier": 775,
+      "tierExcluded": true
     },
     {
       "id": "魔軍司令ホメロス",
       "name": "魔軍司令ホメロス",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 776
+      "tier": 776,
+      "tierExcluded": true
     },
     {
       "id": "てんのもんばん",
       "name": "てんのもんばん",
       "familyId": "material",
       "rank": "SS",
-      "tier": 777
+      "tier": 777,
+      "tierExcluded": true
     },
     {
       "id": "砂塵の幻馬",
       "name": "砂塵の幻馬",
       "familyId": "beast",
       "rank": "SS",
-      "tier": 778
+      "tier": 778,
+      "tierExcluded": true
     },
     {
       "id": "キングホイミスライム",
       "name": "キングホイミスライム",
       "familyId": "slime",
       "rank": "SS",
-      "tier": 779
+      "tier": 779,
+      "tierExcluded": true
     },
     {
       "id": "キングスペーディオ",
       "name": "キングスペーディオ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 780
+      "tier": 780,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "神獣配合で作成可(トランプ組神獣×自然系Sランク以上)。他に錬金カギのクリア報酬、わくわくたまご、オンライン他国マスターの乱入(DQMジョーカー2主人公/DQMジョーカー1主人公)"
     },
     {
       "id": "クインガルハート",
       "name": "クインガルハート",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 781
+      "tier": 781,
+      "tierExcluded": true
     },
     {
       "id": "グラブゾンジャック",
       "name": "グラブゾンジャック",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 782
+      "tier": 782,
+      "tierExcluded": true
     },
     {
       "id": "ディアノーグエース",
       "name": "ディアノーグエース",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 783
+      "tier": 783,
+      "tierExcluded": true
     },
     {
       "id": "スーパーキラーマシン",
@@ -6801,35 +7385,43 @@
       "tier": 784,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "光あふれる地（裏ボス撃破後・光あふれる地のカギ） / 他国マスター（宿り木の塔）"
+      "acquisitionDetail": "光あふれる地（裏ボス撃破後・光あふれる地のカギ） / 他国マスター（宿り木の塔）",
+      "tierExcluded": true
     },
     {
       "id": "カンダタレディース",
       "name": "カンダタレディース",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 785
+      "tier": 785,
+      "tierExcluded": true
     },
     {
       "id": "スラブラスター",
       "name": "スラブラスター",
       "familyId": "slime",
       "rank": "SS",
-      "tier": 786
+      "tier": 786,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "天空の世界ヒターノの町東の小島でクリア後に出現"
     },
     {
       "id": "ジェノダーク",
       "name": "ジェノダーク",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 787
+      "tier": 787,
+      "tierExcluded": true
     },
     {
       "id": "メタルスコーピオン",
       "name": "メタルスコーピオン",
       "familyId": "nature",
       "rank": "SS",
-      "tier": 788
+      "tier": 788,
+      "tierExcluded": true
     },
     {
       "id": "レオパルド",
@@ -6839,7 +7431,8 @@
       "tier": 789,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（宿り木の塔）"
+      "acquisitionDetail": "他国マスター（宿り木の塔）",
+      "tierExcluded": true
     },
     {
       "id": "ギガデーモン",
@@ -6849,35 +7442,43 @@
       "tier": 790,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（宿り木の塔）"
+      "acquisitionDetail": "他国マスター（宿り木の塔）",
+      "tierExcluded": true
     },
     {
       "id": "キングヒドラ",
       "name": "キングヒドラ",
       "familyId": "dragon",
       "rank": "SS",
-      "tier": 791
+      "tier": 791,
+      "tierExcluded": true
     },
     {
       "id": "スライダーキング",
       "name": "スライダーキング",
       "familyId": "slime",
       "rank": "SS",
-      "tier": 792
+      "tier": 792,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "オンライン他国マスター60勝以降、ランダムで獲得"
     },
     {
       "id": "カンダタロックス",
       "name": "カンダタロックス",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 793
+      "tier": 793,
+      "tierExcluded": true
     },
     {
       "id": "カンダタセブン",
       "name": "カンダタセブン",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 794
+      "tier": 794,
+      "tierExcluded": true
     },
     {
       "id": "ダイヤモンドスライム",
@@ -6887,231 +7488,300 @@
       "tier": 795,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "天空の世界 フィールド（隕石から稀に出現）"
+      "acquisitionDetail": "天空の世界 フィールド（隕石から稀に出現）",
+      "tierExcluded": true
     },
     {
       "id": "デスピサロ",
       "name": "デスピサロ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 796
+      "tier": 796,
+      "tierExcluded": true
     },
     {
       "id": "魔王ミルドラース",
       "name": "魔王ミルドラース",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 797
+      "tier": 797,
+      "tierExcluded": true
     },
     {
       "id": "竜王",
       "name": "竜王",
       "familyId": "dragon",
       "rank": "SS",
-      "tier": 798
+      "tier": 798,
+      "tierExcluded": true
     },
     {
       "id": "スラリン船",
       "name": "スラリン船",
       "familyId": "slime",
       "rank": "SS",
-      "tier": 799
+      "tier": 799,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "にじのタマゴ(A〜SS)から孵化。カメハの不思議な冒険隊では入手不可(SSランクのため)"
     },
     {
       "id": "スライバ船",
       "name": "スライバ船",
       "familyId": "slime",
       "rank": "SS",
-      "tier": 800
+      "tier": 800,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "にじのタマゴ(A〜SS)から孵化"
     },
     {
       "id": "魔王ジェイム",
       "name": "魔王ジェイム",
       "familyId": "dragon",
       "rank": "SS",
-      "tier": 801
+      "tier": 801,
+      "tierExcluded": true
     },
     {
       "id": "トロデ",
       "name": "トロデ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 802
+      "tier": 802,
+      "tierExcluded": true
     },
     {
       "id": "魔壺インヘーラー",
       "name": "魔壺インヘーラー",
       "familyId": "material",
       "rank": "SS",
-      "tier": 803
+      "tier": 803,
+      "tierExcluded": true
     },
     {
       "id": "魔戦車ダビド",
       "name": "魔戦車ダビド",
       "familyId": "material",
       "rank": "SS",
-      "tier": 804
+      "tier": 804,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "にじのタマゴのみ。虹のタマゴは水・土・日の通信ショップで150,000Gで購入可。Ver.1.0.1(2020/9/11)以降に入手可能化。配合×/スカウト×/他国×。SSランク物質系Gサイズ"
     },
     {
       "id": "魔戦士ホゲイラ",
       "name": "魔戦士ホゲイラ",
       "familyId": "nature",
       "rank": "SS",
-      "tier": 805
+      "tier": 805,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "錬金カギ限定。プラチナの鍵を素材に、前半キーワードを各系統に関する名称、後半を「鉄条」に設定して錬金"
     },
     {
       "id": "魔戦士ヴェーラ",
       "name": "魔戦士ヴェーラ",
       "familyId": "beast",
       "rank": "SS",
-      "tier": 806
+      "tier": 806,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "錬金カギ限定。プラチナの鍵、後半キーワード「鉄条」"
     },
     {
       "id": "魔戦士アルゴ",
       "name": "魔戦士アルゴ",
       "familyId": "demon",
       "rank": "SS",
-      "tier": 807
+      "tier": 807,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "錬金カギ限定。プラチナの鍵、後半キーワード「鉄条」"
     },
     {
       "id": "魔戦士サイフォン",
       "name": "魔戦士サイフォン",
       "familyId": "zombie",
       "rank": "SS",
-      "tier": 808
+      "tier": 808,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "錬金カギ限定。プラチナの鍵、後半キーワード「鉄条」"
     },
     {
       "id": "魔戦士ルギウス",
       "name": "魔戦士ルギウス",
       "familyId": "dragon",
       "rank": "SS",
-      "tier": 809
+      "tier": 809,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "錬金カギ(プラチナの鍵/「鉄条」)。配合でも入手可"
     },
     {
       "id": "魔戦士メイザー",
       "name": "魔戦士メイザー",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 810
+      "tier": 810,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "錬金カギ(プラチナの鍵/「鉄条」)。配合でも入手可"
     },
     {
       "id": "妖魔ジュリアンテ",
       "name": "妖魔ジュリアンテ",
       "familyId": "beast",
       "rank": "SS",
-      "tier": 811
+      "tier": 811,
+      "tierExcluded": true
     },
     {
       "id": "魔軍師イッド",
       "name": "魔軍師イッド",
       "familyId": "dragon",
       "rank": "SS",
-      "tier": 812
+      "tier": 812,
+      "tierExcluded": true
     },
     {
       "id": "怪蟲アラグネ",
       "name": "怪蟲アラグネ",
       "familyId": "nature",
       "rank": "SS",
-      "tier": 813
+      "tier": 813,
+      "tierExcluded": true
     },
     {
       "id": "呪術師マリーン",
       "name": "呪術師マリーン",
       "familyId": "demon",
       "rank": "SS",
-      "tier": 814
+      "tier": 814,
+      "tierExcluded": true
     },
     {
       "id": "暴君バサグランデ",
       "name": "暴君バサグランデ",
       "familyId": "beast",
       "rank": "SS",
-      "tier": 815
+      "tier": 815,
+      "tierExcluded": true
     },
     {
       "id": "天魔クァバルナ",
       "name": "天魔クァバルナ",
       "familyId": "demon",
       "rank": "SS",
-      "tier": 816
+      "tier": 816,
+      "tierExcluded": true
     },
     {
       "id": "神殿レイダメテス",
       "name": "神殿レイダメテス",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 817
+      "tier": 817,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "にじのタマゴ(A〜SS)から孵化。カメハの不思議な冒険隊では入手不可(SSランクのため)"
     },
     {
       "id": "守護者ラズバーン",
       "name": "守護者ラズバーン",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 818
+      "tier": 818,
+      "tierExcluded": true
     },
     {
       "id": "オリハルゴン",
       "name": "オリハルゴン",
       "familyId": "dragon",
       "rank": "SS",
-      "tier": 819
+      "tier": 819,
+      "tierExcluded": true
     },
     {
       "id": "リバイアさま",
       "name": "リバイアさま",
       "familyId": "dragon",
       "rank": "SS",
-      "tier": 820
+      "tier": 820,
+      "tierExcluded": true
     },
     {
       "id": "マンモデウス",
       "name": "マンモデウス",
       "familyId": "beast",
       "rank": "SS",
-      "tier": 821
+      "tier": 821,
+      "tierExcluded": true
     },
     {
       "id": "竜皇帝バルグディス",
       "name": "竜皇帝バルグディス",
       "familyId": "dragon",
       "rank": "SS",
-      "tier": 822
+      "tier": 822,
+      "tierExcluded": true
     },
     {
       "id": "ゴールドマジンガ",
       "name": "ゴールドマジンガ",
       "familyId": "material",
       "rank": "SS",
-      "tier": 823
+      "tier": 823,
+      "tierExcluded": true
     },
     {
       "id": "ワルぼう",
       "name": "ワルぼう",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 824
+      "tier": 824,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "にじのタマゴ(A〜SS)から孵化"
     },
     {
       "id": "ヨッチーズ",
       "name": "ヨッチーズ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 825
+      "tier": 825,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "勝ち抜きバトルで30勝の報酬"
     },
     {
       "id": "ガルマッゾ",
       "name": "ガルマッゾ",
       "familyId": "zombie",
       "rank": "SS",
-      "tier": 826
+      "tier": 826,
+      "tierExcluded": true
     },
     {
       "id": "大魔王ゾーマ",
       "name": "大魔王ゾーマ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 827
+      "tier": 827,
+      "tierExcluded": true
     },
     {
       "id": "はぐれメタルキング",
@@ -7121,56 +7791,67 @@
       "tier": 828,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（宿り木の塔）"
+      "acquisitionDetail": "他国マスター（宿り木の塔）",
+      "tierExcluded": true
     },
     {
       "id": "かみさま",
       "name": "かみさま",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 829
+      "tier": 829,
+      "tierExcluded": true
     },
     {
       "id": "わたぼう",
       "name": "わたぼう",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 830
+      "tier": 830,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "オンライン他国マスターの乱入モンスター"
     },
     {
       "id": "エリスグール",
       "name": "エリスグール",
       "familyId": "material",
       "rank": "SS",
-      "tier": 831
+      "tier": 831,
+      "tierExcluded": true
     },
     {
       "id": "大魔王デスタムーア",
       "name": "大魔王デスタムーア",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 832
+      "tier": 832,
+      "tierExcluded": true
     },
     {
       "id": "邪獣ヒヒュルデ",
       "name": "邪獣ヒヒュルデ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 833
+      "tier": 833,
+      "tierExcluded": true
     },
     {
       "id": "メタルスター",
       "name": "メタルスター",
       "familyId": "slime",
       "rank": "SS",
-      "tier": 834
+      "tier": 834,
+      "tierExcluded": true
     },
     {
       "id": "ファイナルウェポン",
       "name": "ファイナルウェポン",
       "familyId": "material",
       "rank": "SS",
-      "tier": 835
+      "tier": 835,
+      "tierExcluded": true
     },
     {
       "id": "バルボロス",
@@ -7180,7 +7861,8 @@
       "tier": 836,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（宿り木の塔）"
+      "acquisitionDetail": "他国マスター（宿り木の塔） / 宿り木の世界の他国マスターからスカウト。夢見るタマゴ(ドラゴン系)からも入手可",
+      "tierExcluded": true
     },
     {
       "id": "グレイナル",
@@ -7190,21 +7872,24 @@
       "tier": 837,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "他国マスター（宿り木の塔）"
+      "acquisitionDetail": "他国マスター（宿り木の塔） / 宿り木の世界の他国マスターからスカウト",
+      "tierExcluded": true
     },
     {
       "id": "エグドラシル",
       "name": "エグドラシル",
       "familyId": "nature",
       "rank": "SS",
-      "tier": 838
+      "tier": 838,
+      "tierExcluded": true
     },
     {
       "id": "マガルギ",
       "name": "マガルギ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 839
+      "tier": 839,
+      "tierExcluded": true
     },
     {
       "id": "サージタウス",
@@ -7214,119 +7899,136 @@
       "tier": 840,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（エスターク仲間化後にランダム出現・スカウト可）"
+      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（エスターク仲間化後にランダム出現・スカウト可）",
+      "tierExcluded": true
     },
     {
       "id": "魔勇者アンルシア",
       "name": "魔勇者アンルシア",
       "familyId": "unknown",
       "rank": "S",
-      "tier": 841
+      "tier": 841,
+      "tierExcluded": true
     },
     {
       "id": "魔王オルゴデミーラ",
       "name": "魔王オルゴデミーラ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 842
+      "tier": 842,
+      "tierExcluded": true
     },
     {
       "id": "ガーディス",
       "name": "ガーディス",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 843
+      "tier": 843,
+      "tierExcluded": true
     },
     {
       "id": "闇竜シャムダ",
       "name": "闇竜シャムダ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 844
+      "tier": 844,
+      "tierExcluded": true
     },
     {
       "id": "神竜",
       "name": "神竜",
       "familyId": "dragon",
       "rank": "SS",
-      "tier": 845
+      "tier": 845,
+      "tierExcluded": true
     },
     {
       "id": "トーポ",
       "name": "トーポ",
       "familyId": "nature",
       "rank": "SS",
-      "tier": 846
+      "tier": 846,
+      "tierExcluded": true
     },
     {
       "id": "絶望と憎悪の魔宮",
       "name": "絶望と憎悪の魔宮",
       "familyId": "material",
       "rank": "SS",
-      "tier": 847
+      "tier": 847,
+      "tierExcluded": true
     },
     {
       "id": "ラプソーン",
       "name": "ラプソーン",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 848
+      "tier": 848,
+      "tierExcluded": true
     },
     {
       "id": "メタルゴッデス",
       "name": "メタルゴッデス",
       "familyId": "slime",
       "rank": "SS",
-      "tier": 849
+      "tier": 849,
+      "tierExcluded": true
     },
     {
       "id": "皇帝ウィンディオ",
       "name": "皇帝ウィンディオ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 850
+      "tier": 850,
+      "tierExcluded": true
     },
     {
       "id": "女帝フレイシャ",
       "name": "女帝フレイシャ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 851
+      "tier": 851,
+      "tierExcluded": true
     },
     {
       "id": "戦帝アックル",
       "name": "戦帝アックル",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 852
+      "tier": 852,
+      "tierExcluded": true
     },
     {
       "id": "義帝ガオガイヤ",
       "name": "義帝ガオガイヤ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 853
+      "tier": 853,
+      "tierExcluded": true
     },
     {
       "id": "じげんりゅう",
       "name": "じげんりゅう",
       "familyId": "dragon",
       "rank": "SS",
-      "tier": 854
+      "tier": 854,
+      "tierExcluded": true
     },
     {
       "id": "海王神",
       "name": "海王神",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 855
+      "tier": 855,
+      "tierExcluded": true
     },
     {
       "id": "真魔王ザラーム",
       "name": "真魔王ザラーム",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 856
+      "tier": 856,
+      "tierExcluded": true
     },
     {
       "id": "エスターク",
@@ -7336,329 +8038,379 @@
       "tier": 857,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（裏ボス撃破後／10ターン以内撃破で仲間化）"
+      "acquisitionDetail": "さいごのカギ・溶岩の洞くつ（裏ボス撃破後／10ターン以内撃破で仲間化）",
+      "tierExcluded": true
     },
     {
       "id": "ダークドレアム",
       "name": "ダークドレアム",
       "familyId": "demon",
       "rank": "SS",
-      "tier": 858
+      "tier": 858,
+      "tierExcluded": true
     },
     {
       "id": "暗黒神ラプソーン",
       "name": "暗黒神ラプソーン",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 859
+      "tier": 859,
+      "tierExcluded": true
     },
     {
       "id": "神鳥レティス",
       "name": "神鳥レティス",
       "familyId": "nature",
       "rank": "SS",
-      "tier": 860
+      "tier": 860,
+      "tierExcluded": true
     },
     {
       "id": "ラーミア",
       "name": "ラーミア",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 861
+      "tier": 861,
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "egg",
+      "acquisitionDetail": "夢見るタマゴ(???系)から孵化。カメハの不思議な冒険隊でも入手可。位階配合不可・特殊配合の組み合わせ無し"
     },
     {
       "id": "デモンスペーディオ",
       "name": "デモンスペーディオ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 862
+      "tier": 862,
+      "tierExcluded": true
     },
     {
       "id": "JOKER",
       "name": "JOKER",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 863
+      "tier": 863,
+      "tierExcluded": true
     },
     {
       "id": "JESTER",
       "name": "JESTER",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 864
+      "tier": 864,
+      "tierExcluded": true
     },
     {
       "id": "邪神レオソード",
       "name": "邪神レオソード",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 865
+      "tier": 865,
+      "tierExcluded": true
     },
     {
       "id": "闘神レオソード",
       "name": "闘神レオソード",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 866
+      "tier": 866,
+      "tierExcluded": true
     },
     {
       "id": "オムドロレス",
       "name": "オムドロレス",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 867
+      "tier": 867,
+      "tierExcluded": true
     },
     {
       "id": "ギスヴァーグ",
       "name": "ギスヴァーグ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 868
+      "tier": 868,
+      "tierExcluded": true
     },
     {
       "id": "竜神王",
       "name": "竜神王",
       "familyId": "dragon",
       "rank": "SS",
-      "tier": 869
+      "tier": 869,
+      "tierExcluded": true
     },
     {
       "id": "エルギオス",
       "name": "エルギオス",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 870
+      "tier": 870,
+      "tierExcluded": true
     },
     {
       "id": "魔王ウルノーガ",
       "name": "魔王ウルノーガ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 871
+      "tier": 871,
+      "tierExcluded": true
     },
     {
       "id": "マスタードラゴン",
       "name": "マスタードラゴン",
       "familyId": "dragon",
       "rank": "SS",
-      "tier": 872
+      "tier": 872,
+      "tierExcluded": true
     },
     {
       "id": "ヒヒュドラード",
       "name": "ヒヒュドラード",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 873
+      "tier": 873,
+      "tierExcluded": true
     },
     {
       "id": "アギロゴス",
       "name": "アギロゴス",
       "familyId": "dragon",
       "rank": "SS",
-      "tier": 874
+      "tier": 874,
+      "tierExcluded": true
     },
     {
       "id": "アルダララ",
       "name": "アルダララ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 875
+      "tier": 875,
+      "tierExcluded": true
     },
     {
       "id": "闇の王ヴラート",
       "name": "闇の王ヴラート",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 876
+      "tier": 876,
+      "tierExcluded": true
     },
     {
       "id": "ガルビルス",
       "name": "ガルビルス",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 877
+      "tier": 877,
+      "tierExcluded": true
     },
     {
       "id": "魔王オムドレクス",
       "name": "魔王オムドレクス",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 878
+      "tier": 878,
+      "tierExcluded": true
     },
     {
       "id": "凶魔獣メイザー",
       "name": "凶魔獣メイザー",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 879
+      "tier": 879,
+      "tierExcluded": true
     },
     {
       "id": "ネオドーク",
       "name": "ネオドーク",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 880
+      "tier": 880,
+      "tierExcluded": true
     },
     {
       "id": "しんりゅうおう",
       "name": "しんりゅうおう",
       "familyId": "dragon",
       "rank": "SS",
-      "tier": 881
+      "tier": 881,
+      "tierExcluded": true
     },
     {
       "id": "ジェノシドー",
       "name": "ジェノシドー",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 882
+      "tier": 882,
+      "tierExcluded": true
     },
     {
       "id": "アスラゾーマ",
       "name": "アスラゾーマ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 883
+      "tier": 883,
+      "tierExcluded": true
     },
     {
       "id": "サイコピサロ",
       "name": "サイコピサロ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 884
+      "tier": 884,
+      "tierExcluded": true
     },
     {
       "id": "冥王ネルゲル",
       "name": "冥王ネルゲル",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 885
+      "tier": 885,
+      "tierExcluded": true
     },
     {
       "id": "魔戦神ゼメルギアス",
       "name": "魔戦神ゼメルギアス",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 886
+      "tier": 886,
+      "tierExcluded": true
     },
     {
       "id": "聖竜ミラクレア",
       "name": "聖竜ミラクレア",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 887
+      "tier": 887,
+      "tierExcluded": true
     },
     {
       "id": "冥獣王ネルゲル",
       "name": "冥獣王ネルゲル",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 888
+      "tier": 888,
+      "tierExcluded": true
     },
     {
       "id": "創造神マデサゴーラ",
       "name": "創造神マデサゴーラ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 889
+      "tier": 889,
+      "tierExcluded": true
     },
     {
       "id": "ガルマザード",
       "name": "ガルマザード",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 890
+      "tier": 890,
+      "tierExcluded": true
     },
     {
       "id": "狭間の闇の王",
       "name": "狭間の闇の王",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 891
+      "tier": 891,
+      "tierExcluded": true
     },
     {
       "id": "禍乱の竜アンテロ",
       "name": "禍乱の竜アンテロ",
       "familyId": "dragon",
       "rank": "SS",
-      "tier": 892
+      "tier": 892,
+      "tierExcluded": true
     },
     {
       "id": "邪竜神ナドラガ",
       "name": "邪竜神ナドラガ",
       "familyId": "dragon",
       "rank": "SS",
-      "tier": 893
+      "tier": 893,
+      "tierExcluded": true
     },
     {
       "id": "グランエスターク",
       "name": "グランエスターク",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 894
+      "tier": 894,
+      "tierExcluded": true
     },
     {
       "id": "名もなき闇の王",
       "name": "名もなき闇の王",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 895
+      "tier": 895,
+      "tierExcluded": true
     },
     {
       "id": "ダースガルマ",
       "name": "ダースガルマ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 896
+      "tier": 896,
+      "tierExcluded": true
     },
     {
       "id": "ダグジャガルマ",
       "name": "ダグジャガルマ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 897
+      "tier": 897,
+      "tierExcluded": true
     },
     {
       "id": "大魔王ウルノーガ",
       "name": "大魔王ウルノーガ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 898
+      "tier": 898,
+      "tierExcluded": true
     },
     {
       "id": "大魔王マデュラージャ",
       "name": "大魔王マデュラージャ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 899
+      "tier": 899,
+      "tierExcluded": true
     },
     {
       "id": "WORLD",
       "name": "WORLD",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 900
+      "tier": 900,
+      "tierExcluded": true
     },
     {
       "id": "魔界神マデュラーシャ",
       "name": "魔界神マデュラーシャ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 901
+      "tier": 901,
+      "tierExcluded": true
     },
     {
       "id": "邪神ニズゼルファ",
       "name": "邪神ニズゼルファ",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 902
+      "tier": 902,
+      "tierExcluded": true
     },
     {
       "id": "マジェスドレアム",
       "name": "マジェスドレアム",
       "familyId": "unknown",
       "rank": "SS",
-      "tier": 903
+      "tier": 903,
+      "tierExcluded": true
     }
   ],
   "familyPairs": [
@@ -17098,6 +17850,115 @@
         }
       ],
       "note": "祖父母4体の組み合わせで決まる4体配合 4体配合"
+    },
+    {
+      "id": "sp_add_000_キングスペーディオ",
+      "childId": "キングスペーディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スペディオ"
+        },
+        {
+          "kind": "family",
+          "familyId": "nature",
+          "minRankId": "S"
+        }
+      ],
+      "note": "神獣配合。親Aはトランプ組神獣(スペディオ/キングスペーディオ/ガルハート/クインガルハート/グラブゾン/グラブゾンジャック/ディアノーグ/ディアノーグエース/デモンスペーディオ/JOKER)のいずれでも可。親Bは自然系のSランク以上。アルカナ組(ウィンディオ/フレイシャ/アックル/ガオガイヤ)は不可。"
+    },
+    {
+      "id": "sp_add_000_クインガルハート",
+      "childId": "クインガルハート",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ガルハート"
+        },
+        {
+          "kind": "family",
+          "familyId": "beast",
+          "minRankId": "S"
+        }
+      ],
+      "note": "神獣配合。親Aはトランプ組神獣10体のいずれでも可。親Bは魔獣系のSランク以上。"
+    },
+    {
+      "id": "sp_add_000_グラブゾンジャック",
+      "childId": "グラブゾンジャック",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グラブゾン"
+        },
+        {
+          "kind": "family",
+          "familyId": "material",
+          "minRankId": "S"
+        }
+      ],
+      "note": "神獣配合。親Aはトランプ組神獣10体のいずれでも可。親Bは物質系のSランク以上。"
+    },
+    {
+      "id": "sp_add_000_ディアノーグエース",
+      "childId": "ディアノーグエース",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ディアノーグ"
+        },
+        {
+          "kind": "family",
+          "familyId": "demon",
+          "minRankId": "S"
+        }
+      ],
+      "note": "神獣配合。親Aはトランプ組神獣10体のいずれでも可。親Bは悪魔系のSランク以上。"
+    },
+    {
+      "id": "sp_add_000_魔剣神レパルド",
+      "childId": "魔剣神レパルド",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "クシャラミ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ギュメイ将軍"
+        }
+      ],
+      "note": "既存608件に含まれている可能性が高い。"
+    },
+    {
+      "id": "sp_add_000_怪力軍曹イボイノス",
+      "childId": "怪力軍曹イボイノス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "バルバルー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴレオン将軍"
+        }
+      ],
+      "note": "既存608件に含まれている可能性が高い。"
+    },
+    {
+      "id": "sp_add_000_フールフール",
+      "childId": "フールフール",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ドラゴビショップ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ドラゴンロード"
+        }
+      ],
+      "note": "既存608件に含まれている可能性が高い。"
     }
   ]
 }

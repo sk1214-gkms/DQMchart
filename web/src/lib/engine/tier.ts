@@ -13,9 +13,9 @@ import type {
   BreedingRuleset,
   Monster,
   RecipeParent,
-  SpecialRecipe,
   TitleData,
 } from './types';
+import { matchesUnordered, parentMatches, recipeMatches } from './recipeParent';
 
 function monsterById(data: TitleData, id: string): Monster | undefined {
   return data.monsters.find((m) => m.id === id);
@@ -25,35 +25,8 @@ function tierOf(m: Monster): number {
   return m.tier ?? 0;
 }
 
-function parentMatches(p: RecipeParent, m: Monster): boolean {
-  if (p.kind === 'any') return true;
-  return p.kind === 'monster' ? p.monsterId === m.id : p.familyId === m.familyId;
-}
 
-function recipeMatches(recipe: SpecialRecipe, a: Monster, b: Monster): boolean {
-  if (recipe.parents.length !== 2) return false;
-  const [p1, p2] = recipe.parents;
-  return (
-    (parentMatches(p1, a) && parentMatches(p2, b)) ||
-    (parentMatches(p1, b) && parentMatches(p2, a))
-  );
-}
 
-function matchesUnordered(reqs: RecipeParent[], monsters: Monster[]): boolean {
-  if (reqs.length !== monsters.length) return false;
-  const used = new Array(monsters.length).fill(false);
-  const assign = (i: number): boolean => {
-    if (i === reqs.length) return true;
-    for (let j = 0; j < monsters.length; j++) {
-      if (used[j] || !parentMatches(reqs[i], monsters[j])) continue;
-      used[j] = true;
-      if (assign(i + 1)) return true;
-      used[j] = false;
-    }
-    return false;
-  };
-  return assign(0);
-}
 
 /** 系統組み合わせ表を引く（順不同） */
 function childFamilyOf(data: TitleData, famA: string, famB: string): string | null {
@@ -264,8 +237,8 @@ class Planner {
     if (p.kind === 'monster') {
       return p.monsterId === childId ? null : this.plan(p.monsterId);
     }
-    if (p.kind === 'any') return this.cheapestOf((x) => x.id !== childId);
-    return this.cheapestOf((x) => x.familyId === p.familyId && x.id !== childId);
+    // 系統指定はランクの下限が付くことがあるので、共通の判定に任せる
+    return this.cheapestOf((x) => x.id !== childId && parentMatches(this.data, p, x));
   }
 
   private cheapestOf(pred: (m: Monster) => boolean): BreedingPlan | null {
@@ -303,7 +276,7 @@ export const tierRuleset: BreedingRuleset = {
       }
     }
     for (const recipe of data.specialRecipes) {
-      if (!recipeMatches(recipe, a, b)) continue;
+      if (!recipeMatches(data, recipe, a, b)) continue;
       const child = monsterById(data, recipe.childId);
       if (child) out.push({ child, method: 'special', recipe });
     }
@@ -315,7 +288,7 @@ export const tierRuleset: BreedingRuleset = {
     const out: BreedingCandidate[] = [];
     for (const recipe of data.specialRecipes) {
       if (recipe.parents.length !== 4) continue;
-      if (!matchesUnordered(recipe.parents, grandparents)) continue;
+      if (!matchesUnordered(data, recipe.parents, grandparents)) continue;
       const child = monsterById(data, recipe.childId);
       if (child) out.push({ child, method: 'quad', recipe });
     }

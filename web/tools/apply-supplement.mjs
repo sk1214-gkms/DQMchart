@@ -116,7 +116,17 @@ for (const r of supplement.recipes ?? []) {
         ok = false;
         break;
       }
-      parents.push({ kind: 'family', familyId });
+      const parent = { kind: 'family', familyId };
+      // 「自然系のSランク以上」のようにランクの下限が付くことがある
+      if (p.minRank) {
+        if (!data.ranks.some((r) => r.id === p.minRank)) {
+          report.skipped.push(`レシピ ${r.child} のランク: ${p.minRank}（未知）`);
+          ok = false;
+          break;
+        }
+        parent.minRankId = p.minRank;
+      }
+      parents.push(parent);
     } else if (p.type === 'any') {
       parents.push({ kind: 'any' });
     } else {
