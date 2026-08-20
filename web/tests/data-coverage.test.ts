@@ -47,6 +47,7 @@ describe('データ網羅状況', () => {
       'それらを素材にする配合は一覧に出てきません（実際には作れない場合があります）。',
       '',
     ];
+    const rates: Array<{ name: string; rate: number }> = [];
 
     for (const data of listTitles()) {
       const engine = getRuleset(data.ruleset);
@@ -173,11 +174,15 @@ describe('データ網羅状況', () => {
 
       // 配信終了で入手できなくなったものを除けば、ほぼ全てに到達できるはず
       const blockedByDiscontinued = unreachable.filter((m) => m.discontinued).length;
-      const reachableIfAvailable = (reached + blockedByDiscontinued) / total;
-      expect(reachableIfAvailable).toBeGreaterThan(0.9);
+      rates.push({ name: data.name, rate: (reached + blockedByDiscontinued) / total });
     }
 
+    // 先にレポートを残す（検証で落ちても原因を追えるようにするため）
     mkdirSync(dirname(REPORT_PATH), { recursive: true });
     writeFileSync(REPORT_PATH, `${lines.join('\n')}\n`, 'utf-8');
+
+    for (const { name, rate } of rates) {
+      expect(rate, `${name} の到達率`).toBeGreaterThan(0.9);
+    }
   });
 });

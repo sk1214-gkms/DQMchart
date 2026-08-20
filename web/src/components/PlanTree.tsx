@@ -26,23 +26,25 @@ function buildLines(plan: BreedingPlan): TreeLine[] {
   const lines: TreeLine[] = [];
   const expandedOnce = new Set<string>();
 
-  const describe = (p: BreedingPlan, repeated: boolean): string => {
+  const describe = (p: BreedingPlan, repeated: boolean, count: number): string => {
     const m = p.monster;
-    if (repeated) return `${m.name}（上記と同じ）`;
+    // 4体配合で同じモンスターを複数使うことがあるので「×2」のようにまとめる
+    const name = count > 1 ? `${m.name} ×${count}` : m.name;
+    if (repeated) return `${name}（上記と同じ）`;
     if (p.kind === 'wild') {
       const how = m.acquisitionDetail
         ? m.acquisitionDetail.split(/[／/。]/)[0].trim()
         : `${acquisitionLabel(m.acquisition)}で入手`;
-      return `${m.name}（${how}）`;
+      return `${name}（${how}）`;
     }
-    return `${m.name}（${METHOD_LABEL[p.method] ?? '配合'}）`;
+    return `${name}（${METHOD_LABEL[p.method] ?? '配合'}）`;
   };
 
-  const walk = (p: BreedingPlan, prefix: string, isLast: boolean, depth: number) => {
+  const walk = (p: BreedingPlan, prefix: string, isLast: boolean, depth: number, count = 1) => {
     const connector = depth === 0 ? '' : isLast ? '└─ ' : '├─ ';
     const repeated = p.kind === 'breed' && expandedOnce.has(p.monster.id);
     lines.push({
-      text: prefix + connector + describe(p, repeated),
+      text: prefix + connector + describe(p, repeated, count),
       monster: p.monster,
       depth,
       repeated,
@@ -52,8 +54,15 @@ function buildLines(plan: BreedingPlan): TreeLine[] {
     expandedOnce.add(p.monster.id);
 
     const childPrefix = depth === 0 ? '' : prefix + (isLast ? '   ' : '│  ');
-    p.parents.forEach((parent, i) => {
-      walk(parent, childPrefix, i === p.parents.length - 1, depth + 1);
+    // 同じモンスターが複数要る場合は1行にまとめる（同じ素材なら手順も同じため）
+    const groups: Array<{ plan: BreedingPlan; count: number }> = [];
+    for (const parent of p.parents) {
+      const same = groups.find((g) => g.plan.monster.id === parent.monster.id);
+      if (same) same.count += 1;
+      else groups.push({ plan: parent, count: 1 });
+    }
+    groups.forEach((g, i) => {
+      walk(g.plan, childPrefix, i === groups.length - 1, depth + 1, g.count);
     });
   };
 
