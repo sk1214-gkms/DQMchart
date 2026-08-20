@@ -2331,7 +2331,10 @@
       "familyId": "material",
       "rank": "D",
       "tier": 224,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配合の副産物。配合時にスキルを3個以上余らせると、通常の子モンスターと同時に誕生する。余らせる（継承しない）スキルにはSPを20以上振っておく必要がある。親の組み合わせでは表現できない。"
     },
     {
       "id": "ふくぶくろ",
@@ -3614,7 +3617,10 @@
       "familyId": "material",
       "rank": "B",
       "tier": 350,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配合の副産物。配合時にスキルを4個以上余らせると誕生。余らせるスキルにはSPを20以上振っておく必要がある。親の組み合わせでは表現できない。"
     },
     {
       "id": "ギガンテス",
@@ -3940,7 +3946,10 @@
       "familyId": "material",
       "rank": "B",
       "tier": 382,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配合の副産物。配合時にスキルを5個以上余らせると誕生。余らせるスキルにはSPを20以上振っておく必要がある。親の組み合わせでは表現できない。"
     },
     {
       "id": "アークデーモン",
@@ -4084,7 +4093,10 @@
       "familyId": "slime",
       "rank": "A",
       "tier": 396,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "よろこびの扉（黄金郷）の最下層ボス。倒すと仲間になる（何度でも再挑戦可）。SP版追加要素。"
     },
     {
       "id": "アンドレアル",
@@ -4235,7 +4247,10 @@
       "familyId": "slime",
       "rank": "A",
       "tier": 411,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "おもいでの扉（黄金郷）の最下層ボス。倒すと仲間になる。SP版追加要素（3DS版はすれちがいバトル景品だった）。"
     },
     {
       "id": "ワニバーン",
@@ -4518,7 +4533,10 @@
       "familyId": "unknown",
       "rank": "A",
       "tier": 440,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "オンライン他国マスターの闘技場中央に稀に乱入する「カンダタ」に話しかけてバトルし、勝利すると相手パーティのモンスター1体を貰える。乱入は対戦回数（目安350戦程度）と名声ランクに応じて発生し、2回目の乱入（カンダタこぶん2体＋カンダタ1体）以降でカンダタを入手できる。配合・スカウト・タマゴは不可。"
     },
     {
       "id": "アサシンブロス",
@@ -4973,7 +4991,10 @@
       "familyId": "material",
       "rank": "A",
       "tier": 483,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "まよいの扉（黄金郷）の最下層ボス。倒すと仲間になる。SP版追加要素。"
     },
     {
       "id": "大王イカ",
@@ -5507,7 +5528,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 537,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "まちびとの扉（黄金郷）の最下層ボス。倒すと仲間になる。SP版追加要素。"
     },
     {
       "id": "スライムマデュラ",
@@ -5581,7 +5605,10 @@
       "familyId": "zombie",
       "rank": "S",
       "tier": 544,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "うらみの扉（黄金郷）の最下層ボス。倒すと仲間になる。SP版追加要素。"
     },
     {
       "id": "キングモーモン",
@@ -5685,7 +5712,10 @@
       "familyId": "demon",
       "rank": "S",
       "tier": 554,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "さばきの扉（黄金郷）の最下層ボス。倒すと仲間になる。SP版追加要素。"
     },
     {
       "id": "シドー",
@@ -5830,7 +5860,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 568,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "とまどいの扉（黄金郷）の最下層ボス。倒すと仲間になる。SP版追加要素。"
     },
     {
       "id": "魔軍司令ホメロス",
@@ -5879,7 +5912,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 573,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "ぜっかいの扉（黄金郷）の最下層ボス。倒すと仲間になる。SP版追加要素。"
     },
     {
       "id": "キングスペーディオ",
@@ -5962,7 +5998,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 583,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "オンライン他国マスターのカンダタ乱入イベントの4回目（カンダタ1体＋カンダタレディース1体）で勝利すると入手できる。乱入順は「こぶん2体」→「こぶん2体＋カンダタ」→「カンダタ＋おやぶん」→「カンダタ＋レディース」。配合・スカウト・タマゴは不可。"
     },
     {
       "id": "スラ・ブラスター",
@@ -6193,7 +6232,10 @@
       "familyId": "material",
       "rank": "SS",
       "tier": 607,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "ほろびの扉（黄金郷）の最下層ボス。倒すと仲間になる。SP版追加要素。"
     },
     {
       "id": "ワルぼう",
@@ -6250,7 +6292,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 613,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "ほむらの扉（黄金郷）の最下層ボス。倒すと仲間になる。SP版追加要素。"
     },
     {
       "id": "わたぼう",
@@ -6269,7 +6314,10 @@
       "familyId": "material",
       "rank": "SS",
       "tier": 615,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "ちからの扉（黄金郷）の最下層ボス。倒すと仲間になる。SP版追加要素。"
     },
     {
       "id": "大魔王デスタムーア",
@@ -6399,7 +6447,10 @@
       "familyId": "material",
       "rank": "SS",
       "tier": 629,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "まぼろしの扉（黄金郷）の最下層ボス。倒すと仲間になる。SP版追加要素。"
     },
     {
       "id": "魔王ラプソーン",
@@ -6434,7 +6485,10 @@
       "familyId": "dragon",
       "rank": "SS",
       "tier": 633,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "さいはての扉（黄金郷）の最下層ボス。倒すと仲間になる。配合・スカウト・他国・タマゴはすべて不可。SP版追加要素。"
     },
     {
       "id": "海王神",
@@ -6493,7 +6547,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 640,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "とこやみの扉（黄金郷）の最下層ボス。倒すと仲間になる。配合・スカウト・他国・タマゴはすべて不可。SP版追加要素。"
     },
     {
       "id": "デモンスペーディオ",
@@ -14241,6 +14298,51 @@
         }
       ],
       "note": "4体配合（指定4体が祖父母になるように配合する） 4体配合"
+    },
+    {
+      "id": "sp_add_000_魔壺インヘーラー",
+      "childId": "魔壺インヘーラー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "トロデ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ガーディス"
+        }
+      ],
+      "note": "位階配合では作れない特殊配合。これが通るとキングヒドラ・竜皇帝バルグディス・凶魔獣メイザー・魔戦神ゼメルギアス・大魔王マデュラージャの5体が芋づる式に到達可能になる。参考: トロデ＝ドーク×ドン・モグーラ×わたぼう（またはワルぼう）×キングモーモンの4体配合、ガーディス＝サージタウス×魔王ジェイムの特殊配合。"
+    },
+    {
+      "id": "sp_add_001_もりもりベス",
+      "childId": "もりもりベス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "もりもりスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "スライムベス"
+        }
+      ],
+      "note": "位階配合では作れない特殊配合。しれんの扉・さいはての扉・きょじんの扉（黄金郷）に出現はするがスカウトは不可なので、入手はこの配合のみ。"
+    },
+    {
+      "id": "sp_add_002_デスフラッター",
+      "childId": "デスフラッター",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "おおがらす"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "やたがらす"
+        }
+      ],
+      "note": "配合のほか「たまご(金)」からも入手可能。"
     }
   ]
 }
