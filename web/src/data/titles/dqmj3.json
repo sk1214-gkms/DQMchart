@@ -2842,7 +2842,10 @@
       "familyId": "material",
       "rank": "B",
       "tier": 326,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "無印では配合レシピが存在せずスカウトのみ。フィールドに宝箱（緑の宝箱）のシンボルとして配置されている個体をリアクターで調べ、敵反応ならミミック。固定湧きなし。定番の探し方は崩落都市 センタービル30階へルーラ→屋上へ出て外周リングを空中ライドで一周。いなければ別マップへ移動して戻ると再配置される。スカウト自体の難度は低い。"
     },
     {
       "id": "凶メイジキメラ",
@@ -3331,7 +3334,10 @@
       "familyId": "break",
       "rank": "A",
       "tier": 390,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "魂配合。「凶キングリザードの魂」＋「ダークマデュライト」を持ってセンタービルの配合所のエースに話しかけると誕生。魂は焦熱の火山のステルスボックス（レジスタンス秘密基地付近／一番西のルーラポイント周辺の低地の小さな足場、リアクター反応）。スカウト不可・通常配合不可。2体目以降は通信コイン交換。"
     },
     {
       "id": "凶だいおうイカ",
@@ -3339,7 +3345,10 @@
       "familyId": "break",
       "rank": "A",
       "tier": 391,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "魂配合。「凶だいおうイカの魂」＋「ダークマデュライト」をセンタービルの配合所のエースへ。魂は黒鉄の監獄塔の屋上、ルーラポイントの東〜北東側のステルスボックス。スカウト不可・通常配合不可。"
     },
     {
       "id": "凶とげジョボー",
@@ -3395,7 +3404,10 @@
       "familyId": "break",
       "rank": "S",
       "tier": 398,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "魂配合。「凶にじくじゃくの魂」＋「ダークマデュライト」をセンタービルの配合所のエースへ。魂は歓楽の霊道の南東端、空中ライドで渡る離れ小島のステルスボックス。スカウト不可・通常配合不可。"
     },
     {
       "id": "凶ヴォルカドラゴン",
@@ -3443,7 +3455,10 @@
       "familyId": "material",
       "rank": "S",
       "tier": 404,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "無印では配合レシピが存在しない。フィールドやディスクの世界に出現する黒い宝箱に擬態しており、リアクターで調べて敵反応ならパンドラボックス。ザラキを使うため即死対策が必要。固定湧きポイントは確認できず、ミミックと同じ宝箱シンボル探索で遭遇する。通信広場で金コイン1枚での交換も可能。"
     },
     {
       "id": "トマホーガー",
@@ -3915,7 +3930,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 463,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配合不可。裏ストーリーまで完全クリア後、センタービル地下2Fで「黒鉄の天導石」を入手し、黒鉄の監獄塔（アロイパーク付近／凍骨の氷原へ行ける移動装置の右側）のマスターズロードに挑戦。ゴール地点のボスであるレジウィングを倒すと仲間になる。空中ライド推奨、難度最高ランク。"
     },
     {
       "id": "レジマリン",
@@ -9134,6 +9152,21 @@
         }
       ],
       "note": "DQMJ3P(プロフェッショナル)の配合表に記載。無印での可否は未確認"
+    },
+    {
+      "id": "sp_add_026_ダースガルマ",
+      "childId": "ダースガルマ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ガルマザード"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "名もなき闇の王"
+        }
+      ],
+      "note": "特殊配合。capch(無印)・spwiki(無印)の両方で一致。"
     }
   ]
 }
