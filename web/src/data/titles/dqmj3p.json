@@ -2826,7 +2826,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "e-STORE予約特典のダウンロードコード/Wi-Fiプレゼントディスク配信",
+      "acquisitionDetail": "スクウェア・エニックス e-STORE予約特典のダウンロードコードでプレゼントディスクを入手し、センタービル地下1階のディスクマシーンで使用・クリアして仲間にする。2017年5月1日からはインターネット通信広場のWi-Fi PRESENTでも配信された（復活配信12体のうちの1体）。位階配合・特殊配合ともに不可。3DSのインターネット通信サービス終了(2024年4月)により現在は受け取れない",
       "discontinued": true
     },
     {
@@ -2838,7 +2838,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Amazon予約特典のダウンロードコード/Wi-Fiプレゼントディスク配信",
+      "acquisitionDetail": "Amazon.co.jp予約特典のダウンロードコード。2017年5月1日からWi-Fi PRESENTでもプレゼントディスクを受け取れるようになった（ディスクマシーンで使用・クリアして仲間にする）。ランクB。位階配合では作れず、特殊配合の組み合わせも無し",
       "discontinued": true
     },
     {
@@ -4478,7 +4478,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fi配信(2017年2月23日〜)",
+      "acquisitionDetail": "インターネット通信広場のWi-Fi PRESENTでプレゼントディスクを受け取り、センタービル地下1階のディスクマシーンで使用・クリアして仲間にする。配信は2017年2月23日〜（プチットⅣ〜Ⅷの一括配信）。ランクS。位階配合不可・特殊配合の組み合わせ無し",
       "discontinued": true
     },
     {
@@ -4501,7 +4501,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fiプレゼントディスク配信(モンパレコラボ)",
+      "acquisitionDetail": "スマホアプリ『ドラゴンクエスト モンスターパレード』コラボ限定（2017年2月13日〜3月31日、リンジー村のクエスト「ライドとたんこぶ」クリアでアイテムコード）。2017年5月1日からWi-Fi PRESENTでも配信。位階配合不可。モンパレはサービス終了、3DS通信も終了済み。スラキャンサーの4体配合素材なので、この1体が下流の配合を全部止めている",
       "discontinued": true
     },
     {
@@ -4513,7 +4513,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fi配信(2017年2月9日〜)",
+      "acquisitionDetail": "自宅のWi-Fi（Wi-Fi PRESENT）で2017年2月9日から配信。ディスクを読み込むと近くにスライダーヒーローが出現し、戦闘に勝つと仲間になる。攻略の虎の入手・出現欄も「配信」。位階配合では作れない",
       "discontinued": true
     },
     {
@@ -4525,7 +4525,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "攻略本『最強データ＋ガイドブック for PRO』のプレゼントコード特典。2017年9月1日以降はインターネット通信広場のWi-Fi PRESENTでプレゼントディスクを受け取り、センタービル地下1階のディスクマシーンで使用・クリアして入手。配合不可",
+      "acquisitionDetail": "公式攻略本『ドラゴンクエストモンスターズ ジョーカー3 プロフェッショナル 最強データ＋ガイドブック for PRO』(2017年3月9日発売)の封入プレゼントコード特典。2017年9月1日からはWi-Fi PRESENTでもプレゼントディスクを受け取れるようになった。位階配合・特殊配合ともに不可。現在は未使用コード付きの攻略本の入手が事実上不可能",
       "discontinued": true
     },
     {
@@ -4537,7 +4537,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "3DSステーションでのWi-Fi配信",
+      "acquisitionDetail": "ニンテンドー3DSステーション設置店舗でのプレゼントディスク配信（2017年2月9日〜）。攻略の虎の入手・出現欄も「配信」。位階配合では作れない。3DSステーション／セブンスポットのサービスが終了しているため現在は入手不可",
       "discontinued": true
     },
     {
@@ -4571,7 +4571,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "ドラゴンクエストX とのコラボ限定。DQ10でキーエンブレムを1個以上獲得して応募し、もらえるプレゼントコードでディスクを入手（配布は2017/3/2〜2017/12/31で終了済み）。配合では作れない",
+      "acquisitionDetail": "『ドラゴンクエストX』コラボ限定。DQ10でキーエンブレムを1個以上獲得し、スクウェア・エニックス アカウントでプレゼントコードを受け取ってディスクを入手、倒して仲間にする。キャンペーンは2017年3月2日開始で終了済み（終了日は出典により3月31日／12月31日と差がある）。位階配合不可。スラキャンサーの4体配合素材",
       "discontinued": true
     },
     {
@@ -4594,7 +4594,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fiプレゼントディスク配信/7SPOTでDS配信",
+      "acquisitionDetail": "セブン＆アイ系列の7SPOT設置店で『7SPOTでDS』からプレゼントディスクを受け取る期間限定コラボ（2017年2月13日〜3月31日）。2017年5月1日からはWi-Fi PRESENTで常時受け取り可能になった。位階配合不可・特殊配合の組み合わせ無し。※イルルカ等で言われる『金のタマゴ／引越しアプリでピピット→ティコ』はDQMJ3Pには当てはまらない（J3PのティコはSランク・配信専用）",
       "discontinued": true
     },
     {
@@ -4606,7 +4606,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fiプレゼントディスク配信/ローソン秋葉原 すれちがい配信",
+      "acquisitionDetail": "ローソン外神田三丁目店（ドラクエコラボ店舗）で『オフィシャル配信とすれちがう』を選んで通信し、SQEXの刺客に勝つと仲間になる期間限定コラボ（2017年2月16日〜4月9日）。2017年5月1日からWi-Fi PRESENTでプレゼントディスクを受け取れるようになった。ランクS、位階配合不可・特殊配合無し。当時から入手最難関と言われた1体",
       "discontinued": true
     },
     {
@@ -4615,7 +4615,9 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 488,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "acquisitionDetail": "ティコ×ククリの2体特殊配合のみ。位階配合不可。ティコもククリも配信限定で現在入手できないため、長老ピピットも作れない。アプリの登録レシピは正しい",
+      "discontinued": true
     },
     {
       "id": "少年レオソード",
@@ -4626,7 +4628,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fiプレゼントディスク配信/TSUTAYAでDS配信",
+      "acquisitionDetail": "TSUTAYA店舗内で『TSUTAYAでDS』からディスクを受け取りクリアするキャンペーン（2017年2月9日10:00〜5月31日23:59）。2017年5月1日からはWi-Fi PRESENTでも配信（復活配信12体の1体）。位階配合不可。闘神レオソードの4体配合素材で、この1体が闘神レオソード以降の系譜を全部止めている",
       "discontinued": true
     },
     {
@@ -5054,7 +5056,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "すれちがい対戦で稀に現れる「SQEXの刺客」に勝利すると入手",
+      "acquisitionDetail": "すれちがいバトルで稀に『SQEXの刺客』として現れ、勝利すると仲間になる。位階配合不可・特殊配合の組み合わせ無し。すれちがい自体はローカル通信なので理論上は可能だが、当時はWi-Fi対戦相手もすれちがい扱いになる仕様で稼いでいた。現在は同ソフトを持つ相手が必要で実質入手困難。※『格闘場イベントたたかえ！あくまアリーナの報酬』はDQMスーパーライトの話で、J3Pの情報ではない",
       "discontinued": true
     },
     {
@@ -5093,7 +5095,9 @@
       "familyId": "slime",
       "rank": "S",
       "tier": 537,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "acquisitionDetail": "4体特殊配合のみ。位階配合不可。J3Pでは魔界の門のストーリーボスとしても登場するがスカウトはできない（『魔界の野生スラキャンサーをスカウト』はDQMJ2の情報で、J3Pには当てはまらない）。素材のプレミアムスライム（モンパレコラボ）と管理端末Ｑ４８４（DQ10コラボ）が両方とも終了済みコラボ限定のため作成不可。当時の『管理端末なしで作る方法』は他プレイヤーからの素材配布・通信交換のことで、単独プレイでの入手手段ではない",
+      "discontinued": true
     },
     {
       "id": "キングモーモン",
@@ -5232,7 +5236,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "すれちがいバトル50勝で入手",
+      "acquisitionDetail": "すれちがいバトルで通算50勝すると仲間になる。以降も10勝ごとのプレゼントで仲間にできる場合がある。位階配合不可・特殊配合の組み合わせ無し。すれちがいはローカル通信だが同ソフトを持つ相手が50回分必要で、現在は実質入手困難",
       "discontinued": true
     },
     {
@@ -5878,7 +5882,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "いつのまに通信で配信され、ワールドマップに出現する",
+      "acquisitionDetail": "いつの間に通信をオンにしておくと巨大モンスターのデータを受信し、ガルマザード討伐後に大空ライドで行けるワールドマップに超Gサイズの『正体不明のおそろしい気配』として出現、勝利すると仲間になる。位階配合不可・特殊配合無し。攻略の虎の入手・出現欄は【プロ】いつの間に通信／【元祖】ニンテンドー3DSステーション。game8の『今作は大空ライドで入手できる』という記述は、いつの間に通信で受信したデータが大空ライドの空域に出るという意味で、配信データの受信自体は必須。いつの間に通信（SpotPass）は3DSネットワークサービス終了で機能しない",
       "discontinued": true
     },
     {
@@ -6061,7 +6065,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "すれちがいバトルで『SQEXの刺客』として現れることがあり、勝利すると仲間になる。配合では作れない",
+      "acquisitionDetail": "すれちがいバトルで稀に現れる『SQEXの刺客』に勝利すると仲間になる。J3Pには配合ルートが無い（イルルカSP・テリワンSPのキラーマジンガ×キラーマジンガはJ3Pには存在しない）。オムド・ロレスの4体配合素材",
       "discontinued": true
     },
     {
@@ -6084,7 +6088,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fiプレゼントディスク配信/スクウェア・エニックスカフェ秋葉原 すれちがい配信",
+      "acquisitionDetail": "スクウェア・エニックス カフェ秋葉原でのすれちがい配信（2017年2月9日〜）と、2017年5月1日からのWi-Fi PRESENT配信。位階配合不可。対戦相手がすれちがい設定をしていれば二次配信として受け取れる仕組みがあったが、相手プレイヤーが必要",
       "discontinued": true
     },
     {
@@ -6096,7 +6100,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fiプレゼントディスク配信/店頭すれちがい配信",
+      "acquisitionDetail": "インターネット通信広場のWi-Fi PRESENTでプレゼントディスクを受け取り、センタービル地下1階のディスクマシーンで使用・クリアして仲間にする（2017年5月1日〜）。位階配合不可・特殊配合の組み合わせ無し。※『魔戦士アルゴ×ヴェーラ×サイフォン×ホゲイラの4体配合』はイルルカ系の情報で、J3Pには配合ルートが無い。アプリ側の『店頭すれちがい配信』という記述は出典で確認できず、Wi-Fi PRESENT配信が正しい",
       "discontinued": true
     },
     {
@@ -6135,7 +6139,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fiプレゼントディスク配信(星ドラコラボ)",
+      "acquisitionDetail": "スマホアプリ『星のドラゴンクエスト』コラボ限定（2017年3月15日〜3月29日、コラボイベント初級クリアで特典コード）。2017年5月1日からWi-Fi PRESENTにも追加された。位階配合不可。真・魔王ザラームの4体配合素材",
       "discontinued": true
     },
     {
@@ -6235,7 +6239,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fiプレゼント（配信）限定。配合では作れない",
+      "acquisitionDetail": "プロ版ではいつの間に通信をオンにしておくと、シナリオ全クリア後の大空ライド中に『正体不明のおそろしい気配を感知しました』と表示され、ワールドマップに出現して勝利すると仲間になる（キングホイミスライムと交互に来る）。無印ジョーカー3ではWi-Fiプレゼントの配信ディスク（2016年4月16日〜）。元は『ドラゴンクエスト モンスターパレード』のオリジナルモンスターで、配合では作れない。※アプリの『Wi-Fiプレゼント（配信）限定』は無印の説明。プロ版はいつの間に通信が正しい",
       "discontinued": true
     },
     {
@@ -6291,7 +6295,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fiプレゼントディスク配信/7SPOTでDS配信",
+      "acquisitionDetail": "7SPOT設置店（セブンイレブン等）で『7SPOTでDS』からプレゼントディスクを受け取る期間限定コラボ。2017年5月1日からはWi-Fi PRESENTでも配信。位階配合不可。マスタードラゴンの4体配合素材",
       "discontinued": true
     },
     {
@@ -6383,7 +6387,9 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 674,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "acquisitionDetail": "4体特殊配合のみ。位階配合不可。素材の少年レオソードが配信限定で入手できないため作成不可。重要：無印ジョーカー3ではすれちがい100回ごとに乱入する『伝説のマスター』（ジョーカー2のマスター）に勝つと貰えたが、プロ版ではこの報酬が神獣石10個に変更されており、すれちがいでは入手できない。アプリの登録レシピは正しい",
+      "discontinued": true
     },
     {
       "id": "オムド・ロレス",
@@ -6391,7 +6397,9 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 675,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "acquisitionDetail": "4体特殊配合のみ。位階配合不可。闘神レオソード・サージタウス・スラキャンサーの3つが同時に詰んでいるため作成不可。アプリの登録レシピは正しい",
+      "discontinued": true
     },
     {
       "id": "邪獣ヒヒュルデ",
@@ -6399,7 +6407,9 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 676,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "acquisitionDetail": "4体特殊配合のみ。位階配合不可。闘神レオソードと長老ピピットが詰んでいるため作成不可。アプリの登録レシピは正しい",
+      "discontinued": true
     },
     {
       "id": "ヒヒュドラード",
@@ -6407,7 +6417,9 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 677,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "acquisitionDetail": "2体特殊配合のみ。位階配合不可。無印ジョーカー3では『デモンスペーディオ×闘神レオソード』だったがプロ版で変更されており、アプリの登録（プロ版レシピ）が正しい。邪獣ヒヒュルデが作れないため作成不可",
+      "discontinued": true
     },
     {
       "id": "堕天使エルギオス",
@@ -6478,7 +6490,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fi配信(2017年2月9日〜)",
+      "acquisitionDetail": "自宅のWi-Fi（Wi-Fi PRESENT）で2017年2月9日から配信。位階配合では作れない。注意：ソフトの初回生産封入特典にも『神馬アルシオン』のカードが付くが、あれは別ゲーム『ドラゴンクエスト バトルスキャナー』用でJ3P本体では使えない",
       "discontinued": true
     },
     {
@@ -6525,7 +6537,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "Wi-Fi配信(2017年2月16日〜)",
+      "acquisitionDetail": "自宅のWi-Fi（Wi-Fi PRESENT）で2017年2月16日から配信。位階配合では作れず、配合ルートも無い。神竜の4体配合素材で、この1体が神竜→マスタードラゴン→魔剣士ピサロの系譜を止めている。※神獣（JOKER/JESTER）を神獣石と交換する仕組みとは別物",
       "discontinued": true
     },
     {
@@ -6542,7 +6554,9 @@
       "familyId": "dragon",
       "rank": "SS",
       "tier": 691,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "acquisitionDetail": "4体特殊配合のみ。位階配合不可。軍神トガミヒメ（亡霊の古文書）・ドーク／竜王（時空の裂け目の異世界の魔王を10ターン以内に撃破）はゲーム内で入手できるが、神さまだけが配信限定のため作成不可。アプリの登録レシピは正しい",
+      "discontinued": true
     },
     {
       "id": "エスターク",
@@ -6590,7 +6604,9 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 697,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "acquisitionDetail": "2体特殊配合のみ。位階配合不可。ヒヒュドラードが作れないため作成不可。アプリの登録レシピは正しい",
+      "discontinued": true
     },
     {
       "id": "ガルマザード",
@@ -6678,7 +6694,9 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 708,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "acquisitionDetail": "2体特殊配合のみ。位階配合不可。冥獣王ネルゲルが作れないため作成不可（魔勇者アンルシア側は問題なし）。アプリの登録レシピは正しい",
+      "discontinued": true
     },
     {
       "id": "魔王オムド・レクス",
@@ -6689,7 +6707,7 @@
       "tierExcluded": true,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "DQMスーパーライトの条件達成で配布されるプレゼントコードで入手",
+      "acquisitionDetail": "『ドラゴンクエストモンスターズ スーパーライト』コラボ限定。DQMSLで「魔物たちの楽園・凶」のクエストを1回クリアし、データ引き継ぎ設定でメールアドレスを登録するとプレゼントコードが貰えた。2017年5月1日からはWi-Fi PRESENTでも配信。位階配合不可。当時の代替手段は『すれちがいで所持者から配信してもらい超しもふり肉でスカウト』で、相手プレイヤーが必須。真・魔王ザラームの4体配合素材",
       "discontinued": true
     },
     {
@@ -6698,7 +6716,9 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 710,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "acquisitionDetail": "4体特殊配合のみ。位階配合不可。魔王オムド・レクス（DQMSLコラボ）とアルダララ（星ドラコラボ）が両方とも終了済みコラボ限定のため作成不可。※イルルカSPの『闇竜シャムダ×大魔王ゾーマ』はJ3Pには無い。アプリの登録レシピは正しい",
+      "discontinued": true
     },
     {
       "id": "ダグジャガルマ",
@@ -6706,7 +6726,9 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 711,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "acquisitionDetail": "2体特殊配合のみ。位階配合不可。創造神マデサゴーラが作れないため作成不可。ストーリーの裏ボスとしても登場するがスカウト不可。アプリの登録レシピは正しい",
+      "discontinued": true
     },
     {
       "id": "マスタードラゴン",
@@ -6714,7 +6736,9 @@
       "familyId": "dragon",
       "rank": "SS",
       "tier": 712,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "acquisitionDetail": "4体特殊配合のみ（プロ版からの追加モンスター）。位階配合不可、野生出現・スカウトの記載も無し。神竜（素材の神さまが配信限定）とじげんりゅう（配信限定）の2つで詰んでいる。有名モンスターだが、J3Pでは配信モンスター2体を経由しないと作れない設計になっている。アプリの登録レシピは正しい",
+      "discontinued": true
     },
     {
       "id": "グランエスターク",
@@ -6744,7 +6768,9 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 715,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "acquisitionDetail": "4体特殊配合のみ。位階配合不可。真・魔王ザラームとマスタードラゴンが両方とも作れないため作成不可。アプリの登録レシピは正しい",
+      "discontinued": true
     },
     {
       "id": "グランドラゴーン",
@@ -6760,7 +6786,9 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 717,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "acquisitionDetail": "4体特殊配合のみ。位階配合不可、配合以外の入手方法の記載も無し。ダグジャガルマが作れないため作成不可。フォロボス（冥土の古文書）・大魔王マデュラージャ（クリア後再戦イベント5日目）・デュランはゲーム内で入手できるので、詰まっているのはダグジャガルマ側だけ。アプリの登録レシピは正しい",
+      "discontinued": true
     },
     {
       "id": "ＷＯＲＬＤ",
