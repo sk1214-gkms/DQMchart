@@ -223,7 +223,6 @@ class Planner {
    */
   private tryBuildByTier(m: Monster): BreedingPlan | null {
     if (m.tierExcluded || m.tier === undefined) return null; // 一般配合では生まれない
-    const target = tierOf(m);
     // 作れない位階を飛ばして m にたどり着く場合があるので、狙う位階には幅がある
     const targets = this.tiersLandingOn(m);
     if (targets.length === 0) return null;

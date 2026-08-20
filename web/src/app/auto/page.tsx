@@ -22,6 +22,8 @@ import { OrientationToggle, useOrientation } from '@/components/Orientation';
 import type { Orientation } from '@/components/Orientation';
 import { useTitleData } from '@/components/TitleProvider';
 import { getRuleset } from '@/lib/engine/registry';
+import { findParentAlternatives } from '@/lib/engine/alternatives';
+import { PlanTree } from '@/components/PlanTree';
 import type {
   BreedingMethod,
   BreedingPlan,
@@ -29,6 +31,14 @@ import type {
   Monster,
   TitleData,
 } from '@/lib/engine/types';
+
+/** 配合手順の1ステップ。表示時に相方の代替候補を出せるよう構造で持つ */
+type BreedStep = {
+  childId: string;
+  childName: string;
+  parents: Array<{ id: string; name: string }>;
+  method: BreedingMethod;
+};
 
 // 縦向きは葉が横に並び深さが縦方向、横向きはその逆になる
 const GAPS: Record<Orientation, { across: number; depth: number }> = {
@@ -59,7 +69,7 @@ function buildFlow(
   const nodes: MonsterFlowNode[] = [];
   const edges: Edge[] = [];
   const leaves: Monster[] = []; // 実際に集める必要のあるモンスター（展開状態を反映）
-  const steps: string[] = [];
+  const steps: BreedStep[] = [];
   let seq = 0;
   let leafIndex = 0;
 
@@ -163,17 +173,100 @@ function buildFlow(
     }
 
     // 手順は親を先に処理してから積むので、上流から順に並ぶ
-    const parentNames = p.parents.map((x) => x.monster.name).join(' × ');
-    steps.push(
-      p.method === 'quad'
-        ? `${parentNames} の4体を祖父母にして2回配合し、その子同士を配合 → ${p.monster.name}（4体配合）`
-        : `${parentNames} → ${p.monster.name}（${methodLabel(p.method)}）`,
-    );
+    steps.push({
+      childId: p.monster.id,
+      childName: p.monster.name,
+      parents: p.parents.map((x) => ({ id: x.monster.id, name: x.monster.name })),
+      method: p.method,
+    });
     return { id, across };
   }
 
   walk(plan, 0, new Set());
   return { nodes, edges, leaves, steps };
+}
+
+/**
+ * 配合手順の1行。
+ * 位階配合は条件さえ合えば相方を選べるので、「○○系の位階△△以下」のように
+ * 条件で示し、具体的な候補は折りたたんで見られるようにする。
+ */
+function BreedStepLine({
+  step,
+  data,
+  engine,
+}: {
+  step: BreedStep;
+  data: TitleData;
+  engine: BreedingRuleset;
+}) {
+  // 4体配合や特殊配合は組み合わせが決まっているので、そのまま名前で出す
+  const fixedRecipe = step.method !== 'normal' || step.parents.length !== 2;
+
+  const alternatives = useMemo(() => {
+    if (fixedRecipe) return null;
+    // 片方を固定したとき、もう片方に使えるモンスターを調べる
+    const [a, b] = step.parents;
+    const forB = findParentAlternatives(engine, data, step.childId, a.id);
+    const forA = findParentAlternatives(engine, data, step.childId, b.id);
+    // 選択肢が多いほうを「条件」として示すと分かりやすい
+    return forB.candidates.length >= forA.candidates.length
+      ? { fixed: a, flexible: forB }
+      : { fixed: b, flexible: forA };
+  }, [fixedRecipe, step, data, engine]);
+
+  if (step.method === 'quad') {
+    return (
+      <span>
+        {step.parents.map((p) => p.name).join(' × ')} の4体を祖父母にして2回配合し、その子同士を配合
+        → <span className="font-semibold">{step.childName}</span>（4体配合）
+      </span>
+    );
+  }
+
+  const flexible = alternatives?.flexible;
+  const canSummarize = flexible && flexible.candidates.length > 1 && flexible.summary;
+
+  return (
+    <span>
+      {canSummarize ? (
+        <>
+          {alternatives.fixed.name} ×{' '}
+          <span className="rounded bg-[#eef3fd] px-1.5 text-[var(--brand-700)]">
+            {flexible.summary}
+          </span>
+        </>
+      ) : (
+        step.parents.map((p) => p.name).join(' × ')
+      )}
+      {' → '}
+      <span className="font-semibold">{step.childName}</span>（{methodLabel(step.method)}）
+      {canSummarize && (
+        <details className="mt-0.5">
+          <summary className="cursor-pointer text-xs text-[var(--muted)]">
+            使えるモンスター{flexible.candidates.length}種を見る
+          </summary>
+          <div className="mt-1 flex flex-wrap gap-1">
+            {flexible.candidates.map((m) => (
+              <span
+                key={m.id}
+                className="rounded border px-1.5 py-0.5 text-[11px]"
+                style={{
+                  background: familyBackground(m.familyId),
+                  borderColor: familyColor(m.familyId),
+                }}
+              >
+                {m.name}
+                {m.tier !== undefined && (
+                  <span className="ml-1 text-[var(--muted)]">位階{m.tier}</span>
+                )}
+              </span>
+            ))}
+          </div>
+        </details>
+      )}
+    </span>
+  );
 }
 
 /** 画像保存はReactFlowの状態を参照するため、ページ全体をProviderで包む */
@@ -203,6 +296,8 @@ function AutoPageContent() {
 
   // 葉ノードを押して配合手順を開いたモンスター
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
+  // 配合手順の見せ方（ツリー＝親子関係が分かる／順番＝上から順に作業できる）
+  const [stepView, setStepView] = useState<'tree' | 'list'>('tree');
 
   const result = useMemo(() => {
     if (!targetId) return null;
@@ -226,9 +321,14 @@ function AutoPageContent() {
   // 同じ配合を複数回行う場合は回数をまとめる
   const stepCounts = useMemo(() => {
     if (!result?.flow) return [];
-    const counts = new Map<string, number>();
-    for (const s of result.flow.steps) counts.set(s, (counts.get(s) ?? 0) + 1);
-    return Array.from(counts.entries());
+    const counts = new Map<string, { step: BreedStep; count: number }>();
+    for (const s of result.flow.steps) {
+      const key = `${s.childId}|${s.parents.map((p) => p.id).join('|')}|${s.method}`;
+      const cur = counts.get(key);
+      if (cur) cur.count += 1;
+      else counts.set(key, { step: s, count: 1 });
+    }
+    return Array.from(counts.values());
   }, [result]);
 
   // 最初に集める必要のある素材（配合ツリーの葉）を必要数つきで集計。展開状態を反映する
@@ -396,25 +496,44 @@ function AutoPageContent() {
                   ②
                 </span>
                 配合手順
+                <span className="ml-auto inline-flex overflow-hidden rounded-lg border" style={{ borderColor: 'var(--border)' }}>
+                  {(['tree', 'list'] as const).map((v) => (
+                    <button
+                      key={v}
+                      onClick={() => setStepView(v)}
+                      aria-pressed={stepView === v}
+                      className={`min-h-9 px-3 text-xs font-medium transition ${
+                        stepView === v
+                          ? 'bg-[var(--brand-700)] text-white'
+                          : 'bg-white text-[var(--muted)] hover:bg-[#f2f5fc]'
+                      }`}
+                    >
+                      {v === 'tree' ? 'ツリー' : '順番'}
+                    </button>
+                  ))}
+                </span>
               </h2>
-              <ol className="flex flex-col gap-2">
-                {stepCounts.map(([step, count], i) => (
+              {stepView === 'tree' && result.plan.kind === 'breed' && (
+                <PlanTree plan={result.plan} data={data} />
+              )}
+              <ol className={`flex-col gap-2 ${stepView === 'list' ? 'flex' : 'hidden'}`}>
+                {stepCounts.map(({ step, count }, i) => (
                   <li
-                    key={step}
+                    key={`${step.childId}-${i}`}
                     className="flex items-start gap-3 rounded-lg border bg-white px-3 py-2 text-sm shadow-sm"
                     style={{ borderColor: 'var(--border)' }}
                   >
                     <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#eef3fd] text-xs font-bold tabular-nums text-[var(--brand-700)]">
                       {i + 1}
                     </span>
-                    <span className="flex-1 leading-relaxed">
-                      {step}
+                    <div className="flex-1 leading-relaxed">
+                      <BreedStepLine step={step} data={data} engine={engine} />
                       {count > 1 && (
                         <span className="ml-1.5 rounded bg-amber-100 px-1.5 text-xs font-bold text-amber-800">
                           ×{count}回
                         </span>
                       )}
-                    </span>
+                    </div>
                   </li>
                 ))}
               </ol>
