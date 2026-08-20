@@ -1185,7 +1185,10 @@
       "familyId": "nature",
       "rank": "E",
       "tier": 121,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "ノチョリンにモンスターのスカウトを依頼（凍骨の氷原）低確率"
     },
     {
       "id": "ブラックマンティス",
@@ -1508,7 +1511,10 @@
       "familyId": "beast",
       "rank": "D",
       "tier": 157,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "ノチョリンにモンスターのスカウトを依頼（歓楽の霊道）低確率"
     },
     {
       "id": "ブラウニー",
@@ -1638,7 +1644,10 @@
       "familyId": "nature",
       "rank": "D",
       "tier": 171,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "ノチョリンにモンスターのスカウトを依頼（静寂の草原）低確率"
     },
     {
       "id": "スピンサタン",
@@ -1686,7 +1695,10 @@
       "familyId": "nature",
       "rank": "D",
       "tier": 176,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "ノチョリンにモンスターのスカウトを依頼（崩落都市）低確率"
     },
     {
       "id": "りゅうせんし",
@@ -2302,7 +2314,10 @@
       "familyId": "nature",
       "rank": "C",
       "tier": 240,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "ノチョリンにモンスターのスカウトを依頼（焦熱の火山）低確率"
     },
     {
       "id": "マザーオクト",
@@ -2785,7 +2800,10 @@
       "familyId": "break",
       "rank": "C",
       "tier": 292,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "センタービル地下2階の勝ちぬきバトル100勝の報酬。魔界のボスでもあり、撃破すると魔王軍侵攻イベントが発生する。配合では作れない"
     },
     {
       "id": "カンダタ",
@@ -2851,7 +2869,10 @@
       "familyId": "beast",
       "rank": "B",
       "tier": 299,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "ノチョリンにモンスターのスカウトを依頼（黒鉄の監獄塔）低確率"
     },
     {
       "id": "ホークブリザード",
@@ -3294,7 +3315,10 @@
       "familyId": "beast",
       "rank": "B",
       "tier": 349,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "崩落都市マスターズロード★のゴールキーパー"
     },
     {
       "id": "じごくのたまねぎ",
@@ -4340,7 +4364,10 @@
       "familyId": "break",
       "rank": "A",
       "tier": 464,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "魂配合。『凶だいおうイカの魂』（黒鉄の監獄塔の屋上にルーラ→空中ライドで柵を越えて北東のリアクター反応）と『ダークマデュライト』を配合所に持ち込む"
     },
     {
       "id": "凶とげジョボー",
@@ -4489,7 +4516,10 @@
       "familyId": "slime",
       "rank": "S",
       "tier": 480,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "攻略本『最強データ＋ガイドブック for PRO』のプレゼントコード特典。2017年9月1日以降はインターネット通信広場のWi-Fi PRESENTでプレゼントディスクを受け取り、センタービル地下1階のディスクマシーンで使用・クリアして入手。配合不可"
     },
     {
       "id": "スライダーガール",
@@ -4530,7 +4560,10 @@
       "familyId": "material",
       "rank": "S",
       "tier": 484,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "ドラゴンクエストX とのコラボ限定。DQ10でキーエンブレムを1個以上獲得して応募し、もらえるプレゼントコードでディスクを入手（配布は2017/3/2〜2017/12/31で終了済み）。配合では作れない"
     },
     {
       "id": "みならい神獣",
@@ -4538,7 +4571,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 485,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "シナリオ完全クリア後、神獣界の神獣の里の祭壇で神獣石1個と交換。スカウト・配合では入手不可"
     },
     {
       "id": "ティコ",
@@ -4587,7 +4623,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 490,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "シナリオ完全クリア後、センタービル1階のティコに話しかけ神獣の里へ移動し、祭壇に神獣石5個を捧げると仲間になる"
     },
     {
       "id": "ウィンデオ",
@@ -4595,7 +4634,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 491,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "神獣の里の祭壇で神獣石5個と交換"
     },
     {
       "id": "ガルハート",
@@ -4603,7 +4645,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 492,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "神獣の里の祭壇で神獣石5個と交換"
     },
     {
       "id": "フレイシャ",
@@ -4611,7 +4656,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 493,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "神獣の里の祭壇で神獣石5個と交換"
     },
     {
       "id": "グラブゾン",
@@ -4619,7 +4667,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 494,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "神獣の里の祭壇で神獣石5個と交換"
     },
     {
       "id": "アックル",
@@ -4627,7 +4678,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 495,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "神獣の里の祭壇で神獣石5個と交換"
     },
     {
       "id": "ディアノーグ",
@@ -4635,7 +4689,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 496,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "神獣の里の祭壇で神獣石5個と交換"
     },
     {
       "id": "ガオガイヤ",
@@ -4643,7 +4700,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 497,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "神獣の里の祭壇で神獣石5個と交換"
     },
     {
       "id": "ゴールデンスライム",
@@ -4957,7 +5017,10 @@
       "familyId": "demon",
       "rank": "S",
       "tier": 531,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "魔界・魔王城3階に出現（凶おおみみず撃破後の魔王軍侵攻イベント以降）。配合では作れない"
     },
     {
       "id": "シャンタク",
@@ -4987,7 +5050,10 @@
       "familyId": "zombie",
       "rank": "S",
       "tier": 534,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "凍骨の氷原マスターズロード★★のゴールキーパーを倒すと入手。配合では作れない"
     },
     {
       "id": "デスカイザー",
@@ -5033,7 +5099,10 @@
       "familyId": "slime",
       "rank": "S",
       "tier": 539,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "焦熱の火山マスターズロード★★★のゴールキーパー"
     },
     {
       "id": "レティス",
@@ -5147,7 +5216,10 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 551,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "すれちがいバトル50勝で入手"
     },
     {
       "id": "スライダークロボ",
@@ -5377,7 +5449,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 576,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "DQMJ3（無印）からの引き継ぎ限定。プロ版ではマスターズロード報酬がゴールドウィングに置き換わっているため、引き継がないと入手できない"
     },
     {
       "id": "レジマリン",
@@ -5385,7 +5460,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 577,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "DQMJ3（無印）からの引き継ぎ限定"
     },
     {
       "id": "レジアクセル",
@@ -5393,7 +5471,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 578,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "DQMJ3（無印）からの引き継ぎ限定"
     },
     {
       "id": "サンチョゼロ",
@@ -5401,7 +5482,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 579,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "シナリオ完全クリア後、センタービル地下2階でテレジアから『サンチョ修理キット』を入手し、楽園の残骸で使うと入手"
     },
     {
       "id": "サンチョ",
@@ -5409,7 +5493,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 580,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "イベントバトル5日目の報酬"
     },
     {
       "id": "凶ドラゴンガイア",
@@ -5441,7 +5528,10 @@
       "familyId": "break",
       "rank": "SS",
       "tier": 584,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "ディスク報酬でも入手可能（グレートライダーズカップでゴールデンゴーレムの攻撃をシールドで防ぐと得られるコード「後ろ盾な」でディスクを作成し、その報酬）。通常は凶ギガンテス×アトラスの配合"
     },
     {
       "id": "凶アークデーモン",
@@ -5771,7 +5861,10 @@
       "familyId": "slime",
       "rank": "SS",
       "tier": 623,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "いつのまに通信で配信され、ワールドマップに出現する"
     },
     {
       "id": "グレートノチョーラＺ",
@@ -5779,7 +5872,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 624,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "センタービル地下2階の勝ちぬきバトルで第50戦に勝利すると仲間になる"
     },
     {
       "id": "ゴールドノチョーラＺ",
@@ -5787,7 +5883,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 625,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "グレートライダーズカップSランクの1位報酬"
     },
     {
       "id": "プラチナノチョーラＺ",
@@ -5795,7 +5894,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 626,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "グレートライダーズカップSSランクの1位報酬"
     },
     {
       "id": "ゴールドアクセル",
@@ -5803,7 +5905,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 627,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "静寂の草原マスターズロード★★★★のゴールキーパー"
     },
     {
       "id": "ゴールドマリン",
@@ -5811,7 +5916,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 628,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "歓楽の霊道マスターズロード★★★★★のゴールキーパー"
     },
     {
       "id": "ゴールドウィング",
@@ -5819,7 +5927,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 629,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "黒鉄の監獄塔マスターズロード★★★★★★のゴールキーパー"
     },
     {
       "id": "カンダタセブン",
@@ -5932,7 +6043,10 @@
       "familyId": "material",
       "rank": "SS",
       "tier": 642,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "すれちがいバトルで『SQEXの刺客』として現れることがあり、勝利すると仲間になる。配合では作れない"
     },
     {
       "id": "はぐれメタルキング",
@@ -5940,7 +6054,10 @@
       "familyId": "slime",
       "rank": "SS",
       "tier": 643,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "神獣界・第一層マップ右上の高台に夜限定・超低確率で出現（4体配合でも作成可能）"
     },
     {
       "id": "魔戦士ヴェーラ",
@@ -6096,7 +6213,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 658,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "Wi-Fiプレゼント（配信）限定。配合では作れない"
     },
     {
       "id": "トーポ",
@@ -6231,7 +6351,10 @@
       "familyId": "beast",
       "rank": "SS",
       "tier": 673,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "バーチャルコロシアムSランククリア時に仲間になる（レティス×キングスペーディオの配合でも作成可能）"
     },
     {
       "id": "闘神レオソード",
@@ -6309,7 +6432,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 682,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "神獣の里の祭壇で神獣石10個と交換（4体配合でも作成可能）"
     },
     {
       "id": "ＪＥＳＴＥＲ",
@@ -6317,7 +6443,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 683,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "神獣の里の祭壇で神獣石10個と交換（4体配合でも作成可能）"
     },
     {
       "id": "神馬アルシオン",
@@ -6615,7 +6744,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 718,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "神獣の里の祭壇で神獣石20個と交換（ＪＯＫＥＲ×ＪＥＳＴＥＲの配合でも作成可能）"
     },
     {
       "id": "魔界神マデュラーシャ",
@@ -6634,7 +6766,10 @@
       "familyId": "demon",
       "rank": "SS",
       "tier": 720,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "Ver.1.2アップデート（2017/4/5配信）で追加されたダイの大冒険コラボ。神獣の村（神獣の里）でSランクモンスターを182匹以上作ってライブラリを埋めてからブラスに話しかけると仲間になる"
     },
     {
       "id": "チウ",
@@ -6642,7 +6777,10 @@
       "familyId": "beast",
       "rank": "SS",
       "tier": 721,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "Ver.1.2アップデートのダイの大冒険コラボ。センタービル地下2階／闘技場のチウに、マリンスライムに『マリべえ』・アルミラージに『ラミ』・ドラキーに『ドナドナ』と名付けたモンスターを見せると仲間になる（いずれか1匹でよい）"
     },
     {
       "id": "ゴメちゃん",
@@ -6661,7 +6799,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 723,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "Ver.1.2アップデートのダイの大冒険コラボ。センタービル地下2階のイベントバトルに勝つと『コラボバトルチケット』が手に入り、そのチケットバトル1戦目（HP10000）に勝利すると仲間になる"
     },
     {
       "id": "ミストバーン",
@@ -6669,7 +6810,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 724,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "Ver.1.2アップデートのダイの大冒険コラボ。センタービル地下2階のコラボチケットバトル2戦目（HP10000）に勝利すると仲間になる"
     },
     {
       "id": "大魔王バーン",
@@ -6677,7 +6821,10 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 725,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "Ver.1.2アップデートのダイの大冒険コラボ。センタービル地下2階のコラボチケットバトル3戦目（HP10000・2回行動）に勝利すると仲間になる"
     },
     {
       "id": "鬼眼王バーン",
@@ -11681,6 +11828,281 @@
           "familyId": "material"
         }
       ]
+    },
+    {
+      "id": "sp_add_000_キングスペーディオ",
+      "childId": "キングスペーディオ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "スペディオ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "竜王"
+        }
+      ],
+      "note": "特殊配合"
+    },
+    {
+      "id": "sp_add_009_ＪＯＫＥＲ",
+      "childId": "ＪＯＫＥＲ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キングスペーディオ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "クインガルハート"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "グラブゾンジャック"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ディアノーグエース"
+        }
+      ],
+      "note": "特殊配合。神獣石10個との交換でも入手可 4体配合"
+    },
+    {
+      "id": "sp_add_010_ＪＥＳＴＥＲ",
+      "childId": "ＪＥＳＴＥＲ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "皇帝ウィンディオ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "義帝ガオガイヤ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "女帝フレイシャ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "戦帝アックル"
+        }
+      ],
+      "note": "特殊配合。神獣石10個との交換でも入手可 4体配合"
+    },
+    {
+      "id": "sp_add_011_ＷＯＲＬＤ",
+      "childId": "ＷＯＲＬＤ",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ＪＯＫＥＲ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ＪＥＳＴＥＲ"
+        }
+      ],
+      "note": "特殊配合。神獣石20個との交換でも入手可"
+    },
+    {
+      "id": "sp_add_018_神竜",
+      "childId": "神竜",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "神さま"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "軍神トガミヒメ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ドーク"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "竜王"
+        }
+      ],
+      "note": "特殊配合。攻略の虎は『かみさま』表記、攻略広場は『神さま』表記。通信広場で金コイン2枚での交換も可 4体配合"
+    },
+    {
+      "id": "sp_add_020_マスタードラゴン",
+      "childId": "マスタードラゴン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "神竜"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "グレイナル"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "バルボロス"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "じげんりゅう"
+        }
+      ],
+      "note": "特殊配合 4体配合"
+    },
+    {
+      "id": "sp_add_021_バルボロス",
+      "childId": "バルボロス",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ギュメイ将軍"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゲルニック将軍"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴレオン将軍"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ヘルクラッシャー"
+        }
+      ],
+      "note": "特殊配合。通信広場で金コイン2枚での交換も可 4体配合"
+    },
+    {
+      "id": "sp_add_022_ヘルクラッシャー",
+      "childId": "ヘルクラッシャー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "シャンタク"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "魔王の使い"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "デスカイザー"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "シャドーノーブル"
+        }
+      ],
+      "note": "特殊配合 4体配合"
+    },
+    {
+      "id": "sp_add_023_スラキャンサー",
+      "childId": "スラキャンサー",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "凶キラークラブ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴールデンスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "プレミアムスライム"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "管理端末Ｑ４８４"
+        }
+      ],
+      "note": "特殊配合。通信広場で金コイン2枚での交換も可 4体配合"
+    },
+    {
+      "id": "sp_add_030_ダークドレアム",
+      "childId": "ダークドレアム",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "デュラン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ダグジャガルマ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "大魔王マデュラージャ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "フォロボス"
+        }
+      ],
+      "note": "特殊配合 4体配合"
+    },
+    {
+      "id": "sp_add_031_グランドラゴーン",
+      "childId": "グランドラゴーン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "グランエスターク"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "キングヒドラ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ゴールドアクセル"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "大魔王マデュラージャ"
+        }
+      ],
+      "note": "特殊配合 4体配合"
+    },
+    {
+      "id": "sp_add_039_ムド―",
+      "childId": "ムド―",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "ブースカ"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ブオーン"
+        }
+      ],
+      "note": "特殊配合。通信広場で金コイン2枚での交換も可"
+    },
+    {
+      "id": "sp_add_040_鬼眼王バーン",
+      "childId": "鬼眼王バーン",
+      "parents": [
+        {
+          "kind": "monster",
+          "monsterId": "キルバーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "ミストバーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "大魔王バーン"
+        },
+        {
+          "kind": "monster",
+          "monsterId": "魔界神マデュラーシャ"
+        }
+      ],
+      "note": "特殊配合。Ver.1.2アップデート後のみ作成可能。ダイの大冒険コラボ 4体配合"
     }
   ]
 }
