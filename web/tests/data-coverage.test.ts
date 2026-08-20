@@ -37,6 +37,9 @@ describe('データ網羅状況', () => {
       '- **素材に到達できない**: 配合レシピはあるが、材料側にたどり着けない',
       '  → 調べるべきは材料のほう。「大元の原因」の列にさかのぼった先を出しています',
       '',
+      '「分かっている入手方法」の列には、データに登録済みの入手方法を出しています。',
+      '調べ直すときに、どこまで確認済みかがここで分かります。',
+      '',
       '各タイトルの表の下に「優先して調べたいモンスター」を載せています。',
       'そこが解決すると芋づる式に他のモンスターも到達可能になります。',
       '',
@@ -126,8 +129,8 @@ describe('データ網羅状況', () => {
         lines.push('未到達のモンスターはありません。', '');
       } else {
         lines.push(
-          '| ランク | モンスター | 系統 | 状況 | 直接の原因（到達できない素材） | 大元の原因 |',
-          '| --- | --- | --- | --- | --- | --- |',
+          '| ランク | モンスター | 系統 | 状況 | 直接の原因（到達できない素材） | 大元の原因 | 分かっている入手方法 |',
+          '| --- | --- | --- | --- | --- | --- | --- |',
         );
         for (const m of unreachable) {
           const hasRecipe = childIds.has(m.id);
@@ -146,8 +149,12 @@ describe('データ網羅状況', () => {
           const rootText = roots.length
             ? roots.filter((r) => r !== m.name).join('、') || '（自身が行き止まり）'
             : '（自身が行き止まり）';
+          // 「なぜ入手できないのか」を表から直接読めるようにする。
+          // 調べ直すときに、どこまで確認済みかがすぐ分かる
+          const known = (m.acquisitionDetail ?? '').replace(/\|/g, '／').replace(/\s+/g, ' ').trim();
+          const knownText = known ? (known.length > 90 ? `${known.slice(0, 90)}…` : known) : '—';
           lines.push(
-            `| ${m.rank} | ${m.name} | ${familyName(m.familyId)} | ${state} | ${blockerText} | ${rootText} |`,
+            `| ${m.rank} | ${m.name} | ${familyName(m.familyId)} | ${state} | ${blockerText} | ${rootText} | ${knownText} |`,
           );
         }
         lines.push('');
