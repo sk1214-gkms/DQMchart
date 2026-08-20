@@ -88,7 +88,10 @@
       "name": "ドラゴンキッズ",
       "familyId": "dragon",
       "rank": "F",
-      "tier": 2
+      "tier": 2,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "海岸（晴・夜）・海岸（雨）"
     },
     {
       "id": "ズッキーニャ",
@@ -166,7 +169,10 @@
       "name": "カバシラー",
       "familyId": "nature",
       "rank": "F",
-      "tier": 10
+      "tier": 10,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "飛行船・密林（夜）"
     },
     {
       "id": "ももんじゃ",
@@ -185,8 +191,8 @@
       "rank": "F",
       "tier": 12,
       "obtainable": true,
-      "acquisition": "wild",
-      "acquisitionDetail": "平原・雪山に出現"
+      "acquisition": "event",
+      "acquisitionDetail": "（特殊）平原のプークプック、雪山のおおきづち・イエティ・アルミラージが巨大モンスターから逃げるときに落とす袋から出現"
     },
     {
       "id": "ドラキー",
@@ -300,7 +306,10 @@
       "name": "キャタピラー",
       "familyId": "nature",
       "rank": "F",
-      "tier": 24
+      "tier": 24,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "密林（雨）"
     },
     {
       "id": "プークプック",
@@ -1167,10 +1176,7 @@
       "name": "クラウンヘッド",
       "familyId": "material",
       "rank": "D",
-      "tier": 114,
-      "obtainable": true,
-      "acquisition": "wild",
-      "acquisitionDetail": "断崖に出現"
+      "tier": 114
     },
     {
       "id": "あばれこまいぬ",
@@ -1240,7 +1246,10 @@
       "name": "とっしんこぞう",
       "familyId": "material",
       "rank": "D",
-      "tier": 122
+      "tier": 122,
+      "obtainable": true,
+      "acquisition": "wild",
+      "acquisitionDetail": "断崖（晴）"
     },
     {
       "id": "ゴールドマン",
@@ -1925,7 +1934,10 @@
       "familyId": "nature",
       "rank": "C",
       "tier": 193,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "（イベント）ピピッ島でぬしさまを倒す"
     },
     {
       "id": "ダンビラムーチョ",
@@ -2306,7 +2318,10 @@
       "familyId": "demon",
       "rank": "B",
       "tier": 232,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "（イベント）ＧＪマスター戦の景品"
     },
     {
       "id": "ナイトリッチ",
@@ -2324,7 +2339,10 @@
       "familyId": "zombie",
       "rank": "B",
       "tier": 234,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "（イベント）ＧＪマスター戦の景品"
     },
     {
       "id": "ルーファ",
@@ -2468,7 +2486,10 @@
       "name": "ランプの魔王",
       "familyId": "demon",
       "rank": "B",
-      "tier": 249
+      "tier": 249,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "（イベント）ＧＪマスター戦の景品"
     },
     {
       "id": "黒騎士レオコーン",
@@ -3259,9 +3280,6 @@
       "familyId": "nature",
       "rank": "S",
       "tier": 327,
-      "obtainable": true,
-      "acquisition": "wild",
-      "acquisitionDetail": "海岸に出現",
       "tierExcluded": true
     },
     {
@@ -3372,8 +3390,8 @@
       "rank": "S",
       "tier": 339,
       "obtainable": true,
-      "acquisition": "egg",
-      "acquisitionDetail": "タマゴ(昼にタイジュの苗へ置く)から誕生",
+      "acquisition": "event",
+      "acquisitionDetail": "（イベント）ＧＪマスター戦の景品（特殊）モンスターのタマゴ（昼）",
       "tierExcluded": true
     },
     {
@@ -3935,8 +3953,8 @@
       "rank": "SS",
       "tier": 401,
       "obtainable": true,
-      "acquisition": "wild",
-      "acquisitionDetail": "断崖(ブランパレスクリア後)に出現",
+      "acquisition": "event",
+      "acquisitionDetail": "（イベント）断崖でエスタークを10ラウンド以内に倒す",
       "tierExcluded": true
     },
     {
