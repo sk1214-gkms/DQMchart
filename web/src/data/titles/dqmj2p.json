@@ -80,7 +80,8 @@
       "obtainable": true,
       "acquisition": "event",
       "acquisitionDetail": "飛行船での初期仲間候補",
-      "tierExcluded": true
+      "tierExcluded": true,
+      "discontinued": true
     },
     {
       "id": "ドラゴンキッズ",
@@ -397,7 +398,8 @@
       "obtainable": true,
       "acquisition": "event",
       "acquisitionDetail": "DQMJ2無印版の密林でスカウトして連れてくる",
-      "tierExcluded": true
+      "tierExcluded": true,
+      "discontinued": true
     },
     {
       "id": "マドハンド",
@@ -756,7 +758,11 @@
       "familyId": "zombie",
       "rank": "E",
       "tier": 72,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配信限定モンスター。出典の「スカウト等」列は『（特殊）配信サービス』のみで、「位階配合」列・「特殊配合」列はどちらも『-』＝配合で作る手段が一切ない。大会賞品系の配信枠（無印は『世界モンスター選手権』、プロ版は『最強マスター選手権』の賞品）として配布されたもの。ニンテンドーWi-Fiコネクションは2014年5月20日で終了しており（スクウェア・エニックス公式FAQ：プレゼント対戦・最強マスター決定戦等が終了）、店舗/イベント配信も2011年の期間限定だったため、現在は正規手段では入手不可。所持している他プレイヤーとのすれちがい／ローカル通信での交換のみ。",
+      "discontinued": true
     },
     {
       "id": "ダッシュラン",
@@ -921,7 +927,8 @@
       "obtainable": true,
       "acquisition": "event",
       "acquisitionDetail": "DQMJ2無印版で配合作成して連れてくる",
-      "tierExcluded": true
+      "tierExcluded": true,
+      "discontinued": true
     },
     {
       "id": "おどるほうせき",
@@ -980,7 +987,8 @@
       "obtainable": true,
       "acquisition": "event",
       "acquisitionDetail": "DQMJ2無印版の平原でスカウトして連れてくる",
-      "tierExcluded": true
+      "tierExcluded": true,
+      "discontinued": true
     },
     {
       "id": "よるのていおう",
@@ -1773,7 +1781,8 @@
       "obtainable": true,
       "acquisition": "event",
       "acquisitionDetail": "DQMJ2無印版の遺跡でスカウトして連れてくる",
-      "tierExcluded": true
+      "tierExcluded": true,
+      "discontinued": true
     },
     {
       "id": "あくまのめだま",
@@ -2245,7 +2254,8 @@
       "obtainable": true,
       "acquisition": "event",
       "acquisitionDetail": "スカウトQプロクリアで最強版を入手",
-      "tierExcluded": true
+      "tierExcluded": true,
+      "discontinued": true
     },
     {
       "id": "ポンポコあにき",
@@ -2322,7 +2332,11 @@
       "familyId": "slime",
       "rank": "B",
       "tier": 235,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配信限定モンスター。出典の「スカウト等」列は『（特殊）配信サービス』のみで、「位階配合」列・「特殊配合」列はどちらも『-』＝配合で作る手段が一切ない。大会賞品系の配信枠（無印は『世界モンスター選手権』、プロ版は『最強マスター選手権』の賞品）として配布されたもの。ニンテンドーWi-Fiコネクションは2014年5月20日で終了しており（スクウェア・エニックス公式FAQ：プレゼント対戦・最強マスター決定戦等が終了）、店舗/イベント配信も2011年の期間限定だったため、現在は正規手段では入手不可。所持している他プレイヤーとのすれちがい／ローカル通信での交換のみ。",
+      "discontinued": true
     },
     {
       "id": "ヘルダイバー",
@@ -2617,7 +2631,8 @@
       "obtainable": true,
       "acquisition": "event",
       "acquisitionDetail": "プレゼント対戦で勝利時に入手",
-      "tierExcluded": true
+      "tierExcluded": true,
+      "discontinued": true
     },
     {
       "id": "ずしおうまる",
@@ -2825,7 +2840,8 @@
       "obtainable": true,
       "acquisition": "event",
       "acquisitionDetail": "マックでDS配信(3/31～4/27)で入手",
-      "tierExcluded": true
+      "tierExcluded": true,
+      "discontinued": true
     },
     {
       "id": "ガルーダ",
@@ -2910,7 +2926,8 @@
       "obtainable": true,
       "acquisition": "event",
       "acquisitionDetail": "マックでDS配信(3/31～4/27)で入手",
-      "tierExcluded": true
+      "tierExcluded": true,
+      "discontinued": true
     },
     {
       "id": "メカバーン",
@@ -3106,7 +3123,11 @@
       "familyId": "material",
       "rank": "A",
       "tier": 314,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配信限定モンスター。出典の「スカウト等」列は『（特殊）配信サービス』のみで、「位階配合」列・「特殊配合」列はどちらも『-』＝配合で作る手段が一切ない。なお「次の配合先」列は『暗黒の魔神』。ただし暗黒の魔神はバベルボブル×うごくせきぞう／ゴールドマン でも作れるため、ヘルクラウドが入手できなくても暗黒の魔神以降の配合ルートは塞がらない。ニンテンドーWi-Fiコネクションは2014年5月20日で終了しており（スクウェア・エニックス公式FAQ：プレゼント対戦・最強マスター決定戦等が終了）、店舗/イベント配信も2011年の期間限定だったため、現在は正規手段では入手不可。所持している他プレイヤーとのすれ",
+      "discontinued": true
     },
     {
       "id": "レティス",
@@ -3128,7 +3149,8 @@
       "obtainable": true,
       "acquisition": "event",
       "acquisitionDetail": "マックでDS配信(3/31～4/27)で入手",
-      "tierExcluded": true
+      "tierExcluded": true,
+      "discontinued": true
     },
     {
       "id": "ゾーマズデビル",
@@ -3294,7 +3316,8 @@
       "obtainable": true,
       "acquisition": "event",
       "acquisitionDetail": "プレゼント対戦で勝利時に入手",
-      "tierExcluded": true
+      "tierExcluded": true,
+      "discontinued": true
     },
     {
       "id": "おにこんぼう",
@@ -3559,7 +3582,8 @@
       "obtainable": true,
       "acquisition": "event",
       "acquisitionDetail": "店限定プレゼント対戦の賞品",
-      "tierExcluded": true
+      "tierExcluded": true,
+      "discontinued": true
     },
     {
       "id": "スラ・ブラスター",
@@ -3756,7 +3780,11 @@
       "familyId": "nature",
       "rank": "SS",
       "tier": 384,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配信限定モンスター。出典の「スカウト等」列は『（特殊）配信サービス』のみで、「位階配合」列・「特殊配合」列はどちらも『-』＝配合で作る手段が一切ない。スクウェア・エニックスの2011年7月27日付プレスリリースにより、2011年8月1日から店舗（SQUARE ENIX SHOW CASE／ルイーダの酒場／ヨドバシAkiba・梅田／フタバ図書TERA／ビックカメラ天神・札幌）およびイベント（お台場合衆国2011 8/1〜8/31、Vジャンプフェスタ2011 8/20・8/27）で「すれちがい配信」された期間限定配信。ニンテンドーWi-Fiコネクションは2014年5月20日で終了しており（スクウェ",
+      "discontinued": true
     },
     {
       "id": "わたぼう",
@@ -3775,7 +3803,11 @@
       "familyId": "material",
       "rank": "SS",
       "tier": 386,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "配信限定モンスター。出典の「スカウト等」列は『（特殊）配信サービス』のみで、「位階配合」列・「特殊配合」列はどちらも『-』＝配合で作る手段が一切ない。スクウェア・エニックスの2011年7月27日付プレスリリースにより、2011年8月1日から店舗（SQUARE ENIX SHOW CASE／ルイーダの酒場／ヨドバシAkiba・梅田／フタバ図書TERA／ビックカメラ天神・札幌）およびイベント（お台場合衆国2011 8/1〜8/31、Vジャンプフェスタ2011 8/20・8/27）で「すれちがい配信」された期間限定配信。ニンテンドーWi-Fiコネクションは2014年5月20日で終了しており（スクウェ",
+      "discontinued": true
     },
     {
       "id": "大魔王デスタムーア",
@@ -3885,7 +3917,8 @@
       "obtainable": true,
       "acquisition": "event",
       "acquisitionDetail": "マックでDS配信(3/31～4/27)で入手",
-      "tierExcluded": true
+      "tierExcluded": true,
+      "discontinued": true
     },
     {
       "id": "海王神",
@@ -3931,7 +3964,8 @@
       "obtainable": true,
       "acquisition": "event",
       "acquisitionDetail": "プレゼント対戦で勝利時に入手",
-      "tierExcluded": true
+      "tierExcluded": true,
+      "discontinued": true
     },
     {
       "id": "闘神レオソード",
