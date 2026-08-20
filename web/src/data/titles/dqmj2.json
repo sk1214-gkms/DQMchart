@@ -2242,16 +2242,15 @@
       "tierExcluded": true
     },
     {
-      "id": "ゆうしゃスラリンガル",
-      "name": "ゆうしゃスラリンガル",
+      "id": "勇車スラリンガル",
+      "name": "勇車スラリンガル",
       "familyId": "slime",
       "rank": "A",
       "tier": 234,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "（配信）ドラゴンクエストモンスターバトルロードII レジェンドとの連動／配信限定モンスター。配合では作成できない",
-      "tierExcluded": true,
-      "discontinued": true
+      "acquisitionDetail": "ジョーカー2プロで入手して通信交換で無印版に持ち込む（プロ版での入手: すれちがいバトル50勝で入手）。DS本体2台と両方のソフトが必要。交換なのでプロ版側からは居なくなり、レベルと能力値は初期化される（配合回数・特性・特技は維持）。無印のみで遊ぶ場合は配信限定のため現在は入手できない。",
+      "tierExcluded": true
     },
     {
       "id": "ヘルクラウド",
@@ -2679,9 +2678,8 @@
       "tier": 281,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "（配信）配信限定モンスター。2010年当時のWi-Fi／店頭配信でのみ入手。配合では作成できない",
-      "tierExcluded": true,
-      "discontinued": true
+      "acquisitionDetail": "ジョーカー2プロで入手して通信交換で無印版に持ち込む（プロ版での入手: 伝説のマスター「テリー」撃破で入手）。DS本体2台と両方のソフトが必要。交換なのでプロ版側からは居なくなり、レベルと能力値は初期化される（配合回数・特性・特技は維持）。無印のみで遊ぶ場合は配信限定のため現在は入手できない。",
+      "tierExcluded": true
     },
     {
       "id": "スーパーキラーマシン",
@@ -2750,9 +2748,8 @@
       "tier": 289,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "（配信）配信限定モンスター。2010年当時のWi-Fi／店頭配信でのみ入手。配合では作成できない",
-      "tierExcluded": true,
-      "discontinued": true
+      "acquisitionDetail": "ジョーカー2プロで入手して通信交換で無印版に持ち込む（プロ版での入手: タマゴ(昼)から誕生）。DS本体2台と両方のソフトが必要。交換なのでプロ版側からは居なくなり、レベルと能力値は初期化される（配合回数・特性・特技は維持）。無印のみで遊ぶ場合は配信限定のため現在は入手できない。",
+      "tierExcluded": true
     },
     {
       "id": "魔王オルゴ・デミーラ",

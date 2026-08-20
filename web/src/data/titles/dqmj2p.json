@@ -406,9 +406,8 @@
       "tier": 34,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "DQMJ2無印版の密林でスカウトして連れてくる",
-      "tierExcluded": true,
-      "discontinued": true
+      "acquisitionDetail": "ジョーカー2（無印）で入手して通信交換でプロ版に持ち込む（無印での入手: 密林（雨））。DS本体2台と両方のソフトが必要。交換なので無印側からは居なくなり、レベルと能力値は初期化される（配合回数・特性・特技は維持）。プロ版のみで遊ぶ場合は配信限定のため現在は入手できない。",
+      "tierExcluded": true
     },
     {
       "id": "マドハンド",
@@ -935,9 +934,8 @@
       "tier": 89,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "DQMJ2無印版で配合作成して連れてくる",
-      "tierExcluded": true,
-      "discontinued": true
+      "acquisitionDetail": "ジョーカー2（無印）で入手して通信交換でプロ版に持ち込む（無印での入手: 魔界）。DS本体2台と両方のソフトが必要。交換なので無印側からは居なくなり、レベルと能力値は初期化される（配合回数・特性・特技は維持）。プロ版のみで遊ぶ場合は配信限定のため現在は入手できない。",
+      "tierExcluded": true
     },
     {
       "id": "おどるほうせき",
@@ -995,9 +993,8 @@
       "tier": 95,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "DQMJ2無印版の平原でスカウトして連れてくる",
-      "tierExcluded": true,
-      "discontinued": true
+      "acquisitionDetail": "ジョーカー2（無印）で入手して通信交換でプロ版に持ち込む（無印での入手: 平原（雨））。DS本体2台と両方のソフトが必要。交換なので無印側からは居なくなり、レベルと能力値は初期化される（配合回数・特性・特技は維持）。プロ版のみで遊ぶ場合は配信限定のため現在は入手できない。",
+      "tierExcluded": true
     },
     {
       "id": "よるのていおう",
@@ -1789,9 +1786,8 @@
       "tier": 178,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "DQMJ2無印版の遺跡でスカウトして連れてくる",
-      "tierExcluded": true,
-      "discontinued": true
+      "acquisitionDetail": "ジョーカー2（無印）で入手して通信交換でプロ版に持ち込む（無印での入手: 遺跡（昼）・メタルエリア）。DS本体2台と両方のソフトが必要。交換なので無印側からは居なくなり、レベルと能力値は初期化される（配合回数・特性・特技は維持）。プロ版のみで遊ぶ場合は配信限定のため現在は入手できない。",
+      "tierExcluded": true
     },
     {
       "id": "あくまのめだま",
@@ -2860,9 +2856,8 @@
       "tier": 286,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "マックでDS配信(3/31～4/27)で入手",
-      "tierExcluded": true,
-      "discontinued": true
+      "acquisitionDetail": "ジョーカー2（無印）で入手して通信交換でプロ版に持ち込む（無印での入手: （イベント）すれちがいバトル200勝）。DS本体2台と両方のソフトが必要。交換なので無印側からは居なくなり、レベルと能力値は初期化される（配合回数・特性・特技は維持）。プロ版のみで遊ぶ場合は配信限定のため現在は入手できない。",
+      "tierExcluded": true
     },
     {
       "id": "ガルーダ",
@@ -2946,9 +2941,8 @@
       "tier": 294,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "マックでDS配信(3/31～4/27)で入手",
-      "tierExcluded": true,
-      "discontinued": true
+      "acquisitionDetail": "ジョーカー2（無印）で入手して通信交換でプロ版に持ち込む（無印での入手: （イベント）すれちがいバトルで200勝した後、10勝するごとにもらえることがある）。DS本体2台と両方のソフトが必要。交換なので無印側からは居なくなり、レベルと能力値は初期化される（配合回数・特性・特技は維持）。プロ版のみで遊ぶ場合は配信限定のため現在は入手できない。",
+      "tierExcluded": true
     },
     {
       "id": "メカバーン",
