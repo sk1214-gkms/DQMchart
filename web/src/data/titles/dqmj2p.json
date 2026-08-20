@@ -222,8 +222,7 @@
       "tier": 16,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪山に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "雪山に出現"
     },
     {
       "id": "くしざしツインズ",
@@ -360,8 +359,7 @@
       "tier": 30,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "密林(クリア後)に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "密林(クリア後)に出現"
     },
     {
       "id": "ぐんたいアリ",
@@ -388,8 +386,7 @@
       "name": "ブリザード",
       "familyId": "material",
       "rank": "F",
-      "tier": 33,
-      "tierExcluded": true
+      "tier": 33
     },
     {
       "id": "プチット族",
@@ -427,8 +424,7 @@
       "tier": 37,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪山に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "雪山に出現"
     },
     {
       "id": "はなカワセミ",
@@ -499,8 +495,7 @@
       "tier": 44,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡に出現"
     },
     {
       "id": "リザードフライ",
@@ -597,8 +592,7 @@
       "tier": 54,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪山に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "雪山に出現"
     },
     {
       "id": "ミステリドール",
@@ -645,8 +639,7 @@
       "tier": 59,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "海岸(クリア後)に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "海岸(クリア後)に出現"
     },
     {
       "id": "マッドプラント",
@@ -663,8 +656,7 @@
       "name": "コサックシープ",
       "familyId": "beast",
       "rank": "E",
-      "tier": 61,
-      "tierExcluded": true
+      "tier": 61
     },
     {
       "id": "ブッチョマン",
@@ -699,8 +691,7 @@
       "name": "ぶちスライム",
       "familyId": "slime",
       "rank": "E",
-      "tier": 65,
-      "tierExcluded": true
+      "tier": 65
     },
     {
       "id": "ドラゴンブッシュ",
@@ -710,8 +701,7 @@
       "tier": 66,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "魔界に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "魔界に出現"
     },
     {
       "id": "サボテンボール",
@@ -776,8 +766,7 @@
       "tier": 73,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "平原(クリア後)に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "平原(クリア後)に出現"
     },
     {
       "id": "ベビーパンサー",
@@ -797,8 +786,7 @@
       "tier": 75,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪山・魔界(クリア後)に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "雪山・魔界(クリア後)に出現"
     },
     {
       "id": "フレイム",
@@ -808,8 +796,7 @@
       "tier": 76,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "断崖・遺跡地下(クリア後)に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "断崖・遺跡地下(クリア後)に出現"
     },
     {
       "id": "ベビーサタン",
@@ -846,8 +833,7 @@
       "tier": 80,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "海岸(クリア後)に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "海岸(クリア後)に出現"
     },
     {
       "id": "キメラ",
@@ -884,8 +870,7 @@
       "name": "ヌボーン",
       "familyId": "demon",
       "rank": "E",
-      "tier": 84,
-      "tierExcluded": true
+      "tier": 84
     },
     {
       "id": "ダースウルフェン",
@@ -905,8 +890,7 @@
       "tier": 86,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪山に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "雪山に出現"
     },
     {
       "id": "フェアリードラゴン",
@@ -947,8 +931,7 @@
       "tier": 90,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡(クリア後)・魔界に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡(クリア後)・魔界に出現"
     },
     {
       "id": "びっくりサタン",
@@ -975,8 +958,7 @@
       "name": "スライムナイト",
       "familyId": "slime",
       "rank": "D",
-      "tier": 93,
-      "tierExcluded": true
+      "tier": 93
     },
     {
       "id": "スカルゴン",
@@ -1018,8 +1000,7 @@
       "tier": 97,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡に出現"
     },
     {
       "id": "デザートデーモン",
@@ -1029,8 +1010,7 @@
       "tier": 98,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "断崖に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "断崖に出現"
     },
     {
       "id": "パラサキス",
@@ -1065,8 +1045,7 @@
       "name": "ドラゴンバゲージ",
       "familyId": "dragon",
       "rank": "D",
-      "tier": 102,
-      "tierExcluded": true
+      "tier": 102
     },
     {
       "id": "プリズニャン",
@@ -1115,8 +1094,7 @@
       "tier": 107,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "断崖に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "断崖に出現"
     },
     {
       "id": "ポムポムボム",
@@ -1126,8 +1104,7 @@
       "tier": 108,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "断崖に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "断崖に出現"
     },
     {
       "id": "エンゼルスライム",
@@ -1157,8 +1134,7 @@
       "tier": 111,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪山に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "雪山に出現"
     },
     {
       "id": "いわとびあくま",
@@ -1256,8 +1232,7 @@
       "name": "とっしんこぞう",
       "familyId": "material",
       "rank": "D",
-      "tier": 122,
-      "tierExcluded": true
+      "tier": 122
     },
     {
       "id": "ゴールドマン",
@@ -1295,8 +1270,7 @@
       "tier": 126,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "魔界に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "魔界に出現"
     },
     {
       "id": "ぐんたいガニ",
@@ -1369,8 +1343,7 @@
       "name": "メタルライダー",
       "familyId": "slime",
       "rank": "D",
-      "tier": 134,
-      "tierExcluded": true
+      "tier": 134
     },
     {
       "id": "よろいムカデ",
@@ -1401,8 +1374,7 @@
       "tier": 137,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪山に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "雪山に出現"
     },
     {
       "id": "ひょうが魔人",
@@ -1412,8 +1384,7 @@
       "tier": 138,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "断崖に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "断崖に出現"
     },
     {
       "id": "きりさきピエロ",
@@ -1489,8 +1460,7 @@
       "tier": 146,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡(クリア後)に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡(クリア後)に出現"
     },
     {
       "id": "カンダタこぶん",
@@ -1511,8 +1481,7 @@
       "tier": 148,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "海岸に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "海岸に出現"
     },
     {
       "id": "スライムブレス",
@@ -1574,8 +1543,7 @@
       "tier": 154,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "魔界に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "魔界に出現"
     },
     {
       "id": "ウィングデビル",
@@ -1585,8 +1553,7 @@
       "tier": 155,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡・遺跡地下に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡・遺跡地下に出現"
     },
     {
       "id": "ダーククラブ",
@@ -1596,8 +1563,7 @@
       "tier": 156,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "海岸(クリア後)に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "海岸(クリア後)に出現"
     },
     {
       "id": "スライムタワー",
@@ -1702,8 +1668,7 @@
       "name": "じんめんじゅ",
       "familyId": "nature",
       "rank": "C",
-      "tier": 167,
-      "tierExcluded": true
+      "tier": 167
     },
     {
       "id": "マーマン",
@@ -1748,8 +1713,7 @@
       "tier": 172,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡に出現"
     },
     {
       "id": "キングスライム",
@@ -1767,8 +1731,7 @@
       "name": "バルンバ",
       "familyId": "dragon",
       "rank": "C",
-      "tier": 174,
-      "tierExcluded": true
+      "tier": 174
     },
     {
       "id": "グランドシャーク",
@@ -1778,8 +1741,7 @@
       "tier": 175,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "海岸に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "海岸に出現"
     },
     {
       "id": "かくとうパンサー",
@@ -1831,8 +1793,7 @@
       "tier": 180,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "海岸に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "海岸に出現"
     },
     {
       "id": "メタルドラゴン",
@@ -1853,8 +1814,7 @@
       "tier": 182,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "海岸・魔界(クリア後)に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "海岸・魔界(クリア後)に出現"
     },
     {
       "id": "ピピット",
@@ -1890,8 +1850,7 @@
       "tier": 186,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡に出現"
     },
     {
       "id": "ひとくいサーベル",
@@ -1918,8 +1877,7 @@
       "tier": 189,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡に出現"
     },
     {
       "id": "はぐれメタル",
@@ -1950,8 +1908,7 @@
       "tier": 192,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "海岸に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "海岸に出現"
     },
     {
       "id": "ぬしさま",
@@ -2032,8 +1989,7 @@
       "tier": 200,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡地下に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡地下に出現"
     },
     {
       "id": "かぶとこぞう",
@@ -2054,8 +2010,7 @@
       "tier": 202,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡地下に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡地下に出現"
     },
     {
       "id": "ようがん魔人",
@@ -2065,8 +2020,7 @@
       "tier": 203,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡地下に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡地下に出現"
     },
     {
       "id": "ジェネラルダンテ",
@@ -2094,8 +2048,7 @@
       "tier": 206,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡地下に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡地下に出現"
     },
     {
       "id": "ダークスライム",
@@ -2105,8 +2058,7 @@
       "tier": 207,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "断崖・遺跡地下に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "断崖・遺跡地下に出現"
     },
     {
       "id": "ドラゴンソルジャー",
@@ -2116,24 +2068,21 @@
       "tier": 208,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡地下に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡地下に出現"
     },
     {
       "id": "メダパニシックル",
       "name": "メダパニシックル",
       "familyId": "nature",
       "rank": "B",
-      "tier": 209,
-      "tierExcluded": true
+      "tier": 209
     },
     {
       "id": "バードファイター",
       "name": "バードファイター",
       "familyId": "beast",
       "rank": "B",
-      "tier": 210,
-      "tierExcluded": true
+      "tier": 210
     },
     {
       "id": "プロトキラー",
@@ -2143,8 +2092,7 @@
       "tier": 211,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡に出現"
     },
     {
       "id": "なぞのしんかん",
@@ -2176,16 +2124,14 @@
       "tier": 214,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "魔界に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "魔界に出現"
     },
     {
       "id": "ワンダーエッグ",
       "name": "ワンダーエッグ",
       "familyId": "slime",
       "rank": "B",
-      "tier": 215,
-      "tierExcluded": true
+      "tier": 215
     },
     {
       "id": "スカイドラゴン",
@@ -2195,8 +2141,7 @@
       "tier": 216,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "断崖に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "断崖に出現"
     },
     {
       "id": "デスファレーナ",
@@ -2216,8 +2161,7 @@
       "tier": 218,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "ピピッ島(クリア後)に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "ピピッ島(クリア後)に出現"
     },
     {
       "id": "ミミック",
@@ -2227,8 +2171,7 @@
       "tier": 219,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡地下に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡地下に出現"
     },
     {
       "id": "デーモンレスラー",
@@ -2246,8 +2189,7 @@
       "tier": 221,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡(クリア後)に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡(クリア後)に出現"
     },
     {
       "id": "ゆうれい船長",
@@ -2264,16 +2206,14 @@
       "tier": 223,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡地下・魔界に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡地下・魔界に出現"
     },
     {
       "id": "シャークマジュ",
       "name": "シャークマジュ",
       "familyId": "dragon",
       "rank": "B",
-      "tier": 224,
-      "tierExcluded": true
+      "tier": 224
     },
     {
       "id": "リザードファッツ",
@@ -2294,8 +2234,7 @@
       "tier": 226,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "魔界に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "魔界に出現"
     },
     {
       "id": "キラーピッケル",
@@ -2338,8 +2277,7 @@
       "tier": 230,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡地下に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡地下に出現"
     },
     {
       "id": "ボストロール",
@@ -2368,8 +2306,7 @@
       "tier": 233,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡地下(クリア後)に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡地下(クリア後)に出現"
     },
     {
       "id": "病魔パンデルム",
@@ -2392,8 +2329,7 @@
       "name": "ヘルダイバー",
       "familyId": "dragon",
       "rank": "B",
-      "tier": 236,
-      "tierExcluded": true
+      "tier": 236
     },
     {
       "id": "ドラゴンライダー",
@@ -2442,8 +2378,7 @@
       "tier": 241,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡地下に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡地下に出現"
     },
     {
       "id": "じごくのメンドーサ",
@@ -2461,8 +2396,7 @@
       "name": "スライムベホマズン",
       "familyId": "slime",
       "rank": "B",
-      "tier": 243,
-      "tierExcluded": true
+      "tier": 243
     },
     {
       "id": "ギガントヒルズ",
@@ -2482,8 +2416,7 @@
       "tier": 245,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡地下に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡地下に出現"
     },
     {
       "id": "パオーム",
@@ -2493,8 +2426,7 @@
       "tier": 246,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "密林に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "密林に出現"
     },
     {
       "id": "ブオーン",
@@ -2515,16 +2447,14 @@
       "tier": 248,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "ピピッ島に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "ピピッ島に出現"
     },
     {
       "id": "ランプの魔王",
       "name": "ランプの魔王",
       "familyId": "demon",
       "rank": "B",
-      "tier": 249,
-      "tierExcluded": true
+      "tier": 249
     },
     {
       "id": "黒騎士レオコーン",
@@ -2553,8 +2483,7 @@
       "tier": 252,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "ピピッ島(クリア後)に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "ピピッ島(クリア後)に出現"
     },
     {
       "id": "ブリザードマン",
@@ -2564,8 +2493,7 @@
       "tier": 253,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "断崖に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "断崖に出現"
     },
     {
       "id": "ギガンテス",
@@ -2575,8 +2503,7 @@
       "tier": 254,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "雪山・遺跡地下(クリア後)に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "雪山・遺跡地下(クリア後)に出現"
     },
     {
       "id": "キラーマシン",
@@ -2615,8 +2542,7 @@
       "name": "フラワーゾンビ",
       "familyId": "zombie",
       "rank": "A",
-      "tier": 258,
-      "tierExcluded": true
+      "tier": 258
     },
     {
       "id": "バブルキング",
@@ -2626,16 +2552,14 @@
       "tier": 259,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "魔界に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "魔界に出現"
     },
     {
       "id": "アンドレアル",
       "name": "アンドレアル",
       "familyId": "dragon",
       "rank": "A",
-      "tier": 260,
-      "tierExcluded": true
+      "tier": 260
     },
     {
       "id": "ウパソルジャー",
@@ -2652,8 +2576,7 @@
       "name": "バッファロン",
       "familyId": "beast",
       "rank": "A",
-      "tier": 262,
-      "tierExcluded": true
+      "tier": 262
     },
     {
       "id": "メガボーグ",
@@ -2663,8 +2586,7 @@
       "tier": 263,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "遺跡に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "遺跡に出現"
     },
     {
       "id": "ライオネック",
@@ -2684,8 +2606,7 @@
       "tier": 265,
       "obtainable": true,
       "acquisition": "wild",
-      "acquisitionDetail": "ピピッ島に出現",
-      "tierExcluded": true
+      "acquisitionDetail": "ピピッ島に出現"
     },
     {
       "id": "スライムファミリー",
