@@ -80,7 +80,7 @@ function buildFlow(
   plan: BreedingPlan,
   data: TitleData,
   orientation: Orientation,
-  opts: { engine: BreedingRuleset; expanded: Set<string> },
+  opts: { engine: BreedingRuleset; expanded: Set<string>; expandAll: boolean },
 ) {
   /** モンスターごとの置き場所。depthは根からの最長距離（親が必ず手前に来るように） */
   type Slot = {
@@ -94,43 +94,33 @@ function buildFlow(
   const steps: BreedStep[] = [];
   let order = 0;
 
-  // どのモンスターがどの深さに来るかを先に決める。
-  // 同じモンスターが違う深さから必要になることがあるので、深いほうに合わせる。
-  const visit = (p: BreedingPlan, depth: number, ancestors: Set<string>) => {
+  // まず「どのモンスターを、どの親から作るか」だけを集める。深さはあとで決める。
+  // モンスターをまとめると、別のルート経由で行き先が戻ってくる（循環する）ことがあり、
+  // 見つけながら深さを押し下げていくと再帰が止まらなくなるため。
+  const visit = (p: BreedingPlan, ancestors: Set<string>) => {
     // 直接入手できるモンスターでも、配合で作る手順を開いていればそちらを展開する
     let target = p;
-    if (p.kind === 'wild' && !ancestors.has(p.monster.id) && opts.expanded.has(p.monster.id)) {
+    const openHere = opts.expandAll || opts.expanded.has(p.monster.id);
+    if (p.kind === 'wild' && !ancestors.has(p.monster.id) && openHere) {
       const sub = opts.engine.planByBreeding(p.monster.id, data);
       if (sub) target = sub;
     }
 
     const id = target.monster.id;
-    // 4体配合は「この2体の子」を2段挟むので、親はその分だけ深くなる
-    const childDepth = target.kind === 'breed' && target.method === 'quad' ? depth + 2 : depth + 1;
-
     const found = slots.get(id);
     if (found) {
       found.uses += 1;
       if (target.kind !== 'breed') leaves.push(target.monster);
-      if (depth > found.depth) {
-        // より深い位置で必要になったので、下流ごと押し下げる
-        found.depth = depth;
-        if (found.plan.kind === 'breed') {
-          const next = new Set([...ancestors, id]);
-          const d = found.plan.method === 'quad' ? depth + 2 : depth + 1;
-          found.plan.parents.forEach((x) => visit(x, d, next));
-        }
-      }
       return;
     }
 
-    slots.set(id, { plan: target, depth, uses: 1, order: order++ });
+    slots.set(id, { plan: target, depth: 0, uses: 1, order: order++ });
     if (target.kind !== 'breed') {
       leaves.push(target.monster);
       return;
     }
     const next = new Set([...ancestors, id]);
-    target.parents.forEach((x) => visit(x, childDepth, next));
+    target.parents.forEach((x) => visit(x, next));
     steps.push({
       childId: target.monster.id,
       childName: target.monster.name,
@@ -138,7 +128,54 @@ function buildFlow(
       method: target.method,
     });
   };
-  visit(plan, 0, new Set());
+  visit(plan, new Set());
+
+  // 深さは「根からの最長距離」。親は必ず子より奥に置く。
+  //
+  // モンスターをまとめると、別ルート経由で先祖に戻る辺（逆流）ができることがある。
+  // それを含めて最長距離を出すと深さがいくらでも伸びてしまうので、
+  // まず根からたどって逆流する辺を外し、残った並び順で一度だけ押し下げる。
+  const childrenOf = (slot: Slot): string[] =>
+    slot.plan.kind === 'breed' ? slot.plan.parents.map((x) => x.monster.id) : [];
+  const stepOf = (slot: Slot) =>
+    slot.plan.kind === 'breed' && slot.plan.method === 'quad' ? 2 : 1;
+
+  const rootId = plan.monster.id;
+  const onStack = new Set<string>();
+  const done = new Set<string>();
+  const orderedIds: string[] = []; // 帰りがけ順。逆にすると親が後に来る並びになる
+  const backEdges = new Set<string>();
+  const sortStack: Array<{ id: string; next: number }> = [{ id: rootId, next: 0 }];
+  onStack.add(rootId);
+  while (sortStack.length) {
+    const top = sortStack[sortStack.length - 1];
+    const slot = slots.get(top.id);
+    const kids = slot ? childrenOf(slot) : [];
+    if (top.next < kids.length) {
+      const kid = kids[top.next++];
+      if (onStack.has(kid)) {
+        backEdges.add(`${top.id}>${kid}`); // 先祖に戻る辺。深さの計算には使わない
+      } else if (!done.has(kid) && slots.has(kid)) {
+        onStack.add(kid);
+        sortStack.push({ id: kid, next: 0 });
+      }
+      continue;
+    }
+    sortStack.pop();
+    onStack.delete(top.id);
+    done.add(top.id);
+    orderedIds.push(top.id);
+  }
+  for (const id of orderedIds.reverse()) {
+    const slot = slots.get(id);
+    if (!slot) continue;
+    const step = stepOf(slot);
+    for (const kid of childrenOf(slot)) {
+      if (backEdges.has(`${id}>${kid}`)) continue;
+      const p = slots.get(kid);
+      if (p && p.depth < slot.depth + step) p.depth = slot.depth + step;
+    }
+  }
 
   // 4体配合は祖父母4体と子の間に「この2体の子」を2つ挟む。
   // これも場所を取るので、モンスターと一緒に並べないと重なってしまう。
@@ -192,8 +229,12 @@ function buildFlow(
     const bred = slot.plan.kind === 'breed' ? slot.plan : null;
     const breed = bred !== null;
     const canExpand =
-      !breed && opts.engine.planByBreeding(m.id, data) !== null && !opts.expanded.has(m.id);
-    const isExpandedHere = breed && m.obtainable === true && opts.expanded.has(m.id);
+      !breed &&
+      !opts.expandAll &&
+      opts.engine.planByBreeding(m.id, data) !== null &&
+      !opts.expanded.has(m.id);
+    const isExpandedHere =
+      breed && !opts.expandAll && m.obtainable === true && opts.expanded.has(m.id);
     const how = bred
       ? `${methodLabel(bred.method)}で作る`
       : shortHow(m.acquisitionDetail ?? `${acquisitionLabel(m.acquisition)}で入手`);
@@ -376,14 +417,25 @@ function AutoPageContent() {
     useCallback((v: string) => v === 'tree' || v === 'list', []),
   );
   const stepView = storedStepView || 'tree';
+  // 配合で作れる素材も全部さかのぼるか。
+  // 切ると「入手できるところ」で止まり、入れるとスカウトなどでしか
+  // 手に入らないモンスターまで下がる
+  const [storedExpandAll, setExpandAll] = useStoredValue(
+    'haigou-expand-all',
+    useCallback((v: string) => v === 'on' || v === 'off', []),
+  );
+  const expandAll = storedExpandAll === 'on';
 
   const result = useMemo(() => {
     if (!targetId) return null;
     const direct = engine.plan(targetId, data);
     const plan = forceBreeding && breedingPlan ? breedingPlan : direct;
     if (!plan) return { plan: null, flow: null };
-    return { plan, flow: buildFlow(plan, data, orientation, { engine, expanded }) };
-  }, [engine, data, targetId, orientation, forceBreeding, breedingPlan, expanded]);
+    return {
+      plan,
+      flow: buildFlow(plan, data, orientation, { engine, expanded, expandAll }),
+    };
+  }, [engine, data, targetId, orientation, forceBreeding, breedingPlan, expanded, expandAll]);
 
   const toggleExpand = useCallback((_: unknown, node: MonsterFlowNode) => {
     if (!node.data.expandable || !node.data.monsterId) return;
@@ -506,6 +558,30 @@ function AutoPageContent() {
                 配合で作る手順を見る（{breedingPlan.cost}回の配合で作れます）
               </label>
             )}
+
+            {/* 配合でも作れる素材をどこまで下げるか。
+                切っていると「入手できるところ」で止まるので、
+                実際にはスカウトしなくても配合で用意できる素材が葉に混ざる */}
+            {result.plan.kind === 'breed' && (
+              <label
+                className="flex min-h-11 w-full cursor-pointer items-start gap-2 rounded-lg border px-3 py-2 text-sm"
+                style={{ borderColor: 'var(--border)' }}
+              >
+                <input
+                  type="checkbox"
+                  className="mt-0.5 h-4 w-4 shrink-0"
+                  checked={expandAll}
+                  onChange={(e) => setExpandAll(e.target.checked ? 'on' : 'off')}
+                />
+                <span>
+                  スカウトなどでしか手に入らないモンスターまでさかのぼる
+                  <span className="block text-xs text-[var(--muted)]">
+                    配合でも作れる素材をすべて配合の形にします。図は大きくなりますが、
+                    本当に捕まえる必要があるモンスターだけが「まず集める素材」に残ります。
+                  </span>
+                </span>
+              </label>
+            )}
           </div>
 
           {result.flow && result.flow.nodes.length > 1 && (
@@ -546,7 +622,7 @@ function AutoPageContent() {
                 <span aria-hidden className="text-[var(--brand-500)]">
                   ①
                 </span>
-                まず集める素材
+                {expandAll ? 'まず捕まえる素材（配合では作れないもの）' : 'まず集める素材'}
               </h2>
               <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
                 {materials.map(({ monster, count }) => (
