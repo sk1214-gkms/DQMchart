@@ -25,6 +25,7 @@ import { getRuleset } from '@/lib/engine/registry';
 import { findParentAlternatives } from '@/lib/engine/alternatives';
 import { explainUnreachable } from '@/lib/engine/blockers';
 import { PlanTree } from '@/components/PlanTree';
+import { useStoredValue } from '@/lib/useStoredValue';
 import type {
   BreedingMethod,
   BreedingPlan,
@@ -281,7 +282,11 @@ export default function AutoPage() {
 
 function AutoPageContent() {
   const data = useTitleData();
-  const [targetId, setTargetId] = useState('');
+  // 選んだモンスターは保存する。スマホでタブが破棄されても選び直しにならないように
+  const [targetId, setTargetId] = useStoredValue(
+    `haigou-auto-target-${data.id}`,
+    useCallback((v: string) => data.monsters.some((m) => m.id === v), [data]),
+  );
 
   const [orientation, setOrientation] = useOrientation();
   // 直接入手できるモンスターでも配合ルートを見たいときに切り替える

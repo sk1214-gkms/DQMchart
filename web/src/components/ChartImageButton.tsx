@@ -13,6 +13,12 @@ import { EDGE_COLOR } from '@/components/edgeStyle';
 const PADDING = 40;
 const SCALE = 2; // 文字がぼやけないように2倍で描く
 const MAX_SIDE = 8000;
+/**
+ * canvasの面積の上限。
+ * iOSのSafariには「1辺」ではなく「面積」の上限（およそ1677万px）があり、
+ * 超えると中身が空の画像になる。辺だけを見ていると引っかかるので面積でも抑える。
+ */
+const MAX_AREA = 16_000_000;
 
 const FONT_STACK =
   '"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",Meiryo,sans-serif';
@@ -90,8 +96,12 @@ function buildSvg(nodes: MonsterFlowNode[], edgePaths: string[], bounds: Bounds)
   </svg>`;
 }
 
-/** SVG文字列をPNGのdata URLに変換する */
-async function svgToPng(svg: string, width: number, height: number): Promise<string> {
+/**
+ * SVG文字列をPNGのBlobに変換する。
+ * data URLで受け取ると巨大な文字列（大きいチャートだと100MB超）になり、
+ * スマホではタブごと落ちて画面が初期状態に戻ってしまうのでBlobで扱う。
+ */
+async function svgToPng(svg: string, width: number, height: number): Promise<Blob> {
   const url = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
   const image = new Image();
   await new Promise<void>((resolve, reject) => {
@@ -101,7 +111,12 @@ async function svgToPng(svg: string, width: number, height: number): Promise<str
   });
 
   // 上限に当たっても縦横比が崩れないよう、倍率を一括で決める
-  const scale = Math.min(SCALE, MAX_SIDE / width, MAX_SIDE / height);
+  const scale = Math.min(
+    SCALE,
+    MAX_SIDE / width,
+    MAX_SIDE / height,
+    Math.sqrt(MAX_AREA / (width * height)),
+  );
   const canvas = document.createElement('canvas');
   canvas.width = Math.ceil(width * scale);
   canvas.height = Math.ceil(height * scale);
@@ -110,7 +125,50 @@ async function svgToPng(svg: string, width: number, height: number): Promise<str
   ctx.fillStyle = '#ffffff';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-  return canvas.toDataURL('image/png');
+
+  const blob = await new Promise<Blob | null>((resolve) =>
+    canvas.toBlob((b) => resolve(b), 'image/png'),
+  );
+  if (!blob) throw new Error('画像を作れませんでした');
+  return blob;
+}
+
+/**
+ * 画像を端末に渡す。
+ * スマホでは `<a download>` が効かず、data URLやblob URLへ画面遷移してしまうことがある。
+ * そうなると選択状態が消えて初期画面に戻るので、まず共有シート（写真に保存できる）を使う。
+ */
+async function deliver(blob: Blob, fileName: string): Promise<'shared' | 'downloaded'> {
+  const file = new File([blob], fileName, { type: 'image/png' });
+  const nav = navigator as Navigator & {
+    canShare?: (data: { files: File[] }) => boolean;
+    share?: (data: { files: File[] }) => Promise<void>;
+  };
+  // パソコンでは download が確実に動くので、共有シートはスマホ・タブレットだけで使う
+  const mobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if (mobile && nav.share && nav.canShare?.({ files: [file] })) {
+    try {
+      await nav.share({ files: [file] });
+      return 'shared';
+    } catch (e) {
+      // 利用者が共有をやめた場合はそのまま終わる（失敗扱いにしない）
+      if (e instanceof DOMException && e.name === 'AbortError') return 'shared';
+      // 共有できなかったときはダウンロードに切り替える
+    }
+  }
+
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.download = fileName;
+  link.href = url;
+  link.rel = 'noopener';
+  // 一部のブラウザは画面に無いリンクのclickを無視するので、いったん挿す
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  // すぐ消すと保存が始まらない端末があるため、少し待ってから解放する
+  setTimeout(() => URL.revokeObjectURL(url), 60_000);
+  return 'downloaded';
 }
 
 export function ChartImageButton({ fileName }: { fileName: string }) {
@@ -135,16 +193,8 @@ export function ChartImageButton({ fileName }: { fileName: string }) {
 
       const bounds = getNodesBounds(nodes);
       const svg = buildSvg(nodes, edgePaths, bounds);
-      const dataUrl = await svgToPng(
-        svg,
-        bounds.width + PADDING * 2,
-        bounds.height + PADDING * 2,
-      );
-
-      const link = document.createElement('a');
-      link.download = `${safeFileName(fileName)}.png`;
-      link.href = dataUrl;
-      link.click();
+      const blob = await svgToPng(svg, bounds.width + PADDING * 2, bounds.height + PADDING * 2);
+      await deliver(blob, `${safeFileName(fileName)}.png`);
     } catch {
       setError('画像の保存に失敗しました。もう一度お試しください。');
     } finally {
