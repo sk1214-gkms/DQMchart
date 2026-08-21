@@ -52,7 +52,9 @@ export function MonsterNode({ data, selected }: NodeProps<MonsterFlowNode>) {
 
   return (
     <div
-      className={`relative min-w-40 overflow-hidden rounded-lg border-2 py-2 pl-4 pr-3 text-xs shadow-sm transition ${
+      // 入手方法の説明が長いモンスターがいるので幅に上限を付ける。
+      // 上限が無いとノードが極端に横長になり、隣のノードと重なって図が読めなくなる
+      className={`relative min-w-40 max-w-52 overflow-hidden rounded-lg border-2 py-2 pl-4 pr-3 text-xs shadow-sm transition ${
         statusStyles[data.status]
       } ${selected ? 'ring-2 ring-[var(--brand-500)] ring-offset-1' : ''} ${
         data.expandable ? 'cursor-pointer hover:shadow-md' : ''
