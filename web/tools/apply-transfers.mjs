@@ -91,6 +91,14 @@ function pass(deadEndOnly) {
           const mine = rankOrder.get(m.rank);
           if (limit === undefined || mine === undefined || mine > limit) continue;
         }
+        // 連れてくる元のランクにも上限がある場合（作品ごとにランクが違うので両側を見る）
+        if (rule.maxSourceRankId !== undefined) {
+          const order = new Map(from.data.ranks.map((r) => [r.id, r.order]));
+          const there = from.data.monsters.find((x) => x.id === m.id);
+          const limit = order.get(rule.maxSourceRankId);
+          const theirs = there ? order.get(there.rank) : undefined;
+          if (limit === undefined || theirs === undefined || theirs > limit) continue;
+        }
 
         m.obtainable = true;
         m.acquisition = 'transfer';

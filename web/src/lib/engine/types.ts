@@ -107,6 +107,12 @@ export interface TransferRule {
   titleId: string;
   /** 連れてこられるランクの上限（この作品のランクで判定。省略すると制限なし） */
   maxRankId?: string;
+  /**
+   * 連れてくる元の作品でのランクの上限。
+   * イルルカ3DS→ジョーカー3のように「両方の作品でAランク以下」が条件の場合に使う。
+   * 作品によって同じモンスターのランクが違うため、両側を見る必要がある。
+   */
+  maxSourceRankId?: string;
   /** 手段の説明。入手方法の文章に使う */
   note: string;
 }
