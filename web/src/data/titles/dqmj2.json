@@ -1805,9 +1805,8 @@
       "tier": 188,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "（配信）配信限定モンスター。2010年当時のWi-Fi／店頭配信でのみ入手。配合では作成できない",
-      "tierExcluded": true,
-      "discontinued": true
+      "acquisitionDetail": "ジョーカー2プロで入手して通信交換で無印版に持ち込む（プロ版での入手: 闘技場のスカウトQを全13問クリアしてドロシーを仲間にした後、隣のスコットに話しかける）。DS本体2台と両方のソフトが必要。交換なのでプロ版側からは居なくなり、レベルと能力値は初期化される（配合回数・特性・特技は維持）。無印のみで遊ぶ場合は配信限定のため現在は入手できない。",
+      "tierExcluded": true
     },
     {
       "id": "ボストロール",

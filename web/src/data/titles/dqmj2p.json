@@ -2261,9 +2261,8 @@
       "tier": 227,
       "obtainable": true,
       "acquisition": "event",
-      "acquisitionDetail": "スカウトQプロクリアで最強版を入手",
-      "tierExcluded": true,
-      "discontinued": true
+      "acquisitionDetail": "闘技場のどろにんぎょう「ドロシー」が出すスカウトQを全13問クリアするとドロシーが仲間になり、その後、隣にいる「スコット」（キラーピッケル）に話しかけると仲間になる（最強キラーピッケル・守備力アップSP持ち）。反応が無い場合はスカウトリング強化後に再訪する。通信不要のゲーム内イベント。",
+      "tierExcluded": true
     },
     {
       "id": "ポンポコあにき",
