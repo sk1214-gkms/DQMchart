@@ -126,6 +126,8 @@ function tierCandidates(a: Monster, b: Monster, data: TitleData): Monster[] {
  */
 class Planner {
   private best = new Map<string, BreedingPlan>();
+  /** 安く用意できる順の並び。見積もりが変わったら作り直す */
+  private sorted: Monster[] | null = null;
 
   constructor(private data: TitleData) {
     this.computeAll();
@@ -149,8 +151,11 @@ class Planner {
       }
     }
     for (let i = 0; i < this.data.monsters.length; i++) {
+      this.sorted = null; // 見積もりが変わったので並びを作り直す
       let improved = false;
       for (const m of this.data.monsters) {
+        // 直接入手できるものは手数0で、配合でこれ以上安くはならない
+        if (this.best.get(m.id)?.cost === 0) continue;
         const candidate = this.tryBuild(m);
         if (!candidate) continue;
         const current = this.best.get(m.id);
@@ -216,54 +221,81 @@ class Planner {
     };
 
     const index = tierIndex(this.data);
-    const ones = onesIndex(this.data);
 
-    for (const goal of targets) {
-      // 候補3（平均）: (high + low) / 2 の切り捨てが goal → high + low は goal*2 か goal*2+1
-      for (const sum of [goal * 2, goal * 2 + 1]) {
-        for (let high = Math.ceil(sum / 2); high <= sum - 1; high++) {
-          const low = sum - high;
-          if (low < 1 || low > high) continue;
-          const pa = index.get(high);
-          const pb = index.get(low);
-          if (pa && pb) consider(pa, pb);
+    // 片方の親を決めると、もう片方に必要な位階は次のように絞れる。
+    //   候補3（平均）… 位階が1通りか2通りに決まる
+    //   候補2        … 相手の1の位から位階が決まるので2通り
+    //   候補1        … 相手の1の位だけが決まるので、その1の位を持つ中で一番安いものを引く
+    // そこで「今いちばん安く用意できるモンスター」から順に片親を試し、
+    // その時点の最良を超えられなくなったら打ち切る。総当たりを避けるため。
+    for (const fixed of this.byCost()) {
+      const fixedPlan = this.best.get(fixed.id);
+      if (!fixedPlan) continue;
+      // これ以降はもっと高くつく親しか出てこないので、最良を超えられないなら終わり
+      if (best !== null && 1 + fixedPlan.cost >= (best as BreedingPlan).cost) break;
+      const ft = tierOf(fixed);
+      const fOnes = ft % 10;
+
+      for (const goal of targets) {
+        // 候補3: high + low が goal*2 か goal*2+1
+        for (const sum of [goal * 2, goal * 2 + 1]) {
+          const other = index.get(sum - ft);
+          if (other) consider(fixed, other);
         }
-      }
 
-      // 候補1: 1の位の合計が10以上なら high + (lowの1の位) = goal、
-      //        10未満なら high + (lowの1の位) + 10 = goal。
-      // どちらも high を決めれば必要な「lowの1の位」が一意に定まるので、
-      // その1の位を持つモンスターだけを見ればよい（全走査が不要）。
-      for (let high = Math.max(1, goal - 19); high <= goal; high++) {
-        const pa = index.get(high);
-        if (!pa) continue;
-        for (const offset of [0, 10]) {
-          const lowOnes = goal - high - offset;
-          if (lowOnes < 0 || lowOnes > 9) continue;
-          for (const pb of ones.get(lowOnes) ?? []) {
-            if (tierOf(pb) > high) break; // 位階順に並んでいるので以降は範囲外
-            consider(pa, pb);
+        // 候補2: 相手が low のとき low = goal - fOnes ∓ 5、
+        //        自分が low のとき相手の1の位が決まる
+        for (const offset of [-5, 5]) {
+          const low = index.get(goal - fOnes - offset);
+          if (low) consider(fixed, low);
+          const highOnes = goal - ft - offset;
+          if (highOnes >= 0 && highOnes <= 9) {
+            const cheap = this.cheapestWithOnes(highOnes, ft, Number.POSITIVE_INFINITY);
+            if (cheap) consider(cheap, fixed);
           }
         }
-      }
 
-      // 候補2: 1の位の合計が10以上なら low + (highの1の位) - 5 = goal、
-      //        10未満なら low + (highの1の位) + 5 = goal。
-      // low を決めれば必要な「highの1の位」が定まる。
-      for (let low = Math.max(1, goal - 14); low <= goal + 5; low++) {
-        const pb = index.get(low);
-        if (!pb) continue;
-        for (const offset of [-5, 5]) {
-          const highOnes = goal - low - offset;
-          if (highOnes < 0 || highOnes > 9) continue;
-          for (const pa of ones.get(highOnes) ?? []) {
-            if (tierOf(pa) < low) continue; // highはlow以上
-            consider(pa, pb);
+        // 候補1: 相手が high のとき high = goal - fOnes - {0,10}、
+        //        自分が high のとき相手の1の位が決まる（自分以下で一番安いもの）
+        for (const offset of [0, 10]) {
+          const high = index.get(goal - fOnes - offset);
+          if (high) consider(high, fixed);
+          const lowOnes = goal - ft - offset;
+          if (lowOnes >= 0 && lowOnes <= 9) {
+            const cheap = this.cheapestWithOnes(lowOnes, 1, ft);
+            if (cheap) consider(fixed, cheap);
           }
         }
       }
     }
     return best;
+  }
+
+  /** 今の見積もりで安く用意できる順のモンスター一覧。周ごとに作り直す */
+  private byCost(): Monster[] {
+    if (!this.sorted) {
+      this.sorted = this.data.monsters
+        .filter((m) => this.best.has(m.id))
+        .sort((a, b) => (this.best.get(a.id)?.cost ?? 0) - (this.best.get(b.id)?.cost ?? 0));
+    }
+    return this.sorted;
+  }
+
+  /** 1の位が ones で位階が [minTier, maxTier] にある中で、一番安く用意できるもの */
+  private cheapestWithOnes(ones: number, minTier: number, maxTier: number): Monster | null {
+    let out: Monster | null = null;
+    let outCost = Number.POSITIVE_INFINITY;
+    for (const m of onesIndex(this.data).get(ones) ?? []) {
+      const t = tierOf(m);
+      if (t < minTier) continue;
+      if (t > maxTier) break; // 位階順に並んでいる
+      const p = this.best.get(m.id);
+      if (p && p.cost < outCost) {
+        out = m;
+        outCost = p.cost;
+      }
+    }
+    return out;
   }
 
   /** m にたどり着く位階番号（m自身と、m の上にある作れないモンスターの位階） */

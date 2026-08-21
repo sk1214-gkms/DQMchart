@@ -94,6 +94,7 @@ export function AcquisitionBadge({
     wild: 'bg-sky-50 text-sky-800 border-sky-200',
     egg: 'bg-amber-50 text-amber-800 border-amber-200',
     event: 'bg-fuchsia-50 text-fuchsia-800 border-fuchsia-200',
+    transfer: 'bg-teal-50 text-teal-800 border-teal-200',
   };
   if (discontinued) {
     return (

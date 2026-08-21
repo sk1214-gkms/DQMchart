@@ -23,6 +23,7 @@ import type { Orientation } from '@/components/Orientation';
 import { useTitleData } from '@/components/TitleProvider';
 import { getRuleset } from '@/lib/engine/registry';
 import { findParentAlternatives } from '@/lib/engine/alternatives';
+import { explainUnreachable } from '@/lib/engine/blockers';
 import { PlanTree } from '@/components/PlanTree';
 import type {
   BreedingMethod,
@@ -345,6 +346,12 @@ function AutoPageContent() {
 
   const targetMonster = data.monsters.find((m) => m.id === targetId);
 
+  // 作れないときは、なぜ作れないのかを説明する（調べても解決しない理由なのかを伝える）
+  const blockReason = useMemo(
+    () => (targetId && result && !result.plan ? explainUnreachable(engine, data, targetId) : null),
+    [engine, data, targetId, result],
+  );
+
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-xl font-bold">自動チャート生成</h1>
@@ -358,7 +365,23 @@ function AutoPageContent() {
         </p>
       ) : !result.plan ? (
         <p className="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">
-          このモンスターへの入手ルートが見つかりませんでした（データ未整備の可能性があります）。
+          {blockReason?.kind === 'discontinued' ? (
+            <>
+              このモンスターは今から入手することができません。
+              {blockReason.roots.some((m) => m.id === targetId)
+                ? '配信・通信が終了しているためです。'
+                : `配合の材料になる${blockReason.roots
+                    .map((m) => m.name)
+                    .join('・')}が、配信・通信の終了により入手できないためです。`}
+            </>
+          ) : blockReason?.kind === 'materials' ? (
+            <>
+              配合の材料になる{blockReason.roots.map((m) => m.name).join('・')}
+              にたどり着けないため、手順を出せませんでした。
+            </>
+          ) : (
+            <>このモンスターへの入手ルートが見つかりませんでした（データ未整備の可能性があります）。</>
+          )}
         </p>
       ) : (
         <>

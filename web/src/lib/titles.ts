@@ -1,28 +1,29 @@
 // タイトル（作品）マスタデータの読み込み。
 // 当面はJSON同梱。タイトル追加時は data/titles/ にJSONを置いてここに登録する。
 import type { TitleData } from './engine/types';
-import dqm3 from '@/data/titles/dqm3.json';
-import iruruka3ds from '@/data/titles/iruruka3ds.json';
-import iruruka from '@/data/titles/iruruka.json';
-import terry3d from '@/data/titles/terry3d.json';
-import terrysp from '@/data/titles/terrysp.json';
-import dqmj3 from '@/data/titles/dqmj3.json';
-import dqmj3p from '@/data/titles/dqmj3p.json';
 import dqmj1 from '@/data/titles/dqmj1.json';
 import dqmj2 from '@/data/titles/dqmj2.json';
 import dqmj2p from '@/data/titles/dqmj2p.json';
+import terry3d from '@/data/titles/terry3d.json';
+import iruruka3ds from '@/data/titles/iruruka3ds.json';
+import dqmj3 from '@/data/titles/dqmj3.json';
+import dqmj3p from '@/data/titles/dqmj3p.json';
+import terrysp from '@/data/titles/terrysp.json';
+import iruruka from '@/data/titles/iruruka.json';
+import dqm3 from '@/data/titles/dqm3.json';
 
+// 発売順に並べる。作品を選ぶときにシリーズの流れが分かるようにするため。
 const titles: TitleData[] = [
-  dqm3 as TitleData,
-  iruruka3ds as TitleData,
-  iruruka as TitleData,
-  terry3d as TitleData,
-  terrysp as TitleData,
-  dqmj3 as TitleData,
-  dqmj3p as TitleData,
-  dqmj1 as TitleData,
-  dqmj2 as TitleData,
-  dqmj2p as TitleData,
+  dqmj1 as TitleData, // 2007 DS
+  dqmj2 as TitleData, // 2010 DS
+  dqmj2p as TitleData, // 2011 DS
+  terry3d as TitleData, // 2012 3DS
+  iruruka3ds as TitleData, // 2014 3DS
+  dqmj3 as TitleData, // 2016 3DS
+  dqmj3p as TitleData, // 2017 3DS
+  terrysp as TitleData, // 2019 Switch/スマホ
+  iruruka as TitleData, // 2019 Switch/スマホ
+  dqm3 as TitleData, // 2023 Switch/スマホ
 ];
 
 export function listTitles(): TitleData[] {

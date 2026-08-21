@@ -20,7 +20,7 @@ const dir = join(here, '..', 'src', 'data', 'titles');
 const write = process.argv.includes('--write');
 
 /** 引っ越しで入手できることにした印。付け直しできるように目印を残す */
-const MARK = '【他作品から】';
+// 付け直しの判定は acquisition==='transfer' で行う（説明文に目印を入れると画面に出てしまう）
 
 const titles = new Map();
 for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
@@ -31,7 +31,7 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
 // 前回の実行で付けたものを一旦外す（経路やデータが変わったときに残らないように）
 for (const { data } of titles.values()) {
   for (const m of data.monsters) {
-    if (m.acquisition === 'transfer' || (m.acquisitionDetail ?? '').startsWith(MARK)) {
+    if (m.acquisition === 'transfer') {
       delete m.obtainable;
       delete m.acquisition;
       delete m.acquisitionDetail;
@@ -102,7 +102,7 @@ function pass(deadEndOnly) {
 
         m.obtainable = true;
         m.acquisition = 'transfer';
-        m.acquisitionDetail = `${MARK}${from.data.name}で入手して${rule.note}`;
+        m.acquisitionDetail = `${from.data.name}で入手して${rule.note}`;
         delete m.discontinued;
         applied.push(`${data.name}: ${m.name}（← ${from.data.name}）`);
         changed += 1;
