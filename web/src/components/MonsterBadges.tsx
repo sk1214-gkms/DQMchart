@@ -79,6 +79,7 @@ export function RankText({ rank }: { rank: string }) {
 export function acquisitionLabel(kind: AcquisitionKind | undefined): string {
   if (kind === 'egg') return 'タマゴ';
   if (kind === 'event') return 'イベント';
+  if (kind === 'transfer') return '他作品';
   return '野生';
 }
 

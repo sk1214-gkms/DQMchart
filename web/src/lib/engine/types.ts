@@ -12,8 +12,12 @@ export interface FamilyDef {
   name: string; // 例: スライム系
 }
 
-/** 配合以外の入手手段。egg=タマゴ限定、event=イベント・コラボ配信など */
-export type AcquisitionKind = 'wild' | 'egg' | 'event';
+/**
+ * 配合以外の入手手段。
+ * egg=タマゴ限定、event=イベント・コラボ配信など、
+ * transfer=他の作品で入手して引っ越し・通信交換で連れてくる
+ */
+export type AcquisitionKind = 'wild' | 'egg' | 'event' | 'transfer';
 
 export interface Monster {
   id: string;
@@ -89,6 +93,22 @@ export interface TitleData {
   /** 位階配合方式の系統組み合わせ表（DQM3方式のタイトルでは持たない） */
   familyPairs?: FamilyPairRule[];
   specialRecipes: SpecialRecipe[];
+  /**
+   * 他の作品からモンスターを連れてこられる経路（引っ越しアプリ・通信交換など）。
+   * ある作品で配信終了などにより入手できないモンスターでも、
+   * 連れてこられる作品側で手に入るなら今でも入手できる。
+   */
+  transfersFrom?: TransferRule[];
+}
+
+/** 他作品からモンスターを連れてくる経路 */
+export interface TransferRule {
+  /** 連れてくる元の作品のID */
+  titleId: string;
+  /** 連れてこられるランクの上限（この作品のランクで判定。省略すると制限なし） */
+  maxRankId?: string;
+  /** 手段の説明。入手方法の文章に使う */
+  note: string;
 }
 
 /** 配合方法。quad=4体配合（祖父母4体の組み合わせで決まる） */

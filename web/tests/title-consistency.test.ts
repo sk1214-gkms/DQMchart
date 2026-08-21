@@ -95,3 +95,38 @@ describe('マスタデータの整合', () => {
     });
   }
 });
+
+// 作品間の引っ越し経路が壊れていないかを確かめる。
+describe('引っ越し経路', () => {
+  const ids = new Set(listTitles().map((t) => t.id));
+
+  for (const data of listTitles()) {
+    for (const rule of data.transfersFrom ?? []) {
+      it(`${data.name} ← ${rule.titleId} の経路が有効`, () => {
+        expect(ids.has(rule.titleId), `${rule.titleId} というタイトルが無い`).toBe(true);
+        expect(rule.titleId).not.toBe(data.id); // 自分自身からは連れてこられない
+        expect(rule.note.length).toBeGreaterThan(0);
+        if (rule.maxRankId !== undefined) {
+          expect(data.ranks.some((r) => r.id === rule.maxRankId)).toBe(true);
+        }
+      });
+    }
+  }
+
+  it('他作品から連れてくるモンスターは、連れてくる元にも居る', () => {
+    const byId = new Map(listTitles().map((t) => [t.id, t]));
+    const problems: string[] = [];
+    for (const data of listTitles()) {
+      const sources = (data.transfersFrom ?? [])
+        .map((r) => byId.get(r.titleId))
+        .filter((t): t is NonNullable<typeof t> => t !== undefined);
+      for (const m of data.monsters) {
+        if (m.acquisition !== 'transfer') continue;
+        if (!sources.some((s) => s.monsters.some((x) => x.id === m.id))) {
+          problems.push(`${data.name} の ${m.name}`);
+        }
+      }
+    }
+    expect(problems).toEqual([]);
+  });
+});
