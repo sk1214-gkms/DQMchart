@@ -3,6 +3,7 @@
 import type { TitleData } from './engine/types';
 import dqm3 from '@/data/titles/dqm3.json';
 import iruruka from '@/data/titles/iruruka.json';
+import terry3d from '@/data/titles/terry3d.json';
 import terrysp from '@/data/titles/terrysp.json';
 import dqmj3 from '@/data/titles/dqmj3.json';
 import dqmj3p from '@/data/titles/dqmj3p.json';
@@ -13,6 +14,7 @@ import dqmj2p from '@/data/titles/dqmj2p.json';
 const titles: TitleData[] = [
   dqm3 as TitleData,
   iruruka as TitleData,
+  terry3d as TitleData,
   terrysp as TitleData,
   dqmj3 as TitleData,
   dqmj3p as TitleData,
