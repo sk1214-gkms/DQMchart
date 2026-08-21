@@ -3278,7 +3278,11 @@
       "familyId": "slime",
       "rank": "C",
       "tier": 311,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "「マックでDS」の配信で入手する配信限定モンスター。ニンテンドーゾーン／マックでDSのサービスは終了しており、現在は入手できない。SP版では野生でスカウトできるようになった。",
+      "discontinued": true
     },
     {
       "id": "ホイップスライム",
@@ -3286,7 +3290,11 @@
       "familyId": "slime",
       "rank": "C",
       "tier": 312,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "「マックでDS」の配信で入手する配信限定モンスター。ニンテンドーゾーン／マックでDSのサービスは終了しており、現在は入手できない。SP版では野生でスカウトできるようになった。",
+      "discontinued": true
     },
     {
       "id": "プリンスライム",
@@ -3294,7 +3302,11 @@
       "familyId": "slime",
       "rank": "C",
       "tier": 313,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "「マックでDS」の配信で入手する配信限定モンスター。ニンテンドーゾーン／マックでDSのサービスは終了しており、現在は入手できない。SP版では野生でスカウトできるようになった。",
+      "discontinued": true
     },
     {
       "id": "ぶちキング",
@@ -3880,10 +3892,10 @@
       "familyId": "nature",
       "rank": "C",
       "tier": 370,
+      "tierExcluded": true,
       "obtainable": true,
       "acquisition": "transfer",
-      "acquisitionDetail": "【他作品から】テリワン3Dで入手してクリア後にeShopから無料の引越アプリを入れて連れてくる（引換番号は不要）。1日10体まで、イルルカ側でAランク以下のモンスターのみ。レベルは1に戻るがスキルは引き継がれ、元のソフトからは消えないので何度でも連れてこられる。※アプリは3DSのeショップ（2023年3月終了）でのダウンロードが必要なため、今から入手するのは困難。",
-      "tierExcluded": true
+      "acquisitionDetail": "【他作品から】テリワン3Dで入手してクリア後にeShopから無料の引越アプリを入れて連れてくる（引換番号は不要）。1日10体まで、イルルカ側でAランク以下のモンスターのみ。レベルは1に戻るがスキルは引き継がれ、元のソフトからは消えないので何度でも連れてこられる。※アプリは3DSのeショップ（2023年3月終了）でのダウンロードが必要なため、今から入手するのは困難。"
     },
     {
       "id": "アイアンブルドー",
@@ -4835,10 +4847,10 @@
       "familyId": "slime",
       "rank": "B",
       "tier": 463,
+      "tierExcluded": true,
       "obtainable": true,
       "acquisition": "transfer",
-      "acquisitionDetail": "【他作品から】テリワン3Dで入手してクリア後にeShopから無料の引越アプリを入れて連れてくる（引換番号は不要）。1日10体まで、イルルカ側でAランク以下のモンスターのみ。レベルは1に戻るがスキルは引き継がれ、元のソフトからは消えないので何度でも連れてこられる。※アプリは3DSのeショップ（2023年3月終了）でのダウンロードが必要なため、今から入手するのは困難。",
-      "tierExcluded": true
+      "acquisitionDetail": "【他作品から】テリワン3Dで入手してクリア後にeShopから無料の引越アプリを入れて連れてくる（引換番号は不要）。1日10体まで、イルルカ側でAランク以下のモンスターのみ。レベルは1に戻るがスキルは引き継がれ、元のソフトからは消えないので何度でも連れてこられる。※アプリは3DSのeショップ（2023年3月終了）でのダウンロードが必要なため、今から入手するのは困難。"
     },
     {
       "id": "トライワインダー",
@@ -5091,10 +5103,10 @@
       "familyId": "slime",
       "rank": "B",
       "tier": 488,
+      "tierExcluded": true,
       "obtainable": true,
       "acquisition": "transfer",
-      "acquisitionDetail": "【他作品から】テリワン3Dで入手してクリア後にeShopから無料の引越アプリを入れて連れてくる（引換番号は不要）。1日10体まで、イルルカ側でAランク以下のモンスターのみ。レベルは1に戻るがスキルは引き継がれ、元のソフトからは消えないので何度でも連れてこられる。※アプリは3DSのeショップ（2023年3月終了）でのダウンロードが必要なため、今から入手するのは困難。",
-      "tierExcluded": true
+      "acquisitionDetail": "【他作品から】テリワン3Dで入手してクリア後にeShopから無料の引越アプリを入れて連れてくる（引換番号は不要）。1日10体まで、イルルカ側でAランク以下のモンスターのみ。レベルは1に戻るがスキルは引き継がれ、元のソフトからは消えないので何度でも連れてこられる。※アプリは3DSのeショップ（2023年3月終了）でのダウンロードが必要なため、今から入手するのは困難。"
     },
     {
       "id": "ドラゴンライダー",
@@ -5809,10 +5821,10 @@
       "familyId": "zombie",
       "rank": "A",
       "tier": 557,
+      "tierExcluded": true,
       "obtainable": true,
       "acquisition": "transfer",
-      "acquisitionDetail": "【他作品から】テリワン3Dで入手してクリア後にeShopから無料の引越アプリを入れて連れてくる（引換番号は不要）。1日10体まで、イルルカ側でAランク以下のモンスターのみ。レベルは1に戻るがスキルは引き継がれ、元のソフトからは消えないので何度でも連れてこられる。※アプリは3DSのeショップ（2023年3月終了）でのダウンロードが必要なため、今から入手するのは困難。",
-      "tierExcluded": true
+      "acquisitionDetail": "【他作品から】テリワン3Dで入手してクリア後にeShopから無料の引越アプリを入れて連れてくる（引換番号は不要）。1日10体まで、イルルカ側でAランク以下のモンスターのみ。レベルは1に戻るがスキルは引き継がれ、元のソフトからは消えないので何度でも連れてこられる。※アプリは3DSのeショップ（2023年3月終了）でのダウンロードが必要なため、今から入手するのは困難。"
     },
     {
       "id": "カンダタ",
@@ -6449,7 +6461,11 @@
       "familyId": "material",
       "rank": "S",
       "tier": 615,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "2015年のSQEX配信。すれちがい対戦に乱入してくるカメハ（SQEX）に勝利すると仲間になる。いつの間に通信をONにしてインターネットに接続している必要があり、3DSのインターネット通信サービスは2024年4月に終了したため現在は入手できない。",
+      "discontinued": true
     },
     {
       "id": "かくれんぼう",
@@ -6992,7 +7008,11 @@
       "familyId": "beast",
       "rank": "S",
       "tier": 665,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "Wi-Fi配信限定モンスター。3DSのインターネット通信サービスは2024年4月に終了したため現在は入手できない。SP版ではにじのタマゴ・夢見るタマゴから入手できるようになった。",
+      "discontinued": true
     },
     {
       "id": "ゆうれい船",
@@ -7089,7 +7109,11 @@
       "familyId": "dragon",
       "rank": "S",
       "tier": 674,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "2015年のSQEX配信。すれちがい対戦に乱入してくるカメハ（SQEX）に勝利すると仲間になる。いつの間に通信をONにしてインターネットに接続している必要があり、3DSのインターネット通信サービスは2024年4月に終了したため現在は入手できない。",
+      "discontinued": true
     },
     {
       "id": "大地の竜バウギア",
@@ -7421,12 +7445,16 @@
       "tierExcluded": true
     },
     {
-      "id": "Ｖロン",
-      "name": "Ｖロン",
+      "id": "Vロン",
+      "name": "Vロン",
       "familyId": "dragon",
       "rank": "S",
       "tier": 705,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "Wi-Fi配信限定モンスター。3DSのインターネット通信サービスは2024年4月に終了したため現在は入手できない。SP版ではにじのタマゴ・夢見るタマゴから入手できるようになった。",
+      "discontinued": true
     },
     {
       "id": "ニジゴロン",
@@ -7434,7 +7462,11 @@
       "familyId": "slime",
       "rank": "S",
       "tier": 706,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "Wi-Fi配信限定モンスター。3DSのインターネット通信サービスは2024年4月に終了したため現在は入手できない。SP版ではにじのタマゴ・夢見るタマゴから入手できるようになった。",
+      "discontinued": true
     },
     {
       "id": "モンスターパレード",
@@ -7442,7 +7474,11 @@
       "familyId": "unknown",
       "rank": "S",
       "tier": 707,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "Wi-Fi配信限定モンスター。3DSのインターネット通信サービスは2024年4月に終了したため現在は入手できない。SP版ではにじのタマゴ・夢見るタマゴから入手できるようになった。",
+      "discontinued": true
     },
     {
       "id": "キングスペーディオ",
@@ -7593,7 +7629,11 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 721,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "Wi-Fi配信限定モンスター。3DSのインターネット通信サービスは2024年4月に終了したため現在は入手できない。SP版ではにじのタマゴ・夢見るタマゴから入手できるようになった。",
+      "discontinued": true
     },
     {
       "id": "ダイヤモンドスライム",
@@ -7828,7 +7868,11 @@
       "familyId": "unknown",
       "rank": "SS",
       "tier": 744,
-      "tierExcluded": true
+      "tierExcluded": true,
+      "obtainable": true,
+      "acquisition": "event",
+      "acquisitionDetail": "Wi-Fi配信限定モンスター。3DSのインターネット通信サービスは2024年4月に終了したため現在は入手できない。SP版ではにじのタマゴ・夢見るタマゴから入手できるようになった。",
+      "discontinued": true
     },
     {
       "id": "守護者ラズバーン",
