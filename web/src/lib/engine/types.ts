@@ -155,4 +155,21 @@ export interface BreedingRuleset {
    * 配合で作る方法がなければ null。
    */
   planByBreeding(targetId: string, data: TitleData): BreedingPlan | null;
+  /**
+   * その子を1回の配合で作れる親の組み合わせ（特殊配合を除いた、計算で決まる分）。
+   * 「このモンスターの作り方」を全部見せるために使う。
+   * 方式ごとに決め方が違うので、対応できる方式だけが実装する。
+   */
+  parentPairs?(childId: string, data: TitleData): ParentPairGroup[];
+}
+
+/**
+ * 「この親 × これらのどれか」で子が生まれる、というまとまり。
+ * 位階配合は相方の自由度が高いので、1体ずつ列挙せずグループで見せる。
+ */
+export interface ParentPairGroup {
+  /** 組み合わせの軸になる親 */
+  basis: Monster;
+  /** 相方の候補 */
+  partners: Monster[];
 }

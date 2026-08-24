@@ -6,6 +6,12 @@ import { useTitleData } from '@/components/TitleProvider';
 
 const modes = [
   {
+    href: '/monster',
+    icon: '🔍',
+    title: 'モンスターを調べる',
+    desc: 'モンスターを選ぶと、そのモンスターの作り方（特殊配合・位階配合）と、そのモンスターを使って作れるものを表示します。',
+  },
+  {
     href: '/simulate',
     icon: '⚗',
     title: '配合シミュレータ',
@@ -14,8 +20,8 @@ const modes = [
   {
     href: '/auto',
     icon: '✦',
-    title: '自動チャート生成',
-    desc: '目標のモンスターを選ぶと、配合なしで手に入るモンスターから始まる配合チャートを自動で逆算します。',
+    title: '配合チャート',
+    desc: '目標のモンスターを選ぶと、手に入るモンスターから始まる配合の手順をまとめて逆算します。',
   },
   {
     href: '/editor',
@@ -55,7 +61,7 @@ export default function Home() {
         </dl>
       </section>
 
-      <section className="grid gap-3 sm:grid-cols-3 sm:gap-4">
+      <section className="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
         {modes.map((m) => (
           <Link
             key={m.href}

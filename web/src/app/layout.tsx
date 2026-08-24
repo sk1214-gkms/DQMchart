@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 const navItems = [
+  { href: '/monster', label: 'モンスターを調べる', icon: '🔍' },
   { href: '/simulate', label: '配合シミュレータ', icon: '⚗' },
-  { href: '/auto', label: '自動チャート生成', icon: '✦' },
+  { href: '/auto', label: '配合チャート', icon: '✦' },
   { href: '/editor', label: '手動エディタ', icon: '✎' },
 ];
 

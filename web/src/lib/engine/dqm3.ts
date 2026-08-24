@@ -8,6 +8,7 @@ import type {
   BreedingPlan,
   BreedingRuleset,
   Monster,
+  ParentPairGroup,
   RecipeParent,
   TitleData,
 } from './types';
@@ -217,6 +218,42 @@ export const dqm3Ruleset: BreedingRuleset = {
 
   planByBreeding(targetId: string, data: TitleData): BreedingPlan | null {
     return getPlanner(data).planByBreeding(targetId);
+  },
+
+  /**
+   * 通常配合表からその子が生まれる親の組み合わせを出す。
+   * 表は「系統ペア×ランク」なので、片親はそのランク、もう片親は同じ系統で
+   * それ以下のランクになる。
+   */
+  parentPairs(childId: string, data: TitleData): ParentPairGroup[] {
+    const child = monsterById(data, childId);
+    if (!child) return [];
+    const out: ParentPairGroup[] = [];
+    const seen = new Set<string>();
+    for (const rule of data.normalRules ?? []) {
+      if (!rule.childIds.includes(childId)) continue;
+      for (const [anchorFam, otherFam] of [
+        [rule.familyA, rule.familyB],
+        [rule.familyB, rule.familyA],
+      ]) {
+        for (const basis of data.monsters) {
+          if (basis.id === childId) continue;
+          if (basis.familyId !== anchorFam || basis.rank !== rule.rank) continue;
+          const partners = data.monsters.filter(
+            (p) =>
+              p.id !== childId &&
+              p.familyId === otherFam &&
+              rankOrder(data, p.rank) <= rankOrder(data, rule.rank),
+          );
+          if (!partners.length) continue;
+          const key = `${basis.id}|${otherFam}|${rule.rank}`;
+          if (seen.has(key)) continue;
+          seen.add(key);
+          out.push({ basis, partners });
+        }
+      }
+    }
+    return out;
   },
 };
 

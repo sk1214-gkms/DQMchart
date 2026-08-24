@@ -12,6 +12,7 @@ import type {
   BreedingPlan,
   BreedingRuleset,
   Monster,
+  ParentPairGroup,
   RecipeParent,
   TitleData,
 } from './types';
@@ -307,6 +308,48 @@ export const tierRuleset: BreedingRuleset = {
 
   planByBreeding(targetId: string, data: TitleData): BreedingPlan | null {
     return getPlanner(data).planByBreeding(targetId);
+  },
+
+  /**
+   * 位階配合でその子が生まれる親の組み合わせを全部出す。
+   *
+   * 子mが生まれるのは「基準になる親の位階が、mの1つ下からm未満の間にある」とき。
+   * その範囲に入る親を軸にして、相方として成立するものを集める。
+   * 相方は数が多くなるので、軸ごとにまとめて返す。
+   */
+  parentPairs(childId: string, data: TitleData): ParentPairGroup[] {
+    const child = monsterById(data, childId);
+    if (!child || child.tierExcluded) return [];
+    const prev = prevInFamily(data, child);
+    const lower = prev ? tierOf(prev) : -1;
+    const upper = tierOf(child);
+    const inRange = (x: Monster) => tierOf(x) >= lower && tierOf(x) < upper && x.id !== childId;
+
+    // 軸になりうる親: mと同じ系統で範囲内のもの（候補1・2）と、
+    // 系統組み合わせ表でmの系統になるペアの弱いほう（候補3）
+    const bases = data.monsters.filter((x) => {
+      if (x.id === childId) return false;
+      if (x.familyId === child.familyId) return inRange(x);
+      // 別系統でも、組み合わせ表でmの系統になるなら軸になれる
+      return (data.familyPairs ?? []).some(
+        (r) =>
+          r.childFamilyId === child.familyId &&
+          r.familyA !== r.familyB &&
+          (r.familyA === x.familyId || r.familyB === x.familyId) &&
+          inRange(x),
+      );
+    });
+
+    const out: ParentPairGroup[] = [];
+    for (const basis of bases) {
+      const partners = data.monsters.filter(
+        (p) =>
+          p.id !== childId &&
+          tierCandidates(basis, p, data).some((c) => c.id === childId),
+      );
+      if (partners.length) out.push({ basis, partners });
+    }
+    return out;
   },
 };
 

@@ -14,6 +14,7 @@ import type {
   BreedingPlan,
   BreedingRuleset,
   Monster,
+  ParentPairGroup,
   RecipeParent,
   SpecialRecipe,
   TitleData,
@@ -378,6 +379,76 @@ export const dqmj3Ruleset: BreedingRuleset = {
 
   planByBreeding(targetId: string, data: TitleData): BreedingPlan | null {
     return getPlanner(data).planByBreeding(targetId);
+  },
+
+  /**
+   * その子が生まれる親の組み合わせを全部出す。
+   *
+   * 子の位階は親2体の位階から計算で決まるので、片方の親を決めれば
+   * もう片方に必要な位階はごく少数に絞れる。全モンスターを片親として試し、
+   * 成立した相手だけを集める（総当たりだと組み合わせが多すぎる）。
+   */
+  parentPairs(childId: string, data: TitleData): ParentPairGroup[] {
+    const child = monsterById(data, childId);
+    if (!child || child.tierExcluded || child.tier === undefined) return [];
+
+    // 作れない位階を飛ばして子にたどり着く場合があるので、狙う位階には幅がある
+    const index = tierIndex(data);
+    const goals = [tierOf(child)];
+    for (let t = tierOf(child) + 1; ; t++) {
+      const above = index.get(t);
+      if (!above || !above.tierExcluded) break;
+      goals.push(t);
+    }
+
+    const groups = new Map<string, Monster[]>();
+    const add = (a: Monster, b: Monster) => {
+      if (a.id === childId || b.id === childId) return;
+      if (!tierCandidates(a, b, data).some((c) => c.id === childId)) return;
+      const list = groups.get(a.id);
+      if (list) {
+        if (!list.some((x) => x.id === b.id)) list.push(b);
+      } else {
+        groups.set(a.id, [b]);
+      }
+    };
+
+    for (const fixed of data.monsters) {
+      if (fixed.tier === undefined) continue;
+      const ft = tierOf(fixed);
+      const fOnes = ft % 10;
+      for (const goal of goals) {
+        // 候補3（平均）: 位階の合計が goal*2 か goal*2+1
+        for (const sum of [goal * 2, goal * 2 + 1]) {
+          const other = index.get(sum - ft);
+          if (other) add(fixed, other);
+        }
+        // 候補2: 相手の位階が fOnes から決まる／自分の1の位から相手が決まる
+        for (const offset of [-5, 5]) {
+          const low = index.get(goal - fOnes - offset);
+          if (low) add(fixed, low);
+          const highOnes = goal - ft - offset;
+          if (highOnes >= 0 && highOnes <= 9) {
+            for (const p of onesIndex(data).get(highOnes) ?? []) add(p, fixed);
+          }
+        }
+        // 候補1: 同じく2通りの向きで相手を絞る
+        for (const offset of [0, 10]) {
+          const high = index.get(goal - fOnes - offset);
+          if (high) add(high, fixed);
+          const lowOnes = goal - ft - offset;
+          if (lowOnes >= 0 && lowOnes <= 9) {
+            for (const p of onesIndex(data).get(lowOnes) ?? []) add(fixed, p);
+          }
+        }
+      }
+    }
+
+    const byId = new Map(data.monsters.map((m) => [m.id, m]));
+    return [...groups.entries()]
+      .map(([id, partners]) => ({ basis: byId.get(id) as Monster, partners }))
+      .filter((g) => g.basis)
+      .sort((a, b) => tierOf(b.basis) - tierOf(a.basis));
   },
 };
 
