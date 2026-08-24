@@ -40,19 +40,19 @@ describe('モンスター1体の作り方と使い道', () => {
       expect(checked, '親の組み合わせを1つも出せていない').toBeGreaterThan(0);
     });
 
-    it(`${data.name}: 使い道に挙げた配合が実際に成立する`, () => {
+    it(`${data.name}: 使い道は特殊配合だけで、レシピと一致する`, () => {
       const bad: string[] = [];
-      for (const m of data.monsters.slice(0, 20)) {
-        for (const u of usedFor(engine, data, m.id).filter((x) => x.method === 'normal').slice(0, 5)) {
-          for (const p of u.partners.slice(0, 2)) {
-            const ok = engine
-              .candidates(m, p, data)
-              .some((c) => c.child.id === u.child.id && c.method === 'normal');
-            if (!ok) bad.push(`${m.name} × ${p.name} では ${u.child.name} は生まれない`);
-          }
-        }
+      for (const m of data.monsters.slice(0, 40)) {
+        const uses = usedFor(engine, data, m.id);
+        // 位階配合は含めない
+        expect(uses.every((u) => u.method !== 'normal')).toBe(true);
+        // その数はレシピで親に使われている回数と一致する
+        const expected = data.specialRecipes.filter((r) =>
+          r.parents.some((p) => p.kind === 'monster' && p.monsterId === m.id),
+        ).length;
+        if (uses.length !== expected) bad.push(`${m.name}: ${uses.length} ≠ ${expected}`);
       }
-      expect(bad.slice(0, 5)).toEqual([]);
+      expect(bad).toEqual([]);
     });
   }
 });

@@ -17,6 +17,7 @@ import type {
   TitleData,
 } from './types';
 import { matchesUnordered, parentMatches, recipeMatches } from './recipeParent';
+import { supplyPenalty } from './supply';
 
 function monsterById(data: TitleData, id: string): Monster | undefined {
   return data.monsters.find((m) => m.id === id);
@@ -248,12 +249,24 @@ class Planner {
     return this.cheapestOf((x) => x.id !== childId && parentMatches(this.data, p, x));
   }
 
+  /**
+   * 条件に合う中でいちばん用意しやすいプラン。
+   * 手数が同じなら、何体でも入手できるモンスターを選ぶ。
+   * イベントで1体しかもらえないモンスターを相方に選び続けると、
+   * 「同じモンスターが何十体も必要」という実行できない手順になるため。
+   */
   private cheapestOf(pred: (m: Monster) => boolean): BreedingPlan | null {
     let best: BreedingPlan | null = null;
+    let bestScore = Number.POSITIVE_INFINITY;
     for (const m of this.data.monsters) {
       if (!pred(m)) continue;
       const p = this.best.get(m.id);
-      if (p && (best === null || p.cost < best.cost)) best = p;
+      if (!p) continue;
+      const score = p.cost * 2 + supplyPenalty(m);
+      if (score < bestScore) {
+        best = p;
+        bestScore = score;
+      }
     }
     return best;
   }

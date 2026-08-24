@@ -17,7 +17,6 @@ import {
 import { useTitleData } from '@/components/TitleProvider';
 import { getRuleset } from '@/lib/engine/registry';
 import { howToMake, usedFor } from '@/lib/engine/lookup';
-import type { Usage } from '@/lib/engine/lookup';
 import { useStoredValue } from '@/lib/useStoredValue';
 import type { Monster, ParentPairGroup, TitleData } from '@/lib/engine/types';
 
@@ -141,12 +140,12 @@ export default function MonsterPage() {
     [engine, data, monsterId],
   );
 
-  // 使い道は「特殊配合 → 上位のものから」の順に出す。数が多いので上位が先に見えるように
+  // 上位ランクのものから先に出す
   const sortedUses = useMemo(() => {
     const rank = new Map(data.ranks.map((r) => [r.id, r.order]));
-    const score = (u: Usage) =>
-      (u.method === 'normal' ? 0 : 1000) + (rank.get(u.child.rank) ?? 0) * 10;
-    return [...uses].sort((a, b) => score(b) - score(a));
+    return [...uses].sort(
+      (a, b) => (rank.get(b.child.rank) ?? 0) - (rank.get(a.child.rank) ?? 0),
+    );
   }, [uses, data.ranks]);
 
   const [showAllUses, setShowAllUses] = useState(false);
@@ -276,9 +275,12 @@ export default function MonsterPage() {
                 {sortedUses.length}件
               </span>
             </h2>
+            <p className="mb-2 text-xs text-[var(--muted)]">
+              特殊配合・4体配合だけを出しています（位階配合は含みません）。
+            </p>
             {sortedUses.length === 0 ? (
               <p className="text-sm text-[var(--muted)]">
-                このモンスターを親にして作れるものはありません。
+                このモンスターを親に使う特殊配合はありません。
               </p>
             ) : (
               <>

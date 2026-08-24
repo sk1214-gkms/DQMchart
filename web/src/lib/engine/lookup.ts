@@ -85,10 +85,11 @@ export interface Usage {
 }
 
 /**
- * そのモンスターを親に使って1回の配合で作れるもの。
+ * そのモンスターを親に使って作れるもの。
  *
- * 位階配合は相方の総当たりで求める。モンスター数ぶんの判定で済むので実用上は速い。
- * 4体配合は祖父母4体で決まるため、相方は「他の3体」としてまとめて出す。
+ * 特殊配合・4体配合だけを見る。位階配合まで含めると、
+ * 強いモンスターと弱いモンスターを別系統で組んだときに生まれる弱い子まで入り、
+ * 200件を超えて役に立たなくなるため。
  */
 export function usedFor(
   engine: BreedingRuleset,
@@ -99,25 +100,7 @@ export function usedFor(
   if (!monster) return [];
   const byId = new Map(data.monsters.map((m) => [m.id, m]));
   const familyName = (id: string) => data.families.find((f) => f.id === id)?.name ?? id;
-
-  // 位階配合・通常配合: 相方を総当たりして子を集める
-  const normal = new Map<string, Monster[]>();
-  for (const partner of data.monsters) {
-    for (const c of engine.candidates(monster, partner, data)) {
-      if (c.method !== 'normal') continue;
-      // 「親自身の種族も候補に残る」仕様の分は、新しく作れたことにならないので省く
-      if (c.child.id === monsterId || c.child.id === partner.id) continue;
-      const list = normal.get(c.child.id);
-      if (list) list.push(partner);
-      else normal.set(c.child.id, [partner]);
-    }
-  }
-
   const out: Usage[] = [];
-  for (const [childId, partners] of normal) {
-    const child = byId.get(childId);
-    if (child) out.push({ child, partners, method: 'normal' });
-  }
 
   // 特殊配合・4体配合: そのモンスターを親に含むレシピ
   for (const r of data.specialRecipes) {
