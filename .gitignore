@@ -5,3 +5,6 @@ node_modules/
 *.log
 .vercel/
 coverage/
+
+# テストが作る作業ファイル
+web/*.txt

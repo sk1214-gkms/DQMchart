@@ -4,7 +4,6 @@
 // 相方に選び続けると実行できない手順になる。
 // （イルルカSPのモントナーは位階1で全モンスターの相方になれるため、
 //  以前は31体必要という手順が出ていた）
-import { writeFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { getRuleset } from '@/lib/engine/registry';
 import { listTitles } from '@/lib/titles';
@@ -52,8 +51,10 @@ describe('素材の集めやすさ', () => {
     });
   }
 
-  it('確認できた分を書き出す', () => {
-    writeFileSync('supply.txt', report.join('\n'), 'utf-8');
-    expect(true).toBe(true);
+  it('1体しか手に入らないのに複数必要なものを把握しておく', () => {
+    // レシピ自体が同じモンスターを複数要求している場合があるので落としはしない。
+    // ただし数が急に増えたら選び方が壊れたサインなので見ておく。
+    if (report.length) console.log(report.join('\n'));
+    expect(report.length).toBeLessThan(200);
   });
 });
