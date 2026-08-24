@@ -6,6 +6,12 @@ import { useTitleData } from '@/components/TitleProvider';
 
 const modes = [
   {
+    href: '/list',
+    icon: '📖',
+    title: 'モンスター図鑑',
+    desc: '収録モンスターを一覧します。系統・ランクで絞り込んで、目当てのモンスターを探せます。',
+  },
+  {
     href: '/monster',
     icon: '🔍',
     title: 'モンスターを調べる',
